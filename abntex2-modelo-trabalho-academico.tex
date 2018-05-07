@@ -289,7 +289,7 @@ Segundo \citet{conciAzevedoLeta:2008}, o histograma pode ser obtido da seguinte 
 
 Um processo comumente aplicado em técnicas de PDI é a convolução. Segundo \citet{pedriniSchwartz:2008}, o processo de convolução faz uso de matrizes, que são denominadas máscaras, para aplicar modificações na imagem pixel a pixel. A máscara, também conhecida como \textit{kernel} é uma matriz bidimensional quadrada. Usualmente, esta matriz possui um tamanho ímpar e dimensões quadradas, estas características são importantes para que a máscara possua um pixel central.
 
-O processo de convolução utiliza os coeficientes desta máscaras para realizar uma multiplicação pelos níveis de cor dos pixeis. O pixel central é modificado pela média de todas as multiplicações. Este processo percorre a imagem aplicando a máscara em todos os pixel da imagem. Outro processo semelhante é o processo de correlação, onde este possui o mesmo princípio da convolução, mas com a diferença da máscara ser rotacionada em 180º \cite{gonzalesWoods:2008}. A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/ConvolutionProcess.java}.
+O processo de convolução utiliza os coeficientes desta máscaras para realizar uma multiplicação pelos níveis de cor dos pixeis. O pixel central é modificado pela média de todas as multiplicações. Este processo percorre a imagem aplicando a máscara em todos os pixel da imagem. Outro processo semelhante é o processo de correlação, onde este possui o mesmo princípio da convolução, mas com a diferença da máscara ser rotacionada em 180º \cite{gonzalesWoods:2008}. A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KJBGzc}.
 
 Neste capítulo serão apresentadas algumas das principais técnicas de PDI. Dentre elas estarão limiarização, transformações geométricas, filtro de passa baixa e passa alta, morfologia matemática, afinamento e técnicas de classificação.
 % ---
@@ -307,7 +307,7 @@ Limiarização ou \textit{Threshold} é uma técnica que consiste em comparar ca
 \label{fig:limiarizacaofig}
 \end{figure}
 
-Na Figura \ref{fig:limiarizacaofig} é aplicado um \textit{Threshold} de 190, desta forma, os pixels com valores maiores que 190 recebem a cor branca, enquanto os pixels com valores inferiores recebem a cor preta. A imagem resultante será composta por pixels pretos e brancos variando, sendo 0 ou 255.A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/ThresholdProcess.java}
+Na Figura \ref{fig:limiarizacaofig} é aplicado um \textit{Threshold} de 190, desta forma, os pixels com valores maiores que 190 recebem a cor branca, enquanto os pixels com valores inferiores recebem a cor preta. A imagem resultante será composta por pixels pretos e brancos variando, sendo 0 ou 255.A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2K1QO9S}
 
 Uma maneira comum para a identificação do \textit{Threshold} a ser utilizado é através do histograma da imagem, sendo que através do histograma se tem uma visão geral da distribuição das tonalidades da imagem. Em um histograma com dois picos, o valor entre os dois picos pode ser utilizado como \textit{Threshold}, onde os picos representam as cores com maior ocorrência \cite{gonzalesWoods:2008}. 
 
@@ -325,7 +325,7 @@ O brilho e contraste podem ser definidos através de uma função matemática. E
 \label{fig:contraste}
 \end{figure}
 
-A Figura \ref{fig:contraste} apresenta figuras que representam a imagem original (esquerda), o resultado após a aplicação de contraste utilizando o coeficiente 2 (b) e o resultado após a aplicação de contraste utilizando o coeficiente 0,5, respectivamente (c). A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/ContrastProcess.java}
+A Figura \ref{fig:contraste} apresenta figuras que representam a imagem original (esquerda), o resultado após a aplicação de contraste utilizando o coeficiente 2 (b) e o resultado após a aplicação de contraste utilizando o coeficiente 0,5, respectivamente (c). A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2JY8Dqj}
 
 \begin{figure}[ht]
 \centering
@@ -335,7 +335,7 @@ A Figura \ref{fig:contraste} apresenta figuras que representam a imagem original
 \label{fig:brilho}
 \end{figure}
 
-A Figura \ref{fig:brilho} apresenta imagens que representam a imagem original (direita), o resultado após a aplicação de brilho utilizando o coeficiente 50 (b) e o resultado após a aplicação de brilho utilizando o coeficiente -50, respectivamente (c). A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/BrightnessProcess.java}
+A Figura \ref{fig:brilho} apresenta imagens que representam a imagem original (direita), o resultado após a aplicação de brilho utilizando o coeficiente 50 (b) e o resultado após a aplicação de brilho utilizando o coeficiente -50, respectivamente (c). A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2FTWGPN}
 
 % ---
 \section{Transformações geométricas}
@@ -384,7 +384,7 @@ T
 \end{bmatrix} 
 \]
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/TranslateProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KHJ26c}
 
 % ---
 \subsection{Mudança de escala}
@@ -401,7 +401,7 @@ T
 \end{bmatrix} 
 \]
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/ResizeProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2IpuvxP}
 
 % ---
 \subsection{Reflexão}
@@ -436,7 +436,7 @@ Onde \(E_yz\) refere-se a reflexão no eixo \(xy\), \(E_xz\) refere-se a reflex�
 
 Segundo \citet{conciAzevedoLeta:2008}, um \textit{flip} horizontal pode ser definido por uma rotação de 180º com os valores das coordenadas \(y_0\) invertidas (representado pela máscara \(E_yz\)) e um \textit{flip} vertical pode ser definido por uma rotação de 180º com os valores das coordenadas x0invertidas (representado pela máscara \(E_xz\));
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/HorizontalMirroringProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KIZRxn}
 
 % ---
 \subsection{Rotação}
@@ -477,7 +477,7 @@ R_\gamma
 \end{bmatrix} 
 \]
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/RotateProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2I4hQga}
 
 \begin{figure}[ht]
 \centering
@@ -501,13 +501,13 @@ Filtros de média são utilizadas para fins de suavização de imagens, sendo ut
 
 O filtro de média calcula a média aritmética da máscara em processamento, o valor resultante será aplicado no pixel central. Este filtro diminui variações da imagem, removendo, desta forma, seu ruído desta \cite{gonzalesWoods:2008}.
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/AverageBlurProcess.java} 
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jGc7CM} 
 
 % ---
 \subsection{Moda}
 O filtro de moda calcula o ponto de maior frequência entre os da área em processamento. É indicado para a remoção de ruídos aleatoriamente distribuídos como o ruído gaussiano ou o uniforme \cite{gonzalesWoods:2008}. Neste filtro, os valores existentes na máscara são ordenado e é utilizado o como novo valor o valor mais frequente \cite{conciAzevedoLeta:2008}.
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/ModeBlurProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2Io3U46}
 
 % ---
 \subsection{Mediana}
@@ -520,7 +520,7 @@ Este filtro realiza a ordenação das intensidades dos pixels existentes dentro 
 
 O filtro de mediana possui resultados melhores do que o filtro de média. Isso ocorre devido ao fato de que, se existe um ruído entre os elementos da máscara, este valor estará presente nas primeiras ou últimas posições. Desta forma, pontos discrepantes têm grande chance de serem considerados ruídos e suavizados \cite{conciAzevedoLeta:2008}.
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/MedianBlurProcess.java} 
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2wi5EXL} 
 
 % ---
 \subsection{Filtro Gaussiano}
@@ -542,7 +542,7 @@ A aplicação de um filtro Gaussiano pode ser realizada através de convoluçõe
 \includegraphics[width=0.8\textwidth]{imagens/gauss_mascara.png}
 \end{figure}
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/GaussianBlurProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KIrx5F}
 
 \begin{figure}[ht]
 \centering
@@ -617,7 +617,7 @@ Considerando \(z_0\) a \(z_8\) os tons de cinza em torno do pixel que está send
 \[Gx = (z_6 + 2z_7 + z_8) - (z_0 + 2z_1 + z_2)\]
 \[Gy = (z_2 + 2z_5 + z_8) - (z_0 + 2z_3 + z_6)\]
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/SobelProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2HYVgcU}
 
 % ---
 \subsection{Roberts}
@@ -644,8 +644,7 @@ Considerando \(z_0\) a \(z_8\) os tons de cinza em torno do pixel que está send
 \[G_x = z_0 - z_4\]
 \[G_y = z_3 -z_1\]
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi
-/Roberts.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KIsb35}
 % ---
 \subsection{Prewith}
 
@@ -671,7 +670,7 @@ Este filtro faz uso do mesmo conceito de Sobel e Roberts. Considerando \(z0\) a 
 \[Gx = (z_6 + z_7 + z_8) - (z_0 + z_1 + z_2)\]
 \[Gy = (z_2 + z_5 + z_8) - (z_0 + z_3 + z_6)\]
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/PrewittProcess.java.java} 
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2wrt2lQ} 
 
 % ---
 \subsection{Kirsch}
@@ -725,7 +724,7 @@ O operador Kirsch (KIRSCH, 1971) consiste na utilização de oito máscaras orie
 
 Outras máscaras maiores podem ser aplicadas, como máscaras de tamanho 5 x 5 ou 7 x 7 pixel, mas estas abordagens são menos sensíveis a ruído e o tempo para a realização dos cálculos destas máscaras aumenta significamente \cite{pedriniSchwartz:2008}.
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/KirshProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jG3HLs}
 
 % ---
 \subsection{Robinson}
@@ -777,7 +776,7 @@ Robson propôs um conjunto de oito máscaras onde a magnitude é calculada de ma
 \end{bmatrix}
 \]
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/RobinsonProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2HWssSd}
 
 % ---
 \subsection{Frei-Chein}
@@ -846,7 +845,7 @@ M9
 \end{bmatrix} 
 \]
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/FreiChenProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2K227ig}
 
 \begin{figure}[ht]
 \centering
@@ -865,7 +864,7 @@ O operador de \citet{canny:1986} propõem um método que tem como objetivo otimi
 
 A após a identificação da borda, é possível que a imagem ainda contenha certos fragmentos causadores de ruído. Para solucionar este problema, o operador de \citet{canny:1986} faz uso de dois limiares \(T_1\) e \(T_2\), constituindo a etapa denominada limiarização com histerese. Desta forma, os pontos da borda que possuem gradiente maiores que \(T_2\) são mantidos na imagem. Pontos que estão conectados a estes pontos e que possuem magnitude de gradiente maior que T1 também são considerados como pertencentes a borda \cite{pedriniSchwartz:2008}.
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/CannyProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jG3YxY}
 
 % ---
 \subsection{Marr and Hildreth}
@@ -884,7 +883,7 @@ H
 \end{bmatrix} 
 \]
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/MarrHildrethProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jDAeSp}
 
 \begin{figure}[ht]
 \centering
@@ -926,7 +925,7 @@ De acordo com \citet{pedriniSchwartz:2008}, a fórmula que representa a operaç�
 
 Onde f representa a imagem de origem e (s, t) pertencem ao elemento estruturante b. Este elemento estruturante é aplicado na imagem e a cada ciclo, o pixel analisado é substituído pelo pixel resultante de menor valor.
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/ErosionProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2rrIuIO}
 
 % ---
 \subsection{Dilatação}
@@ -944,7 +943,7 @@ Onde \(f\) representa a imagem de origem e \((s, t)\) pertencem ao elemento estr
 
 É importante ressaltar que as operações de dilatação e erosão são contrárias, mas uma não desfaz a outra. Uma operação de erosão, nem sempre, desfaz corretamente outra operação de dilatação, o mesmo ocorre de maneira inversa.
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/DilationProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2HYh7ku}
 
 % ---
 \subsection{Abertura}
@@ -953,7 +952,7 @@ A abertura é geralmente utilizada para suavizar os contornos de um objeto, elim
 
 Segundo \citet{pedriniSchwartz:2008}, o processo de abertura consiste na aplicação de uma erosão, seguida de uma dilatação na mesma imagem, utilizando o mesmo elemento estruturante.
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/OpeningProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2FUz0Lc}
 
 % ---
 \subsection{Fechamento}
@@ -962,7 +961,7 @@ A operação de fechamento também realiza a suavização da imagem, mas ao cont
 
 Segundo \citet{pedriniSchwartz:2008}, o processo de fechamento consiste na aplicação de uma dilatação, seguida de uma erosão na mesma imagem, utilizando o mesmo elemento estruturante.
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/ClosingProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jFS47r}
 
 \begin{figure}[ht]
 \centering
@@ -1008,7 +1007,7 @@ Segundo \citet{guilherme:2007}, o algoritmo de Stentiford é composto por seis p
 \item Se algum ponto foi apagado no passo 5, os passos a partir do passo 1 devem ser repetidos.
 \end{itemize}
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/StentifordProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2I0u0qf}
 
 % ---
 \subsection{Zhang Suen}
@@ -1073,7 +1072,7 @@ Fonte: Guilherme (2007, p. 16)
 \label{fig:zhangsuen4}
 \end{figure}
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/ZhangSuenProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2rrBU5L}
 
 % ---
 \subsection{Holt}    
@@ -1111,7 +1110,7 @@ Segunda iteração:
 \includegraphics[width=0.8\textwidth]{imagens/holt_formula1.png}
 \end{figure}
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/HoltProcess.java} 
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2rr6e0i} 
 
 \begin{figure}[ht]
 \centering
@@ -1177,7 +1176,7 @@ O ajuste da curva é realizado levando em consideração forças internas e exte
 
 Na Figura \ref{fig:snake} é demonstrado uma execução do método de Snakes. (a) é o contorno inicial. (b) é o contorno resultante após aplicação de algumas etapas. (c) contorno final.
 
-A implementação em java para o algoritmo pode ser acessado através do link:\url{https://github.com/GrupoTorax/PDI/blob/master/src/main/java/org/paim/pdi/CannyProcess.java}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jG3YxY}
 
 \section{Considerações}
 
