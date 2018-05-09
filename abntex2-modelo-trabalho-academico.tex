@@ -156,14 +156,14 @@ A área de processamento digital de imagens vem crescendo nas mais diversas áre
 \end{resumo}
 
 % resumo em inglês
-\begin{resumo}[Abstract]
+\begin{resumo}[ABSTRACT]
  \begin{otherlanguage*}{english}
-   This is the english abstract.
+The area of digital image processing has been growing in the most diverse areas of knowledge, becoming an important field of study. The study of this area is often not attractive due to the way in which the theoretical foundation is presented without this being exciting for the student. Approaches such as gamification aims to help students stay motivated and involved with the learning process, using concepts from games. Teaching tools provide an environment of simulation and prototyping, serving as a mechanism for the student to apply in practice what he has learned in theory. VISNode is a tool for prototyping IP techniques, which makes use of nodes and their connections to represent techniques and their connections. In this way, this work aims to develop modules for the VISNode tool, aiming the development of a tool for the contribution to teaching in the area of IPs. Gamification concepts will be used to encourage students, also offering theoretical materials to complement the learning. The modules of the tool will be developed and validated according to the learning style of the users.
 
    \vspace{\onelineskip}
  
    \noindent 
-   \textbf{Key-words}: latex. abntex. text editoration.
+   \textbf{Key-words}: Image processing, knowledge, teach, gamification.
  \end{otherlanguage*}
 \end{resumo}
 
@@ -236,7 +236,7 @@ Os avanços de pesquisa e utilização de  (PDI) cresce fortemente nas mais dive
 
 PDI é composta por diversas etapas, iniciando pela aquisição da imagem, passando pelo processamento e segmentação até a exibição da imagem ou informações provenientes destas. A etapa de processamento de imagens é composta por procedimentos que são apresentados em forma de algoritmos \cite{gonzalesWoods:2008}. Por estes algoritmos expressarem funções matemáticas complexas, softwares podem ser úteis para auxiliar alunos a entender estes conceitos sem desconsiderar a teoria matemática \cite{lopez2016teaching}. A tecnologia é uma poderosa ferramenta para o processo de ensino e aprendizagem, oferecendo ambientes de simulação e prototipação para educadores e estudantes, que servem como aporte do ensino \cite{henderson2017works}.
 
-A área de PDI conta com diversas ferramentas para auxiliar tanto na aprendizagem quanto no desenvolvimento de novas soluções. Pode-se citar o OpenCV que é uma biblioteca de visão computacional open source \cite{pulli2012realtime}, o ambiente CoLFDImaP é uma ferramenta web para experimentação que faz uso de um paradigma colaborativo \cite{garcia2015colfdimap} e o Adaptive Vision Studio (AVS) que é uma ferramenta para a criação de algoritmos de processamento e análise de imagens através de um dataflow de técnicas PDI \cite{radlak2015adaptive}.
+A área de PDI conta com diversas ferramentas para auxiliar tanto na aprendizagem quanto no desenvolvimento de novas soluções. Pode-se citar o OpenCV que é uma biblioteca de visão computacional \textit{open source} \cite{pulli2012realtime}, o ambiente CoLFDImaP é uma ferramenta web para experimentação que faz uso de um paradigma colaborativo \cite{garcia2015colfdimap} e o Adaptive Vision Studio (AVS) que é uma ferramenta para a criação de algoritmos de processamento e análise de imagens através de um \textit{dataflow} de técnicas PDI \cite{radlak2015adaptive}.
 
 O VISNode é uma ferramenta que apresenta uma interface que permite uma visualização mais concreta de técnicas de PDI e como elas se conectam para formar um processamento de mais alto nível. A ferramenta é baseada em nodos e suas conexões, onde cada nodo representa uma técnica de PDI e pode ser encadeado para formação de um processo \cite{visnode}.
 
@@ -1524,38 +1524,79 @@ PDI: implementações de algoritmos de processamento de imagens, que são aplica
 
 O presente trabalho se propõe a desenvolver uma ferramenta que faça uso de conceitos de gamificação visando auxiliar o ensino e aprendizagem. Este trabalho foca no ensino de processamento digital de imagens, pretendendo servir como aporte para alunos de disciplinas que abordam esses conceitos.
 
-O principal objetivo do trabalho é desenvolver um ferramenta que motive os alunos a participarem das aulas e engaja-los na busca por conhecimentos relacionados a área de estudo. Para isso será utilizada a gamificação, portando, a ferramenta proporcionará um ambiente para que isso seja possível, utilizando elementos como:
-Recompensas, Narrativas, \textit{feedback}, Desafios e Missões.
+Tendo como objetivo dar assistência ao usuário no entendimento dos algoritmos utilizados, a ferramenta provê informações detalhadas dos algoritmos implementados, sendo possível visualizar uma explicação textual de seu funcionamento, além do código de sua implementação. Esta funcionalidade também pode servir como material didático, auxiliando na etapa de aprendizado de usuários como pouca conhecimento na área.
 
-Para o usuário acessar a parte gamificada da ferramenta, este terá de realizar um cadastro e logar no sistema. Após o usuário logado, ele terá acesso a todas as funcionalidades do VISNode, como prototipação e experimentação de algoritmos e também a parte gamificada da ferramenta.
+\subsection{Elementos}
 
-Logado no sistema, o usuário possui acesso ao menu de missões. Neste local o usuário encontrará diversas missões com diferentes objetivos e graus de dificuldades diferentes.	
+O principal objetivo do trabalho é desenvolver um ferramenta que motive os alunos a participarem das aulas e engaja-los na busca por conhecimentos relacionados a área de estudo. Para isso será utilizada a gamificação. A ferramenta contará com elementos como: Desafios, Missões, Narrativas, Recompensas e Rankings.
 
-Quando a ferramenta for utilizada dentro da sala de aula, o educador poderá criar um grupo de trabalho e definir quais usuário e quais desafios este grupo irá compor. Desta forma, o usuário poderá controlar o progresso de cada participante do grupo, podendo visualizar quantas tarefas o usuário já realizou, como ele solucionou os desafios, quais recompensas ele já ganhou.
+\subsubsection{Desafios}
 
-Um desafio consiste em uma tarefa que o usuário deverá realizar. Cada desafio possuirá uma narrativa, na qual deve contextualizar o problema visando motivar o usuário à resolução do mesmo.
+A ferramenta irá contar com desafios. Um desafio consiste em uma tarefa que o usuário deverá realizar. Cada desafio possuirá uma narrativa, na qual deve contextualizar o problema visando motivar o usuário à resolução do mesmo.
 
-A resolução do desafio deve ser realizada utilizando o VISNode, sendo que o usuário deverá conectar as técnicas existente para obter o resultado esperado. O próprio software realizará a conferência se a solução proposta pelo usuário condiz com o resultado esperado. Informações como número de tentativa e duração serão armazenadas para análises por parte do educador.
+A resolução do desafio deve ser realizada utilizando o VISNode, desta forma, o usuário deverá conectar as técnicas existente para obter o resultado esperado. O próprio software realizará a conferência se a solução proposta pelo usuário condiz com o resultado esperado. Informações como número de tentativa e duração serão armazenadas para análises por parte do educador.
+
+\subsubsection{Missões}
+
+Um missão consiste em um grande objetivo que o usuário deve alcançar. Cada missão será composta por desafios, desta forma, para um usuário concluir uma missão, este deverá concluir primeiramente uma seŕie de pequenos desafios. Estes desafios são pensados para que o aluno consiga dividir o problema em partes, desta forma, a resolução de um problema de maior complexidade é mais facilmente alcançada.
+
+Cada missão possuirá uma narrativa para que seja apresentado ao aluno a problemática a ser trabalhada. Esta narrativa irá descrever o problema como um todo e irá demonstrar o resultado final esperado. Abaixo será apresentado um exemplo de missão.
+
+\subsubsection{Narrativa} 
+Uma loja procura uma maneira mais simples de calcular o valor em moedas existes em suas caixas registradoras. A cada encerramento de caixa, fica a cargo do operador realizar a conferência que quanto em valor existe em cada caixa. Levando em consideração este cenário, foi desenvolvido um equipamento que possui um câmera fotográfica a cima de um tablado. Pede-se para desenvolver um algoritmo de processamento digital de imagens que seja capaz de identificar cada moeda e calcular o valor existente no tablado. A Figura \ref{fig:exemploNarrativa} apresenta um exemplo da imagem capturada do tablado. 
+
+\begin{figure}[ht]
+\centering
+\caption{\textbf{Imagem capturada do equipamento de cálculo de valor monetário}}
+\includegraphics[width=0.8\textwidth]{imagens/moedas.jpg}
+\sourceAuthor
+\label{fig:exemploNarrativa}
+\end{figure}
+
+
+\subsubsection{Desafios}
+
+\begin{enumerate}
+\item \textbf{Pré-processamento}: Neste desafio os usuários terão de trabalhar para melhorar a qualidade da imagens para que seja possível realizar o processo de segmentação. Como resultado espera-se que seja retornado uma imagem binária, onde os pixels com valor 0 correspondam ao fundo da imagem, e os pixels com valor 1 correspondam as moedas.
+\item \textbf{Cálculo do valor}: Neste desafios os usuários terão que executar algum procedimento que realize a segmentação das imagens. Após este procedimento, deveram extrair características de cada objeto para que seja possível identificar qual é o valor monetário de cada imagem.
+\end{enumerate}
+
+\subsubsection{Recompensas e pontos de experiência}
+
+Ao completar missões e desafios o usuário receberá pontos de experiência. Cada tarefa terá sua pontuação de acordo com o grau de dificuldade imposto ao usuário. Esta informação de experiência transmite ao usuário um \textit{feedback} de como ele está em relação ao seu progresso. Além de ser um fator de motivação extrínseca. 
+
+Além dos pontos de experiência, o usuário poderá receber algumas recompensas. Um exemplo de recompensa seria o usuário receber um parte de uma imagem a cada desafio completado. Após a conclusão de alguns desafios, o usuário possuirá a imagem completa.
+
+\subsubsection{Rankings}
+
+Tendo em visa a possibilidade do usuário se situar em relação ao seu desempenho comparado com outros usuários, a ferramenta possuirá um ranking. Este ranking levará em consideração a pontuação conquistada por cada usuário para posiciona-los em suas respectivas colocações.
+
+
+\subsection{Utilização}
+
+A parte gamificada da ferramenta será acessar através de um cadastro e login no sistema. Isso se torna necessário para poder identificar o usuário que esta acessando o sistema, e também para controlar o progresso de cada usuário. Após o usuário logado, ele terá acesso a todas as funcionalidades referentes a parte gamificada da ferramenta.
+
+Logado no sistema, o usuário possui acesso ao menu de missões. Neste local o usuário encontrará diversas missões com diferentes objetivos e graus de dificuldades diferentes. O usuário poderá selecionar uma missão para ser realiza e cada conquista receberá suas respectivas recompensas.
+
+A ferramenta exibirá os pontos do usuário na página principal do sistema. Isso ocorrerá para que os usuário recebem um \textit{feedback} o mais rápido possível.
+
+O usuário terá acesso a dois menus responsável pelo ranking e uma lista das recompensas conquistas pelo usuário. Também haverá uma página onde o usuário poderá visualizar seu progresso em cada missão, sendo possível visualizar o quanto ele já cumpriu de cada missão.
+
+Quando a ferramenta for utilizada dentro da sala de aula, o educador poderá criar um grupo de trabalho e definir quais usuário e quais desafios este grupo irá compor. Desta forma, o educador poderá controlar o progresso de cada participante do grupo, podendo visualizar quantas tarefas o usuário já realizou, como ele solucionou os desafios e quais recompensas ele já ganhou.
 
 Visando ser utilizada em outras instituições, a ferramenta permite a criação de novas missões e desafios. Ampliando, desta forma, o uso da ferramenta para mais usuários.
 
-A ideia da ferramenta é que possa ser utilizada dentro da sala de aula, como já descrito, mas também fora. Para isso, a ferramenta contará com áreas que podem ser acessíveis por pessoas fora da disciplina. Desta forma, qualquer indivíduo que tenha interesse em utilizar a ferramenta poderá.
+A ideia da ferramenta é que possa ser utilizada dentro da sala de aula, como já descrito, mas também fora. Para isso, a ferramenta contará com áreas que podem ser acessíveis por pessoas fora da disciplina. Desta forma, qualquer indivíduo que tenha interesse em utilizar a ferramenta poderá utiliza-la.
 
-Tendo como objetivo dar assistência ao usuário no entendimento dos algoritmos utilizados, a ferramenta provê informações detalhadas dos algoritmos implementados, sendo possível visualizar uma explicação textual de seu funcionamento, além do código de sua implementação. Esta funcionalidade também pode servir como material didático, auxiliando na etapa de aprendizado de usuários como pouca conhecimento na área.
+\subsection{Validação}
 
-Recompensas
+A validação da ferramenta será realizada dentro de sala de aula. Para isso, será elaborado uma aula onde os alunos da disciplina irão utilizar a ferramenta como meio de aprendizagem. Serão propostas missão ao alunos.
 
-Pontos de experiência
+Esta validação busca identificar se a utilização da ferramenta pode auxiliar os alunos no ensino e aprendizagem de PDI. Verificar se sua utilização auxiliou na motivação dos estudante em relação a conteúdo da disciplina.
 
-Descrever as funcionalidades do sistema
+Após a utilização do ferramenta, será aplicado ao estudantes um questionário sobre a utilização da ferramenta. Este questionário será focado em avaliar se, na percepção dos estudantes, a ferramenta foi útil ou não.
 
-Rankins
-
-Progresso
-
-Exemplos de narrativas
-
-Como o software vai ser validado
+Também será solicitado ao educador avaliar a experiência da aplicação da ferramenta em sala de aula. Esta avaliação tem por objetivo extrair a percepção do avaliador em relação ao uso da ferramenta.
 
 \section{Considerações}
 
