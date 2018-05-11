@@ -556,6 +556,7 @@ Na Figura \ref{fig:suavizacao} é apresentado um conjunto de aplicações de fil
 
 % ---
 \section{Filtros passa-alta}
+\ref{sec:passaAlta}
 
 Filtros passa-alta diminuem ou eliminam baixas frequências, realçando as altas frequências. São filtros que destacam características como bordas, linhas e curvas, indicado mudanças repentinas nos níveis de intensidade entre duas regiões. Em geral, o resultado obtido através destes filtros é o de tornar mais nítidas as transições entre regiões da imagem \cite{conciAzevedoLeta:2008}.
 
@@ -586,9 +587,9 @@ Onde \(G_x\) e \(G_y\) corresponde ao resultado da multiplicação da matriz Z, 
 \[
 Z
 \begin{bmatrix}
-    z_0 & z_1 & z_2   
-	z_3 & z_4 & z_5      
-	z_6 & z_7 & z_8      
+    z_0 & z_1 & z_2    \\
+	z_3 & z_4 & z_5    \\  
+	z_6 & z_7 & z_8    \\  
 \end{bmatrix} 
 \]
 
@@ -606,9 +607,9 @@ G_x
 \end{bmatrix} 
 G_y
 \begin{bmatrix}
-    -1 & -2 & -1   \\ \hline
-	 0 &  0 & 0    \\ \hline   
-	 1 &  2 & 1    \\ \hline   
+    -1 & -2 & -1   \\ 
+	 0 &  0 & 0    \\ 
+	 1 &  2 & 1    \\    
 \end{bmatrix} 
 \]
 
@@ -1127,7 +1128,7 @@ Na Figura \ref{fig:esqueletizacao} são apresentados as aplicações de algoritm
 
 Segmentação é um processo que consiste em dividir a imagem em regiões. O objetivo deste processo é fazer com que os objetos e áreas de interesse de uma imagem tenham seus pixels agrupados e destacados do restante da imagem. A segmentação é um tema de extrema importância na área de análise de imagens, pois a identificação de partes de imagens que representam elementos de interesse é fundamental \cite{conciAzevedoLeta:2008}.  
 
-A segmentação de imagens é convencionalmente baseada em propriedades dos níveis de cinza de imagens, a descontinuidade e a similaridade. Os métodos da descontinuidade visam a identificação de objetos a partir de mudanças abruptas dos níveis de cinza da imagem, que caracterizam a borda de um objeto. Estes métodos foram tratados do seção XXX. Os métodos de similaridade tem como objetivo agrupar pontos semelhantes da imagem para um determinado conjunto de características \cite{pedriniSchwartz:2008}. Este métodos serão tratados nesta seção.
+A segmentação de imagens é convencionalmente baseada em propriedades dos níveis de cinza de imagens, a descontinuidade e a similaridade. Os métodos da descontinuidade visam a identificação de objetos a partir de mudanças abruptas dos níveis de cinza da imagem, que caracterizam a borda de um objeto. Estes métodos foram tratados do seção \ref{passaAlta}. Os métodos de similaridade tem como objetivo agrupar pontos semelhantes da imagem para um determinado conjunto de características \cite{pedriniSchwartz:2008}. Este métodos serão tratados nesta seção.
     
 % ---
 \subsection{Segmentação baseada em regiões}     
@@ -1180,7 +1181,7 @@ A implementação em java para o algoritmo pode ser acessado através do link: \
 
 \section{Considerações}
 
-Neste capítulo foi apresentado o referencial teórico referente a PDI, cumprindo, desta forma, o primeiro objetivo específico do trabalho. Foram abordadas as principais técnicas de PDI relacionadas a transformações geométricas, filtros passa-baixa, filtros passa-alta, morfologia matemática, afinamento de bordas e técnicas de segmentação. Todas as técnicas apresentadas estão implementadas na ferramenta VISNode que será aborda na sessão \ref{sec:visnode}.
+Neste capítulo foi apresentado o referencial teórico referente a PDI, cumprindo, desta forma, o primeiro objetivo específico do trabalho. Foram abordadas as principais técnicas de PDI relacionadas a transformações geométricas, filtros passa-baixa, filtros passa-alta, morfologia matemática, afinamento de bordas e técnicas de segmentação. Todas as técnicas apresentadas estão implementadas na ferramenta VISNode, que será aborda na seção \ref{sec:visnode}.
 
 No próximo capítulo serão abordados conceitos referente a gamificação. São abordados temas referente a sua diferença em relação a simulação e jogo, sua aplicação na educação e elementos da gamificação.
 
@@ -1220,7 +1221,7 @@ A simulação também está relacionada com a ideia de jogo. Mas diferente de um
 \label{fig:gamificacao}
 \end{figure}
 
-A Figura \ref{fig:gamificacao} contextualiza a gamificação, fazendo uma divisão em 4 sessões. As sessões acima do eixo horizontal compõem abordagens que fazem uso de conceitos de jogos (mais formal), já as sessões abaixo do eixo horizontal compõem abordagens que fazem uso de brincadeiras (livre e descontraída). Também há outra divisão realizada no eixo vertical da imagem, onde é separado abordagens que fazem uso de jogos  de abordagens que somente utilizam elementos de jogos.
+A Figura \ref{fig:gamificacao} contextualiza a gamificação, fazendo uma divisão em 4 seções. As seções acima do eixo horizontal compõem abordagens que fazem uso de conceitos de jogos (mais formal), já as seções abaixo do eixo horizontal compõem abordagens que fazem uso de brincadeiras (livre e descontraída). Também há outra divisão realizada no eixo vertical da imagem, onde é separado abordagens que fazem uso de jogos  de abordagens que somente utilizam elementos de jogos.
 
 A gamificação é uma abordagem que visa facilitar a aprendizagem e incrementar a motivação, através da utilização de conceitos provenientes dos jogos, como superar desafios, receber recompensas e ganhar pontuação. Um dos objetivos da gamificação é atrair a atenção da pessoa e motivá-la a executar a tarefa proposta, criando um ambiente onde haja um maior envolvimento \cite{kaap:2014}. Semelhante ao que acontece com o uso de \textit{serious game}, a gamificação utiliza jogos para um propósito diferente do uso normal para o entretenimento \cite{deterding2011game}.
 
@@ -1318,14 +1319,14 @@ As pessoas atingem um nível mais elevado de satisfação ao comparar seu desemp
 
 Neste capítulo foi apresentado o referencial teórico referente a gamificação, cumprindo, desta forma, o segundo objetivo específico do trabalho. Foi abordado o conceito de gamificação, sua aplicabilidade como ferramenta educacional e seus principais elementos .
 
-No próximo capítulo serão apresentados trabalhos relacionados ao trabalho desenvolvido. O primeiro trabalho apresentado (sessão \ref{sec:javavis}) é uma ferramenta que foi desenvolvida com o objetivo de auxiliar no ensino e aprendizagem de PDI. O segundo trabalho apresentado (sessão \ref{sec:classrom}) é uma ferramenta que foi desenvolvida visando melhorar o engajamento de estudantes, para isso, ela foi desenvolvida utilizando elementos da gamificação.
+No próximo capítulo serão apresentados trabalhos relacionados a pequisa desenvolvida. O primeiro trabalho apresentado (seção \ref{sec:javavis}) é uma ferramenta que tem o objetivo de auxiliar no ensino e aprendizagem de PDI. O segundo trabalho apresentado (seção \ref{sec:classrom}) é uma ferramenta que foi desenvolvida visando melhorar o engajamento de estudantes, para isso, ela utiliza elementos da gamificação.
 
 % ----------------------------------------------------------
 % Trabalhos correlatos
 % ----------------------------------------------------------
 \chapter{Trabalhos correlatos}
 
-Neste capítulo são apresentados trabalhos relacionados à área de pesquisa deste projeto. O objetivo é identificar e avaliar os propostas que outros autores utilizaram para tratar do tema do presente estudo.
+Neste capítulo são apresentados trabalhos relacionados à área de pesquisa deste projeto. O objetivo é identificar e avaliar as propostas que outros autores utilizaram para tratar do tema do presente estudo.
 
 % ---
 \section{JavaVis: An Integrated Computer Vision Library for Teaching Computer Vision}
@@ -1409,7 +1410,7 @@ Para os autores, o JavaVis possui algumas funcionalidades que permitem ao estuda
 \section{Classroom Live: a software-assisted gamification tool}
 \label{sec:classrom}
 
-A pesquisa de \citet{de2013classroom} tem por objetivo conseguir engajar os estudantes da US Air Force Academy. Para isso, foi desenvolvido um sistema cliente/servidor para servir como aporte para aulas gamificadas. O sistema é chamado de Classroom Live, e este faz uso do de computadores e acesso wireless para prover uma experiência \textit{online} e interativa de aprendizagem. Ao acessar o software, o aluno recebe “\textit{quests}” que são preparadas pelo instrutor. O instrutor pode acessar uma aplicação diferente para analisar a performance do estudante e recompensas em tempo real.
+A pesquisa de \citet{de2013classroom} tem por objetivo engajar os estudantes da US Air Force Academy. Para isso, foi desenvolvido um sistema cliente/servidor para servir como aporte para aulas gamificadas. O sistema é chamado de Classroom Live, e este faz uso do de computadores e acesso wireless para prover uma experiência \textit{online} e interativa de aprendizagem. Ao acessar o software, o aluno recebe “\textit{quests}” que são preparadas pelo instrutor. O instrutor pode acessar uma aplicação diferente para analisar a performance do estudante e recompensas em tempo real.
 
 Os autores desenvolveram o software visando a utilização em aulas do curso de ciência da computação, e que pudesse utilizar a infraestrutura já existente, como computadores e acesso a internet. O desenvolvimento da aplicação foi influenciado pelo \textit{feedback} de alunos e instrutores, servindo como guia para o desenvolvimento. Os autores citam alguns pontos que foram considerados durante o desenvolvimento do software:
 
@@ -1435,7 +1436,7 @@ A área \textit{“Create Achievements”}, permite ao instrutor criar uma bibli
 
 Durante as aulas, o instrutor terá quatro áreas para gerenciar as atividades dos alunos. Na área \textit{“Issue Quest”}, o instrutor poderá controlar as \textit{quests} existentes, podendo inativa-las, definir um tempo limite para a conclusão. Na área \textit{”Award Achievements”}, o instrutor tem a possibilidade de definir prêmios para os alunos. Na área \textit{“Track Student Progress”}, o instrutor pode observar o avanço dos alunos. Na última área, \textit{"Mark quest"} complete, o instrutor analisa o trabalho realizado pelo estudante e define se este cumprir com a especificação determinada ou não.
 
-Na sessão do alunos, existem 4 funcionalidades. A principal delas é a \textit{“Manege Active Quests”}, esta é a funcionalidade que permite o alunos visualizar suas \textit{quests} e enviar suas respectivas respostas. A funcionalidade \textit{“View Completed Quests”} possibilita ao aluno visualizar sua própria performance em \textit{quests} já concluídas, e também permite a visualização das respostas corretas paras as \textit{quests}. A funcionalidade \textit{“View Achievements”} permite a visualização de todas as conquista recebidas pelo usuário. Por final, a funcionalidade “Customize Avatar” é onde o aluno pode customizar a aparência de seu avatar a partir dos itens conquistados.
+Na seção do alunos, existem 4 funcionalidades. A principal delas é a \textit{“Manege Active Quests”}, esta é a funcionalidade que permite o alunos visualizar suas \textit{quests} e enviar suas respectivas respostas. A funcionalidade \textit{“View Completed Quests”} possibilita ao aluno visualizar sua própria performance em \textit{quests} já concluídas, e também permite a visualização das respostas corretas paras as \textit{quests}. A funcionalidade \textit{“View Achievements”} permite a visualização de todas as conquista recebidas pelo usuário. Por final, a funcionalidade “Customize Avatar” é onde o aluno pode customizar a aparência de seu avatar a partir dos itens conquistados.
 
 Para avaliar a eficácia do Classroom Live, os autores aplicaram a ferramenta em uma parte do curso de introdução a programação. A Figura \ref{fig:classroom_aula}, demonstra a sequência de eventos utilizados nesta experiência de aplicação em sala de aula. Cada lição começa com a criação de dois tipos de \textit{quests} por parte do instrutor. O primeiro corresponde a uma tarefa onde o aluno deve desenvolver e enviar um trecho de código fonte que corresponda a tarefa atribuída. O instrutor também desenvolve \textit{quests} de múltiplas escolhas relacionadas ao material ensinado na aula daquele dia. O instrutor tem a possibilidade de adicionar recompensas em ambas as \textit{quests}.
 
@@ -1470,9 +1471,9 @@ Segundo os autores, aparentemente os alunos gostaram de utilizar o Classroom Liv
 Os autores não conseguiram constatar se a utilização da ferramenta aumentou a performance dos estudantes, mas eles observaram que a aplicação obteve êxito em relação a melhorar o interesse e engajamento dos estudantes nas aula.
 
 \section{Considerações}
-Neste capítulo foi apresentado ferramentas relacionadas ao trabalho desenvolvido, cumprindo, desta forma, o terceiro objetivo específico do trabalho. Foi abordado o funcionamento das ferramente e como elas foram utilizadas em sala de aula.
+Neste capítulo foram apresentadas ferramentas relacionadas ao trabalho desenvolvido, cumprindo, desta forma, o terceiro objetivo específico do trabalho. Foi abordado o funcionamento das ferramentas e como elas foram utilizadas em sala de aula.
 
-No próximo capítulo será apresentado a proposta do trabalho. Será demonstrando o principal objetivo do trabalho e o que será feito para cumpri-lo, abordando quais elementos da gamificação serão utilizados e como serão implementados na ferramenta.
+No próximo capítulo será apresentada a proposta do trabalho. Será demonstrando o principal objetivo e o que será feito para cumpri-lo, abordando quais elementos da gamificação serão utilizados e como serão implementados na ferramenta.
 
 % ----------------------------------------------------------
 % Proposta
@@ -1481,17 +1482,17 @@ No próximo capítulo será apresentado a proposta do trabalho. Será demonstran
 
 O objetivo principal deste trabalho é o desenvolvimento de uma ferramenta gamificada para o auxílio ao ensino de processamento digital de imagens. Primeiramente foi realizado um estudo de sistemas com objetivos semelhantes e os principais conceitos de gamificação que serviram como aporte para o desenvolvimento da proposta. Estes estudos foram apresentados nos capítulos anteriores.
     
-Este trabalho fará uso da ferramenta VISNode (apresentada na sessão \ref{sec:visnode}). Esta ferramenta já se encarra de proporcionar um ambiente para a prototipação e experimentação de técnicas de PDI, possuindo diversas técnicas já implementadas. 
+Este trabalho fará uso da ferramenta VISNode (apresentada na seção \ref{sec:visnode}). Esta ferramenta já se encarrega de proporcionar um ambiente para a prototipação e experimentação de técnicas de PDI, possuindo diversas técnicas já implementadas. 
    
 % ---
 \section{VISNode}
 \label{sec:visnode}
 
-Esta ferramenta foi desenvolvida por alunos da Universidade Feevale após concluírem a disciplina de Processamento Digital de Imagem. Eles identificaram uma dificuldade para realizar a comparação de técnicas, com o mesmo objetivo, e escolher o parâmetro adequada para cada situação. Desta forma, foi desenvolvido um ferramenta que tem por objetivo demonstrar, de forma visual,  a execução de técnicas de PDI e como elas se conectam \cite{visnode}.
+Esta ferramenta foi desenvolvida por alunos da Universidade Feevale após concluírem a disciplina de Processamento Digital de Imagem. Eles identificaram uma dificuldade para realizar a comparação de técnicas, com o mesmo objetivo, e escolher o parâmetro adequada para cada situação. Desta forma, foi desenvolvida uma ferramenta que tem por objetivo demonstrar, de forma visual,  a execução de técnicas de PDI e como elas se conectam \cite{visnode}.
 
-O VISNode utiliza o conceito de processos, que consiste em operações que podem ser executados em entradas (\textit{inputs}) e gerar saídas (\textit{outputs}). Estas saídas podem ser imagens, valores numéricos, ou qualquer outra estrutura de dados necessária para a execução do processo. Os processos podem ser qualquer função que possa ser aplicada a um \textit{input} e gerar um \textit{output}, como por exemplo: de manipulação da imagem, como desfoque de Gauss, limiarização ou de inversão de cores; obtenção de informações, como a obtenção de estatísticas de cor;  extração de objetos \cite{visnode}.
+O VISNode utiliza o conceito de processos, que consiste em operações que podem ser executados em entradas (\textit{inputs}) e gerar saídas (\textit{outputs}). Estas saídas podem ser imagens, valores numéricos, ou qualquer outra estrutura de dados necessária para a execução do processo. Os processos podem ser qualquer função que possa ser aplicada a um \textit{input} e gerar um \textit{output}, como, por exemplo: de manipulação da imagem, como desfoque de Gauss, limiarização ou de inversão de cores; obtenção de informações, como a obtenção de estatísticas de cor;  extração de objetos \cite{visnode}.
 
-Cada processo da ferramenta é considerado um nodo, como em uma árvore ou grafo. Cada nodo possui entradas e saídas que podem ser conectadas a entradas e saídas de outros nodos para a execução sequencial. Para um processo de Threshold, por exemplo, a imagem de origem e o limiar numérico são os parâmetros de entrada, enquanto a imagem resultante da operação consiste no parâmetro de saída \cite{visnode}. 
+Cada processo da ferramenta é considerado um nodo, como em uma árvore ou grafo. Cada nodo possui entradas e saídas que podem ser conectadas a entradas e saídas de outros nodos para a execução sequencial. Para um processo de \textit{Threshold}, por exemplo, a imagem de origem e o limiar numérico são os parâmetros de entrada, enquanto a imagem resultante da operação consiste no parâmetro de saída \cite{visnode}. 
 
 Para determinados tipos de entrada é possível informar o valor manualmente no nodo ou via conexão. Por exemplo, para o nodo de limiarização é possível informar um valor numérico para o limiar diretamente no nodo, utilizando a interface gráfica, ou obter à partir da saída de outro nodo, como, por exemplo, a cor média da imagem \cite{visnode}.
 
@@ -1519,6 +1520,8 @@ PDI: implementações de algoritmos de processamento de imagens, que são aplica
 \item Acesso a Arquivos: camada de acesso arquivos do tipo DICOM.
 \end{enumerate}
 
+%TODO: Dizer as técnicas que foram implementadas%
+
 % ---
 \section{Proposta gamificada}
 
@@ -1534,16 +1537,16 @@ O principal objetivo do trabalho é desenvolver um ferramenta que motive os alun
 
 A ferramenta irá contar com desafios. Um desafio consiste em uma tarefa que o usuário deverá realizar. Cada desafio possuirá uma narrativa, na qual deve contextualizar o problema visando motivar o usuário à resolução do mesmo.
 
-A resolução do desafio deve ser realizada utilizando o VISNode, desta forma, o usuário deverá conectar as técnicas existente para obter o resultado esperado. O próprio software realizará a conferência se a solução proposta pelo usuário condiz com o resultado esperado. Informações como número de tentativa e duração serão armazenadas para análises por parte do educador.
+A resolução do desafio deve ser realizada utilizando o VISNode, desta forma, o usuário deverá conectar as técnicas existentes para obter o resultado esperado. O próprio software realizará a conferência se a solução proposta pelo usuário condiz com o resultado esperado. Informações como número de tentativas e duração serão armazenadas para análises por parte do educador.
 
 \subsubsection{Missões}
 
 Um missão consiste em um grande objetivo que o usuário deve alcançar. Cada missão será composta por desafios, desta forma, para um usuário concluir uma missão, este deverá concluir primeiramente uma seŕie de pequenos desafios. Estes desafios são pensados para que o aluno consiga dividir o problema em partes, desta forma, a resolução de um problema de maior complexidade é mais facilmente alcançada.
 
-Cada missão possuirá uma narrativa para que seja apresentado ao aluno a problemática a ser trabalhada. Esta narrativa irá descrever o problema como um todo e irá demonstrar o resultado final esperado. Abaixo será apresentado um exemplo de missão.
+Cada missão possuirá uma narrativa para que seja apresentado ao aluno a problemática a ser trabalhada. Esta narrativa descreverá o problema como um todo e demonstrará o resultado final esperado. 
 
-\subsubsection{Narrativa} 
-Uma loja procura uma maneira mais simples de calcular o valor em moedas existes em suas caixas registradoras. A cada encerramento de caixa, fica a cargo do operador realizar a conferência que quanto em valor existe em cada caixa. Levando em consideração este cenário, foi desenvolvido um equipamento que possui um câmera fotográfica a cima de um tablado. Pede-se para desenvolver um algoritmo de processamento digital de imagens que seja capaz de identificar cada moeda e calcular o valor existente no tablado. A Figura \ref{fig:exemploNarrativa} apresenta um exemplo da imagem capturada do tablado. 
+Uma missão pode ser exemplificada por:
+uma loja procura uma maneira mais simples de calcular o valor em moedas existes em suas caixas registradoras. A cada encerramento de caixa, fica a cargo do operador realizar a conferência de quanto em valor existe em cada caixa. Levando em consideração este cenário, foi desenvolvido um equipamento que possui um câmera fotográfica acima de um tablado. Pede-se para desenvolver um algoritmo de processamento digital de imagens que seja capaz de identificar cada moeda e calcular o valor existente no tablado. A Figura \ref{fig:exemploNarrativa} apresenta um exemplo da imagem capturada do tablado. 
 
 \begin{figure}[ht]
 \centering
@@ -1553,12 +1556,11 @@ Uma loja procura uma maneira mais simples de calcular o valor em moedas existes 
 \label{fig:exemploNarrativa}
 \end{figure}
 
-
-\subsubsection{Desafios}
+Os desafios desta missão podem ser:
 
 \begin{enumerate}
-\item \textbf{Pré-processamento}: Neste desafio os usuários terão de trabalhar para melhorar a qualidade da imagens para que seja possível realizar o processo de segmentação. Como resultado espera-se que seja retornado uma imagem binária, onde os pixels com valor 0 correspondam ao fundo da imagem, e os pixels com valor 1 correspondam as moedas.
-\item \textbf{Cálculo do valor}: Neste desafios os usuários terão que executar algum procedimento que realize a segmentação das imagens. Após este procedimento, deveram extrair características de cada objeto para que seja possível identificar qual é o valor monetário de cada imagem.
+\item \textbf{Pré-processamento}: Neste desafio os usuários terão de trabalhar para melhorar a qualidade da imagem para que seja possível realizar o processo de segmentação. Como resultado espera-se que seja retornado uma imagem binária, onde os pixels com valor 0 correspondam ao fundo da imagem, e os pixels com valor 1 correspondam as moedas.
+\item \textbf{Cálculo do valor}: Neste desafios os usuários terão que executar algum procedimento que realize a segmentação das imagens. Após este procedimento, deverão extrair características de cada objeto para que seja possível identificar qual é o valor monetário de cada imagem.
 \end{enumerate}
 
 \subsubsection{Recompensas e pontos de experiência}
@@ -1567,22 +1569,22 @@ Ao completar missões e desafios o usuário receberá pontos de experiência. Ca
 
 Além dos pontos de experiência, o usuário poderá receber algumas recompensas. Um exemplo de recompensa seria o usuário receber um parte de uma imagem a cada desafio completado. Após a conclusão de alguns desafios, o usuário possuirá a imagem completa.
 
-\subsubsection{Rankings}
+\subsubsection{\textit{Rankings}}
 
-Tendo em visa a possibilidade do usuário se situar em relação ao seu desempenho comparado com outros usuários, a ferramenta possuirá um ranking. Este ranking levará em consideração a pontuação conquistada por cada usuário para posiciona-los em suas respectivas colocações.
+Tendo em visa a possibilidade do usuário se situar em relação ao seu desempenho comparado com outros usuários, a ferramenta possuirá um \textit{ranking}. Este ranking levará em consideração a pontuação conquistada por cada usuário para posiciona-los em suas respectivas colocações.
 
 
 \subsection{Utilização}
 
-A parte gamificada da ferramenta será acessar através de um cadastro e login no sistema. Isso se torna necessário para poder identificar o usuário que esta acessando o sistema, e também para controlar o progresso de cada usuário. Após o usuário logado, ele terá acesso a todas as funcionalidades referentes a parte gamificada da ferramenta.
+A parte gamificada da ferramenta será acessada através de um cadastro e \textit{login} no sistema. Isso se torna necessário para identificar o usuário que esta acessando o sistema, e também para controlar o progresso de cada usuário. Após o usuário logado, ele terá acesso a todas as funcionalidades referentes a parte gamificada da ferramenta.
 
-Logado no sistema, o usuário possui acesso ao menu de missões. Neste local o usuário encontrará diversas missões com diferentes objetivos e graus de dificuldades diferentes. O usuário poderá selecionar uma missão para ser realiza e cada conquista receberá suas respectivas recompensas.
+Logado no sistema, o usuário possui acesso ao menu de missões. Neste local o usuário encontrará diversas missões com diferentes objetivos e graus de dificuldades. O usuário poderá selecionar uma missão para ser realiza e a cada missão cumprida receberá suas respectivas recompensas.
 
-A ferramenta exibirá os pontos do usuário na página principal do sistema. Isso ocorrerá para que os usuário recebem um \textit{feedback} o mais rápido possível.
+A ferramenta exibirá os pontos do usuário na página principal do sistema. Isso ocorrerá para que os usuários recebem um \textit{feedback} o mais rápido possível.
 
-O usuário terá acesso a dois menus responsável pelo ranking e uma lista das recompensas conquistas pelo usuário. Também haverá uma página onde o usuário poderá visualizar seu progresso em cada missão, sendo possível visualizar o quanto ele já cumpriu de cada missão.
+O usuário terá acesso a mais dois menus responsáveis pelo \textit{ranking} e uma lista das recompensas conquistas pelo usuário. Também haverá uma página onde o usuário poderá visualizar seu progresso em cada missão, sendo possível visualizar o quanto ele já cumpriu de cada missão.
 
-Quando a ferramenta for utilizada dentro da sala de aula, o educador poderá criar um grupo de trabalho e definir quais usuário e quais desafios este grupo irá compor. Desta forma, o educador poderá controlar o progresso de cada participante do grupo, podendo visualizar quantas tarefas o usuário já realizou, como ele solucionou os desafios e quais recompensas ele já ganhou.
+Quando a ferramenta for utilizada dentro da sala de aula, o educador poderá criar um grupo de trabalho e definir quais usuários e quais desafios este grupo irá compor. Desta forma, o educador poderá controlar o progresso de cada participante do grupo, podendo visualizar quantas tarefas o usuário já realizou, como ele solucionou os desafios e quais recompensas ele já ganhou.
 
 Visando ser utilizada em outras instituições, a ferramenta permite a criação de novas missões e desafios. Ampliando, desta forma, o uso da ferramenta para mais usuários.
 
@@ -1590,19 +1592,19 @@ A ideia da ferramenta é que possa ser utilizada dentro da sala de aula, como j�
 
 \subsection{Validação}
 
-A validação da ferramenta será realizada dentro de sala de aula. Para isso, será elaborado uma aula onde os alunos da disciplina irão utilizar a ferramenta como meio de aprendizagem. Serão propostas missão ao alunos.
+A validação da ferramenta será realizada dentro de sala de aula. Para isso, será elaborado uma aula onde os alunos da disciplina irão utilizar a ferramenta como meio de aprendizagem. Nesta aula, serão propostas, aos alunos, missão e desafios a serem realizados.
 
-Esta validação busca identificar se a utilização da ferramenta pode auxiliar os alunos no ensino e aprendizagem de PDI. Verificar se sua utilização auxiliou na motivação dos estudante em relação a conteúdo da disciplina.
+A validação busca identificar se a utilização da ferramenta pode auxiliar os alunos no ensino e aprendizagem de PDI. Analisando se sua utilização auxiliou na motivação dos estudante em relação a conteúdo da disciplina.
 
-Após a utilização do ferramenta, será aplicado ao estudantes um questionário sobre a utilização da ferramenta. Este questionário será focado em avaliar se, na percepção dos estudantes, a ferramenta foi útil ou não.
+Após a utilização do ferramenta, será aplicado ao estudantes um questionário sobre a utilização da ferramenta. Este questionário será focado em avaliar se, na percepção dos estudantes, a ferramenta auxiliou na motivação e engajamento.
 
 Também será solicitado ao educador avaliar a experiência da aplicação da ferramenta em sala de aula. Esta avaliação tem por objetivo extrair a percepção do avaliador em relação ao uso da ferramenta.
 
 \section{Considerações}
 
-Neste capítulo foi apresentado a proporta do trabalho, cumprindo, desta forma, o quarto objetivo específico do trabalho. Foi demonstrando o principal objetivo do trabalho e o que será feito para cumpri-lo, abordando quais elementos da gamificação serão utilizados e como serão implementados na ferramenta.
+Neste capítulo foi apresentada a proposta do trabalho, cumprindo, desta forma, o quarto objetivo específico do trabalho. Foi demonstrando o principal objetivo do trabalho e o que será feito para cumpri-lo, abordando quais elementos da gamificação serão utilizados e como serão implementados na ferramenta.
 
-No próximo capitulo será apresentado o desenvolvimento da ferramenta. Será demonstrado o as tecnologias envolvidas no desenvolvimento e as etapas realizadas até a conclusão do desenvolvimento e o resultado final da implementação.
+No próximo capítulo será apresentado o desenvolvimento da ferramenta. Serão demonstradas as tecnologias envolvidas no desenvolvimento e as etapas realizadas até a conclusão do desenvolvimento e o resultado final da implementação.
 
 % ----------------------------------------------------------
 % Desenvolvimento
@@ -1610,6 +1612,11 @@ No próximo capitulo será apresentado o desenvolvimento da ferramenta. Será de
 \chapter{Desenvolvimento} 
 
 %https://invis.io/XWGWAN156ES#/291345781_01
+
+- Página de explicação dos algoritmos
+- Processo (Script Process)
+
+
 
 % ---
 \section{Arquitetura}
