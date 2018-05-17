@@ -870,6 +870,6 @@
 Fonte: {#1}
 }
 
-\newcommand{\sourceAuthor}{\source{do autor}}
+\newcommand{\sourceAuthor}{\source{elaborado pelo autor}}
 
 \newcommand{\citet}{\citeonline}

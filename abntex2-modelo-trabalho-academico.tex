@@ -232,7 +232,7 @@ Mesmo com o esforço e dedicação de educadores de universidades, estudantes se
 
 A gamificação é uma abordagem que visa facilitar a aprendizagem e incrementar a motivação, através da utilização de conceitos provenientes dos jogos como superar desafios, receber recompensas e ganhar pontuação. Um dos objetivos da gamificação é atrair a atenção da pessoa e motivá-la a executar a tarefa proposta, criando um ambiente onde haja um maior envolvimento \cite{kaap:2014}.   
 
-Os avanços de pesquisa e utilização de  (PDI) cresce fortemente nas mais diversas áreas de conhecimento. Em medicina, por exemplo, procedimentos são utilizados para melhorar a qualidade de imagens médicas através da alteração de contraste ou intensidade de contraste, facilitando, desta forma, a interpretação por parte de profissionais da área da saúde \cite{ronnau2015}. Da mesma forma, PDI pode ser encontrado em astronomia \cite{grice20153d}, biologia \cite{hardy2017advanced}, aplicações industriais \cite{dai2015advances} e apoio a defesa \cite{mendoza2016development}. Devido a esta importância, a disciplina de PDI é presente em quase todos os programas de graduação dos cursos de Ciência da Computação e Sistemas de Informação \cite{garcia2015colfdimap}.
+Os avanços de pesquisa e utilização de Processamento Digital de Imagens (PDI) cresce fortemente nas mais diversas áreas de conhecimento. Em medicina, por exemplo, procedimentos são utilizados para melhorar a qualidade de imagens médicas através da alteração de contraste ou intensidade de contraste, facilitando, desta forma, a interpretação por parte de profissionais da área da saúde \cite{ronnau2015}. Da mesma forma, PDI pode ser encontrado em astronomia \cite{grice20153d}, biologia \cite{hardy2017advanced}, aplicações industriais \cite{dai2015advances} e apoio a defesa \cite{mendoza2016development}. Devido a esta importância, a disciplina de PDI é presente em quase todos os programas de graduação dos cursos de Ciência da Computação e Sistemas de Informação \cite{garcia2015colfdimap}.
 
 PDI é composta por diversas etapas, iniciando pela aquisição da imagem, passando pelo processamento e segmentação até a exibição da imagem ou informações provenientes destas. A etapa de processamento de imagens é composta por procedimentos que são apresentados em forma de algoritmos \cite{gonzalesWoods:2008}. Por estes algoritmos expressarem funções matemáticas complexas, softwares podem ser úteis para auxiliar alunos a entender estes conceitos sem desconsiderar a teoria matemática \cite{lopez2016teaching}. A tecnologia é uma poderosa ferramenta para o processo de ensino e aprendizagem, oferecendo ambientes de simulação e prototipação para educadores e estudantes, que servem como aporte do ensino \cite{henderson2017works}.
 
@@ -244,12 +244,9 @@ Portanto, este trabalho tem como objetivo desenvolver módulos para a ferramenta
 
 O módulo desenvolvido proporcionará aos estudantes um ambiente onde seja possível o aprendizado através da experimentação de técnicas de PDI. A partir da ferramenta será possível consultar materiais teóricos que descrevem o funcionamento das técnicas de PDI, além do pseudocódigo de seus algoritmos. Tendo em vista que a busca por material teórico pode ser um desafio, pois normalmente estas matérias possuem o referencial matemático e a escrita de forma algorítmica pode ser difícil. Além disso, a ferramenta contará com um ambiente de desafios que tem como objetivo incentivar estudantes através da resolução de problemas relacionados a área de PDI.
 
-Os procedimentos metodológicos adotados neste trabalho seguem as definições de
-\cite{prodanov2013metodologia}, sendo caracterizado como uma pesquisa aplicada, em que o
-ferramenta criado poderá ser utilizado diretamente nas de educação. Também é possível caracterizá-lo como uma pesquisa experimental, pois a solução encontrada envolveu testes práticos para a validação da ferramenta. Esta validação será realizada em sala de aula, utilizando a ferramenta desenvolvida e aplicando os desafios propostos por ela nos alunos.
+Os procedimentos metodológicos adotados neste trabalho seguem as definições de \cite{prodanov2013metodologia}, sendo caracterizado como uma pesquisa aplicada, em que a ferramenta criada poderá ser utilizada como aporte para o ensino. Também é possível caracterizá-lo como uma pesquisa experimental, pois a solução encontrada envolveu testes práticos para a validação da ferramenta. Esta validação será realizada em sala de aula, utilizando a ferramenta desenvolvida e aplicando os desafios propostos por ela nos alunos.
 
-Quanto aos procedimentos técnicos adotados, inicialmente foi realizada uma pesquisa
-bibliográfica sobre os principais temas abordados, gamificação e PDI. Da mesma forma, foi realizada uma revisão de trabalhos correlatos buscando, nos experimentos estudados, aporte técnico e científico para o desenvolvimento do projeto.
+Quanto aos procedimentos técnicos adotados, inicialmente foi realizada uma pesquisa bibliográfica sobre os principais temas abordados, gamificação e PDI. Da mesma forma, foi realizada uma revisão de trabalhos correlatos, buscando, nos experimentos estudados, aporte técnico e científico para o desenvolvimento do projeto.
 
 Este trabalho está dividido em seis capítulos. No Capítulo 1 são expostas diferentes técnicas aplicadas no PDI, que foram estudadas na busca de embasamento técnico para o desenvolvimento da ferramenta. O Capítulo 2 trata da gamificação e seus conceitos, apresentando os principais elementos que podem ser utilizados na aplicação de gamificação. No Capitulo 3 são apresentadas algumas pesquisas que já foram feitas na área de desenvolvimento de ferramentas para o ensino e ferramentas gamificadas. No Capítulo 4 é abordado a proposta que o trabalho se prontifica a fazer. Será apresentado o principal objetivo do trabalho e o que será feito para cumpri-lo, abordando quais elementos da gamificação serão utilizados e como serão implementados na ferramenta. O Capítulo 5 aborda o desenvolvimento da ferramenta, com detalhes de seu funcionamento e das técnicas que foram utilizadas. O Capítulo 6 demonstra o processo de validação e os resultados obtidos nessa etapa, seguido das considerações finais.
 
@@ -264,7 +261,7 @@ Um sistema de processamento de imagens é composto por um conjunto de etapas, de
 
 A etapa de aquisição tem como objetivo capturar a imagem por meio de um dispositivo e converte-la adequadamente para uma representação digital. A etapa de pré-processamento visa a melhora da qualidade da imagem, utilizando técnicas para a diminuição de ruídos, a correção de contraste e a suavização da imagem. A etapa de segmentação é responsável pela extração e identificação de áreas de interesse, geralmente utilizando técnicas de detecção de bordas ou regiões \cite{pedriniSchwartz:2008}.
 
-A etapa de representação e descrição é responsável  pelo armazenamento e manipulação dos objetos extraídos da imagem. Além disso, este processo visa a extração de características dos objetivos extraídos. A etapa de reconhecimento e interpretação, é a etapa que rotula os objetivos da imagem, utilizando, para isso, as características extraídas na etapa anterior. Além da rotulação, é responsabilidade desta etapa atribuir um significado ao conjunto de objetos reconhecidos \cite{pedriniSchwartz:2008}. 
+A etapa de representação e descrição é responsável pelo armazenamento e manipulação dos objetos extraídos da imagem. Além disso, este processo visa a extração de características dos objetivos extraídos. A etapa de reconhecimento e interpretação é responsável por rotular os objetos da imagem, utilizando, para isso, as características extraídas na etapa anterior. Além da rotulação, é responsabilidade deste procedimento atribuir um significado ao conjunto de objetos reconhecidos \cite{pedriniSchwartz:2008}. 
 
 Para o processamento digital de imagens é necessário que a imagem possa ser manipulada digitalmente. Segundo \citet{pedriniSchwartz:2008}, uma imagem digital pode ser representada através de uma matriz bidimensional, onde cada elemento desta matriz corresponde a um ponto da imagem. Cada um destes pontos representa uma cor ou um tom de cinza e são denominados pixels. 
 
@@ -284,7 +281,6 @@ O cálculo da distribuição de níveis cor de uma imagem é denominado histogra
 \sourceAuthor
 \end{figure}
 
-
 Segundo \citet{conciAzevedoLeta:2008}, o histograma pode ser obtido da seguinte forma: analisa-se o tom de cada pixel; realiza-se a contagem do número de pixeis de cada intensidade de cor; representa-se esses valores na forma gráfica, correspondendo a frequência de cada tom.
 
 Um processo comumente aplicado em técnicas de PDI é a convolução. Segundo \citet{pedriniSchwartz:2008}, o processo de convolução faz uso de matrizes, que são denominadas máscaras, para aplicar modificações na imagem pixel a pixel. A máscara, também conhecida como \textit{kernel} é uma matriz bidimensional quadrada. Usualmente, esta matriz possui um tamanho ímpar e dimensões quadradas, estas características são importantes para que a máscara possua um pixel central.
@@ -301,13 +297,13 @@ Limiarização ou \textit{Threshold} é uma técnica que consiste em comparar ca
 \begin{figure}[ht]
 \centering
 
-\caption{\textbf{Imagem colorida (a) e a imagem correspondente após a aplicação do threshold}}
+\caption{\textbf{Imagem colorida (a) e a imagem correspondente após a aplicação do \textit{threshold}}}
 \includegraphics[width=0.6\textwidth]{imagens/limiarizacao.png}
 \sourceAuthor
 \label{fig:limiarizacaofig}
 \end{figure}
 
-Na Figura \ref{fig:limiarizacaofig} é aplicado um \textit{Threshold} de 190, desta forma, os pixels com valores maiores que 190 recebem a cor branca, enquanto os pixels com valores inferiores recebem a cor preta. A imagem resultante será composta por pixels pretos e brancos variando, sendo 0 ou 255.A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2K1QO9S}
+Na Figura \ref{fig:limiarizacaofig} é aplicado um \textit{Threshold} de 190, desta forma, os pixels com valores maiores que 190 recebem a cor branca, enquanto os pixels com valores inferiores recebem a cor preta. A imagem resultante será composta por pixels pretos e brancos variando, sendo 0 ou 255. A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2K1QO9S}
 
 Uma maneira comum para a identificação do \textit{Threshold} a ser utilizado é através do histograma da imagem, sendo que através do histograma se tem uma visão geral da distribuição das tonalidades da imagem. Em um histograma com dois picos, o valor entre os dois picos pode ser utilizado como \textit{Threshold}, onde os picos representam as cores com maior ocorrência \cite{gonzalesWoods:2008}. 
 
@@ -340,7 +336,7 @@ A Figura \ref{fig:brilho} apresenta imagens que representam a imagem original (d
 % ---
 \section{Transformações geométricas}
 
-Transformações geométricas são aquelas que possuem o objetivo de permitir o mapeamento entre posições espaciais da imagem e a imagem modificada. Estas transformações consistem em aplicar operações responsáveis pela reorganização dos pixels da imagem \cite{pedriniSchwartz:2008}. São operações que modificam os tons dos pixel na posição (\(x_o, y_o\)) da imagem de origem para outra imagem (\(x_d, y_d\))de destino, alterando, desta forma, a posição dos pixels \cite{conciAzevedoLeta:2008}.
+Transformações geométricas são aquelas que possuem o objetivo de permitir o mapeamento entre posições espaciais da imagem e a imagem modificada. Estas transformações consistem em aplicar operações responsáveis pela reorganização dos pixels da imagem \cite{pedriniSchwartz:2008}. São operações que modificam os tons dos pixel na posição (\(x_o, y_o\)) da imagem de origem para outra imagem (\(x_d, y_d\)) de destino, alterando, desta forma, a posição dos pixels \cite{conciAzevedoLeta:2008}.
 
 Transformações espaciais podem ser realizadas através da multiplicação de matrizes, expressa por:
 
@@ -434,7 +430,7 @@ E_{xy}
 
 Onde \(E_yz\) refere-se a reflexão no eixo \(xy\), \(E_xz\) refere-se a reflexão no eixo \(xz\) e \(E_xy\) refere-se a reflexão no eixo \(xy\).
 
-Segundo \citet{conciAzevedoLeta:2008}, um \textit{flip} horizontal pode ser definido por uma rotação de 180º com os valores das coordenadas \(y_0\) invertidas (representado pela máscara \(E_yz\)) e um \textit{flip} vertical pode ser definido por uma rotação de 180º com os valores das coordenadas x0invertidas (representado pela máscara \(E_xz\));
+Segundo \citet{conciAzevedoLeta:2008}, um \textit{flip} horizontal pode ser definido por uma rotação de 180º com os valores das coordenadas \(y_0\) invertidas (representado pela máscara \(E_yz\)) e um \textit{flip} vertical pode ser definido por uma rotação de 180º com os valores das coordenadas \(x_0\) invertidas (representado pela máscara \(E_xz\));
 
 A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KIZRxn}
 
@@ -556,13 +552,13 @@ Na Figura \ref{fig:suavizacao} é apresentado um conjunto de aplicações de fil
 
 % ---
 \section{Filtros passa-alta}
-\ref{sec:passaAlta}
+\label{sec:passaAlta}
 
 Filtros passa-alta diminuem ou eliminam baixas frequências, realçando as altas frequências. São filtros que destacam características como bordas, linhas e curvas, indicado mudanças repentinas nos níveis de intensidade entre duas regiões. Em geral, o resultado obtido através destes filtros é o de tornar mais nítidas as transições entre regiões da imagem \cite{conciAzevedoLeta:2008}.
 
 Segundo \citet{pedriniSchwartz:2008}, técnicas de detecção de bordas fazem uso de uma abordagem onde é realizado um cálculo de um operador local, que determina uma mudança abrupta de níveis de cinza. Uma borda é uma fronteira ou limite entre regiões com intensidades distintas de níveis de cinza
 
-Um operador utilizado para a detecção de mudanças significativas nos níveis de cinza de uma imagem é o gradiente. O gradiente é um vetor cuja direção indica os locais onde os níveis de cinza sofreram maior variação \cite{pedriniSchwartz:2008}. Técnicas de detecção de contornos assumem que a transição entre regiões a serem segmentadas são caracterizadas por um variação nos níveis de cinza da imagem, desta forma, uma grande variação dos níveis de cinza pode indicar a presença das fronteiras entre objetos \cite{conciAzevedoLeta:2008}. 
+Um operador utilizado para a detecção de mudanças significativas nos níveis de cinza de uma imagem é o gradiente. O gradiente é um vetor cuja direção indica os locais onde os níveis de cinza sofreram maior variação \cite{pedriniSchwartz:2008}. Técnicas de detecção de contornos assumem que a transição entre regiões a serem segmentadas são caracterizadas por uma variação nos níveis de cinza da imagem, desta forma, uma grande variação dos níveis de cinza pode indicar a presença das fronteiras entre objetos \cite{conciAzevedoLeta:2008}. 
 
 O gradiente de uma imagem, para a função \(f(x,y)\) na coordenadas \(x,y\), pode ser definido como um vetor formado pelas suas derivadas parciais:
 
@@ -581,7 +577,7 @@ A magnitude do gradiente se relaciona com a taxa de variação da imagem por uni
 \end{figure}
 
 
-Onde \(G_x\) e \(G_y\) corresponde ao resultado da multiplicação da matriz Z, que corresponde aos tons da região analisada, com as máscaras de convolução \(G_x\) e \(G_y\) respectivamente
+Onde \(G_x\) e \(G_y\) corresponde ao resultado da multiplicação da matriz Z, que corresponde aos tons da região analisada, com as máscaras de convolução \(G_x\) e \(G_y\) respectivamente.
 
 
 \[
@@ -622,7 +618,7 @@ A implementação em java para o algoritmo pode ser acessado através do link: \
 
 % ---
 \subsection{Roberts}
-O operador de Roberts corresponde ao método mais simples de detecção de bordas. Como resultado, em regiões que possuem contraste bem definido, obtém-se uma imagem com intensidades altas, e baixos valores em regiões com pouco contraste. Este operador caracteriza-se por um orientação a 45º, desta forma, bordas inclinadas são mais realçadas que outras. Outra característica deste operador é a sensibilidade a ruído \cite{conciAzevedoLeta:2008}.
+O operador de Roberts corresponde ao método mais simples de detecção de bordas. Como resultado, em regiões que possuem contraste bem definido, obtém-se uma imagem com intensidades altas, e baixos valores em regiões com pouco contraste. Este operador caracteriza-se por uma orientação a 45º, desta forma, bordas inclinadas são mais realçadas que outras. Outra característica deste operador é a sensibilidade a ruído \cite{conciAzevedoLeta:2008}.
 
 O operador de Roberts faz uso de duas máscaras de tamanho 2 x 2, sendo que uma é aplicada no sentido horizontal e a outro é aplicada no sentido vertical \cite{pedriniSchwartz:2008}.
 
@@ -649,7 +645,7 @@ A implementação em java para o algoritmo pode ser acessado através do link: \
 % ---
 \subsection{Prewith}
 
-O operador de Prewith faz uso de duas máscaras de tamanho 3 x 3, sendo que uma é aplicada no sentido horizontal e a outro é aplicada no sentido vertical \cite{pedriniSchwartz:2008}.	
+O operador de Prewith faz uso de duas máscaras de tamanho 3 x 3, sendo que uma é aplicada no sentido horizontal e a outra é aplicada no sentido vertical \cite{pedriniSchwartz:2008}.	
 
 \[
 G_x
@@ -1004,7 +1000,7 @@ Segundo \citet{guilherme:2007}, o algoritmo de Stentiford é composto por seis p
 \item Marca o ponto como apagado caso o pixel não seja um ponto final e sua conectividade seja igual a 1;
 \item Repetir os passos 1 e 2 para todos os pixels da imagem que se encaixem na máscara M1;
 \item Repetir os passos 1, 2 e 3 para as máscaras M2, M3 e M4;
-\item Apagar todos os pixels que estejam marcados para serem apagado;
+\item Apagar todos os pixels que estejam marcados para serem apagados;
 \item Se algum ponto foi apagado no passo 5, os passos a partir do passo 1 devem ser repetidos.
 \end{itemize}
 
@@ -1128,7 +1124,7 @@ Na Figura \ref{fig:esqueletizacao} são apresentados as aplicações de algoritm
 
 Segmentação é um processo que consiste em dividir a imagem em regiões. O objetivo deste processo é fazer com que os objetos e áreas de interesse de uma imagem tenham seus pixels agrupados e destacados do restante da imagem. A segmentação é um tema de extrema importância na área de análise de imagens, pois a identificação de partes de imagens que representam elementos de interesse é fundamental \cite{conciAzevedoLeta:2008}.  
 
-A segmentação de imagens é convencionalmente baseada em propriedades dos níveis de cinza de imagens, a descontinuidade e a similaridade. Os métodos da descontinuidade visam a identificação de objetos a partir de mudanças abruptas dos níveis de cinza da imagem, que caracterizam a borda de um objeto. Estes métodos foram tratados do seção \ref{passaAlta}. Os métodos de similaridade tem como objetivo agrupar pontos semelhantes da imagem para um determinado conjunto de características \cite{pedriniSchwartz:2008}. Este métodos serão tratados nesta seção.
+A segmentação de imagens é convencionalmente baseada em propriedades dos níveis de cinza de imagens, a descontinuidade e a similaridade. Os métodos da descontinuidade visam a identificação de objetos a partir de mudanças abruptas dos níveis de cinza da imagem, que caracterizam a borda de um objeto. Estes métodos foram tratados do seção \ref{sec:passaAlta}. Os métodos de similaridade tem como objetivo agrupar pontos semelhantes da imagem para um determinado conjunto de características \cite{pedriniSchwartz:2008}. Este métodos serão tratados nesta seção.
     
 % ---
 \subsection{Segmentação baseada em regiões}     
@@ -1149,7 +1145,7 @@ Após a detecção da regiões, comumente é realizada a identificação destas 
 \label{fig:crescimento_regiao}
 \end{figure}
 
-Na Figura \ref{fig:crescimento_regiao} é apresentado um exemplo de uma aplicação de crescimento de regiões. (a) representa a imagem origem. (b) representa uma segmentação utilizando como limiar (T) 4, desta forma, a diferença absoluta entre a semente e o valor do pixel analisado deve ser menor do que 4 para que o pixel seja considerado pertencente a região da semente. Os pontos (1, 1) e (1,5) representam as sementes utilizadas para o método. O predicado P, utilizado para adicionar um pixel em uma região, pode ser observado na fórmula:
+Na Figura \ref{fig:crescimento_regiao} é apresentado um exemplo de uma aplicação de crescimento de regiões. (a) representa a imagem origem, (b) representa uma segmentação utilizando como limiar (T) 4, desta forma, a diferença absoluta entre a semente e o valor do pixel analisado deve ser menor do que 4 para que o pixel seja considerado pertencente a região da semente. Os pontos (1, 1) e (1,5) representam as sementes utilizadas para o método. O predicado P, utilizado para adicionar um pixel em uma região, pode ser observado na fórmula:
 
 \begin{figure}[ht]
 \centering
@@ -1172,8 +1168,6 @@ O ajuste da curva é realizado levando em consideração forças internas e exte
 \sourceAuthor
 \label{fig:snake}
 \end{figure}
-
-\citet{de2013classroom}
 
 Na Figura \ref{fig:snake} é demonstrado uma execução do método de Snakes. (a) é o contorno inicial. (b) é o contorno resultante após aplicação de algumas etapas. (c) contorno final.
 
@@ -1241,7 +1235,7 @@ Portanto, a ideia por trás da aplicação da gamificação na educação é adi
 % ---
 \subsection{Motivação intrínseca e extrínseca}
 
-Uma questão bastante polêmica em torno da gamificação é comparação entre motivação intrínseca e motivação extrínseca. É argumentado que a gamificação faz uso de muitos fatores externos (extrínsecos) para motivar os alunos e é deixado de lado os fatores internos (intrínsecos) \cite{fardo2013gamificaccao}.
+Uma questão bastante polêmica em torno da gamificação é a comparação entre motivação intrínseca e motivação extrínseca. É argumentado que a gamificação faz uso de muitos fatores externos (extrínsecos) para motivar os alunos e é deixado de lado os fatores internos (intrínsecos) \cite{fardo2013gamificaccao}.
 
 A motivação intrínseca é aquela originada pelo próprio indivíduo. O envolvimento do indivíduo ocorre por vontade própria,  pois é motivado por interesse, desafio ou prazer. Além da busca por novidades, curiosidade e vontade de aprender algo novo. Desta forma, o indivíduo participa de uma atividade pois ela proporciona satisfação \cite{busarello2016gamificaccao}.
 
@@ -1257,7 +1251,7 @@ Nesta seção serão apresentado os principais elementos utilizados em soluçõe
 % ---
 \subsection{Narrativas}
 
-A narrativa é um elemento fundamental no contextos de games, pois este é o elemento chave para o acontecimento de eventos e para justificar as ações de jogadores. Uma boa história pode contribuir para o envolvimento do jogador através da interatividade proporcionada por ela  \cite{fardo2013gamificaccao}. Sendo \citet{kaap:2014}, a utilização de histórias, como um elemento gamificado, fornece relevância e significado para experiências obtidas pelo usuário, fornecendo um cenário propício para a aplicação de tarefas.
+A narrativa é um elemento fundamental no contexto de games, pois este é o elemento chave para o acontecimento de eventos e para justificar as ações de jogadores. Uma boa história pode contribuir para o envolvimento do jogador através da interatividade proporcionada por ela  \cite{fardo2013gamificaccao}. Sendo \citet{kaap:2014}, a utilização de histórias, como um elemento gamificado, fornece relevância e significado para experiências obtidas pelo usuário, fornecendo um cenário propício para a aplicação de tarefas.
 
 Segundo \citet{fardo2013gamificaccao} é mais agradável aprender novas informações e adquirir novos conhecimento que estejam relacionados a um determinado contexto, e a narrativa pode ser uma fonte para fornecer contextos. Além disso, envolver o aluno em uma história pode contribuir para que a aprendizagem se torne mais poderosa, sendo que uma história focada em ajudar os alunos a resolver problemas, contribui para a educação do aluno e facilita a memorização do conteúdo abordado.
 
@@ -1278,7 +1272,7 @@ Este elemento pode ser utilizado para diversos propósitos. Uma de suas aplicaç
 % ---
 \subsection{Medalhas}
 
-Medalhas são a comprovação de que uma determinada tarefa foi realizada com mérito ou excelência. Em um sistema gamificado, o uso de medalhas ocorre através de uma indicação visual de que se tenha alcançado um determinado nível ou se tenha comprido um determinado conjunto de objetivos. Para \citet{deterding2011game}, medalhas são apresentadas em algum lugar ou de alguma forma para que outros jogadores possam observar as conquistas e a realização do jogador. O uso de medalhas pode motivar um maior envolvimento por parte dos usuários do sistema, devido a busca por um determinado emblema.
+Medalhas são a comprovação de que uma determinada tarefa foi realizada com mérito ou excelência. Em um sistema gamificado, o uso de medalhas ocorre através de uma indicação visual de que se tenha alcançado um determinado nível ou se tenha cumprido um determinado conjunto de objetivos. Para \citet{deterding2011game}, medalhas são apresentadas em algum lugar ou de alguma forma para que outros jogadores possam observar as conquistas e a realização do jogador. O uso de medalhas pode motivar um maior envolvimento por parte dos usuários do sistema, devido a busca por um determinado emblema.
     
 % ---
 \subsection{Recompensas e Conquistas}    
@@ -1296,7 +1290,7 @@ Os níveis são caracterizados por diferentes categorias que envolvem graus de h
 
 O uso de níveis é um dos maiores componentes para a ocorrência de motivação. Pessoas conseguem determinar seus esforços para a realização de um determinado desafio e através disso se motivar e se esforçar cada vez mais. Podem ser utilizados para identificar o nível de habilidade e conhecimento do indivíduo no sistema.
 
-A utilização de \textit{rankings} permite aos jogadores uma forma de interagir socialmente em torno do jogos, podendo comparar seu progresso com outros jogadores. Também fornece uma forma para que os jogadores possam se vangloriar quando alcançarem resultados melhores. É importante que este \textit{ranking} esteja inserido dentro do contexto do problema, de forma que ele possa competir com os demais usuários \cite{quadros2016gamificaccao}.
+A utilização de \textit{rankings} permite aos jogadores uma forma de interagir socialmente em torno dos jogos, podendo comparar seu progresso com outros jogadores. Também fornece uma forma para que os jogadores possam se vangloriar quando alcançarem resultados melhores. É importante que este \textit{ranking} esteja inserido dentro do contexto do problema, de forma que ele possa competir com os demais usuários \cite{quadros2016gamificaccao}.
     
 % ---
 \subsection{\textit{Feedback}}            
@@ -1308,7 +1302,7 @@ O \textit{feedback} é um recurso pelo qual jogadores podem visualizar o resulta
 
 Os desafios são impostos aos usuários para direcionar o que deve ser feito dentro do cenário proposto. É importante que o usuário sempre tenha algo interessante para fazer, contribuindo para uma melhor experiência. Além disso, é interessante disponibilizar diversas opções neste ambiente, pois usuários podem possuir perfis diferentes \cite{fardo2013gamificaccao}.
 
-Segundo \citet{busarello2016gamificaccao}, os indivíduos têm interesse em resolver desafios que possuem um nível de dificuldade equilibrado, ou seja, não podem ser nem muito fáceis nem muito difíceis. Este equilíbrio entre os níveis de dificuldade e habilidade podem colaborar para o fluxo da atividade, contribuindo para o motivação.
+Segundo \citet{busarello2016gamificaccao}, os indivíduos têm interesse em resolver desafios que possuem um nível de dificuldade equilibrado, ou seja, não podem ser nem muito fáceis nem muito difíceis. Este equilíbrio entre os níveis de dificuldade e habilidade podem colaborar para o fluxo da atividade, contribuindo para a motivação.
     
 % ---
 \subsection{Conflito, Competição e Cooperação}                    
@@ -1317,7 +1311,7 @@ As pessoas atingem um nível mais elevado de satisfação ao comparar seu desemp
 
 \section{Considerações}
 
-Neste capítulo foi apresentado o referencial teórico referente a gamificação, cumprindo, desta forma, o segundo objetivo específico do trabalho. Foi abordado o conceito de gamificação, sua aplicabilidade como ferramenta educacional e seus principais elementos .
+Neste capítulo foi apresentado o referencial teórico referente a gamificação, cumprindo, desta forma, o segundo objetivo específico do trabalho. Foi abordado o conceito de gamificação, sua aplicabilidade como ferramenta educacional e seus principais elementos.
 
 No próximo capítulo serão apresentados trabalhos relacionados a pequisa desenvolvida. O primeiro trabalho apresentado (seção \ref{sec:javavis}) é uma ferramenta que tem o objetivo de auxiliar no ensino e aprendizagem de PDI. O segundo trabalho apresentado (seção \ref{sec:classrom}) é uma ferramenta que foi desenvolvida visando melhorar o engajamento de estudantes, para isso, ela utiliza elementos da gamificação.
 
@@ -1375,7 +1369,7 @@ Na Figura \ref{fig:javavis_desktop} é demonstrada a sequência de três funçõ
 % ---
 \subsection{JavaVis3D}
 
-Esta área da ferramenta tem como objetivo permitir a manipulação de imagens 3D. A maior parte de entidades geométricas estão implementadas no core do JavaVis3D. Entidades como pontos, vetores, segmentos e planos estão incluídos neste pacote, sendo possível utilizados para a aplicação de manipulações nas imagens. A interface foi construída utilizando a API 3D do Java, baseada em OpenGL.
+Esta área da ferramenta tem como objetivo permitir a manipulação de imagens 3D. A maior parte de entidades geométricas estão implementadas no core do JavaVis3D. Entidades como pontos, vetores, segmentos e planos estão incluídos neste pacote, sendo possível utiliza-los para a aplicação de manipulações nas imagens. A interface foi construída utilizando a API 3D do Java, baseada em OpenGL.
 
 A Figura \ref{fig:javavis_3d} demonstra o JavaVis3D \textit{framework}. A janela a direita controla a posição da cena. O usuário pode navegar pela cena utilizando esta janela.
 
@@ -1410,7 +1404,7 @@ Para os autores, o JavaVis possui algumas funcionalidades que permitem ao estuda
 \section{Classroom Live: a software-assisted gamification tool}
 \label{sec:classrom}
 
-A pesquisa de \citet{de2013classroom} tem por objetivo engajar os estudantes da US Air Force Academy. Para isso, foi desenvolvido um sistema cliente/servidor para servir como aporte para aulas gamificadas. O sistema é chamado de Classroom Live, e este faz uso do de computadores e acesso wireless para prover uma experiência \textit{online} e interativa de aprendizagem. Ao acessar o software, o aluno recebe “\textit{quests}” que são preparadas pelo instrutor. O instrutor pode acessar uma aplicação diferente para analisar a performance do estudante e recompensas em tempo real.
+A pesquisa de \citet{de2013classroom} tem por objetivo engajar os estudantes da US Air Force Academy. Para isso, foi desenvolvido um sistema cliente/servidor para servir como aporte para aulas gamificadas. O sistema é chamado de Classroom Live, e este faz uso do de computadores e acesso \textit{wireless} para prover uma experiência \textit{online} e interativa de aprendizagem. Ao acessar o software, o aluno recebe “\textit{quests}” que são preparadas pelo instrutor. O instrutor pode acessar uma aplicação diferente para analisar a performance do estudante e recompensas em tempo real.
 
 Os autores desenvolveram o software visando a utilização em aulas do curso de ciência da computação, e que pudesse utilizar a infraestrutura já existente, como computadores e acesso a internet. O desenvolvimento da aplicação foi influenciado pelo \textit{feedback} de alunos e instrutores, servindo como guia para o desenvolvimento. Os autores citam alguns pontos que foram considerados durante o desenvolvimento do software:
 
@@ -1434,9 +1428,9 @@ A Figura \ref{fig:classroom_diagrama} demonstra as funcionalidades existentes no
 
 A área \textit{“Create Achievements”}, permite ao instrutor criar uma biblioteca de recompensas e associar pontos de experiência a elas. As áreas \textit{“Manage Itens”} e \textit{“Manage zones”} permitem ao instrutor manipular os itens virtuais e os ambientes visuais que o aluno encontrará durante utilização do sistema.
 
-Durante as aulas, o instrutor terá quatro áreas para gerenciar as atividades dos alunos. Na área \textit{“Issue Quest”}, o instrutor poderá controlar as \textit{quests} existentes, podendo inativa-las, definir um tempo limite para a conclusão. Na área \textit{”Award Achievements”}, o instrutor tem a possibilidade de definir prêmios para os alunos. Na área \textit{“Track Student Progress”}, o instrutor pode observar o avanço dos alunos. Na última área, \textit{"Mark quest"} complete, o instrutor analisa o trabalho realizado pelo estudante e define se este cumprir com a especificação determinada ou não.
+Durante as aulas, o instrutor terá quatro áreas para gerenciar as atividades dos alunos. Na área \textit{“Issue Quest”}, o instrutor poderá controlar as \textit{quests} existentes, podendo inativa-las, definir um tempo limite para a conclusão. Na área \textit{”Award Achievements”}, o instrutor tem a possibilidade de definir prêmios para os alunos. Na área \textit{“Track Student Progress”}, o instrutor pode observar o avanço dos alunos. Na última área, \textit{"Mark quest"} complete, o instrutor analisa o trabalho realizado pelo estudante e define se este cumpriu com a especificação determinada ou não.
 
-Na seção do alunos, existem 4 funcionalidades. A principal delas é a \textit{“Manege Active Quests”}, esta é a funcionalidade que permite o alunos visualizar suas \textit{quests} e enviar suas respectivas respostas. A funcionalidade \textit{“View Completed Quests”} possibilita ao aluno visualizar sua própria performance em \textit{quests} já concluídas, e também permite a visualização das respostas corretas paras as \textit{quests}. A funcionalidade \textit{“View Achievements”} permite a visualização de todas as conquista recebidas pelo usuário. Por final, a funcionalidade “Customize Avatar” é onde o aluno pode customizar a aparência de seu avatar a partir dos itens conquistados.
+Na seção dos alunos, existem 4 funcionalidades. A principal delas é a \textit{“Manege Active Quests”}, esta é a funcionalidade que permite o alunos visualizar suas \textit{quests} e enviar suas respectivas respostas. A funcionalidade \textit{“View Completed Quests”} possibilita ao aluno visualizar sua própria performance em \textit{quests} já concluídas, e também permite a visualização das respostas corretas paras as \textit{quests}. A funcionalidade \textit{“View Achievements”} permite a visualização de todas as conquistas recebidas pelo usuário. Por fim, a funcionalidade “Customize Avatar” é onde o aluno pode customizar a aparência de seu avatar a partir dos itens conquistados.
 
 Para avaliar a eficácia do Classroom Live, os autores aplicaram a ferramenta em uma parte do curso de introdução a programação. A Figura \ref{fig:classroom_aula}, demonstra a sequência de eventos utilizados nesta experiência de aplicação em sala de aula. Cada lição começa com a criação de dois tipos de \textit{quests} por parte do instrutor. O primeiro corresponde a uma tarefa onde o aluno deve desenvolver e enviar um trecho de código fonte que corresponda a tarefa atribuída. O instrutor também desenvolve \textit{quests} de múltiplas escolhas relacionadas ao material ensinado na aula daquele dia. O instrutor tem a possibilidade de adicionar recompensas em ambas as \textit{quests}.
 
@@ -1456,7 +1450,7 @@ O conteúdo é muito importante: A eficácia da aplicação da ferramenta depend
 
 Gamificação demanda tempo: Segundo os autores, as utilização de gamificação na sala de aula aumentou o tempo necessário para a preparação das aulas, mesmo com a utilização de um software como Classroom Live para auxiliar. Para estas aulas, os instrutores tiveram que popular o sistema com itens e \textit{quests} que deveriam ser atraentes para os alunos e relevantes para o curso. Os autores acreditam que este tempo diminuirá à medida que é construída uma base de dados de \textit{quests} que possam ser reutilizadas em outros semestres.
 
-Para avaliar a aplicação, foi solicito para que os alunos responder algumas questões referente a utilização do Classroom Live, como pode ser visualizado na Figura \ref{fig:classroom_avaliacao}. O estudo realizado com 15 alunos.
+Para avaliar a aplicação, foi solicitado aos alunos que respondessem algumas questões referente a utilização do Classroom Live, como pode ser visualizado na Figura \ref{fig:classroom_avaliacao}. O estudo realizado com 15 alunos.
 
 \begin{figure}[ht]
 \centering
@@ -1468,7 +1462,7 @@ Para avaliar a aplicação, foi solicito para que os alunos responder algumas qu
 
 Segundo os autores, aparentemente os alunos gostaram de utilizar o Classroom Live. As respostas das duas primeiras questões indicam que os alunos acharam o Classroom Live divertido e acreditam que o software auxiliou a mantê-los engajados na aula. Levando em consideração que o uso do software foi totalmente voluntário, os autores constataram o entorno de 85\% dos alunos utilizaram a aplicação e participaram de \textit{quests} durante todas as aulas. 
 
-Os autores não conseguiram constatar se a utilização da ferramenta aumentou a performance dos estudantes, mas eles observaram que a aplicação obteve êxito em relação a melhorar o interesse e engajamento dos estudantes nas aula.
+Os autores não conseguiram constatar se a utilização da ferramenta aumentou a performance dos estudantes, mas eles observaram que a aplicação obteve êxito em relação a melhorar o interesse e engajamento dos estudantes nas aulas.
 
 \section{Considerações}
 Neste capítulo foram apresentadas ferramentas relacionadas ao trabalho desenvolvido, cumprindo, desta forma, o terceiro objetivo específico do trabalho. Foi abordado o funcionamento das ferramentas e como elas foram utilizadas em sala de aula.
@@ -1511,7 +1505,7 @@ A Figura \ref{fig:visnode} demonstra a utilização do software VISNode. Nesta f
 % ---
 \subsection{Arquitetura}
 
-O software VISNode foi construído utilizando a arquitetura modular proposta por Reis et al. (2017), onde é construída uma linha de produtos de software (\textbf{Software Product Line} ou SPL) (SEI, 2018)  para a extração e apresentação de características em exames médicos por imagem. Na arquitetura existem cinco módulos, cada um com um objetivo específico, que podem ser usados de forma independente para diversos tipos de aplicações que trabalham com imagens. Dos módulos construídos, três foram utilizados no desenvolvimento do VISNode, descritos a seguir:
+O software VISNode foi construído utilizando a arquitetura modular proposta por \citet{reisferramenta}, onde é construída uma linha de produtos de software (\textit{Software Product Line} ou SPL) (SEI, 2018)  para a extração e apresentação de características em exames médicos por imagem. Na arquitetura existem cinco módulos, cada um com um objetivo específico, que podem ser usados de forma independente para diversos tipos de aplicações que trabalham com imagens. Dos módulos construídos, três foram utilizados no desenvolvimento do VISNode, descritos a seguir:
 
 PDI: implementações de algoritmos de processamento de imagens, que são aplicados aos exames médicos no processo de extração de características, como, por exemplo: histograma, limiarização, remoção e redução de ruídos, operações de convolução, métodos de classificação, entre outros \cite{reisferramenta}; 
 
@@ -1541,7 +1535,7 @@ A resolução do desafio deve ser realizada utilizando o VISNode, desta forma, o
 
 \subsubsection{Missões}
 
-Um missão consiste em um grande objetivo que o usuário deve alcançar. Cada missão será composta por desafios, desta forma, para um usuário concluir uma missão, este deverá concluir primeiramente uma seŕie de pequenos desafios. Estes desafios são pensados para que o aluno consiga dividir o problema em partes, desta forma, a resolução de um problema de maior complexidade é mais facilmente alcançada.
+Uma missão consiste em um grande objetivo que o usuário deve alcançar. Cada missão será composta por desafios, desta forma, para um usuário concluir uma missão, este deverá concluir primeiramente uma seŕie de pequenos desafios. Estes desafios são pensados para que o aluno consiga dividir o problema em partes, desta forma, a resolução de um problema de maior complexidade é mais facilmente alcançada.
 
 Cada missão possuirá uma narrativa para que seja apresentado ao aluno a problemática a ser trabalhada. Esta narrativa descreverá o problema como um todo e demonstrará o resultado final esperado. 
 
@@ -1567,7 +1561,7 @@ Os desafios desta missão podem ser:
 
 Ao completar missões e desafios o usuário receberá pontos de experiência. Cada tarefa terá sua pontuação de acordo com o grau de dificuldade imposto ao usuário. Esta informação de experiência transmite ao usuário um \textit{feedback} de como ele está em relação ao seu progresso. Além de ser um fator de motivação extrínseca. 
 
-Além dos pontos de experiência, o usuário poderá receber algumas recompensas. Um exemplo de recompensa seria o usuário receber um parte de uma imagem a cada desafio completado. Após a conclusão de alguns desafios, o usuário possuirá a imagem completa.
+Além dos pontos de experiência, o usuário poderá receber algumas recompensas. Um exemplo de recompensa seria o usuário receber uma parte de uma imagem a cada desafio completado. Após a conclusão de alguns desafios, o usuário possuirá a imagem completa.
 
 \subsubsection{\textit{Rankings}}
 
@@ -1578,7 +1572,7 @@ Tendo em visa a possibilidade do usuário se situar em relação ao seu desempen
 
 A parte gamificada da ferramenta será acessada através de um cadastro e \textit{login} no sistema. Isso se torna necessário para identificar o usuário que esta acessando o sistema, e também para controlar o progresso de cada usuário. Após o usuário logado, ele terá acesso a todas as funcionalidades referentes a parte gamificada da ferramenta.
 
-Logado no sistema, o usuário possui acesso ao menu de missões. Neste local o usuário encontrará diversas missões com diferentes objetivos e graus de dificuldades. O usuário poderá selecionar uma missão para ser realiza e a cada missão cumprida receberá suas respectivas recompensas.
+Logado no sistema, o usuário possui acesso ao menu de missões. Neste local o usuário encontrará diversas missões com diferentes objetivos e graus de dificuldades. O usuário poderá selecionar uma missão para ser realizada e a cada missão cumprida receberá suas respectivas recompensas.
 
 A ferramenta exibirá os pontos do usuário na página principal do sistema. Isso ocorrerá para que os usuários recebem um \textit{feedback} o mais rápido possível.
 
@@ -1588,15 +1582,15 @@ Quando a ferramenta for utilizada dentro da sala de aula, o educador poderá cri
 
 Visando ser utilizada em outras instituições, a ferramenta permite a criação de novas missões e desafios. Ampliando, desta forma, o uso da ferramenta para mais usuários.
 
-A ideia da ferramenta é que possa ser utilizada dentro da sala de aula, como já descrito, mas também fora. Para isso, a ferramenta contará com áreas que podem ser acessíveis por pessoas fora da disciplina. Desta forma, qualquer indivíduo que tenha interesse em utilizar a ferramenta poderá utiliza-la.
+A ideia da ferramenta é que possa ser utilizada dentro da sala de aula, como já descrito, mas também fora. Para isso, a ferramenta contará com áreas que podem ser acessíveis por pessoas fora da disciplina. Desta forma, qualquer indivíduo que tenha interesse em usufruir da ferramenta poderá utiliza-la.
 
 \subsection{Validação}
 
-A validação da ferramenta será realizada dentro de sala de aula. Para isso, será elaborado uma aula onde os alunos da disciplina irão utilizar a ferramenta como meio de aprendizagem. Nesta aula, serão propostas, aos alunos, missão e desafios a serem realizados.
+A validação da ferramenta será realizada dentro de sala de aula. Para isso, será elaborado uma aula onde os alunos da disciplina irão utilizar a ferramenta como meio de aprendizagem. Nesta aula, será proposto, aos alunos, missão e desafios a serem realizados.
 
-A validação busca identificar se a utilização da ferramenta pode auxiliar os alunos no ensino e aprendizagem de PDI. Analisando se sua utilização auxiliou na motivação dos estudante em relação a conteúdo da disciplina.
+A validação busca identificar se a utilização da ferramenta pode auxiliar os alunos no ensino e aprendizagem de PDI. Analisando se sua utilização auxiliou na motivação dos estudantes em relação ao conteúdo da disciplina.
 
-Após a utilização do ferramenta, será aplicado ao estudantes um questionário sobre a utilização da ferramenta. Este questionário será focado em avaliar se, na percepção dos estudantes, a ferramenta auxiliou na motivação e engajamento.
+Após a utilização da ferramenta, será aplicado aos estudantes um questionário sobre a utilização da ferramenta. Este questionário será focado em avaliar se, na percepção dos estudantes, a ferramenta auxiliou na motivação e engajamento.
 
 Também será solicitado ao educador avaliar a experiência da aplicação da ferramenta em sala de aula. Esta avaliação tem por objetivo extrair a percepção do avaliador em relação ao uso da ferramenta.
 
@@ -1747,7 +1741,7 @@ Grupo de trabalho
 % ---
 % Conclusão
 % ---
-\chapter*[Conclusão]{Conclusão}
+\chapter[Conclusão]{Conclusão}
 \addcontentsline{toc}{chapter}{Conclusão}
 
 \lipsum[31-33]
