@@ -1096,16 +1096,10 @@ O algoritmo possui duas funções que são definidas por:
 Segundo \citet{guilherme:2007}, o algoritmo de Holt é composto por duas expressões lógicas, onde uma é aplicada na primeira iteração do algoritmo e a outra na segunda iteração. Para um ponto ser removido, o resultado das expressões lógicas devem ser verdadeiros.
 
 Primeira iteração: 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.8\textwidth]{imagens/holt_formula1.png}
-\end{figure}
+\(v(C) \wedge (\sim edge(C) \vee (v(L) \wedge v(S) \wedge (v(N) \vee v(O))))\)
 
 Segunda iteração:
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.8\textwidth]{imagens/holt_formula1.png}
-\end{figure}
+\(v(C) \wedge (\sim edge(C) \vee (v(O) \wedge v(N) \wedge (v(S) \vee v(L))))\)
 
 A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2rr6e0i} 
 
@@ -1241,6 +1235,16 @@ A motivação intrínseca é aquela originada pelo próprio indivíduo. O envolv
 
 De maneira contrária, a motivação extrínseca é baseada no mundo que envolve o indivíduo de forma externa. Tem como origem o desejo em obter alguma recompensa externa, como, por exemplo, pontos, prêmios e classificações ou evitar uma punição. Desta forma, através da motivação extrínseca, um indivíduo não é motivado por fatores internos, em vez disso, é motivação pela recompensa que será obtida por realizar uma determinada tarefa \cite{busarello2016gamificaccao}.
 
+Segundo \citet{andre2018}, alguns críticos da gamificação argumentam que esta gamificação é baseada em motivações extrínsecas. E, por este motivo, o aluno perderá o interesse a partir do momento que a motivação externa for interrompida. Portanto, é importante equilibrar elementos motivacionais intrínsecos e extrínsecos na implementação da gamificação. O autor apresenta algumas recomendações:
+
+\begin{enumerate}
+\item Utilizar um sistema de pontos e recompensas (extrínseca) para motivar o aluno e demonstrar \textit{feedback} (intrínseca) sobre a execução das tarefas;
+\item Para atividades de baixo interesse para os alunos, fazer um uso maior da motivação extrínseca;
+\item Sempre que possível, combinar elementos motivacionais intrínsecos (senso de realização, oportunidade de sucesso) com elementos extrínsecos (pontos, troféus);
+\item O uso adequado de ambas as motivação aumenta a probabilidade de envolvimento do aluno.
+\end{enumerate}
+
+
 % ---
 \section{Elementos gamificação}
 
@@ -1255,6 +1259,13 @@ A narrativa é um elemento fundamental no contexto de games, pois este é o elem
 
 Segundo \citet{fardo2013gamificaccao} é mais agradável aprender novas informações e adquirir novos conhecimento que estejam relacionados a um determinado contexto, e a narrativa pode ser uma fonte para fornecer contextos. Além disso, envolver o aluno em uma história pode contribuir para que a aprendizagem se torne mais poderosa, sendo que uma história focada em ajudar os alunos a resolver problemas, contribui para a educação do aluno e facilita a memorização do conteúdo abordado.
 
+Segundo \citet{andre2018}, ao construir uma história para o aprendizado gamificado é importante:
+\begin{enumerate}
+\item Os personagens da história devem se assemelhar ao aluno para que os alunos consigam se relacionar;
+\item Fornecer detalhes a ponto que o aluno fique imerso;
+\item Histórias utilizadas para aprendizagem devem possuir um final feliz e uma nota positiva.
+\end{enumerate}
+
 % ---
 \subsection{Metas, Regras e Objetivos}
 
@@ -1264,10 +1275,26 @@ As regras têm como objetivo restringir ações por parte do indivíduo, desta f
 
 O objetivo é aquilo que o indivíduo deve realizar. Objetivos devem ser apresentados de forma clara, para que não haja confusão e aumento da complexidade devido a ambiguidade do objetivo. Normalmente, um jogo possui mais de um objetivo, que vão sendo organizados ao decorrer da iteração. Quando há objetivos muito complexos, estes podem ser quebrados em objetivos menores, para que o indivíduo consiga atingir o objetivo maior. Esta subdivisão de desafios permite ao indivíduo identificar seu progresso em relação ao objetivos maiores \cite{fardo2013gamificaccao}.
 
+Segundo \citet{andre2018}, quando se aplica gamificação na aprendizagem e ensino é importante estabelecer objetivos claros, uma meta com finalidade, foco e resultados que podem ser mensuráveis. O autor defini alguns itens importantes para a aplicação de metas, regras e objetivos:
+
+\begin{enumerate}
+\item Os objetivos devem ser claros e explícitos para que todos tenham entendimento;
+\item As regras devem ser simples para que não haja confusão;
+\item Metas, regras e objetivos são fundamentais para a aplicação de soluções gamificadas, e, portanto, devem ser cuidadosamente aplicados.
+\end{enumerate}
+
 % ---
 \subsection{Pontos}
 
-Este elemento pode ser utilizado para diversos propósitos. Uma de suas aplicações é demonstrar o progresso do usuário, servindo como \textit{feedback}, de forma que seja possível identificar se o usuário está agindo de maneira correta. Este elemento também pode servir como estímulo, de forma que o usuário buscará uma maior pontuação \cite{kaap:2014}. 
+Este elemento pode ser utilizado para diversos propósitos. Uma de suas aplicações é demonstrar o progresso do usuário, servindo como \textit{feedback}, de forma que seja possível identificar se o usuário está agindo de maneira correta. Este elemento também pode servir como estímulo, de forma que o usuário buscará uma maior pontuação \cite{kaap:2014}.
+
+Segundo \citet{andre2018}, sem pontuação, os alunos terão dificuldade para avaliar o desempenho e progresso em um evento gamificado. Para o autor, para aplicar a pontuação é importante considerar:
+
+\begin{enumerate}
+\item A pontuação e a vitória devem ser transparentes. O aluno precisa ser capaz que criar um vínculo entre suas ações e uma pontuação;
+\item A pontuação indica o que é valorizado, desta forma, deve ser atribuir mais pontuação para atividade de maior importância;
+\item Os pontos devem ser relacionados a atividade de aprendizagem.
+\end{enumerate}
 
 % ---
 \subsection{Medalhas}
