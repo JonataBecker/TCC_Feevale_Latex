@@ -31,7 +31,7 @@
 \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
 \usepackage{color}				% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
-\usepackage[labelfont=bf,textfont=md]{caption}
+\usepackage[font=footnotesize,labelfont=bf,textfont=bf]{caption}
 \usepackage{amsmath}
 % ---
 		
@@ -91,6 +91,8 @@
 }
 \makeatother
 % --- 
+
+\newcommand{\vnNumeroTotalProcessos}{40}
 
 % --- 
 % Espaçamentos entre linhas e parágrafos 
@@ -254,6 +256,7 @@ Este trabalho está dividido em seis capítulos. No Capítulo 1 são expostas di
 % Processamento digital de imagens
 % ----------------------------------------------------------
 \chapter{Processamento digital de imagens}
+\label{sec:pdi}
 
 O  processamento digital de imagens (PDI) se refere a utilização de um conjunto de técnicas para processamento de imagens digitais. Este processamento, geralmente, faz uso de técnicas matemáticas transcritas de forma algorítmica que são utilizadas para a manipulação e a geração de novas imagens \cite{gonzalesWoods:2008}. A utilização destas técnicas permite a extração e identificação de informação de imagens, possibilitando a interpretação automática por meio computacional \cite{pedriniSchwartz:2008}.
 
@@ -430,9 +433,19 @@ E_{xy}
 
 Onde \(E_yz\) refere-se a reflexão no eixo \(xy\), \(E_xz\) refere-se a reflexão no eixo \(xz\) e \(E_xy\) refere-se a reflexão no eixo \(xy\).
 
-Segundo \citet{conciAzevedoLeta:2008}, um \textit{flip} horizontal pode ser definido por uma rotação de 180º com os valores das coordenadas \(y_0\) invertidas (representado pela máscara \(E_yz\)) e um \textit{flip} vertical pode ser definido por uma rotação de 180º com os valores das coordenadas \(x_0\) invertidas (representado pela máscara \(E_xz\));
+Segundo \citet{conciAzevedoLeta:2008}, um \textit{flip} horizontal pode ser definido por uma rotação de 180º com os valores das coordenadas \(y_0\) invertidas (representado pela máscara \(E_yz\)) e um \textit{flip} vertical pode ser definido por uma rotação de 180º com os valores das coordenadas \(x_0\) invertidas (representado pela máscara \(E_xz\)).
 
 A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KIZRxn}
+
+\begin{figure}[ht]
+\centering
+\caption{\textbf{Aplicação de filtros de transformações geométricas em uma imagem}}
+\includegraphics[width=0.9\textwidth]{imagens/transformacoesgeometricas.png}
+\sourceAuthor
+\label{fig:transformacoesgeometricas}
+\end{figure}
+
+Na Figura \ref{fig:transformacoesgeometricas} é apresentada a aplicação de transformações geométricas. O primeiro processo apresentado é a translação (b), onde a imagem original é transladada em 50 pixels no \(eixo x\) e 100 pixels no \(eixo y\). Sequencialmente é apresentado a imagem original (a), o processo de mudança de escala utilizando o valor o fator 2 (c), a reflexão horizontalmente (d) e a rotação da imagem (e). 
 
 % ---
 \subsection{Rotação}
@@ -474,16 +487,6 @@ R_\gamma
 \]
 
 A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2I4hQga}
-
-\begin{figure}[ht]
-\centering
-\caption{\textbf{Aplicação de filtros de transformações geométricas em uma imagem}}
-\includegraphics[width=0.9\textwidth]{imagens/transformacoesgeometricas.png}
-\sourceAuthor
-\label{fig:transformacoesgeometricas}
-\end{figure}
-
-Na Figura \ref{fig:transformacoesgeometricas} é apresentada a aplicação de transformações geométricas. O primeiro processo apresentado é a translação (b), onde a imagem original é transladada em 50 pixels no \(eixo x\) e 100 pixels no \(eixo y\). Sequencialmente é apresentado a imagem original (a), o processo de mudança de escala utilizando o valor o fator 2 (c), a reflexão horizontalmente (d) e a rotação da imagem (e). 
 
 % ---
 \section{Filtros passa baixa (Suavização)}
@@ -528,19 +531,10 @@ Segundo \citet{pedriniSchwartz:2008}, em filtros Gaussianos, os coeficientes da 
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.8\textwidth]{imagens/gauss_formula.png}
+\includegraphics[width=0.5\textwidth]{imagens/gauss_formula.png}
 \end{figure}
 
-A aplicação de um filtro Gaussiano pode ser realizada através de convoluções por meio de matrizes. Abaixo são descritas duas máscaras para este filtro, ambas com \(\sigma\) = 0.
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.8\textwidth]{imagens/gauss_mascara.png}
-\end{figure}
-
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KIrx5F}
-
-\begin{figure}[ht]
+\begin{figure}[h]
 \centering
 \caption{\textbf{Aplicação de filtro passa baixa em uma imagem}}
 \includegraphics[width=0.9\textwidth]{imagens/suavizacao.png}
@@ -549,6 +543,16 @@ A implementação em java para o algoritmo pode ser acessado através do link: \
 \end{figure}
 
 Na Figura \ref{fig:suavizacao} é apresentado um conjunto de aplicações de filtros passa baixa para a suavização da imagem de origem. A imagem (a) representa a imagem original.  O primeiro filtro apresentado é o filtro da média (b), seguido do filtro moda (c), mediana (d) e o filtro Gaussiano (e).
+
+A aplicação de um filtro Gaussiano pode ser realizada através de convoluções por meio de matrizes. Abaixo são descritas duas máscaras para este filtro, ambas com \(\sigma\) = 0.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\textwidth]{imagens/gauss_mascara.png}
+\end{figure}
+
+
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KIrx5F}
 
 % ---
 \section{Filtros passa-alta}
@@ -880,8 +884,6 @@ H
 \end{bmatrix} 
 \]
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jDAeSp}
-
 \begin{figure}[ht]
 \centering
 \caption{\textbf{Algoritmos de detecção de bordas de Canny e Marr and Hildreth}}
@@ -891,6 +893,8 @@ A implementação em java para o algoritmo pode ser acessado através do link: \
 \end{figure}
 
 A Figura \ref{fig:deteccao_bordas2} apresenta o resultado da aplicação de detecção de bordas. (a) representa a imagem original. O primeiro algoritmo é o Canny (b), seguido de Marr and Hildreth (c).
+
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jDAeSp}
 
 % ---
 \section{Morfologia matemática}
@@ -1177,6 +1181,7 @@ No próximo capítulo serão abordados conceitos referente a gamificação. São
 % Gamificação
 % ----------------------------------------------------------
 \chapter{Gamificação}
+\label{sec:gamificacao}
 
 A gamificação é um tópico bastante discutido nos últimos anos, estando presente no meio empresarial, acadêmico e nas mais diversas áreas de conhecimento. A gamificação é encarada como uma ferramenta de auxílio para o estímulo e o engajamento de pessoas no desenvolvimento de atividades, fazendo uso de elementos de jogos e suas características \cite{quadros2016gamificaccao}.
 
@@ -1209,9 +1214,9 @@ A simulação também está relacionada com a ideia de jogo. Mas diferente de um
 \label{fig:gamificacao}
 \end{figure}
 
-A Figura \ref{fig:gamificacao} contextualiza a gamificação, fazendo uma divisão em 4 seções. As seções acima do eixo horizontal compõem abordagens que fazem uso de conceitos de jogos (mais formal), já as seções abaixo do eixo horizontal compõem abordagens que fazem uso de brincadeiras (livre e descontraída). Também há outra divisão realizada no eixo vertical da imagem, onde é separado abordagens que fazem uso de jogos  de abordagens que somente utilizam elementos de jogos.
-
 A gamificação é uma abordagem que visa facilitar a aprendizagem e incrementar a motivação, através da utilização de conceitos provenientes dos jogos, como superar desafios, receber recompensas e ganhar pontuação. Um dos objetivos da gamificação é atrair a atenção da pessoa e motivá-la a executar a tarefa proposta, criando um ambiente onde haja um maior envolvimento \cite{kaap:2014}. Semelhante ao que acontece com o uso de \textit{serious game}, a gamificação utiliza jogos para um propósito diferente do uso normal para o entretenimento \cite{deterding2011game}.
+
+A Figura \ref{fig:gamificacao} contextualiza a gamificação, fazendo uma divisão em 4 seções. As seções acima do eixo horizontal compõem abordagens que fazem uso de conceitos de jogos (mais formal), já as seções abaixo do eixo horizontal compõem abordagens que fazem uso de brincadeiras (livre e descontraída). Também há outra divisão realizada no eixo vertical da imagem, onde é separado abordagens que fazem uso de jogos  de abordagens que somente utilizam elementos de jogos.
 
 % ---
 \section{Gamificação na educação}
@@ -1243,7 +1248,6 @@ Segundo \citet{andre2018}, alguns críticos da gamificação argumentam que esta
 \item Sempre que possível, combinar elementos motivacionais intrínsecos (senso de realização, oportunidade de sucesso) com elementos extrínsecos (pontos, troféus);
 \item O uso adequado de ambas as motivação aumenta a probabilidade de envolvimento do aluno.
 \end{enumerate}
-
 
 % ---
 \section{Elementos gamificação}
@@ -1346,6 +1350,7 @@ No próximo capítulo serão apresentados trabalhos relacionados a pequisa desen
 % Trabalhos correlatos
 % ----------------------------------------------------------
 \chapter{Trabalhos correlatos}
+\label{sec:trabalhosCorrelatos}
 
 Neste capítulo são apresentados trabalhos relacionados à área de pesquisa deste projeto. O objetivo é identificar e avaliar as propostas que outros autores utilizaram para tratar do tema do presente estudo.
 
@@ -1529,6 +1534,14 @@ A Figura \ref{fig:visnode} demonstra a utilização do software VISNode. Nesta f
 \label{fig:visnode}
 \end{figure}
 
+O VISNode possui \vnNumeroTotalProcessos{} processos e técnicas de PDI implementadas, entre eles algoritmos de detecção de borda, desfoque, transformação, ajustes de cores, manipulação de imagens binárias, afinamento, operações aritméticas, extração de objetos e preenchimento. Todos os processos atualmente presentes na ferramenta foram desenvolvidas pelo time responsável pelo VISNode, e novos processos são constantemente adicionados a ferramenta.
+
+Os métodos de detecção de bordas implementados são Sobel, Roberts, Prewitt, Laplace \cite{gonzalesWoods:2008}, Robinson \cite{robinson1977edge}, Kirsch \cite{kirsch1971computer}, Frei-Chen \cite{chen1977fast}, Marr-Hildreth \cite{marr1980theory} e Canny \cite{canny:1986}. Na categoria de desfoque tem-se as operações de Gauss, média, mediana e moda \cite{gonzalesWoods:2008}. Redimensionamento, rotação, translação e espelhamento vertical e horizontal \cite{gonzalesWoods:2008} formam a categoria de processos de transformação. Os processos de ajuste de cores são brilho, contraste, tons-de-cinza (média simples e ponderada), inversão de cor e limiarização (\textit{threshold})  \cite{gonzalesWoods:2008}. 
+
+Para manipulação de imagens binárias tem-se os algoritmos de dilatação, erosão, abertura e fechamento \cite{gonzalesWoods:2008}. Os algoritmos implementados da categoria de afinamento são Zhang-Suen \cite{zhang1984fast}, Holt \cite{holt1987improved} e Stentiford \cite{stentiford1983some}. Na categoria de operações aritméticas tem-se a obtenção da média, mediana e moda dos valores da imagem e também histograma \cite{gonzalesWoods:2008}. Para a categoria de extração de objetos tem-se o \textit{Binary Labeling} \cite{gonzalesWoods:2008} e extração de objetos, que trabalham em conjunto. Para preenchimento o algoritmo de Snakes \cite{kass:1988} implementado.
+
+% TODO: adicionar todos os processos implementados
+
 % ---
 \subsection{Arquitetura}
 
@@ -1540,8 +1553,6 @@ PDI: implementações de algoritmos de processamento de imagens, que são aplica
 \item Uso Comum: classes de uso  comum  por todos os outros módulos, como classes utilitárias ou estruturas de dados utilizadas na troca de informações entre módulos; 
 \item Acesso a Arquivos: camada de acesso arquivos do tipo DICOM.
 \end{enumerate}
-
-%TODO: Dizer as técnicas que foram implementadas%
 
 % ---
 \section{Proposta gamificada}
@@ -1561,6 +1572,7 @@ A ferramenta irá contar com desafios. Um desafio consiste em uma tarefa que o u
 A resolução do desafio deve ser realizada utilizando o VISNode, desta forma, o usuário deverá conectar as técnicas existentes para obter o resultado esperado. O próprio software realizará a conferência se a solução proposta pelo usuário condiz com o resultado esperado. Informações como número de tentativas e duração serão armazenadas para análises por parte do educador.
 
 \subsubsection{Missões}
+\label{desafio:moedas}
 
 Uma missão consiste em um grande objetivo que o usuário deve alcançar. Cada missão será composta por desafios, desta forma, para um usuário concluir uma missão, este deverá concluir primeiramente uma seŕie de pequenos desafios. Estes desafios são pensados para que o aluno consiga dividir o problema em partes, desta forma, a resolução de um problema de maior complexidade é mais facilmente alcançada.
 
@@ -1593,7 +1605,6 @@ Além dos pontos de experiência, o usuário poderá receber algumas recompensas
 \subsubsection{\textit{Rankings}}
 
 Tendo em visa a possibilidade do usuário se situar em relação ao seu desempenho comparado com outros usuários, a ferramenta possuirá um \textit{ranking}. Este ranking levará em consideração a pontuação conquistada por cada usuário para posiciona-los em suas respectivas colocações.
-
 
 \subsection{Utilização}
 
@@ -1634,18 +1645,57 @@ No próximo capítulo será apresentado o desenvolvimento da ferramenta. Serão 
 
 %https://invis.io/XWGWAN156ES#/291345781_01
 
-- Página de explicação dos algoritmos
-- Processo (Script Process)
+Neste capítulo será abordado o desenvolvimento do trabalho, sendo apresentado o funcionamento da ferramenta e as tecnologias utilizadas para seu desenvolvimento. Também será apresentado as adaptações realizadas na ferramenta para torna-la gamificada.
 
+\section{Processos}
 
+Para auxiliar o aluno na utilização da ferramenta, foi necessário a implementação de novos processos. Estes processos serão apresentados neste sessão.
 
-% ---
-\section{Arquitetura}
-Acesso a dados
+\subsection{Script Process}
+
+Em algumas ocasiões é necessário realizar algumas operações que não são técnicas de PDI clássicas, para isso foi criado um processo genérico. Este processo não está vinculado a nenhuma técnica de processamento digital de imagens, é um processo que tem por objetivo disponibilizar uma interface para a implementação de algoritmos pela própria ferramenta. Como exemplo, pode ser levado em consideração um cenário apresentado em \ref{desafio:moedas}, onde é necessário calcular o valor total das moedas.
+
+A linguagem Java possui em sua arquitetura uma API para execução de \textit{scripts}, possibilitando escrever customizações para aplicações. JavaScript (JS) é uma das linguagens suportadas por esta API, permitindo rápido desenvolvimento e extensão de partes da aplicação. A API permite a execução de código fonte, sendo possível compartilhar objetos entre Java e JS e invocar funções \cite{oracle}. Devido a esta flexibilidade, os processos dinâmicos fazem uso desta API de Script como linguagem o JS. 
+
+\section{Material teórico}
+
+O processamento digital de imagens é um área de estudo que possui forte embasamento teórico. Em muitas situações, o material teórico é constituído basicamente de notações matemáticas, o que pode dificultar o entendimento dos estudante. Tendo em vista este cenário, foi construído uma área na ferramenta que possibilite ao estudante o contato com o referencial teórico de técnicas de PDI através de uma apresentação mais didática.
+
+Para a construção do material teórico disponível na ferramenta, foi utilizado como base a pesquisa apresentada no Capitulo \ref{sec:pdi}. Este material consiste basicamente de uma explicação conceitual de cada técnica de PDI e o funcionamento básico do algoritmo. Também é disponibilizado ao estudante o código fonte utilizado para implementação do processo.
+
+Para facilitar a disponibilização do material teórico, foi utilizado um arquivo for formato \textit{Markdown}. Este formato possibilita a fácil edição e formação de conteúdo a partir de \textit{tags} que são adicionadas em um arquivo de texto.
+
+O acesso a este conteúdo é realizado por processo, desta forma, o usuário irá selecionar a processo que deseja acessar o material teórico. Na Figura \ref{fig:visnodeCode} é apresentado a janela onde o usuário pode visualizar o código fonte de uma técnica de PDI. Já na Figura \ref{fig:visnodeInformation}, é apresentado a janela onde o usuário tem acesso a explicação teórica da técnica de PDI.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1\textwidth]{imagens/visnode_arquitetura.png}
+\caption{\textbf{Exibição do código fonte de algoritmo de Holt}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_code.png}
+\sourceAuthor
+\label{fig:visnodeCode}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\caption{\textbf{Exibição da explicação do algoritmo de Holt}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_information.png}
+\sourceAuthor
+\label{fig:visnodeInformation}
+\end{figure}
+
+% ---
+\section{Arquitetura}
+
+Para o desenvolvimento da ferramenta foi utilizado a linguagem Java, mesma linguagem utilizada para o desenvolvimento do VISNode. Devido a necessidade de armazenar informações do usuário, foi criado um \textit{WebService} para esta finalidade. Este \textit{WebService} foi construído utilizado o \textit{framework} \textit{SprintBoot} e um Banco de dados Mysql.
+
+A Figura \ref{fig:visnodeArquitetura} demonstra a arquitetura do projeto. É possível visualizar que a comunicação realizada para o acesso a base de dados é feita utilizando o protocolo HTTP. 
+
+\begin{figure}[ht]
+\centering
+\caption{\textbf{Arquitetura VISNode}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_arquitetura.png}
+\sourceAuthor
+\label{fig:visnodeArquitetura}
 \end{figure}
 
 % ---
@@ -1653,8 +1703,11 @@ Acesso a dados
 
 \textit{ranking} geral
 Top 10: Os 10 mais bem colocados 
+
 Posição do usuário
+
 \textit{ranking} por grupo
+
 Lista de todos os participantes, posicionando a página na posição do usuário (acredito que não vai ter muitos usuários neste cenário) 
 
 \begin{figure}[ht]
@@ -1666,6 +1719,7 @@ Lista de todos os participantes, posicionando a página na posição do usuário
 \section{Progresso}
 
 Usuário precisa ter uma noção de seus progresso
+
 Exibir um formato de lista o percentual realizado das missões 
 
 \begin{figure}[ht]
@@ -1677,10 +1731,15 @@ Exibir um formato de lista o percentual realizado das missões
 \section{Recompensas}
 
 Imagem definida para a missão
+
 A imagem será quebrada em formato de quebra cabeça e dada ao usuário a medida que ele vai completando as missões
+
 Definir a quantidade de peças
+
 Pontos
+
 Ao completar desafios
+
 Ao completar missões
 
 \begin{figure}[ht]
@@ -1698,9 +1757,13 @@ Ao completar missões
 
 
 Alguns usuários poderão criar grupos de trabalhos
+
 Definir quais usuário
+
 Definir quais missões
+
 Definir recompensas das missões
+
 Criar nova missões
 
 \begin{figure}[ht]
@@ -1717,16 +1780,27 @@ Criar nova missões
 \section{Missões}
 
 Poder conter N objetivos
+
 Narrativa
+
 Desafios
+
 Questionario
+
 Desenvolvimento VISNode
+
 Narrativa inicial
+
 Texto
+
 Imagem
+
 Nível de dificuldade (Básico, Intermediário, Avançado)
+
 Visibilidate
+
 Global
+
 Grupo de trabalho
 
 \begin{figure}[ht]
@@ -1759,6 +1833,23 @@ Grupo de trabalho
 \includegraphics[width=1\textwidth]{imagens/proposta_tarefa_descricao.png}
 \end{figure}
 
+
+\chapter{Validação dos resultados}
+
+\section{Apresentação do VISNode}
+
+No dia 15/05/2018 foi realizado uma apresentação do VISNode para turma da disciplina de PDI da universidade Feevale do curso de Ciência da Computação e Sistemas da Informação. O objetivo  foi apresentar o VISNode e coletar \textit{feedbacks} dos estudantes. Neste momento a ferramenta não possuía nenhuma implementação relacionada a gamificação, somente foi demonstrado o funcionamento do VISNode.
+
+Para dar uma maior dinâmica a apresentação, foi proposto aos estudantes a realização de um desafio utilizando a ferramenta VISNode. O desafio escolhido é o mesmo descrito na sessão \ref{desafio:moedas}. Participaram da apresentação e da resolução do desafio 5 estudantes.
+
+Ao termino do desafio, foi solicitado aos estudantes que contribuíssem com um \textit{feedback} da utilização da ferramenta. Segundo os estudantes, a utilização da ferramenta permitiu a aplicação da teoria na pratica, onde normalmente os estudantes tinham contado com as técnicas separadamente, foi possível aplica-las em sequência. A ferramenta contribuiu para o intendimento de como conectar as técnicas.
+
+A aplicação do desafios também deve um \textit{feedback} positivo. Segundo os estudantes, o desafio possibilitou a resolução de um problema real. Esta abordagem tornou a dinâmica da aula mais iterativa, instigando os estudantes a resolver um problema de aplicação de técnicas de PDI e não de implementação de técnicas.
+
+Nesta nesta apresentação foram identificados algumas melhorias para a ferramenta VISNode. A ferramenta utiliza tonalidades escuras na construção de suas janelas. Estas tonalidades dificultaram a visualização da ferramenta na projetação da tela, utilizando um projetor. Para a resolução deste problema, foi disponibilizado na ferramenta um opção para a mudanças do \textit{Skin} da ferramenta, sendo possível alternar entre tonalidades escuras e claras.
+
+Neste mesmo cenário, outro ponto de melhoria identificado foi em relação as janelas que possuíam código fonte. Nestes casos, para facilitar a visualização de todos os estudantes, a ferramenta  passou a permitir a mudança do tamanho da fonte.
+
 % ---
 % Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
 % ---
@@ -1768,10 +1859,17 @@ Grupo de trabalho
 % ---
 % Conclusão
 % ---
-\chapter[Conclusão]{Conclusão}
-\addcontentsline{toc}{chapter}{Conclusão}
+\chapter[Considerações Finais]{Considerações Finais}
+\addcontentsline{toc}{chapter}{Considerações Finais}
 
-\lipsum[31-33]
+Processamento digital de imagem é que pode ser aplicada em diversos ramos, tando acadêmicos quanto no mercado. O estudo desta área não é, muitas vezes, atrativo devido a forma com que o embasamento teórico é apresentado sem que este seja entusiasmante para o aluno. A computação pode contribuir para auxiliar alunos e educadores na aquisição de conhecimento, através de ferramentas que façam uso de abordagens motivacionais como a gamificação. Nesta linha, o objetivo principal deste trabalho foi adaptar a ferramenta VISNode para sua aplicação em sala de aula, fazendo uso de técnicas de gamificação para isso. Para alcançar este objetivo, é fundamenta conhecer técnicas de processamento digital de imagens que a ferramenta contempla e os principais elementos na gamificação e como aplica-los.
+
+Desta forma, a pesquisa foi iniciada com a apresentação de diferentes técnicas de processamento digital de imagens. Foi abordado técnicas relacionadas principalmente ao realce, remoção de ruído, segmentação e morfologia matemática. A definição de quais técnicas seriam estudas foi feita com base nas técnicas disponíveis na ferramenta VISNode.
+
+O capítulo \ref{sec:gamificacao} abordou conceitos relacionado a gamificação. Foi abordado seus principais elementos, as motivações por traz do uso desta metodologia e como ela pode ser aplicada.
+Este estudo foi de vital importância para o correto entendimento do assunto, contribuindo para este trabalho alcançasse o objetivo proposto.
+
+No capítulo \ref{sec:trabalhosCorrelatos} foram apresentados dois trabalhos relacionados à área deste projeto. O primeira trata da utilização de uma ferramenta para auxiliar no ensino de processamento digital de imagens. A segunda expõe a utilização de uma ferramenta gamificada para o ensino utilizando elementos da gamificação. A união dos dois trabalhos contribuiu para o escolha dos elementos da gamificação a serem utilizados neste trabalho.
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS

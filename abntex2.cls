@@ -46,8 +46,8 @@
 \newboolean{ABNTEXuppersection}     %true=titles of sections in uppercase
 \newboolean{ABNTEXuppersubsection}  %true=titles of subsections in uppercase
 \newboolean{ABNTEXuppersubsubsection}  %true=titles of subsubsections in uppercase
-\setboolean{ABNTEXupperchapter}{false}
-\setboolean{ABNTEXuppersection}{false}
+\setboolean{ABNTEXupperchapter}{true}
+\setboolean{ABNTEXuppersection}{true}
 \setboolean{ABNTEXuppersubsection}{false}
 \setboolean{ABNTEXuppersubsubsection}{false}
 \DeclareOption{chapter=TITLE}{\setboolean{ABNTEXupperchapter}{true}}
@@ -209,19 +209,22 @@
 
 % ---
 % Fontes padroes de part, chapter, section, subsection e subsubsection
-\newcommand{\ABNTEXchapterfont}{\sffamily}
-\newcommand{\ABNTEXchapterfontsize}{\Huge}
+
+\newcommand{\ABNTEXchapterfontnobold}{\rmfamily\selectfont}
+
+\newcommand{\ABNTEXchapterfont}{\rmfamily\fontseries{b}\selectfont}
+\newcommand{\ABNTEXchapterfontsize}{\normalsize}
 
 \newcommand{\ABNTEXpartfont}{\ABNTEXchapterfont}
-\newcommand{\ABNTEXpartfontsize}{\ABNTEXchapterfontsize}
+\newcommand{\ABNTEXpartfontsize}{\normalsize}
 
-\newcommand{\ABNTEXsectionfont}{\ABNTEXchapterfont}
-\newcommand{\ABNTEXsectionfontsize}{\Large}
+\newcommand{\ABNTEXsectionfont}{\rmfamily}
+\newcommand{\ABNTEXsectionfontsize}{\normalsize}
 
-\newcommand{\ABNTEXsubsectionfont}{\ABNTEXsectionfont}
-\newcommand{\ABNTEXsubsectionfontsize}{\large}
+\newcommand{\ABNTEXsubsectionfont}{\rmfamily\fontseries{b}\selectfont}
+\newcommand{\ABNTEXsubsectionfontsize}{\normalsize}
 
-\newcommand{\ABNTEXsubsubsectionfont}{\ABNTEXsubsectionfont}
+\newcommand{\ABNTEXsubsubsectionfont}{\rmfamily}
 \newcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
 % ---
 
@@ -343,10 +346,10 @@
   % tamanhos de fontes de chapter e part	
    \ifthenelse{\equal{\ABNTEXisarticle}{true}}{%
      \setlength\beforechapskip{\baselineskip}
-     \renewcommand{\chaptitlefont}{\ABNTEXsectionfont\ABNTEXsectionfontsize}
+     \renewcommand{\chaptitlefont}{ \ABNTEXchapterfont }
    }{%else
      \setlength{\beforechapskip}{0pt}
-     \renewcommand{\chaptitlefont}{\ABNTEXchapterfont\ABNTEXchapterfontsize}
+     \renewcommand{\chaptitlefont}{ \ABNTEXchapterfont }
    }
   
   \renewcommand{\chapnumfont}{\chaptitlefont}
@@ -430,7 +433,7 @@
   \ifthenelse{\equal{\ABNTEXisarticle}{true}}{%
     \pagestyle{plain}%
   }{%else  
-    \pagestyle{abntheadings}%
+   \pagestyle{abntheadings}%
   }  
   \nouppercaseheads%
   \bookmarksetup{startatroot}% 
@@ -761,20 +764,20 @@
 \newcommand{\imprimircapa}{%
   \begin{capa}%
     \center
-    {\ABNTEXchapterfont\large\imprimirinstituicao}
+    {\ABNTEXchapterfontnobold\imprimirinstituicao}
     
     \vspace*{\fill}
     
     %\vspace*{1cm}
-    {\ABNTEXchapterfont\large\imprimirautor}
+    {\ABNTEXchapterfontnobold\imprimirautor}
 
     \vspace*{\fill}
-    {\ABNTEXchapterfont\large\imprimirtitulo}
+    {\ABNTEXchapterfont\imprimirtitulo}
     \vspace*{\fill}
     
-    {\large\imprimirlocal}
+    {\imprimirlocal}
     \par
-    {\large\imprimirdata}
+    {\imprimirdata}
     
     \vspace*{1cm}
   \end{capa}
@@ -798,10 +801,10 @@
   \begin{center}
 
     %\vspace*{1cm}
-    {\ABNTEXchapterfont\large\imprimirautor}
+    {\ABNTEXchapterfontnobold\imprimirautor}
 
     \vspace*{\fill}\vspace*{\fill}
-    {\ABNTEXchapterfont\Large\imprimirtitulo}
+    {\ABNTEXchapterfont\imprimirtitulo}
     \vspace*{\fill}
 
     \abntex@ifnotempty{\imprimirpreambulo}{%
@@ -814,15 +817,15 @@
     }%
 
     
-    {\large\imprimirorientadorRotulo~\imprimirorientador\par}
+    {\imprimirorientadorRotulo~\imprimirorientador\par}
     \abntex@ifnotempty{\imprimircoorientador}{%
-       {\large\imprimircoorientadorRotulo~\imprimircoorientador}%
+       {\imprimircoorientadorRotulo~\imprimircoorientador}%
     }%
     \vspace*{\fill}
 
-    {\large\imprimirlocal}
+    {\imprimirlocal}
     \par
-    {\large\imprimirdata}
+    {\imprimirdata}
     \vspace*{1cm}
 
   \end{center}
@@ -852,7 +855,7 @@
 \newcommand{\imprimiragradecimento}[1]{%
   \begin{agradecimentos}%
     \center
-    {\center\ABNTEXchapterfont\Large\agradecimentosname}
+    {\center\ABNTEXchapterfont\agradecimentosname}
     
     \vspace*{\fill}
     \hspace{.45\textwidth}
@@ -865,8 +868,9 @@
 }
 % Comandos para fonte de imagem
 \newcommand{\source}[1]{%
+\footnotesize
 
-Fonte: {#1}
+\textbf{Fonte: {#1}}
 }
 
 \newcommand{\sourceAuthor}{\source{elaborado pelo autor}}
