@@ -645,7 +645,7 @@ Considerando \(z_0\) a \(z_8\) os tons de cinza em torno do pixel que está send
 \[G_x = z_0 - z_4\]
 \[G_y = z_3 -z_1\]
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KIsb35}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2xdxoxe}
 % ---
 \subsection{Prewith}
 
@@ -671,7 +671,7 @@ Este filtro faz uso do mesmo conceito de Sobel e Roberts. Considerando \(z0\) a 
 \[Gx = (z_6 + z_7 + z_8) - (z_0 + z_1 + z_2)\]
 \[Gy = (z_2 + z_5 + z_8) - (z_0 + z_3 + z_6)\]
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2wrt2lQ} 
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2ksfqxT} 
 
 % ---
 \subsection{Kirsch}
@@ -1169,7 +1169,7 @@ O ajuste da curva é realizado levando em consideração forças internas e exte
 
 Na Figura \ref{fig:snake} é demonstrado uma execução do método de Snakes. (a) é o contorno inicial. (b) é o contorno resultante após aplicação de algumas etapas. (c) contorno final.
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jG3YxY}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2LsmV43}
 
 \section{Considerações}
 
@@ -1699,140 +1699,105 @@ A Figura \ref{fig:visnodeArquitetura} demonstra a arquitetura do projeto. É pos
 \end{figure}
 
 % ---
-\section{\textit{Ranking}}
-
-\textit{ranking} geral
-Top 10: Os 10 mais bem colocados 
-
-Posição do usuário
-
-\textit{ranking} por grupo
-
-Lista de todos os participantes, posicionando a página na posição do usuário (acredito que não vai ter muitos usuários neste cenário) 
+\section{\textit{Telas do sistema}}
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1\textwidth]{imagens/proposta_ranking.png}
+\caption{\textbf{Janela de \textit{ranking}}}
+\includegraphics[width=0.6\textwidth]{imagens/proposta_ranking.png}
+\sourceAuthor
+\label{fig:janelaRanking}
 \end{figure}
 
-% ---
-\section{Progresso}
-
-Usuário precisa ter uma noção de seus progresso
-
-Exibir um formato de lista o percentual realizado das missões 
+Na Figura \ref{fig:janelaRanking} é apresentado a janela de \textit{ranking}. Nesta janela é possível visualizar o \textit{ranking} por grupo e global. No \textit{ranking} por grupo somente será considerado os usuário pertencentes aos grupos que o usuário participa. Já no \textit{ranking} global, todos os usuários do sistema serão computados.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1\textwidth]{imagens/proposta_progresso.png}
+\caption{\textbf{Janela de progresso}}
+\includegraphics[width=0.6\textwidth]{imagens/proposta_progresso.png}
+\sourceAuthor
+\label{fig:janelaProgresso}
 \end{figure}
 
-% ---
-\section{Recompensas}
+Na Figura \ref{fig:janelaProgresso} é apresentado o progresso do usuário em suas missões. Está janela se faz necessária para que o usuário tenha uma noção de seu progresso.
 
-Imagem definida para a missão
-
-A imagem será quebrada em formato de quebra cabeça e dada ao usuário a medida que ele vai completando as missões
-
-Definir a quantidade de peças
-
-Pontos
-
-Ao completar desafios
-
-Ao completar missões
+Na Figura \ref{fig:janelaRecompensa} e na Figura \ref{fig:janelaRecompensaDetalhe} são demonstrados as recompensas conquistadas pelo usuário.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1\textwidth]{imagens/proposta_recompensa.png}
+\caption{\textbf{Janela de recompensas}}
+\includegraphics[width=0.6\textwidth]{imagens/proposta_recompensa.png}
+\sourceAuthor
+\label{fig:janelaRecompensa}
 \end{figure}
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1\textwidth]{imagens/proposta_recompensa_detalhe.png}
+\caption{\textbf{Janela de detalhamento de recompensas}}
+\includegraphics[width=0.6\textwidth]{imagens/proposta_recompensa_detalhe.png}
+\sourceAuthor
+\label{fig:janelaRecompensaDetalhe}
 \end{figure}
 
-% ---
-\section{Cadastro}
-
-
-Alguns usuários poderão criar grupos de trabalhos
-
-Definir quais usuário
-
-Definir quais missões
-
-Definir recompensas das missões
-
-Criar nova missões
+Na Figura \ref{fig:janelaCadastro} é apresentado o formulário de cadastros de grupos de usuário. Além de definir os usuários do grupo, também é possível relacionar missões e definir recompensas.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1\textwidth]{imagens/proposta_cadastro.png}
+\caption{\textbf{Janela de cadastro de grupos}}
+\includegraphics[width=0.6\textwidth]{imagens/proposta_cadastro.png}
+\sourceAuthor
+\label{fig:janelaCadastro}
 \end{figure}
+
+Na Figura \ref{fig:janelaCadastrousuario} é demonstrado o formulário por onde os usuários realizarão o cadastro para adquirir acesso ao sistema gamificado.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1\textwidth]{imagens/proposta_cadastro_usuario.png}
+\caption{\textbf{Janela de cadastro de usuários}}
+\includegraphics[width=0.6\textwidth]{imagens/proposta_cadastro_usuario.png}
+\sourceAuthor
+\label{fig:janelaCadastrousuario}
 \end{figure}
 
-% ---
-\section{Missões}
-
-Poder conter N objetivos
-
-Narrativa
-
-Desafios
-
-Questionario
-
-Desenvolvimento VISNode
-
-Narrativa inicial
-
-Texto
-
-Imagem
-
-Nível de dificuldade (Básico, Intermediário, Avançado)
-
-Visibilidate
-
-Global
-
-Grupo de trabalho
+Na Figura \ref{fig:janelaMissoes} é demonstrado as missões disponíveis para o usuário resolver. Cada missão possuirá um breve descrição e um nível de dificuldade, podendo variar entre Básico, Intermediário, Avançado.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1\textwidth]{imagens/proposta_niveis.png}
+\caption{\textbf{Janela de missões}}
+\includegraphics[width=0.6\textwidth]{imagens/proposta_niveis.png}
+\sourceAuthor
+\label{fig:janelaMissoes}
 \end{figure}
+
+Na Figura \ref{fig:janelaMissaoDesafio} são apresentados os desafios ou etapas que compõe a missão selecionada.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1\textwidth]{imagens/proposta_nivel.png}
+\caption{\textbf{Janela de desafios de uma missão}}
+\includegraphics[width=0.6\textwidth]{imagens/proposta_nivel.png}
+\sourceAuthor
+\label{fig:janelaMissaoDesafio}
 \end{figure}
+
+Na Figura \ref{fig:janelaMissaoDesafioApresentacao} é apresentado a narrativa de um desafios. É nesta janela que é explicado a problemática a ser solucionada.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1\textwidth]{imagens/proposta_narrativa.png}
+\caption{\textbf{Janela de apresentação de um desafio}}
+\includegraphics[width=0.6\textwidth]{imagens/proposta_narrativa.png}
+\sourceAuthor
+\label{fig:janelaMissaoDesafioApresentacao}
 \end{figure}
+
+A Figura \ref{fig:janelaMissaoDesafioResolucao} demonstra a resolução de um desafio. A resolução de desafios deverá ser realizada através da conexão de técnicas de PDI, tendo como objetivo, alcançar a resposta que desafio espera como resultado. 
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1\textwidth]{imagens/proposta_desafio.png}
+\caption{\textbf{Janela de resolução de desafios}}
+\includegraphics[width=0.6\textwidth]{imagens/proposta_desafio.png}
+\sourceAuthor
+\label{fig:janelaMissaoDesafioResolucao}
 \end{figure}
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=1\textwidth]{imagens/proposta_desafio_questionario.png}
-\end{figure}
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=1\textwidth]{imagens/proposta_tarefa_descricao.png}
-\end{figure}
-
 
 \chapter{Validação dos resultados}
 
