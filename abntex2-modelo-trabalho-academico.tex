@@ -230,7 +230,7 @@ The area of digital image processing has been growing in the most diverse areas 
 % ----------------------------------------------------------
 \chapter{Introdução}
 
-Mesmo com o esforço e dedicação de educadores de universidades, estudantes se frustram com disciplinas do curso devido a grande complexidade e a falta de motivação \cite{garcia2015colfdimap}. Na maioria dos casos, estudantes descobrem que a teoria não é atrativa, difícil e pouco aplicável \cite{zin2015transforming}.
+Mesmo com o esforço e a dedicação de educadores de universidades, estudantes se frustram com disciplinas do curso devido a grande complexidade e a falta de motivação \cite{garcia2015colfdimap}. Na maioria dos casos, estudantes descobrem que a teoria não é atrativa, difícil e pouco aplicável \cite{zin2015transforming}.
 
 A gamificação é uma abordagem que visa facilitar a aprendizagem e incrementar a motivação, através da utilização de conceitos provenientes dos jogos como superar desafios, receber recompensas e ganhar pontuação. Um dos objetivos da gamificação é atrair a atenção da pessoa e motivá-la a executar a tarefa proposta, criando um ambiente onde haja um maior envolvimento \cite{kaap:2014}.   
 
@@ -238,7 +238,7 @@ Os avanços de pesquisa e utilização de Processamento Digital de Imagens (PDI)
 
 PDI é composta por diversas etapas, iniciando pela aquisição da imagem, passando pelo processamento e segmentação até a exibição da imagem ou informações provenientes destas. A etapa de processamento de imagens é composta por procedimentos que são apresentados em forma de algoritmos \cite{gonzalesWoods:2008}. Por estes algoritmos expressarem funções matemáticas complexas, softwares podem ser úteis para auxiliar alunos a entender estes conceitos sem desconsiderar a teoria matemática \cite{lopez2016teaching}. A tecnologia é uma poderosa ferramenta para o processo de ensino e aprendizagem, oferecendo ambientes de simulação e prototipação para educadores e estudantes, que servem como aporte do ensino \cite{henderson2017works}.
 
-A área de PDI conta com diversas ferramentas para auxiliar tanto na aprendizagem quanto no desenvolvimento de novas soluções. Pode-se citar o OpenCV que é uma biblioteca de visão computacional \textit{open source} \cite{pulli2012realtime}, o ambiente CoLFDImaP é uma ferramenta web para experimentação que faz uso de um paradigma colaborativo \cite{garcia2015colfdimap} e o Adaptive Vision Studio (AVS) que é uma ferramenta para a criação de algoritmos de processamento e análise de imagens através de um \textit{dataflow} de técnicas PDI \cite{radlak2015adaptive}.
+A área de PDI conta com diversas ferramentas para auxiliar tanto na aprendizagem quanto no desenvolvimento de novas soluções. Pode-se citar o OpenCV que é uma biblioteca de visão computacional \textit{open source} \cite{pulli2012realtime}, o ambiente CoLFDImaP que é uma ferramenta web para experimentação que faz uso de um paradigma colaborativo \cite{garcia2015colfdimap} e o Adaptive Vision Studio (AVS) que é uma ferramenta para a criação de algoritmos de processamento e análise de imagens através de um \textit{dataflow} de técnicas PDI \cite{radlak2015adaptive}.
 
 O VISNode é uma ferramenta que apresenta uma interface que permite uma visualização mais concreta de técnicas de PDI e como elas se conectam para formar um processamento de mais alto nível. A ferramenta é baseada em nodos e suas conexões, onde cada nodo representa uma técnica de PDI e pode ser encadeado para formação de um processo \cite{visnode}.
 
@@ -250,7 +250,7 @@ Os procedimentos metodológicos adotados neste trabalho seguem as definições d
 
 Quanto aos procedimentos técnicos adotados, inicialmente foi realizada uma pesquisa bibliográfica sobre os principais temas abordados, gamificação e PDI. Da mesma forma, foi realizada uma revisão de trabalhos correlatos, buscando, nos experimentos estudados, aporte técnico e científico para o desenvolvimento do projeto.
 
-Este trabalho está dividido em seis capítulos. No Capítulo 1 são expostas diferentes técnicas aplicadas no PDI, que foram estudadas na busca de embasamento técnico para o desenvolvimento da ferramenta. O Capítulo 2 trata da gamificação e seus conceitos, apresentando os principais elementos que podem ser utilizados na aplicação de gamificação. No Capitulo 3 são apresentadas algumas pesquisas que já foram feitas na área de desenvolvimento de ferramentas para o ensino e ferramentas gamificadas. No Capítulo 4 é abordado a proposta que o trabalho se prontifica a fazer. Será apresentado o principal objetivo do trabalho e o que será feito para cumpri-lo, abordando quais elementos da gamificação serão utilizados e como serão implementados na ferramenta. O Capítulo 5 aborda o desenvolvimento da ferramenta, com detalhes de seu funcionamento e das técnicas que foram utilizadas. O Capítulo 6 demonstra o processo de validação e os resultados obtidos nessa etapa, seguido das considerações finais.
+Este trabalho está dividido em seis capítulos. No Capítulo 1 são expostas diferentes técnicas aplicadas no PDI, que foram estudadas na busca de embasamento técnico para o desenvolvimento da ferramenta. O Capítulo 2 trata da gamificação e seus conceitos, apresentando os principais elementos que podem ser utilizados na aplicação de gamificação. No Capítulo 3 são apresentadas algumas pesquisas que já foram feitas na área de desenvolvimento de ferramentas para o ensino e ferramentas gamificadas. No Capítulo 4 é abordada a proposta que o trabalho se prontifica a fazer. Será apresentado o principal objetivo do trabalho e o que será feito para cumpri-lo, abordando quais elementos da gamificação serão utilizados e como serão implementados na ferramenta. O Capítulo 5 aborda o desenvolvimento da ferramenta, com detalhes de seu funcionamento e das técnicas que foram utilizadas. O Capítulo 6 demonstra o processo de validação e os resultados obtidos nessa etapa, seguido das considerações finais.
 
 % ----------------------------------------------------------
 % Processamento digital de imagens
@@ -1538,7 +1538,7 @@ O VISNode possui \vnNumeroTotalProcessos{} processos e técnicas de PDI implemen
 
 Os métodos de detecção de bordas implementados são Sobel, Roberts, Prewitt, Laplace \cite{gonzalesWoods:2008}, Robinson \cite{robinson1977edge}, Kirsch \cite{kirsch1971computer}, Frei-Chen \cite{chen1977fast}, Marr-Hildreth \cite{marr1980theory} e Canny \cite{canny:1986}. Na categoria de desfoque tem-se as operações de Gauss, média, mediana e moda \cite{gonzalesWoods:2008}. Redimensionamento, rotação, translação e espelhamento vertical e horizontal \cite{gonzalesWoods:2008} formam a categoria de processos de transformação. Os processos de ajuste de cores são brilho, contraste, tons-de-cinza (média simples e ponderada), inversão de cor e limiarização (\textit{threshold})  \cite{gonzalesWoods:2008}. 
 
-Para manipulação de imagens binárias tem-se os algoritmos de dilatação, erosão, abertura e fechamento \cite{gonzalesWoods:2008}. Os algoritmos implementados da categoria de afinamento são Zhang-Suen \cite{zhang1984fast}, Holt \cite{holt1987improved} e Stentiford \cite{stentiford1983some}. Na categoria de operações aritméticas tem-se a obtenção da média, mediana e moda dos valores da imagem e também histograma \cite{gonzalesWoods:2008}. Para a categoria de extração de objetos tem-se o \textit{Binary Labeling} \cite{gonzalesWoods:2008} e extração de objetos, que trabalham em conjunto. Para preenchimento o algoritmo de Snakes \cite{kass:1988} implementado.
+Para manipulação de imagens binárias tem-se os algoritmos de dilatação, erosão, abertura e fechamento \cite{gonzalesWoods:2008}. Os algoritmos implementados da categoria de afinamento são Zhang-Suen \cite{zhang1984fast}, Holt \cite{holt1987improved} e Stentiford \cite{stentiford1983some}. Na categoria de operações aritméticas tem-se a obtenção da média, mediana e moda dos valores da imagem e também histograma \cite{gonzalesWoods:2008}. Para a categoria de extração de objetos tem-se o \textit{Binary Labeling} \cite{gonzalesWoods:2008} e extração de objetos, que trabalham em conjunto. Para preenchimento de regiões o algoritmo de Snakes \cite{kass:1988} foi implementado.
 
 % TODO: adicionar todos os processos implementados
 
@@ -1624,7 +1624,7 @@ A ideia da ferramenta é que possa ser utilizada dentro da sala de aula, como j�
 
 \subsection{Validação}
 
-A validação da ferramenta será realizada dentro de sala de aula. Para isso, será elaborado uma aula onde os alunos da disciplina irão utilizar a ferramenta como meio de aprendizagem. Nesta aula, será proposto, aos alunos, missão e desafios a serem realizados.
+A validação da ferramenta será realizada dentro de sala de aula. Para isso, será elaborada uma aula onde os alunos da disciplina irão utilizar a ferramenta como meio de aprendizagem. Nesta aula, será proposto, aos alunos, missão e desafios a serem realizados.
 
 A validação busca identificar se a utilização da ferramenta pode auxiliar os alunos no ensino e aprendizagem de PDI. Analisando se sua utilização auxiliou na motivação dos estudantes em relação ao conteúdo da disciplina.
 
@@ -1645,7 +1645,7 @@ No próximo capítulo será apresentado o desenvolvimento da ferramenta. Serão 
 
 %https://invis.io/XWGWAN156ES#/291345781_01
 
-Neste capítulo será abordado o desenvolvimento do trabalho, sendo apresentado o funcionamento da ferramenta e as tecnologias utilizadas para seu desenvolvimento. Também será apresentado as adaptações realizadas na ferramenta para torna-la gamificada.
+Neste capítulo será abordado o desenvolvimento do trabalho, sendo apresentado o funcionamento da ferramenta e as tecnologias utilizadas para seu desenvolvimento. Também serão apresentadas as adaptações realizadas na ferramenta para torna-la gamificada.
 
 \section{Processos}
 
@@ -1653,19 +1653,19 @@ Para auxiliar o aluno na utilização da ferramenta, foi necessário a implement
 
 \subsection{Script Process}
 
-Em algumas ocasiões é necessário realizar algumas operações que não são técnicas de PDI clássicas, para isso foi criado um processo genérico. Este processo não está vinculado a nenhuma técnica de processamento digital de imagens, é um processo que tem por objetivo disponibilizar uma interface para a implementação de algoritmos pela própria ferramenta. Como exemplo, pode ser levado em consideração um cenário apresentado em \ref{desafio:moedas}, onde é necessário calcular o valor total das moedas.
+Em algumas ocasiões é necessário realizar operações que não são técnicas de PDI clássicas, para isso foi criado um processo genérico. Este processo não está vinculado a nenhuma técnica de processamento digital de imagens, é um processo que tem por objetivo disponibilizar uma interface para a implementação de algoritmos pela própria ferramenta. Como exemplo, pode ser levado em consideração um cenário apresentado em \ref{desafio:moedas}, onde é necessário calcular o valor total das moedas.
 
-A linguagem Java possui em sua arquitetura uma API para execução de \textit{scripts}, possibilitando escrever customizações para aplicações. JavaScript (JS) é uma das linguagens suportadas por esta API, permitindo rápido desenvolvimento e extensão de partes da aplicação. A API permite a execução de código fonte, sendo possível compartilhar objetos entre Java e JS e invocar funções \cite{oracle}. Devido a esta flexibilidade, os processos dinâmicos fazem uso desta API de Script como linguagem o JS. 
+A linguagem Java possui em sua arquitetura uma API para execução de \textit{scripts}, possibilitando escrever customizações para aplicações. JavaScript (JS) é uma das linguagens suportadas por esta API, permitindo o rápido desenvolvimento e extensão de partes da aplicação. A API permite a execução de código fonte, sendo possível compartilhar objetos entre Java e JS e invocar funções \cite{oracle}. Devido a esta flexibilidade, os processos dinâmicos fazem uso desta API de Script como linguagem o JS. 
 
 \section{Material teórico}
 
-O processamento digital de imagens é um área de estudo que possui forte embasamento teórico. Em muitas situações, o material teórico é constituído basicamente de notações matemáticas, o que pode dificultar o entendimento dos estudante. Tendo em vista este cenário, foi construído uma área na ferramenta que possibilite ao estudante o contato com o referencial teórico de técnicas de PDI através de uma apresentação mais didática.
+O processamento digital de imagens é um área de estudo que possui forte embasamento teórico. Em muitas situações, o material teórico é constituído basicamente de notações matemáticas, o que pode dificultar o entendimento dos estudante. Tendo em vista este cenário, foi construída uma área na ferramenta que possibilite ao estudante o contato com o referencial teórico de técnicas de PDI através de uma apresentação mais didática.
 
 Para a construção do material teórico disponível na ferramenta, foi utilizado como base a pesquisa apresentada no Capitulo \ref{sec:pdi}. Este material consiste basicamente de uma explicação conceitual de cada técnica de PDI e o funcionamento básico do algoritmo. Também é disponibilizado ao estudante o código fonte utilizado para implementação do processo.
 
 Para facilitar a disponibilização do material teórico, foi utilizado um arquivo for formato \textit{Markdown}. Este formato possibilita a fácil edição e formação de conteúdo a partir de \textit{tags} que são adicionadas em um arquivo de texto.
 
-O acesso a este conteúdo é realizado por processo, desta forma, o usuário irá selecionar a processo que deseja acessar o material teórico. Na Figura \ref{fig:visnodeCode} é apresentado a janela onde o usuário pode visualizar o código fonte de uma técnica de PDI. Já na Figura \ref{fig:visnodeInformation}, é apresentado a janela onde o usuário tem acesso a explicação teórica da técnica de PDI.
+O acesso a este conteúdo é realizado por processo, desta forma, o usuário irá selecionar a processo que deseja acessar o material teórico. Na Figura \ref{fig:visnodeCode} é apresentada a janela onde o usuário pode visualizar o código fonte de uma técnica de PDI. Já na Figura \ref{fig:visnodeInformation}, é apresentada a janela onde o usuário tem acesso a explicação teórica da técnica de PDI.
 
 \begin{figure}[ht]
 \centering
@@ -1699,7 +1699,7 @@ A Figura \ref{fig:visnodeArquitetura} demonstra a arquitetura do projeto. É pos
 \end{figure}
 
 % ---
-\section{\textit{Telas do sistema}}
+\section{Telas do sistema}
 
 \begin{figure}[ht]
 \centering
@@ -1709,7 +1709,7 @@ A Figura \ref{fig:visnodeArquitetura} demonstra a arquitetura do projeto. É pos
 \label{fig:janelaRanking}
 \end{figure}
 
-Na Figura \ref{fig:janelaRanking} é apresentado a janela de \textit{ranking}. Nesta janela é possível visualizar o \textit{ranking} por grupo e global. No \textit{ranking} por grupo somente será considerado os usuário pertencentes aos grupos que o usuário participa. Já no \textit{ranking} global, todos os usuários do sistema serão computados.
+Na Figura \ref{fig:janelaRanking} é apresentado a janela de \textit{ranking}. Nesta janela é possível visualizar o \textit{ranking} por grupo e global. No \textit{ranking} por grupo somente serão considerados os usuários pertencentes aos grupos que o usuário participa. Já no \textit{ranking} global, todos os usuários do sistema serão computados.
 
 \begin{figure}[ht]
 \centering
@@ -1721,7 +1721,7 @@ Na Figura \ref{fig:janelaRanking} é apresentado a janela de \textit{ranking}. N
 
 Na Figura \ref{fig:janelaProgresso} é apresentado o progresso do usuário em suas missões. Está janela se faz necessária para que o usuário tenha uma noção de seu progresso.
 
-Na Figura \ref{fig:janelaRecompensa} e na Figura \ref{fig:janelaRecompensaDetalhe} são demonstrados as recompensas conquistadas pelo usuário.
+Na Figura \ref{fig:janelaRecompensa} e na Figura \ref{fig:janelaRecompensaDetalhe} são demonstradas as recompensas conquistadas pelo usuário.
 
 \begin{figure}[ht]
 \centering
@@ -1759,7 +1759,7 @@ Na Figura \ref{fig:janelaCadastrousuario} é demonstrado o formulário por onde 
 \label{fig:janelaCadastrousuario}
 \end{figure}
 
-Na Figura \ref{fig:janelaMissoes} é demonstrado as missões disponíveis para o usuário resolver. Cada missão possuirá um breve descrição e um nível de dificuldade, podendo variar entre Básico, Intermediário, Avançado.
+Na Figura \ref{fig:janelaMissoes} são demonstradas as missões disponíveis para o usuário resolver. Cada missão possuirá uma breve descrição e um nível de dificuldade, podendo variar entre Básico, Intermediário, Avançado.
 
 \begin{figure}[ht]
 \centering
@@ -1779,7 +1779,7 @@ Na Figura \ref{fig:janelaMissaoDesafio} são apresentados os desafios ou etapas 
 \label{fig:janelaMissaoDesafio}
 \end{figure}
 
-Na Figura \ref{fig:janelaMissaoDesafioApresentacao} é apresentado a narrativa de um desafios. É nesta janela que é explicado a problemática a ser solucionada.
+Na Figura \ref{fig:janelaMissaoDesafioApresentacao} é apresentada a narrativa de um desafios. É nesta janela que é explicada a problemática a ser solucionada.
 
 \begin{figure}[ht]
 \centering
@@ -1803,15 +1803,15 @@ A Figura \ref{fig:janelaMissaoDesafioResolucao} demonstra a resolução de um de
 
 \section{Apresentação do VISNode}
 
-No dia 15/05/2018 foi realizado uma apresentação do VISNode para turma da disciplina de PDI da universidade Feevale do curso de Ciência da Computação e Sistemas da Informação. O objetivo  foi apresentar o VISNode e coletar \textit{feedbacks} dos estudantes. Neste momento a ferramenta não possuía nenhuma implementação relacionada a gamificação, somente foi demonstrado o funcionamento do VISNode.
+No dia 15/05/2018 foi realizada uma apresentação do VISNode para turma da disciplina de PDI da Universidade Feevale do curso de Ciência da Computação e Sistemas da Informação. O objetivo  foi apresentar o VISNode e coletar \textit{feedbacks} dos estudantes. Neste momento a ferramenta não possuía nenhuma implementação relacionada a gamificação, somente foi demonstrado o funcionamento do VISNode.
 
 Para dar uma maior dinâmica a apresentação, foi proposto aos estudantes a realização de um desafio utilizando a ferramenta VISNode. O desafio escolhido é o mesmo descrito na sessão \ref{desafio:moedas}. Participaram da apresentação e da resolução do desafio 5 estudantes.
 
-Ao termino do desafio, foi solicitado aos estudantes que contribuíssem com um \textit{feedback} da utilização da ferramenta. Segundo os estudantes, a utilização da ferramenta permitiu a aplicação da teoria na pratica, onde normalmente os estudantes tinham contado com as técnicas separadamente, foi possível aplica-las em sequência. A ferramenta contribuiu para o intendimento de como conectar as técnicas.
+Ao termino do desafio, foi solicitado aos estudantes que contribuíssem com um \textit{feedback} da utilização da ferramenta. Segundo os estudantes, a utilização da ferramenta permitiu a aplicação da teoria na prática, onde normalmente os estudantes tinham contado com as técnicas separadamente, foi possível aplica-las em sequência. A ferramenta contribuiu para o intendimento de como conectar as técnicas.
 
-A aplicação do desafios também deve um \textit{feedback} positivo. Segundo os estudantes, o desafio possibilitou a resolução de um problema real. Esta abordagem tornou a dinâmica da aula mais iterativa, instigando os estudantes a resolver um problema de aplicação de técnicas de PDI e não de implementação de técnicas.
+A aplicação do desafios também teve um \textit{feedback} positivo. Segundo os estudantes, o desafio possibilitou a resolução de um problema real. Esta abordagem tornou a dinâmica da aula mais iterativa, instigando os estudantes a resolver um problema de aplicação de técnicas de PDI e não de implementação de técnicas.
 
-Nesta nesta apresentação foram identificados algumas melhorias para a ferramenta VISNode. A ferramenta utiliza tonalidades escuras na construção de suas janelas. Estas tonalidades dificultaram a visualização da ferramenta na projetação da tela, utilizando um projetor. Para a resolução deste problema, foi disponibilizado na ferramenta um opção para a mudanças do \textit{Skin} da ferramenta, sendo possível alternar entre tonalidades escuras e claras.
+Nesta apresentação foram identificadas algumas melhorias para a ferramenta VISNode. A ferramenta utiliza tonalidades escuras na construção de suas janelas. Estas tonalidades dificultaram a visualização da ferramenta na projetação da tela, utilizando um projetor. Para a resolução deste problema, foi disponibilizado na ferramenta uma opção para a mudanças do \textit{Skin} da ferramenta, sendo possível alternar entre tonalidades escuras e claras.
 
 Neste mesmo cenário, outro ponto de melhoria identificado foi em relação as janelas que possuíam código fonte. Nestes casos, para facilitar a visualização de todos os estudantes, a ferramenta  passou a permitir a mudança do tamanho da fonte.
 
@@ -1827,11 +1827,11 @@ Neste mesmo cenário, outro ponto de melhoria identificado foi em relação as j
 \chapter[Considerações Finais]{Considerações Finais}
 \addcontentsline{toc}{chapter}{Considerações Finais}
 
-Processamento digital de imagem é que pode ser aplicada em diversos ramos, tando acadêmicos quanto no mercado. O estudo desta área não é, muitas vezes, atrativo devido a forma com que o embasamento teórico é apresentado sem que este seja entusiasmante para o aluno. A computação pode contribuir para auxiliar alunos e educadores na aquisição de conhecimento, através de ferramentas que façam uso de abordagens motivacionais como a gamificação. Nesta linha, o objetivo principal deste trabalho foi adaptar a ferramenta VISNode para sua aplicação em sala de aula, fazendo uso de técnicas de gamificação para isso. Para alcançar este objetivo, é fundamenta conhecer técnicas de processamento digital de imagens que a ferramenta contempla e os principais elementos na gamificação e como aplica-los.
+Processamento digital de imagem pode ser aplicada em diversos ramos, tando acadêmicos quanto no mercado. O estudo desta área não é, muitas vezes, atrativo, devido a forma com que o embasamento teórico é apresentado sem que este seja entusiasmante para o aluno. A computação pode contribuir para auxiliar alunos e educadores na aquisição de conhecimento, através de ferramentas que façam o uso de abordagens motivacionais como a gamificação. Nesta linha, o objetivo principal deste trabalho foi adaptar a ferramenta VISNode para sua aplicação em sala de aula, fazendo uso de técnicas de gamificação para isso. Para alcançar este objetivo, é fundamental conhecer técnicas de processamento digital de imagens que a ferramenta contempla e os principais elementos na gamificação e como aplica-los.
 
-Desta forma, a pesquisa foi iniciada com a apresentação de diferentes técnicas de processamento digital de imagens. Foi abordado técnicas relacionadas principalmente ao realce, remoção de ruído, segmentação e morfologia matemática. A definição de quais técnicas seriam estudas foi feita com base nas técnicas disponíveis na ferramenta VISNode.
+Desta forma, a pesquisa foi iniciada com a apresentação de diferentes técnicas de processamento digital de imagens. Foram abordadas técnicas relacionadas principalmente ao realce, remoção de ruído, segmentação e morfologia matemática. A definição de quais técnicas seriam estudas foi feita com base nas técnicas disponíveis na ferramenta VISNode.
 
-O capítulo \ref{sec:gamificacao} abordou conceitos relacionado a gamificação. Foi abordado seus principais elementos, as motivações por traz do uso desta metodologia e como ela pode ser aplicada.
+O capítulo \ref{sec:gamificacao} abordou conceitos relacionado a gamificação. Foram abordados seus principais elementos, as motivações por traz do uso desta metodologia e como ela pode ser aplicada.
 Este estudo foi de vital importância para o correto entendimento do assunto, contribuindo para este trabalho alcançasse o objetivo proposto.
 
 No capítulo \ref{sec:trabalhosCorrelatos} foram apresentados dois trabalhos relacionados à área deste projeto. O primeira trata da utilização de uma ferramenta para auxiliar no ensino de processamento digital de imagens. A segunda expõe a utilização de uma ferramenta gamificada para o ensino utilizando elementos da gamificação. A união dos dois trabalhos contribuiu para o escolha dos elementos da gamificação a serem utilizados neste trabalho.
