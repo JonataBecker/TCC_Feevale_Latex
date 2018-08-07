@@ -149,7 +149,7 @@
 
 % resumo em português
 \begin{resumo}
-A área de processamento digital de imagens vem crescendo nas mais diversas áreas de conhecimento, tornando-se um importante campo de estudo. O estudo desta área não é, muitas vezes, atrativo, devido a forma com que o embasamento teórico é apresentado sem que este seja entusiasmante para o aluno. Abordagens como gamificação tem como objetivo auxiliar estudantes a se manterem motivados e envolvidos com o processo de aprendizagem, utilizando conceitos provenientes dos jogos. Ferramentas para o ensino proporcionam um ambiente de simulação e prototipação, servindo como mecanismo para o estudante aplicar na prática aquilo que ele aprendeu na teoria. O VISNode é uma ferramenta para prototipação de técnicas de PDI, que faz uso de nodos e suas conexões para representar técnicas e suas conexões. Desta forma, este trabalho tem como objetivo desenvolver módulos para a ferramenta VISNode, visando o desenvolvimento de uma ferramenta para o aporte ao ensino na área de PDI. Serão utilizados conceitos de gamificação para incentivar os estudantes, disponibilizando, também, materiais teóricos para complementar o aprendizado. Os módulos da ferramenta serão desenvolvidos e validados segundo o estilo de aprendizagem dos usuários.
+A área de processamento digital de imagens vem crescendo nas mais diversas áreas de conhecimento, tornando-se um importante campo de estudo. O estudo desta área não é, muitas vezes, atrativo, devido a forma com que o embasamento teórico é apresentado sem que este seja entusiasmante para o aluno. Abordagens como gamificação tem como objetivo auxiliar estudantes a se manterem motivados e envolvidos com o processo de aprendizagem, utilizando conceitos provenientes dos jogos. Ferramentas para o ensino proporcionam um ambiente de simulação e prototipação, servindo como mecanismo para o estudante aplicar na prática aquilo que ele aprendeu na teoria. O VISNode é uma ferramenta para prototipação de técnicas de PDI, que faz uso de nodos e suas conexões para representar técnicas e suas conexões. Desta forma, este trabalho tem como objetivo apresentar o desenvolvimento de módulos para a ferramenta VISNode, visando  uma ferramenta para o aporte ao ensino na área de PDI. Foram utilizados conceitos de gamificação para incentivar os estudantes, disponibilizando, também, materiais teóricos para complementar o aprendizado. Os módulos da ferramenta serão desenvolvidos e validados segundo o estilo de aprendizagem dos usuários.
 
  \vspace{\onelineskip}
     
@@ -230,23 +230,23 @@ The area of digital image processing has been growing in the most diverse areas 
 % ----------------------------------------------------------
 \chapter{Introdução}
 
-Mesmo com o esforço e a dedicação de educadores de universidades, estudantes se frustram com disciplinas do curso devido a grande complexidade e a falta de motivação \cite{garcia2015colfdimap}. Na maioria dos casos, estudantes descobrem que a teoria não é atrativa, difícil e pouco aplicável \cite{zin2015transforming}.
+Mesmo com o esforço e a dedicação de educadores de universidades, estudantes se frustram com algumas disciplinas dos cursos tecnológicos devido a grande complexidade e a falta de motivação \cite{garcia2015colfdimap}. Na maioria dos casos, estudantes descobrem que a teoria não é atrativa, difícil e pouco aplicável \cite{zin2015transforming}.
 
 A gamificação é uma abordagem que visa facilitar a aprendizagem e incrementar a motivação, através da utilização de conceitos provenientes dos jogos como superar desafios, receber recompensas e ganhar pontuação. Um dos objetivos da gamificação é atrair a atenção da pessoa e motivá-la a executar a tarefa proposta, criando um ambiente onde haja um maior envolvimento \cite{kaap:2014}.   
 
-Os avanços de pesquisa e utilização de Processamento Digital de Imagens (PDI) cresce fortemente nas mais diversas áreas de conhecimento. Em medicina, por exemplo, procedimentos são utilizados para melhorar a qualidade de imagens médicas através da alteração de contraste ou intensidade de contraste, facilitando, desta forma, a interpretação por parte de profissionais da área da saúde \cite{ronnau2015}. Da mesma forma, PDI pode ser encontrado em astronomia \cite{grice20153d}, biologia \cite{hardy2017advanced}, aplicações industriais \cite{dai2015advances} e apoio a defesa \cite{mendoza2016development}. Devido a esta importância, a disciplina de PDI é presente em quase todos os programas de graduação dos cursos de Ciência da Computação e Sistemas de Informação \cite{garcia2015colfdimap}.
+Por outro lado, avanços de pesquisa e a  utilização de Processamento Digital de Imagens (PDI) cresce fortemente nas mais diversas áreas de conhecimento. Em medicina, por exemplo, procedimentos são utilizados para melhorar a qualidade de imagens médicas através da alteração de contraste ou intensidade de contraste, facilitando, desta forma, a interpretação por parte de profissionais da área da saúde \cite{ronnau2015}. Da mesma forma, PDI pode ser encontrado em astronomia \cite{grice20153d}, biologia \cite{hardy2017advanced}, aplicações industriais \cite{dai2015advances} e apoio a defesa \cite{mendoza2016development}. Devido a esta importância, a disciplina de PDI é presente em quase todos os programas de graduação dos cursos de Ciência da Computação e Sistemas de Informação \cite{garcia2015colfdimap}.
 
-PDI é composta por diversas etapas, iniciando pela aquisição da imagem, passando pelo processamento e segmentação até a exibição da imagem ou informações provenientes destas. A etapa de processamento de imagens é composta por procedimentos que são apresentados em forma de algoritmos \cite{gonzalesWoods:2008}. Por estes algoritmos expressarem funções matemáticas complexas, softwares podem ser úteis para auxiliar alunos a entender estes conceitos sem desconsiderar a teoria matemática \cite{lopez2016teaching}. A tecnologia é uma poderosa ferramenta para o processo de ensino e aprendizagem, oferecendo ambientes de simulação e prototipação para educadores e estudantes, que servem como aporte do ensino \cite{henderson2017works}.
+PDI é composto por diversas etapas, iniciando pela aquisição da imagem, passando pelo processamento e segmentação até a exibição da imagem ou informações provenientes destas. A etapa de processamento de imagens é composta por procedimentos que são apresentados em forma de algoritmos \cite{gonzalesWoods:2008}. Por estes algoritmos expressarem funções matemáticas complexas, softwares podem ser úteis para auxiliar alunos a entender estes conceitos sem desconsiderar a teoria matemática \cite{lopez2016teaching}. A tecnologia é uma poderosa ferramenta para o processo de ensino e aprendizagem, oferecendo ambientes de simulação e prototipação para educadores e estudantes, que servem como aporte ao ensino \cite{henderson2017works}.
 
 A área de PDI conta com diversas ferramentas para auxiliar tanto na aprendizagem quanto no desenvolvimento de novas soluções. Pode-se citar o OpenCV que é uma biblioteca de visão computacional \textit{open source} \cite{pulli2012realtime}, o ambiente CoLFDImaP que é uma ferramenta web para experimentação que faz uso de um paradigma colaborativo \cite{garcia2015colfdimap} e o Adaptive Vision Studio (AVS) que é uma ferramenta para a criação de algoritmos de processamento e análise de imagens através de um \textit{dataflow} de técnicas PDI \cite{radlak2015adaptive}.
 
-O VISNode é uma ferramenta que apresenta uma interface que permite uma visualização mais concreta de técnicas de PDI e como elas se conectam para formar um processamento de mais alto nível. A ferramenta é baseada em nodos e suas conexões, onde cada nodo representa uma técnica de PDI e pode ser encadeado para formação de um processo \cite{visnode}.
+O VISNode é uma ferramenta que apresenta uma interface que permite uma visualização mais concreta de técnicas de PDI e como elas se conectam para formar um processamento de mais alto nível. A ferramenta é baseada em nodos e suas conexões, onde cada nodo representa uma técnica de PDI e pode ser encadeado para a  formação de um processo completo  \cite{visnode}.
 
-Portanto, este trabalho tem como objetivo desenvolver módulos para a ferramenta VISNode, visando o auxílio na aprendizagem na área de processamento digital de imagens. Para isso serão aplicados conceitos de gamificação. 
+Portanto, este trabalho tem como objetivo apresentar o desenvolvimento de módulos para a ferramenta VISNode, visando o auxílio na aprendizagem na área de processamento digital de imagens. Para isso foram aplicados conceitos de gamificação. 
 
-O módulo desenvolvido proporcionará aos estudantes um ambiente onde seja possível o aprendizado através da experimentação de técnicas de PDI. A partir da ferramenta será possível consultar materiais teóricos que descrevem o funcionamento das técnicas de PDI, além do pseudocódigo de seus algoritmos. Tendo em vista que a busca por material teórico pode ser um desafio, pois normalmente estas matérias possuem o referencial matemático e a escrita de forma algorítmica pode ser difícil. Além disso, a ferramenta contará com um ambiente de desafios que tem como objetivo incentivar estudantes através da resolução de problemas relacionados a área de PDI.
+O módulo desenvolvido proporciona aos estudantes um ambiente onde seja possível o aprendizado através da experimentação de técnicas de PDI. A partir da ferramenta é possível consultar materiais teóricos que descrevem o funcionamento das técnicas de PDI, além do pseudocódigo de seus algoritmos. A busca por material teórico pode ser um desafio, pois normalmente estas matérias possuem o referencial matemático e a escrita de forma algorítmica tornando difícil o entendimento. Além disso, a ferramenta conta com um ambiente de desafios que tem como objetivo incentivar estudantes através da resolução de problemas relacionados a área de PDI.
 
-Os procedimentos metodológicos adotados neste trabalho seguem as definições de \cite{prodanov2013metodologia}, sendo caracterizado como uma pesquisa aplicada, em que a ferramenta criada poderá ser utilizada como aporte para o ensino. Também é possível caracterizá-lo como uma pesquisa experimental, pois a solução encontrada envolveu testes práticos para a validação da ferramenta. Esta validação será realizada em sala de aula, utilizando a ferramenta desenvolvida e aplicando os desafios propostos por ela nos alunos.
+Os procedimentos metodológicos adotados neste trabalho seguem as definições de \cite{prodanov2013metodologia}, sendo caracterizado como uma pesquisa aplicada, em que a ferramenta criada pode ser utilizada como aporte para o ensino. Também é possível caracterizá-lo como uma pesquisa experimental, pois a solução encontrada envolveu testes práticos para a validação da ferramenta. Esta validação foi realizada em sala de aula, utilizando a ferramenta desenvolvida e aplicando os desafios propostos por ela aos alunos.
 
 Quanto aos procedimentos técnicos adotados, inicialmente foi realizada uma pesquisa bibliográfica sobre os principais temas abordados, gamificação e PDI. Da mesma forma, foi realizada uma revisão de trabalhos correlatos, buscando, nos experimentos estudados, aporte técnico e científico para o desenvolvimento do projeto.
 
@@ -268,9 +268,9 @@ A etapa de representação e descrição é responsável pelo armazenamento e ma
 
 Para o processamento digital de imagens é necessário que a imagem possa ser manipulada digitalmente. Segundo \citet{pedriniSchwartz:2008}, uma imagem digital pode ser representada através de uma matriz bidimensional, onde cada elemento desta matriz corresponde a um ponto da imagem. Cada um destes pontos representa uma cor ou um tom de cinza e são denominados pixels. 
 
-Imagens monocromáticas são imagens onde seus pixels possuem somente uma banda espectral, ou seja, seu pixel é representado somente por uma grandeza. Estas imagens podem ser binárias ou em escala de cinza. Imagens binárias são imagens onde seus pixels assumem somente dois valores, normalmente 0 ou 1. Já uma imagem em escala de cinza, é uma imagem onde seus pixels podem assumir uma faixa de valores. Caso a imagem utilize 1 \textit{byte}, seus valores podem variam de 0 a 255, onde 0 representa a cor preta e 255 a cor branca, e o intervalo é representado por tonalidades de cinza, desta forma, haverá 256 tons diferentes \cite{conciAzevedoLeta:2008}.
+Imagens monocromáticas são imagens onde seus pixels possuem somente uma banda espectral, ou seja, seu pixel é representado somente por uma grandeza. Estas imagens podem ser binárias ou em escala de cinza. Imagens binárias são imagens onde seus pixels assumem somente dois valores, normalmente 0 ou 1. Já uma imagem em escala de cinza, é uma imagem onde seus pixels podem assumir uma faixa de valores. Caso a imagem utilize 1 \textit{byte}, seus valores podem variar de 0 a 255, onde 0 representa a cor preta e 255 a cor branca, e o intervalo é representado por tonalidades de cinza, desta forma, haverá 256 tons diferentes \cite{conciAzevedoLeta:2008}.
 
-Imagens coloridas são imagens que possuem mais de uma banda, ou seja, multibanda. Seus pixels possuem mais de um canal. Cada canal representa uma cor, desta forma, uma imagem RGB será representada por canais que representam a cor vermelha, verde e azul, respectivamente. Digitalmente, esta imagem pode ser representada por 3 matrizes, cada uma representando um canal da imagem, a combinação das três matrizes representa uma cor \cite{conciAzevedoLeta:2008}.
+Imagens coloridas são imagens que possuem mais de uma banda, ou seja, multibanda. Seus pixels possuem mais de um canal. Cada canal representa uma cor, desta forma, uma imagem RGB será representada por canais que identificam a cor vermelha, verde e azul, respectivamente. Digitalmente, esta imagem pode ser representada por 3 matrizes, cada uma representando um canal da imagem, a combinação das três matrizes representa uma cor \cite{conciAzevedoLeta:2008}.
 
 Uma imagem colorida pode ser transformada em uma imagem monocromática em escala de cinza ou em uma imagem binária. A transformação em escala de cinza realiza uma combinação dos valores RGB de cada pixel, definido um valor para cada pixel que representa a média dos valores RGB. A conversão para uma imagem binária pode ser realizada através do processo de Limiarização (explicado na seção \ref{sec:limiarizacao}), onde cada pixel da imagem será testado e verificado se seu valor será preto ou branco \cite{mossmann2010extraccao}.
 
@@ -286,9 +286,9 @@ O cálculo da distribuição de níveis cor de uma imagem é denominado histogra
 
 Segundo \citet{conciAzevedoLeta:2008}, o histograma pode ser obtido da seguinte forma: analisa-se o tom de cada pixel; realiza-se a contagem do número de pixeis de cada intensidade de cor; representa-se esses valores na forma gráfica, correspondendo a frequência de cada tom.
 
-Um processo comumente aplicado em técnicas de PDI é a convolução. Segundo \citet{pedriniSchwartz:2008}, o processo de convolução faz uso de matrizes, que são denominadas máscaras, para aplicar modificações na imagem pixel a pixel. A máscara, também conhecida como \textit{kernel} é uma matriz bidimensional quadrada. Usualmente, esta matriz possui um tamanho ímpar e dimensões quadradas, estas características são importantes para que a máscara possua um pixel central.
+Um processo comumente aplicado em técnicas de PDI é a convolução. Segundo \citet{pedriniSchwartz:2008}, o processo de convolução faz uso de matrizes, que são denominadas máscaras, para aplicar modificações na imagem pixel a pixel. A máscara, também conhecida como \textit{kernel}, é uma matriz bidimensional quadrada. Usualmente, esta matriz possui um tamanho ímpar e dimensões quadradas, estas características são importantes para que a máscara possua um pixel central.
 
-O processo de convolução utiliza os coeficientes desta máscaras para realizar uma multiplicação pelos níveis de cor dos pixeis. O pixel central é modificado pela média de todas as multiplicações. Este processo percorre a imagem aplicando a máscara em todos os pixel da imagem. Outro processo semelhante é o processo de correlação, onde este possui o mesmo princípio da convolução, mas com a diferença da máscara ser rotacionada em 180º \cite{gonzalesWoods:2008}. A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KJBGzc}.
+O processo de convolução utiliza os coeficientes desta máscaras para realizar uma multiplicação pelos níveis de cor dos pixeis. O pixel central é modificado pela média de todas as multiplicações. Este processo percorre a imagem aplicando a máscara em todos os pixel da imagem. Outro processo semelhante é o processo de correlação, onde este possui o mesmo princípio da convolução, mas com a diferença da máscara ser rotacionada em 180º \cite{gonzalesWoods:2008}. A implementação em java para o algoritmo de convolução pode ser acessado através do link: \url{https://bit.ly/2KJBGzc}.
 
 Neste capítulo serão apresentadas algumas das principais técnicas de PDI. Dentre elas estarão limiarização, transformações geométricas, filtro de passa baixa e passa alta, morfologia matemática, afinamento e técnicas de classificação.
 % ---
@@ -324,7 +324,7 @@ O brilho e contraste podem ser definidos através de uma função matemática. E
 \label{fig:contraste}
 \end{figure}
 
-A Figura \ref{fig:contraste} apresenta figuras que representam a imagem original (esquerda), o resultado após a aplicação de contraste utilizando o coeficiente 2 (b) e o resultado após a aplicação de contraste utilizando o coeficiente 0,5, respectivamente (c). A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2JY8Dqj}
+A Figura \ref{fig:contraste} apresenta figuras que representam a imagem original (esquerda), o resultado após a aplicação de contraste utilizando o coeficiente 2 (b) e o resultado após a aplicação de contraste utilizando o coeficiente 0,5, respectivamente (c). A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2JY8Dqj}.
 
 \begin{figure}[ht]
 \centering
@@ -334,7 +334,7 @@ A Figura \ref{fig:contraste} apresenta figuras que representam a imagem original
 \label{fig:brilho}
 \end{figure}
 
-A Figura \ref{fig:brilho} apresenta imagens que representam a imagem original (direita), o resultado após a aplicação de brilho utilizando o coeficiente 50 (b) e o resultado após a aplicação de brilho utilizando o coeficiente -50, respectivamente (c). A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2FTWGPN}
+A Figura \ref{fig:brilho} apresenta imagens que representam a imagem original (direita), o resultado após a aplicação de brilho utilizando o coeficiente 50 (b) e o resultado após a aplicação de brilho utilizando o coeficiente -50, respectivamente (c). A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2FTWGPN}.
 
 % ---
 \section{Transformações geométricas}
@@ -366,7 +366,7 @@ Transformações espaciais podem ser realizadas através da multiplicação de m
 \end{bmatrix}
 \]
 
-Os valores X’, Y’, Z representam as coordenadas da imagem de destino que receberão o pixel analisado das coordenadas X, Y, Z da imagem de origem. Os valores \(t_x\), representam a matriz de transformação que deve ser aplicada para o pixel em análise.
+Os valores X’, Y’, Z' representam as coordenadas da imagem de destino que receberão o pixel analisado das coordenadas X, Y, Z da imagem de origem. Os valores \(t_x\), representam a matriz de transformação que deve ser aplicada para o pixel em análise.
 
 % ---
 \subsection{Translação}
@@ -383,7 +383,7 @@ T
 \end{bmatrix} 
 \]
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KHJ26c}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KHJ26c}.
 
 % ---
 \subsection{Mudança de escala}
@@ -400,7 +400,7 @@ T
 \end{bmatrix} 
 \]
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2IpuvxP}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2IpuvxP}.
 
 % ---
 \subsection{Reflexão}
@@ -435,7 +435,7 @@ Onde \(E_yz\) refere-se a reflexão no eixo \(xy\), \(E_xz\) refere-se a reflex�
 
 Segundo \citet{conciAzevedoLeta:2008}, um \textit{flip} horizontal pode ser definido por uma rotação de 180º com os valores das coordenadas \(y_0\) invertidas (representado pela máscara \(E_yz\)) e um \textit{flip} vertical pode ser definido por uma rotação de 180º com os valores das coordenadas \(x_0\) invertidas (representado pela máscara \(E_xz\)).
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KIZRxn}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KIZRxn}.
 
 \begin{figure}[ht]
 \centering
@@ -486,7 +486,7 @@ R_\gamma
 \end{bmatrix} 
 \]
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2I4hQga}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2I4hQga}.
 
 % ---
 \section{Filtros passa baixa (Suavização)}
@@ -500,13 +500,13 @@ Filtros de média são utilizadas para fins de suavização de imagens, sendo ut
 
 O filtro de média calcula a média aritmética da máscara em processamento, o valor resultante será aplicado no pixel central. Este filtro diminui variações da imagem, removendo, desta forma, seu ruído desta \cite{gonzalesWoods:2008}.
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jGc7CM} 
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jGc7CM}. 
 
 % ---
 \subsection{Moda}
 O filtro de moda calcula o ponto de maior frequência entre os da área em processamento. É indicado para a remoção de ruídos aleatoriamente distribuídos como o ruído gaussiano ou o uniforme \cite{gonzalesWoods:2008}. Neste filtro, os valores existentes na máscara são ordenado e é utilizado o como novo valor o valor mais frequente \cite{conciAzevedoLeta:2008}.
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2Io3U46}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2Io3U46}.
 
 % ---
 \subsection{Mediana}
@@ -519,7 +519,7 @@ Este filtro realiza a ordenação das intensidades dos pixels existentes dentro 
 
 O filtro de mediana possui resultados melhores do que o filtro de média. Isso ocorre devido ao fato de que, se existe um ruído entre os elementos da máscara, este valor estará presente nas primeiras ou últimas posições. Desta forma, pontos discrepantes têm grande chance de serem considerados ruídos e suavizados \cite{conciAzevedoLeta:2008}.
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2wi5EXL} 
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2wi5EXL}. 
 
 % ---
 \subsection{Filtro Gaussiano}
@@ -544,7 +544,7 @@ Segundo \citet{pedriniSchwartz:2008}, em filtros Gaussianos, os coeficientes da 
 
 Na Figura \ref{fig:suavizacao} é apresentado um conjunto de aplicações de filtros passa baixa para a suavização da imagem de origem. A imagem (a) representa a imagem original.  O primeiro filtro apresentado é o filtro da média (b), seguido do filtro moda (c), mediana (d) e o filtro Gaussiano (e).
 
-A aplicação de um filtro Gaussiano pode ser realizada através de convoluções por meio de matrizes. Abaixo são descritas duas máscaras para este filtro, ambas com \(\sigma\) = 0.
+A aplicação de um filtro Gaussiano pode ser realizada através de convoluções por meio de matrizes. Na sequência são descritas duas máscaras para este filtro, ambas com \(\sigma\) = 0.
 
 \begin{figure}[ht]
 \centering
@@ -552,7 +552,7 @@ A aplicação de um filtro Gaussiano pode ser realizada através de convoluçõe
 \end{figure}
 
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KIrx5F}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2KIrx5F}.
 
 % ---
 \section{Filtros passa-alta}
@@ -573,7 +573,7 @@ O gradiente de uma imagem, para a função \(f(x,y)\) na coordenadas \(x,y\), po
 Equação 1.1
 \end{figure}
 
-A magnitude do gradiente se relaciona com a taxa de variação da imagem por unidade de distância. Este valor pode ser definido através da fórmula abaixo:
+A magnitude do gradiente se relaciona com a taxa de variação da imagem por unidade de distância. Este valor pode ser definido através da fórmula apresentada na sequência:
 
 \begin{figure}[ht]
 \centering
@@ -596,7 +596,7 @@ Z
 % ---
 \subsection{Sobel}
 
-O operador de Sobel realiza a aproximação da magnitude do gradiente através da diferença de valores ponderados dos níveis de cinza da imagem. Para isso, são utilizados duas máscaras de tamanho 3 x 3, sendo que uma é aplicada em relação ao \(eixo\) \(x\) e a outro é aplicada no \(eixo\) \(y\) \cite{pedriniSchwartz:2008}. Este operador realiza um suavização, e ao mesmo tempo, o realce de bordas.
+O operador de Sobel realiza a aproximação da magnitude do gradiente através da diferença de valores ponderados dos níveis de cinza da imagem. Para isso, são utilizados duas máscaras de tamanho 3 x 3, sendo que uma é aplicada em relação ao \(eixo\) \(x\) e a outra é aplicada no \(eixo\) \(y\) \cite{pedriniSchwartz:2008}. Este operador realiza um suavização, e ao mesmo tempo, o realce de bordas.
 
 \[
 G_x
@@ -618,7 +618,7 @@ Considerando \(z_0\) a \(z_8\) os tons de cinza em torno do pixel que está send
 \[Gx = (z_6 + 2z_7 + z_8) - (z_0 + 2z_1 + z_2)\]
 \[Gy = (z_2 + 2z_5 + z_8) - (z_0 + 2z_3 + z_6)\]
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2HYVgcU}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2HYVgcU}.
 
 % ---
 \subsection{Roberts}
@@ -645,7 +645,7 @@ Considerando \(z_0\) a \(z_8\) os tons de cinza em torno do pixel que está send
 \[G_x = z_0 - z_4\]
 \[G_y = z_3 -z_1\]
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2xdxoxe}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2xdxoxe}.
 % ---
 \subsection{Prewith}
 
@@ -671,11 +671,11 @@ Este filtro faz uso do mesmo conceito de Sobel e Roberts. Considerando \(z0\) a 
 \[Gx = (z_6 + z_7 + z_8) - (z_0 + z_1 + z_2)\]
 \[Gy = (z_2 + z_5 + z_8) - (z_0 + z_3 + z_6)\]
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2ksfqxT} 
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2ksfqxT}. 
 
 % ---
 \subsection{Kirsch}
-O operador Kirsch (KIRSCH, 1971) consiste na utilização de oito máscaras orientadas em 45º. Para cada pixel da imagem é realizada a aplicação de uma das oito máscaras e é mantido o valor máximo. Desta forma, o gradiente não é obtido através dos valores de \(G_x\) e \(G_y\) separadamente, e sim, atrás do maior resultado do conjunto de 8 máscaras \cite{pedriniSchwartz:2008}.
+O operador de Kirsch (KIRSCH, 1971) consiste na utilização de oito máscaras orientadas em 45º. Para cada pixel da imagem é realizada a aplicação de uma das oito máscaras e é mantido o valor máximo. Desta forma, o gradiente não é obtido através dos valores de \(G_x\) e \(G_y\) separadamente, e sim, atrás do maior resultado do conjunto de 8 máscaras \cite{pedriniSchwartz:2008}.
 
 \[
 \begin{bmatrix}
@@ -725,7 +725,7 @@ O operador Kirsch (KIRSCH, 1971) consiste na utilização de oito máscaras orie
 
 Outras máscaras maiores podem ser aplicadas, como máscaras de tamanho 5 x 5 ou 7 x 7 pixel, mas estas abordagens são menos sensíveis a ruído e o tempo para a realização dos cálculos destas máscaras aumenta significamente \cite{pedriniSchwartz:2008}.
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jG3HLs}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jG3HLs}.
 
 % ---
 \subsection{Robinson}
@@ -777,7 +777,7 @@ Robson propôs um conjunto de oito máscaras onde a magnitude é calculada de ma
 \end{bmatrix}
 \]
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2HWssSd}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2HWssSd}.
 
 % ---
 \subsection{Frei-Chein}
@@ -846,7 +846,7 @@ M9
 \end{bmatrix} 
 \]
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2K227ig}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2K227ig}.
 
 \begin{figure}[ht]
 \centering
@@ -856,7 +856,7 @@ A implementação em java para o algoritmo pode ser acessado através do link: \
 \label{fig:deteccao_bordas}
 \end{figure}
 
-A Figura \ref{fig:deteccao_bordas} apresenta o resultado da aplicação de detecção de bordas. A primeira imagem (a) representante a imagem original. O primeiro algoritmo é o Sobel (b), seguido de Kircsh (c), Robinson (d), Frei Chen (e) e Prewitt.
+A Figura \ref{fig:deteccao_bordas} apresenta o resultado da aplicação de detecção de bordas. A primeira imagem (a) representante a imagem original. O primeiro algoritmo aplicado é o Sobel (b), seguido de Kircsh (c), Robinson (d), Frei Chen (e) e Prewitt.
 
 % ---
 \subsection{Canny}
@@ -865,7 +865,7 @@ O operador de \citet{canny:1986} propõem um método que tem como objetivo otimi
 
 A após a identificação da borda, é possível que a imagem ainda contenha certos fragmentos causadores de ruído. Para solucionar este problema, o operador de \citet{canny:1986} faz uso de dois limiares \(T_1\) e \(T_2\), constituindo a etapa denominada limiarização com histerese. Desta forma, os pontos da borda que possuem gradiente maiores que \(T_2\) são mantidos na imagem. Pontos que estão conectados a estes pontos e que possuem magnitude de gradiente maior que T1 também são considerados como pertencentes a borda \cite{pedriniSchwartz:2008}.
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jG3YxY}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jG3YxY}.
 
 % ---
 \subsection{Marr and Hildreth}
@@ -892,9 +892,9 @@ H
 \label{fig:deteccao_bordas2}
 \end{figure}
 
-A Figura \ref{fig:deteccao_bordas2} apresenta o resultado da aplicação de detecção de bordas. (a) representa a imagem original. O primeiro algoritmo é o Canny (b), seguido de Marr and Hildreth (c).
+A Figura \ref{fig:deteccao_bordas2} apresenta o resultado da aplicação de detecção de bordas. (a) representa a imagem original. O primeiro algoritmo aplicado é o de  Canny (b), seguido de Marr and Hildreth (c).
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jDAeSp}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jDAeSp}.
 
 % ---
 \section{Morfologia matemática}
@@ -926,7 +926,7 @@ De acordo com \citet{pedriniSchwartz:2008}, a fórmula que representa a operaç�
 
 Onde f representa a imagem de origem e (s, t) pertencem ao elemento estruturante b. Este elemento estruturante é aplicado na imagem e a cada ciclo, o pixel analisado é substituído pelo pixel resultante de menor valor.
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2rrIuIO}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2rrIuIO}.
 
 % ---
 \subsection{Dilatação}
@@ -944,7 +944,7 @@ Onde \(f\) representa a imagem de origem e \((s, t)\) pertencem ao elemento estr
 
 É importante ressaltar que as operações de dilatação e erosão são contrárias, mas uma não desfaz a outra. Uma operação de erosão, nem sempre, desfaz corretamente outra operação de dilatação, o mesmo ocorre de maneira inversa.
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2HYh7ku}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2HYh7ku}.
 
 % ---
 \subsection{Abertura}
@@ -953,7 +953,7 @@ A abertura é geralmente utilizada para suavizar os contornos de um objeto, elim
 
 Segundo \citet{pedriniSchwartz:2008}, o processo de abertura consiste na aplicação de uma erosão, seguida de uma dilatação na mesma imagem, utilizando o mesmo elemento estruturante.
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2FUz0Lc}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2FUz0Lc}.
 
 % ---
 \subsection{Fechamento}
@@ -962,7 +962,7 @@ A operação de fechamento também realiza a suavização da imagem, mas ao cont
 
 Segundo \citet{pedriniSchwartz:2008}, o processo de fechamento consiste na aplicação de uma dilatação, seguida de uma erosão na mesma imagem, utilizando o mesmo elemento estruturante.
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jFS47r}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2jFS47r}.
 
 \begin{figure}[ht]
 \centering
@@ -972,7 +972,7 @@ A implementação em java para o algoritmo pode ser acessado através do link: \
 \label{fig:morfologia}
 \end{figure}
 
-Na imagem \ref{fig:morfologia} é apresentada a aplicação de operações de morfologia matemática. A primeira operação apresentada é a erosão (b), seguida da operação de dilatação (c), abertura (d) e fechamento (e).
+Na imagem \ref{fig:morfologia} é apresentada a aplicação de operações de morfologia matemática, onde (a) representa a imagem original. A primeira operação apresentada é a erosão (b), seguida da operação de dilatação (c), abertura (d) e fechamento (e).
     
 % ---
 \section{Afinamento de bordas}    
@@ -1008,7 +1008,7 @@ Segundo \citet{guilherme:2007}, o algoritmo de Stentiford é composto por seis p
 \item Se algum ponto foi apagado no passo 5, os passos a partir do passo 1 devem ser repetidos.
 \end{itemize}
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2I0u0qf}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2I0u0qf}.
 
 % ---
 \subsection{Zhang Suen}
@@ -1024,7 +1024,7 @@ Fonte: Guilherme (2007, p. 15)
 \label{fig:zhangsuen_mascara}
 \end{figure}
 
-O algoritmo é composto por duas iterações que fazem uso das quatro regras descritas na sequência. Na primeira iteração, para as regras C e D, serão utilizada as máscaras descritas pela \ref{fig:zhangsuen1} e Figura \ref{fig:zhangsuen2}, respectivamente, na segunda etapa, serão utilizadas as máscaras descritas pela Figura \ref{fig:zhangsuen3} e Figura \ref{fig:zhangsuen4}, respectivamente.
+O algoritmo é composto por duas iterações que fazem uso das quatro regras descritas na sequência. Na primeira iteração, para as regras C e D, serão utilizada as máscaras descritas pelas figuras  \ref{fig:zhangsuen1} e \ref{fig:zhangsuen2}, respectivamente. Na segunda etapa, serão utilizadas as máscaras descritas pela Figura \ref{fig:zhangsuen3} e Figura \ref{fig:zhangsuen4}, respectivamente.
 
 Segundo \citet{guilherme:2007}, para que um pixel seja marcado para exclusão ele deve:
 
@@ -1073,7 +1073,7 @@ Fonte: Guilherme (2007, p. 16)
 \label{fig:zhangsuen4}
 \end{figure}
 
-A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2rrBU5L}
+A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2rrBU5L}.
 
 % ---
 \subsection{Holt}    
