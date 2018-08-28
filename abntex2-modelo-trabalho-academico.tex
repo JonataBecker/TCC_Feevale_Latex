@@ -1648,6 +1648,7 @@ No próximo capítulo será apresentado o desenvolvimento da ferramenta. Serão 
 Neste capítulo será abordado o desenvolvimento do trabalho, sendo apresentado o funcionamento da ferramenta e as tecnologias utilizadas para seu desenvolvimento. Também serão apresentadas as adaptações realizadas na ferramenta para torna-la gamificada.
 
 \section{Processos}
+\label{sec:processos}
 
 Para auxiliar o aluno na utilização da ferramenta, foi necessário a implementação de um novo processos. Este processo foi chamado de {Script Process}.
 
@@ -1800,8 +1801,9 @@ A Figura \ref{fig:janelaMissaoDesafioResolucao} demonstra a resolução de um de
 \chapter{Validação dos resultados}
 
 \section{Piloto de validação}
+\label{validacao:piloto1}
 
-No dia 15/05/2018 foi realizada uma apresentação do VISNode para turma da disciplina de PDI da Universidade Feevale do curso de Ciência da Computação e Sistemas da Informação. O objetivo  foi apresentar o VISNode e coletar \textit{feedbacks} dos estudantes. Neste momento a ferramenta não possuía nenhuma implementação relacionada a gamificação, somente foi demonstrado o funcionamento do VISNode.
+No dia 15/05/2018 foi realizada uma apresentação do VISNode para turma da disciplina de PDI da Universidade Feevale do curso de Ciência da Computação e Sistemas da Informação. O objetivo  foi apresentar o VISNode e coletar \textit{feedbacks} dos estudantes. Neste momento a ferramenta não possuía nenhuma implementação relacionada a gamificação, somente foi demonstrado o funcionamento do VISNode. A turma em questão já possuía conhecimentos em PDI, sendo que os alunos já haviam cursado mais da metada da disciplina.
 
 Para dar uma maior dinâmica a apresentação, foi proposto aos estudantes a realização de um desafio utilizando a ferramenta VISNode. O desafio escolhido é o mesmo descrito na sessão \ref{desafio:moedas}. Participaram da apresentação e da resolução do desafio 5 estudantes.
 
@@ -1815,7 +1817,13 @@ Neste mesmo cenário, outro ponto de melhoria identificado foi em relação as j
 
 \section{Piloto de validação 2}
 
-- Documentação dos processos de script
+No dia 07/08/2018 foi realizada uma apresentação do VISNode para turma da disciplina de PDI da Universidade Feevale do curso de Ciência da Computação e Sistemas da Informação. Diferente do turma que foi aplicado o \ref{validacao:piloto1}, esta turma não possuía conhecimento em PDI, nesta data foi apenas a segunda aula da turma. 
+
+O objetivo do encontro foi apresentar o VISNode e coletar \textit{feedbacks} dos estudantes. Desta forma, a aula consistiu em demonstrar as funcionalidades da ferramenta, apresentados aos alunos o que é possível fazer utilizando o VISNode. Ao final da demonstração do software, foi solicitado aos alunos que realizassem um desafios de PDI utilizando o VISNode. O desafio aplicado é apresentado no Anexo \label{desafio:estatistica}. O modulo de gamificação não foi apresentado, somente foi utilizado os recursos existentes no VISNode.
+
+Ao término do desafio, foi solicitado aos estudantes que contribuíssem com um \textit{feedback} da utilização da ferramenta. Segundo os alunos, esta apresentação permitiu que eles pudessem vislumbrar aplicações reais da disciplina. A ferramenta permitiu que estudantes, com o mínimo de conhecimento na área, pudessem desenvolver uma solução para o desafio descrito na sessão \ref{desafio:moedas} além do desafio \label{desafio:estatistica}.
+
+Uma dificuldade encontrada pelos estudantes foi em relação a utilização do processo \textit{Script process} descrito na seção \ref{sec:processos}. Segundos os alunos, as funcionalidades oferecidas por este processos não estavam bem documentadas, e por este motivo, foi difícil utilizado. Para a resolução deste problema, a documentação deste processo foi revista, disponibilizando todos os métodos disponível para cada parâmetro e também foi adicionado exemplos de utilização deste processo.
 
 % ---
 % Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
@@ -1848,6 +1856,75 @@ No capítulo \ref{sec:trabalhosCorrelatos} foram apresentados dois trabalhos rel
 % Referências bibliográficas
 % ----------------------------------------------------------
 \bibliography{abntex2-modelo-references}
+
+
+% ----------------------------------------------------------
+% Apêndices
+% ----------------------------------------------------------
+
+% ---
+% Inicia os apêndices
+% ---
+\begin{apendicesenv}
+
+% Imprime uma página indicando o início dos apêndices
+\partapendices
+
+% ----------------------------------------------------------
+\chapter{Quisque libero justo}
+% ----------------------------------------------------------
+
+\lipsum[50]
+
+% ----------------------------------------------------------
+\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
+ac pretium ante justo a nulla curabitur tristique arcu eu metus}
+% ----------------------------------------------------------
+\lipsum[55-57]
+
+\end{apendicesenv}
+% ---
+
+
+% ----------------------------------------------------------
+% Anexos
+% ----------------------------------------------------------
+
+% ---
+% Inicia os anexos
+% ---
+\begin{anexosenv}
+
+% Imprime uma página indicando o início dos anexos
+\partanexos
+
+% ---
+\chapter{Desafios de extração de estatísticas da imagem}
+\label{desafio:estatistica}
+% ---
+
+A empresa Chocolates “Melhor Cacau” está com uma promoção para este mês. As embalagens são todas floridas com imagens como esta \ref{fig:desafioEstatistica}:
+
+\begin{figure}[ht]
+\centering
+\caption{\textbf{Imagem de entrada para o desafio}}
+\includegraphics[width=0.3\textwidth]{imagens/Desafio_estatisticas.png}
+\label{fig:desafioEstatistica}
+\sourceAuthor
+\end{figure}
+
+Os primeiros 20 clientes que apresentarem um software que conte a quantidade de pixels com cada tonalidade de cinza na imagem de forma correta receberão um quilo de chocolate.
+
+Você gosta de chocolate? Um quilo é pouco? Então amplie para um quilo por mês nos próximos 12 meses respondendo as questões:
+
+\begin{itemize}
+  \item Qual a média de tonalidades de cinza da imagem?
+  \item Qual a mediana?
+  \item Qual a moda?
+  \item Qual a variância?
+\end{itemize}
+    
+\end{anexosenv}
 
 
 %---------------------------------------------------------------------
