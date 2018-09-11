@@ -33,6 +33,9 @@
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage[font=footnotesize,labelfont=bf,textfont=bf]{caption}
 \usepackage{amsmath}
+
+\usepackage{float}
+\restylefloat{table}
 % ---
 		
 % ---
@@ -1716,121 +1719,269 @@ Nós próximos tópicos são apresentadas as interfaces que o aluno possui acess
 
 \subsection{Desafios e missões}
 
+\begin{figure}[H]
+\centering
+\caption{\textbf{Lista de desafios}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_desafios.png}
+\sourceAuthor
+\label{fig:visnodeDesafios}
+\end{figure}
 
+\begin{table}[H]
+\captionof{table}{Elementos da listagem de desafios} \label{tab:listagemDesafios}
+\begin{tabular}{c|l}
+\hline
+\begin{tabular}[c]{@{}c@{}}(A)\\ Max Score\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Numérico.\\ Descrição: Pontuação máxima para o desafio.\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(B)\\ Missões \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Demonstra a quantidade de missões do desafio.\end{tabular}\\ \hline
+
+\end{tabular}
+\centering
+\sourceAuthor
+\end{table}
+
+
+\begin{figure}[H]
+\centering
+\caption{\textbf{Desafios narrativa}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_desafios_narrativa.png}
+\sourceAuthor
+\label{fig:visnodeDesafiosNarrativa}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\caption{\textbf{Desafios recompensa}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_desafios_recompensa.png}
+\sourceAuthor
+\label{fig:visnodeDesafiosRecompensa}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\caption{\textbf{Missões}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_missoes.png}
+\sourceAuthor
+\label{fig:visnodeMissoes}
+\end{figure}
+
+
+\begin{table}[H]
+\captionof{table}{Elementos da listagem de missões} \label{tab:listagemMissoes}
+\begin{tabular}{c|l}
+\hline
+\begin{tabular}[c]{@{}c@{}}(A)\\ Desafios\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Exibe a narrativa do desafio.\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(B)\\ Recompensas \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Exibe as recompensas já adquiridas.\end{tabular}\\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(B)\\ Resolver \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Inicia a resolução de desafios.\end{tabular}\\ \hline
+
+\end{tabular}
+\centering
+\sourceAuthor
+\end{table}
+
+\begin{figure}[H]
+\centering
+\caption{\textbf{Missões Narrativa}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_missao_narrativa.png}
+\sourceAuthor
+\label{fig:visnodeMissaoNarrativa}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\caption{\textbf{Missões Soluções}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_missoes_solucoes.png}
+\sourceAuthor
+\label{fig:visnodeMissaoSolucoes}
+\end{figure}
+
+\begin{table}[H]
+\captionof{table}{Elementos da listagem de missões concluídas} \label{tab:listagemMissoesConcluidas}
+\begin{tabular}{c|l}
+\hline
+\begin{tabular}[c]{@{}c@{}}(A)\\ XP\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Pontuação ganha com a resolução da missão .\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(B)\\ Data da resolução \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Data em que a missão foi submetida.\end{tabular}\\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(C)\\ Abrir \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Abre a solução submetida no VISNode.\end{tabular}\\ \hline
+
+\end{tabular}
+\centering
+\sourceAuthor
+\end{table}
 
 \subsection{Ranking}
 
+\begin{figure}[H]
+\centering
+\caption{\textbf{Ranking}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_ranking.png}
+\sourceAuthor
+\label{fig:visnodeRanking}
+\end{figure}
+
+\begin{table}[H]
+\captionof{table}{Elementos da listagem de \textit{Rankings}} \label{tab:listagemMissoesConcluidas}
+\begin{tabular}{c|l}
+\hline
+\begin{tabular}[c]{@{}c@{}}(A)\\ Grupo \end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Grupo do usuário. Cada grupo será uma aba. \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(B)\\ Usuário \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Nome do usuário com sua respectiva colocação.\end{tabular}\\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(C)\\ XP \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Quantidade de pontos do usuário.\end{tabular}\\ \hline
+
+\end{tabular}
+\centering
+\sourceAuthor
+\end{table}
+
 \subsection{Conquistas}
+
+\begin{figure}[H]
+\centering
+\caption{\textbf{Conquistas}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_conquistas.png}
+\sourceAuthor
+\label{fig:visnodeConquistas}
+\end{figure}
+
+\begin{table}[H]
+\captionof{table}{Elementos da listagem de missões concluídas} \label{tab:listagemMissoesConcluidas}
+\begin{tabular}{c|l}
+\hline
+\begin{tabular}[c]{@{}c@{}}(A)\\ XP\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Barra de progresso.\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(B)\\ Recompensa \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Imagem.\\ Descrição: Recompensas adquiridas.\end{tabular}\\ \hline
+
+
+\end{tabular}
+\centering
+\sourceAuthor
+\end{table}
 
 \section{Interface do Professor}
 
 Nós próximos tópicos são apresentadas as interfaces que o aluno possui acesso. A partir delas, o professos pode criar e novos desafios e acompanhar o progresso dos alunos.
 
-
 \subsection{Manutenção de Desafios}
+
+Com o intuito de possibilitar aos educadores um canal para a criação de novos desafios, foi desenvolvido na ferramentas funcionalidades com tal finalidade. As Figuras \ref{fig:visnodeCadastroDesafio} e \ref{fig:visnodeCadastroMissoes} demonstram tais funcionalidades. 
+
+\begin{figure}[H]
+\centering
+\caption{\textbf{Cadastro de desafios}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_cadastro_desafio.png}
+\sourceAuthor
+\label{fig:visnodeCadastroDesafio}
+\end{figure}
+
+\begin{table}[H]
+\captionof{table}{Elementos da manutenção de desafios} \label{tab:manutencaoDesafios}
+\begin{tabular}{c|l}
+\hline
+\begin{tabular}[c]{@{}c@{}}(A)\\ Nome\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Nome de identificação do desafio.\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(B)\\ Descrição\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Descrição resumida do desafios.\end{tabular}\\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(C)\\ Narrativa\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto no formato \textit{Markdown}.\\ Descrição: Narrativa do desafio. 
+\\ É nesta sessão que é descrito o cenário do desafio.\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(D)\\ Recompensa\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Image\\ Descrição: Recompensa que o aluno irá receber ao completar o desafio.\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(E)\\ Missões\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Botão\\ Descrição: Adiciona nova missão ao desafio.\end{tabular} \\ \hline
+
+\end{tabular}
+\centering
+\sourceAuthor
+\end{table}
+
+\begin{figure}[H]
+\centering
+\caption{\textbf{Cadastro de missões}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_cadastro_missao.png}
+\sourceAuthor
+\label{fig:visnodeCadastroMissoes}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Elementos da manutenção de missões} 
+
+\begin{tabular}{c|l}
+\hline
+\begin{tabular}[c]{@{}c@{}}(A)\\ XP\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Numérico.\\ Descrição: pontuação máxima da missão.\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(B)\\ Narrativa\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto no formato \textit{Markdown}.\\ Descrição: Narrativa da missão. \end{tabular}\\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(C)\\ Parâmetros\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão. \\ Descrição: Adiciona os parâmetros da missão.\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(D)\\ Input\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Imagem\\ Descrição: Parâmetro de entrada.\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(E)\\ Output\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Imagem\\ Descrição: Parâmetro de saída.\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(F)\\ \textit{Output Text}\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Texto\\ Descrição: Parâmetro de saída em formato texto.\end{tabular} \\ \hline
+
+\end{tabular}
+\centering
+\label{tab:manutencaoMissoes}
+
+\sourceAuthor
+\end{table}
 
 \subsection{Manutenção de grupos}
 
+Visando uma melhor organização dos usuários, a ferramenta VISNode possui uma funcionalidade para a criação de grupos de usuário. Este recurso possibilita que o educador possa acompanhar a evolução de uma determinada turma. A Figura \ref{fig:visnodeNovoGrupo} demonstra a janela pela qual o educador pode criar novos grupo e relacionar o respectivos usuários.
+
+\begin{figure}[H]
+\centering
+\caption{\textbf{Cadastro de grupos}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_novo_grupo.png}
+\sourceAuthor
+\label{fig:visnodeNovoGrupo}
+\end{figure}
+
 \subsection{Acompanhamento de usuários}
 
-
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
-\caption{\textbf{Janela de \textit{ranking}}}
-\includegraphics[width=0.6\textwidth]{imagens/proposta_ranking.png}
+\caption{\textbf{Cadastro de grupos}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_usuarios.png}
 \sourceAuthor
-\label{fig:janelaRanking}
+\label{fig:visnodeNovoGrupo}
 \end{figure}
 
-Na Figura \ref{fig:janelaRanking} é apresentada a janela de \textit{ranking}. Nesta janela é possível visualizar o \textit{ranking} por grupo e global. No \textit{ranking} por grupo somente serão considerados os usuários pertencentes aos grupos que o usuário participa. Já no \textit{ranking} global, todos os usuários do sistema serão computados.
 
-\begin{figure}[ht]
+\begin{table}[H]
 \centering
-\caption{\textbf{Janela de progresso}}
-\includegraphics[width=0.6\textwidth]{imagens/proposta_progresso.png}
-\sourceAuthor
-\label{fig:janelaProgresso}
-\end{figure}
+\caption{Elementos do acompanhamento de usuários} 
 
-Na Figura \ref{fig:janelaProgresso} é apresentado o progresso do usuário em suas missões. Está janela se faz necessária para que o usuário tenha uma noção de seu progresso.
+\begin{tabular}{c|l}
+\hline
+\begin{tabular}[c]{@{}c@{}}(A)\\ Grupo\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Combo-Box.\\ Descrição: Seleção de grupo filtro.\end{tabular} \\ \hline
 
-Na Figura \ref{fig:janelaRecompensa} e na Figura \ref{fig:janelaRecompensaDetalhe} são demonstradas as recompensas conquistadas pelo usuário.
+\begin{tabular}[c]{@{}c@{}}(B)\\ Pesquisar\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Pesquisa de usuários pelo grupo. \end{tabular}\\ \hline
 
-\begin{figure}[ht]
+\begin{tabular}[c]{@{}c@{}}(C)\\ Alterar\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão. \\ Descrição: Alteração do grupo selecionado.\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(D)\\ Incluir\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Botão\\ Descrição: Inclusão de novos grupos.\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(E)\\ Desafio\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Botão\\ Descrição: Consulta de desafios concluídos pelo usuário.\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(F)\\ Conquistas \end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Botão\\ Descrição: Consulta de conquistas obtidas pelo usuário.\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(G)\\ Usuário \end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Texto\\ Descrição: Nome do usuário.\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(H)\\ XP \end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Texto\\ Descrição: Pontuação obtida pelo usuário.\end{tabular} \\ \hline
+
+\end{tabular}
 \centering
-\caption{\textbf{Janela de recompensas}}
-\includegraphics[width=0.6\textwidth]{imagens/proposta_recompensa.png}
+\label{tab:manutencaoMissoes}
+
 \sourceAuthor
-\label{fig:janelaRecompensa}
-\end{figure}
-
-\begin{figure}[ht]
-\centering
-\caption{\textbf{Janela de detalhamento de recompensas}}
-\includegraphics[width=0.6\textwidth]{imagens/proposta_recompensa_detalhe.png}
-\sourceAuthor
-\label{fig:janelaRecompensaDetalhe}
-\end{figure}
-
-Na Figura \ref{fig:janelaCadastro} é apresentado o formulário de cadastros de grupos de usuário. Além de definir os usuários do grupo, também é possível relacionar missões e definir recompensas.
-
-\begin{figure}[ht]
-\centering
-\caption{\textbf{Janela de cadastro de grupos}}
-\includegraphics[width=0.6\textwidth]{imagens/proposta_cadastro.png}
-\sourceAuthor
-\label{fig:janelaCadastro}
-\end{figure}
-
-Na Figura \ref{fig:janelaCadastrousuario} é demonstrado o formulário por onde os usuários realizarão o cadastro para adquirir acesso ao sistema gamificado.
-
-\begin{figure}[ht]
-\centering
-\caption{\textbf{Janela de cadastro de usuários}}
-\includegraphics[width=0.6\textwidth]{imagens/proposta_cadastro_usuario.png}
-\sourceAuthor
-\label{fig:janelaCadastrousuario}
-\end{figure}
-
-Na Figura \ref{fig:janelaMissoes} são demonstradas as missões disponíveis para o usuário resolver. Cada missão possuirá uma breve descrição e um nível de dificuldade, podendo variar entre Básico, Intermediário, Avançado.
-
-\begin{figure}[ht]
-\centering
-\caption{\textbf{Janela de missões}}
-\includegraphics[width=0.6\textwidth]{imagens/proposta_niveis.png}
-\sourceAuthor
-\label{fig:janelaMissoes}
-\end{figure}
-
-Na Figura \ref{fig:janelaMissaoDesafio} são apresentados os desafios ou etapas que compõe a missão selecionada.
-
-\begin{figure}[ht]
-\centering
-\caption{\textbf{Janela de desafios de uma missão}}
-\includegraphics[width=0.6\textwidth]{imagens/proposta_nivel.png}
-\sourceAuthor
-\label{fig:janelaMissaoDesafio}
-\end{figure}
-
-Na Figura \ref{fig:janelaMissaoDesafioApresentacao} é apresentada a narrativa de um desafios. É nesta janela que é explicada a problemática a ser solucionada.
-
-\begin{figure}[ht]
-\centering
-\caption{\textbf{Janela de apresentação de um desafio}}
-\includegraphics[width=0.6\textwidth]{imagens/proposta_narrativa.png}
-\sourceAuthor
-\label{fig:janelaMissaoDesafioApresentacao}
-\end{figure}
-
-A Figura \ref{fig:janelaMissaoDesafioResolucao} demonstra a resolução de um desafio. A resolução de desafios deverá ser realizada através da conexão de técnicas de PDI, tendo como objetivo, alcançar a resposta que desafio espera como resultado. 
-
-\begin{figure}[ht]
-\centering
-\caption{\textbf{Janela de resolução de desafios}}
-\includegraphics[width=0.6\textwidth]{imagens/proposta_desafio.png}
-\sourceAuthor
-\label{fig:janelaMissaoDesafioResolucao}
-\end{figure}
+\end{table}
 
 \chapter{Validação dos resultados}
 
@@ -1863,13 +2014,13 @@ Uma dificuldade encontrada pelos estudantes foi em relação a utilização do p
 
 No dia 04/09/2018 foi realizado a primeira aplicação da ferramenta gamificada na disciplina de Processamento Digital de Imagem na Universidade Feevale. A turma era composta por alunos do curso de Ciência da Computação e Sistemas da Informação.
 
-A aplicação constituiu-se em primeiramente apresentar os módulos gamificados da ferramenta, demonstrando o funcionamento do processos de resolução de desafios, sistema de \textit{ranking} e conquistas. Após a familiarização dos alunos com a ferramenta, foi proposto que resolve-sem um defasafio fazendo uso do sistema gamificado.
+A aplicação constituiu-se em primeiramente apresentar os módulos gamificados da ferramenta, demonstrando o funcionamento do processo de resolução de desafios, sistema de \textit{ranking} e conquistas. Após a familiarização dos alunos com a ferramenta, foi proposto que resolve-sem um desafio fazendo uso do sistema gamificado.
 
-O desafio abordava técnicas de transformação geométrica, que foram abortadas na sessão \ref{fig:transformacoesgeometricas} deste trabalho. Para a escolha do assunto abordado, foi levado em consideração o conhecimento da turma, no momento da aplicação, os alunos estavam iniciando seus estudos de técnicas de transformações geométricas. O desafios é composto por seis missões, cada qual abordando técnicas de transformação. Mais informações sobre o desafio podem ser acessadas no Apêndice \ref{apen:transformacaoGeometrica}.
+O desafio abordava técnicas de transformação geométrica, que foram apresentadas na sessão \ref{fig:transformacoesgeometricas} deste trabalho. Para a escolha do assunto do desafio, foi levado em consideração o conhecimento da turma, no momento da aplicação, os alunos estavam iniciando seus estudos de técnicas de transformações geométricas. O desafios é composto por seis missões, cada qual abordando um técnica de transformação. Mais informações sobre o desafio podem ser acessadas no Apêndice \ref{apen:transformacaoGeometrica}.
 
-No total 14 alunos participaram deste experimento, destes 13 completaram o desafio até o final e 1 somente completou 2 das 6 missões. Somente 1 aluno completou as 6 missões sem cometer erro. O experimento foi composto por 154 submissões de desafios, destas somente 74 foram assertivas. Desta forma, 48\% das submissões falharam.
+No total 14 alunos participaram deste experimento, destes, 13 completaram o desafio até o final e 1 completou parcialmente, concluindo 2 das 6 missões. Somente 1 aluno completou as 6 missões sem cometer erro. O experimento foi composto por 154 submissões de desafios, destas somente 74 foram assertivas. Desta forma, 48\% das submissões falharam.
 
-Aprofundando esta análise, a missão 3 foi a missão com maior número de submissões falhas, contabilizando 46, o que representa 62\% do total de falhas. Este numero excessivo de falhas da missão 3 pode ser justificado pela forma com que sua narrativa foi apresentada. A missão apresenta um objeto em uma posição x, y e pede-se para que este objetivo seja movido para outra posição i, j. Na maioria da submissões, os alunos realizaram a translação para a posição i, j e não para a posição resultante da variação das duas posições. Este fato demonstra uma dificultada na interpretação da missão proposta.
+Aprofundando esta análise, a missão 3 foi a missão com maior número de submissões falhas, o que contabiliza 46 submissões e representa 62\% do total de falhas. Este numero excessivo de falhas da missão 3 pode ser justificado pela forma com que sua narrativa foi apresentada. A missão apresenta um objeto em uma posição x, y e pede-se para que este objeto seja movido para outra posição i, j. Na maioria da submissões, os alunos realizaram a translação para a posição i, j e não para a posição resultante da variação das duas posições. Este fato demonstra uma dificultada na interpretação da missão proposta.
 
 Ao final da aula foi solicita que os alunos responde-sem o questionário. Os dados coletados após a aplicação do questionário foram:
 
