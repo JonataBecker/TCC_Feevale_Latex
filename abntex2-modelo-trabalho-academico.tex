@@ -1663,7 +1663,7 @@ A linguagem Java possui em sua arquitetura uma API para execução de \textit{sc
 
 O processamento digital de imagens é um área de estudo que possui forte embasamento teórico. Em muitas situações, o material teórico é constituído basicamente de notações matemáticas, o que pode dificultar o entendimento dos estudante. Tendo em vista este cenário, foi construída uma área na ferramenta que possibilita ao estudante o contato com o referencial teórico de técnicas de PDI através de uma apresentação mais didática.
 
-Para a construção do material teórico disponível na ferramenta, foi utilizado como base a pesquisa apresentada no Capitulo \ref{sec:pdi}. Este material consiste basicamente de uma explicação conceitual de cada técnica de PDI e o funcionamento básico do algoritmo. Também é disponibilizado ao estudante o código fonte utilizado para a implementação do processo.
+Para a construção do deste material teórico, foi utilizado como base a pesquisa apresentada no Capitulo \ref{sec:pdi}. Este material consiste basicamente de uma explicação conceitual de cada técnica de PDI e o funcionamento básico do algoritmo. Também é disponibilizado ao estudante o código fonte utilizado para a implementação do processo.
 
 Para facilitar a disponibilização do material teórico, foi utilizado um arquivo no formato \textit{Markdown}. Este formato possibilita a fácil edição e formação de conteúdo a partir de \textit{tags} que são adicionadas em um arquivo de texto.
 
@@ -1719,9 +1719,11 @@ Nós próximos tópicos são apresentadas as interfaces que o aluno possui acess
 
 \subsection{Desafios e missões}
 
+O sistema gamificado é baseado em desafios e missões, onde o usuário recebe recompensas e pontuações a partir da conclusão deste elementos. A Figura \ref{fig:visnodeDesafios} demonstra a paǵina onde os alunos pode acessar os desafios disponíveis na ferramenta. Na Tabela \ref{tab:listagemDesafios} é explicado cada elemento desta janela.
+
 \begin{figure}[H]
 \centering
-\caption{\textbf{Lista de desafios}}
+\caption{\textbf{Listagem de desafios}}
 \includegraphics[width=0.7\textwidth]{imagens/visnode_desafios.png}
 \sourceAuthor
 \label{fig:visnodeDesafios}
@@ -1740,23 +1742,17 @@ Nós próximos tópicos são apresentadas as interfaces que o aluno possui acess
 \sourceAuthor
 \end{table}
 
+Quando o aluno seleciona um desafio a ser resolvido, a próxima página exibida é a janela responsável pela contextualização do aluno ao desafio. A Figura \ref{fig:visnodeDesafiosNarrativa} demonstra um exemplo desta contextualização, podendo conter texto e imagens, deforma que facilite o entendimento do aluno em relação ao desafio proposto.
 
 \begin{figure}[H]
 \centering
-\caption{\textbf{Desafios narrativa}}
+\caption{\textbf{Narrativa de um desafio}}
 \includegraphics[width=0.7\textwidth]{imagens/visnode_desafios_narrativa.png}
 \sourceAuthor
 \label{fig:visnodeDesafiosNarrativa}
 \end{figure}
 
-\begin{figure}[H]
-\centering
-\caption{\textbf{Desafios recompensa}}
-\includegraphics[width=0.7\textwidth]{imagens/visnode_desafios_recompensa.png}
-\sourceAuthor
-\label{fig:visnodeDesafiosRecompensa}
-\end{figure}
-
+Após a apresentação da narrativa do desafio, o usuário é redirecionado para página que contém as missões do desafio, que é representada pela Figura \ref{fig:visnodeMissoes}. O aluno deverá resolver as missões em ordem, desta forma, a segunda missão não poderá ser resolvida antes que a missão 1 seja solucionada. Na Tabela \ref{tab:listagemMissoes} é explicado cada elemento desta janela.
 
 \begin{figure}[H]
 \centering
@@ -1766,7 +1762,6 @@ Nós próximos tópicos são apresentadas as interfaces que o aluno possui acess
 \label{fig:visnodeMissoes}
 \end{figure}
 
-
 \begin{table}[H]
 \captionof{table}{Elementos da listagem de missões} \label{tab:listagemMissoes}
 \begin{tabular}{c|l}
@@ -1775,24 +1770,22 @@ Nós próximos tópicos são apresentadas as interfaces que o aluno possui acess
 
 \begin{tabular}[c]{@{}c@{}}(B)\\ Recompensas \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Exibe as recompensas já adquiridas.\end{tabular}\\ \hline
 
-\begin{tabular}[c]{@{}c@{}}(B)\\ Resolver \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Inicia a resolução de desafios.\end{tabular}\\ \hline
+\begin{tabular}[c]{@{}c@{}}(C)\\ Problema \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Exibe a narrativa da missão.\end{tabular}\\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(D)\\ Resolver \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Exibe soluções de outros usuários.\end{tabular}\\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(E)\\ Resolver \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Inicia a resolução de desafios.\end{tabular}\\ \hline
 
 \end{tabular}
 \centering
 \sourceAuthor
 \end{table}
 
-\begin{figure}[H]
-\centering
-\caption{\textbf{Missões Narrativa}}
-\includegraphics[width=0.7\textwidth]{imagens/visnode_missao_narrativa.png}
-\sourceAuthor
-\label{fig:visnodeMissaoNarrativa}
-\end{figure}
+Nesta mesma página, também é possível que o usuário visualize outras soluções para as missões. Este recurso possibilita que os alunos possam aprender novos forma de solucionar um mesmo desafios. Para que o aluno não copie outras soluções, este recuso somente esta disponível após a conclusão da missão. Esta página é demonstrada na Figura \ref{fig:visnodeMissaoSolucoes}. 
 
 \begin{figure}[H]
 \centering
-\caption{\textbf{Missões Soluções}}
+\caption{\textbf{Soluções de Missões}}
 \includegraphics[width=0.7\textwidth]{imagens/visnode_missoes_solucoes.png}
 \sourceAuthor
 \label{fig:visnodeMissaoSolucoes}
@@ -1802,7 +1795,7 @@ Nós próximos tópicos são apresentadas as interfaces que o aluno possui acess
 \captionof{table}{Elementos da listagem de missões concluídas} \label{tab:listagemMissoesConcluidas}
 \begin{tabular}{c|l}
 \hline
-\begin{tabular}[c]{@{}c@{}}(A)\\ XP\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Pontuação ganha com a resolução da missão .\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}c@{}}(A)\\ XP\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Pontuação ganha com a resolução da missão. \end{tabular} \\ \hline
 
 \begin{tabular}[c]{@{}c@{}}(B)\\ Data da resolução \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Data em que a missão foi submetida.\end{tabular}\\ \hline
 
@@ -1813,7 +1806,62 @@ Nós próximos tópicos são apresentadas as interfaces que o aluno possui acess
 \sourceAuthor
 \end{table}
 
+Para cada desafio é relacionado uma recompensa, que será adquirida pelo aluno ao final do desafio. As recompensas da ferramenta são imagens, como demonstrando na Figura \ref{fig:visnodeDesafiosRecompensa}. Com o objetivo de transmitir uma ideia de progresso, esta imagem foi dividida em várias partes e em cada conclusão de missão, uma parte da imagem é concedida ao aluno.
+
+\begin{figure}[H]
+\centering
+\caption{\textbf{Desafios recompensa}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_desafios_recompensa.png}
+\sourceAuthor
+\label{fig:visnodeDesafiosRecompensa}
+\end{figure}
+
+Assim que o aluno seleciona uma missão, a contextualização desta missão é apresentada. Este recurso é demonstrado na Figura \ref{fig:visnodeMissaoNarrativa}.
+
+\begin{figure}[H]
+\centering
+\caption{\textbf{Narrativa de uma missão}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_missao_narrativa.png}
+\sourceAuthor
+\label{fig:visnodeMissaoNarrativa}
+\end{figure}
+
+A Figura \ref{fig:visnodeDesktop} demonstra a resolução de uma missão utilizando a ferramenta VISNode. Na Tabela \ref{tab:visnodeDesktop} é apresentado as funcionalidade desta tarefa.
+
+\begin{figure}[H]
+\centering
+\caption{\textbf{Resolução da missão pelo VISNode}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_desktop.png}
+\sourceAuthor
+\label{fig:visnodeDesktop}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\caption{\textbf{Soluções de Missões}}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_missoes_solucoes.png}
+\sourceAuthor
+\label{fig:visnodeMissaoSolucoes}
+\end{figure}
+
+\begin{table}[H]
+\captionof{table}{Elementos da resolução de missões} \label{tab:visnodeDesktop}
+\begin{tabular}{c|l}
+\hline
+\begin{tabular}[c]{@{}c@{}}(A)\\ Resolver\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Submete missão para validação. \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}c@{}}(B)\\ Narrativa \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Exibe a narrativa da missão.\end{tabular}\\ \hline
+
+
+\end{tabular}
+\centering
+\sourceAuthor
+\end{table}
+
 \subsection{Ranking}
+
+A Figura \ref{fig:visnodeRanking} demonstra a página de visualização de \textit{ranking} de usuários. Este \textit{ranking} pode ser tando no âmbito geral, ou seja, todos os usuários da ferramenta, ou no âmbito de seu grupo, contendo somente os usuário do grupo do usuário. Caso o usuário possuam mais de um grupo, estes serão exibidos em formato de aba. Na Tabela \ref{tab:listagemMissoesConcluidas} é explicado cada elemento desta janela.
 
 \begin{figure}[H]
 \centering
@@ -1840,6 +1888,8 @@ Nós próximos tópicos são apresentadas as interfaces que o aluno possui acess
 
 \subsection{Conquistas}
 
+Para que o usuário visualize duas conquistas foi desenvolvido a página representada pela Figura \ref{fig:visnodeConquistas}. Nesta página, é possível visualizar todas as conquistas do usuário, mesmo que o desafio não esteja completo. Nestes casos, o usuário poderá visualizar o quanto do desafio foi concluído. Na Tabela \ref{tab:listagemMissoesConcluidas} é explicado cada elemento desta janela.
+
 \begin{figure}[H]
 \centering
 \caption{\textbf{Conquistas}}
@@ -1864,11 +1914,11 @@ Nós próximos tópicos são apresentadas as interfaces que o aluno possui acess
 
 \section{Interface do Professor}
 
-Nós próximos tópicos são apresentadas as interfaces que o aluno possui acesso. A partir delas, o professos pode criar e novos desafios e acompanhar o progresso dos alunos.
+Nós próximos tópicos são apresentadas as interfaces que o professor possui acesso. A partir delas, o educador pode criar e novos desafios e acompanhar o progresso de seus alunos.
 
 \subsection{Manutenção de Desafios}
 
-Com o intuito de possibilitar aos educadores um canal para a criação de novos desafios, foi desenvolvido na ferramentas funcionalidades com tal finalidade. As Figuras \ref{fig:visnodeCadastroDesafio} e \ref{fig:visnodeCadastroMissoes} demonstram tais funcionalidades. 
+Com o intuito de possibilitar aos educadores um canal para a criação de novos desafios, foi desenvolvido na ferramenta o cadastro de desafios e missões. As Figuras \ref{fig:visnodeCadastroDesafio} e \ref{fig:visnodeCadastroMissoes} demonstram tais funcionalidades. As Tabelas \ref{tab:manutencaoDesafios} e \ref{tab:manutencaoMissoes} demonstram os elementos destas janelas.
 
 \begin{figure}[H]
 \centering
@@ -1884,7 +1934,7 @@ Com o intuito de possibilitar aos educadores um canal para a criação de novos 
 \hline
 \begin{tabular}[c]{@{}c@{}}(A)\\ Nome\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Nome de identificação do desafio.\end{tabular} \\ \hline
 
-\begin{tabular}[c]{@{}c@{}}(B)\\ Descrição\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Descrição resumida do desafios.\end{tabular}\\ \hline
+\begin{tabular}[c]{@{}c@{}}(B)\\ Descrição\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Descrição resumida do desafio.\end{tabular}\\ \hline
 
 \begin{tabular}[c]{@{}c@{}}(C)\\ Narrativa\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto no formato \textit{Markdown}.\\ Descrição: Narrativa do desafio. 
 \\ É nesta sessão que é descrito o cenário do desafio.\end{tabular} \\ \hline
@@ -1912,7 +1962,7 @@ Com o intuito de possibilitar aos educadores um canal para a criação de novos 
 
 \begin{tabular}{c|l}
 \hline
-\begin{tabular}[c]{@{}c@{}}(A)\\ XP\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Numérico.\\ Descrição: pontuação máxima da missão.\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}c@{}}(A)\\ XP\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Numérico.\\ Descrição: Pontuação máxima da missão.\end{tabular} \\ \hline
 
 \begin{tabular}[c]{@{}c@{}}(B)\\ Narrativa\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto no formato \textit{Markdown}.\\ Descrição: Narrativa da missão. \end{tabular}\\ \hline
 
@@ -1933,7 +1983,7 @@ Com o intuito de possibilitar aos educadores um canal para a criação de novos 
 
 \subsection{Manutenção de grupos}
 
-Visando uma melhor organização dos usuários, a ferramenta VISNode possui uma funcionalidade para a criação de grupos de usuário. Este recurso possibilita que o educador possa acompanhar a evolução de uma determinada turma. A Figura \ref{fig:visnodeNovoGrupo} demonstra a janela pela qual o educador pode criar novos grupo e relacionar o respectivos usuários.
+Visando uma melhor organização dos usuários, a ferramenta VISNode possui uma funcionalidade para a criação de grupos de usuário. Este recurso possibilita que o educador possa acompanhar a evolução de uma determinada turma. A Figura \ref{fig:visnodeNovoGrupo} demonstra a janela pela qual o educador pode criar novos grupo e relacionar os respectivos usuários.
 
 \begin{figure}[H]
 \centering
@@ -1945,14 +1995,15 @@ Visando uma melhor organização dos usuários, a ferramenta VISNode possui uma 
 
 \subsection{Acompanhamento de usuários}
 
+Uma das funcionalidades da ferramenta é possibilitar ao educador um mecanismo que permita o acompanhamento do progresso dos estudantes. A Figura \ref{fig:visnodeUsuarios} demonstra uma página onde é possível visualizar a quantidade de pontos obtidos por cada usuário, além de visualizar suas conquistas e desafios concluídos. Este recurso permite que o educador abra a solução desenvolvida pelo estudante, possibilitando ao educador identificar as abordagem utilizadas pelos alunos nas resoluções dos desafios. Na Tabela \ref{tab:visnodeUsuarios} é explicado cada elemento desta janela.
+
 \begin{figure}[H]
 \centering
-\caption{\textbf{Cadastro de grupos}}
+\caption{\textbf{Acompanhamento de usuários}}
 \includegraphics[width=0.7\textwidth]{imagens/visnode_usuarios.png}
 \sourceAuthor
-\label{fig:visnodeNovoGrupo}
+\label{fig:visnodeUsuarios}
 \end{figure}
-
 
 \begin{table}[H]
 \centering
@@ -1960,7 +2011,7 @@ Visando uma melhor organização dos usuários, a ferramenta VISNode possui uma 
 
 \begin{tabular}{c|l}
 \hline
-\begin{tabular}[c]{@{}c@{}}(A)\\ Grupo\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Combo-Box.\\ Descrição: Seleção de grupo filtro.\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}c@{}}(A)\\ Grupo\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Combo-Box.\\ Descrição: Seleção de grupo a ser filtrado.\end{tabular} \\ \hline
 
 \begin{tabular}[c]{@{}c@{}}(B)\\ Pesquisar\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Pesquisa de usuários pelo grupo. \end{tabular}\\ \hline
 
