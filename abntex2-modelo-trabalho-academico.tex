@@ -1653,21 +1653,21 @@ Neste capítulo será abordado o desenvolvimento do trabalho, sendo apresentado 
 \section{Processos}
 \label{sec:processos}
 
-Para auxiliar o aluno na utilização da ferramenta, foi necessário a implementação de um novo processos. Este processo foi chamado de {Script Process}.
+Para auxiliar o aluno na utilização da ferramenta, foi necessário a implementação de um novo processo. Este processo foi chamado de \textit{Script Process}.
 
-A criação deste processo foi necessário pois em algumas ocasiões é necessário realizar operações que não são técnicas de PDI clássicas. Este processo não está vinculado a nenhuma técnica de processamento digital de imagens, é um processo que tem por objetivo disponibilizar uma interface para a implementação de algoritmos pela própria ferramenta. Como exemplo, pode ser levado em consideração um cenário apresentado em \ref{desafio:moedas}, onde é necessário calcular o valor total das moedas.
+A criação deste processo foi necessário pois em algumas ocasiões é importante realizar operações que não são técnicas de PDI clássicas. Este processo não está vinculado a nenhuma técnica de processamento digital de imagens, é um processo que tem por objetivo disponibilizar uma interface para a implementação de algoritmos pela própria ferramenta. Como exemplo, pode ser levado em consideração um cenário apresentado em \ref{desafio:moedas}, onde é necessário calcular o valor total das moedas.
 
 A linguagem Java possui em sua arquitetura uma API para execução de \textit{scripts}, possibilitando escrever customizações para aplicações. JavaScript (JS) é uma das linguagens suportadas por esta API, permitindo o rápido desenvolvimento e extensão de partes da aplicação. A API permite a execução de código fonte, sendo possível compartilhar objetos entre Java e JS e invocar funções \cite{oracle}. Devido a esta flexibilidade, os processos dinâmicos fazem uso desta API de Script como linguagem o JS. 
 
 \section{Material teórico}
 
-O processamento digital de imagens é um área de estudo que possui forte embasamento teórico. Em muitas situações, o material teórico é constituído basicamente de notações matemáticas, o que pode dificultar o entendimento dos estudante. Tendo em vista este cenário, foi construída uma área na ferramenta que possibilita ao estudante o contato com o referencial teórico de técnicas de PDI através de uma apresentação mais didática.
+O processamento digital de imagens é um área de estudo que possui forte embasamento teórico. Em muitas situações, o material teórico é constituído basicamente de notações matemáticas, o que pode dificultar o entendimento dos estudantes. Tendo em vista este cenário, foi construída uma área na ferramenta que possibilita ao estudante o contato com o referencial teórico de técnicas de PDI através de uma apresentação mais didática.
 
-Para a construção do deste material teórico, foi utilizado como base a pesquisa apresentada no Capitulo \ref{sec:pdi}. Este material consiste basicamente de uma explicação conceitual de cada técnica de PDI e o funcionamento básico do algoritmo. Também é disponibilizado ao estudante o código fonte utilizado para a implementação do processo.
+Para a construção deste material teórico, foi utilizado como base a pesquisa apresentada no Capítulo \ref{sec:pdi}. Este material consiste basicamente de uma explicação conceitual de cada técnica de PDI e o funcionamento básico do algoritmo. Também é disponibilizado ao estudante o código fonte utilizado para a implementação do processo.
 
 Para facilitar a disponibilização do material teórico, foi utilizado um arquivo no formato \textit{Markdown}. Este formato possibilita a fácil edição e formação de conteúdo a partir de \textit{tags} que são adicionadas em um arquivo de texto.
 
-O acesso a este conteúdo é realizado por processo, desta forma, o usuário irá selecionar a processo que deseja acessar o material teórico. Na Figura \ref{fig:visnodeCode} é apresentada a janela onde o usuário pode visualizar o código fonte de uma técnica de PDI. Já na Figura \ref{fig:visnodeInformation}, é apresentada a janela onde o usuário tem acesso a explicação teórica da técnica de PDI.
+O acesso a este conteúdo é realizado por processo, desta forma, o usuário selecionará o processo que deseja acessar o material teórico. Na Figura \ref{fig:visnodeCode} é apresentada a janela onde o usuário pode visualizar o código fonte de uma técnica de PDI. Já na Figura \ref{fig:visnodeInformation}, é apresentada a janela onde o usuário tem acesso a explicação teórica da técnica de PDI.
 
 \begin{figure}[ht]
 \centering
@@ -1685,7 +1685,7 @@ O acesso a este conteúdo é realizado por processo, desta forma, o usuário ir�
 \label{fig:visnodeInformation}
 \end{figure}
 
-Além dos dois recursos apresentados acima, também foi criado uma seção chamada \textit{script}. Esta seção faz uso do processo apresentado na seção \ref{sec:processos}. Através deste recurso, foi possível disponibilizar para o aluno um \textit{script} que represente a técnica de PDI consultada. Desta forma, o aluno pode modificar a implementação do algoritmo para complementar seu aprendizado da técnica estudada.
+Além dos dois recursos apresentados acima, também foi criada uma seção chamada \textit{script}. Esta seção faz uso do processo apresentado na seção \ref{sec:processos}. Através deste recurso, foi possível disponibilizar para o aluno um \textit{script} que represente a técnica de PDI consultada. Desta forma, o aluno pode modificar a implementação do algoritmo para complementar seu aprendizado da técnica estudada.
 
 \begin{figure}[ht]
 \centering
@@ -1695,12 +1695,12 @@ Além dos dois recursos apresentados acima, também foi criado uma seção chama
 \label{fig:visnodeScript}
 \end{figure}
 
-Na Figura \ref{fig:visnodeScript} é apresentado a exibição do \textit{script} que representa o algoritmo de brilho. Também é possível visualizar um botão "Open", no qual ao aciona-lo, o usuário irá abrir o algoritmo em forma de processo na ferramenta.
+Na Figura \ref{fig:visnodeScript} é apresentada a exibição do \textit{script} que representa o algoritmo de brilho. Também é possível visualizar um botão "Open", no qual ao aciona-lo, o usuário abrirá o algoritmo em forma de processo na ferramenta.
 
 % ---
 \section{Arquitetura}
 
-Para o desenvolvimento da ferramenta foi utilizado a linguagem Java, mesma linguagem utilizada para o desenvolvimento do VISNode. Devido a necessidade de armazenar informações do usuário, foi criado um \textit{WebService} para esta finalidade. Este \textit{WebService} foi construído utilizado o \textit{framework} \textit{SprintBoot} e um Banco de dados Mysql.
+Para o desenvolvimento da ferramenta foi utilizada a linguagem Java, mesma linguagem utilizada para o desenvolvimento do VISNode. Devido a necessidade de armazenar informações do usuário, foi criado um \textit{WebService} para esta finalidade. Este \textit{WebService} foi construído utilizado o \textit{framework} \textit{SprintBoot} e um Banco de dados Mysql.
 
 A Figura \ref{fig:visnodeArquitetura} demonstra a arquitetura do projeto. É possível visualizar que a comunicação realizada para o acesso a base de dados é feita utilizando o protocolo HTTP. 
 
@@ -1715,7 +1715,7 @@ A Figura \ref{fig:visnodeArquitetura} demonstra a arquitetura do projeto. É pos
 % ---
 \section{Interface do Aluno}
 
-Nós próximos tópicos são apresentadas as interfaces que o aluno possui acesso. A partir delas, o aluno pode realizar desafios, consultar seu ranking e visualizar suas conquistas.
+Nos próximos tópicos são apresentadas as interfaces que o aluno possui acesso. A partir delas, o aluno pode realizar desafios, consultar seu \textit{ranking} e visualizar suas conquistas.
 
 \subsection{Desafios e missões}
 
@@ -1742,7 +1742,7 @@ O sistema gamificado é baseado em desafios e missões, onde o usuário recebe r
 \sourceAuthor
 \end{table}
 
-Quando o aluno seleciona um desafio a ser resolvido, a próxima página exibida é a janela responsável pela contextualização do aluno ao desafio. A Figura \ref{fig:visnodeDesafiosNarrativa} demonstra um exemplo desta contextualização, podendo conter texto e imagens, deforma que facilite o entendimento do aluno em relação ao desafio proposto.
+Quando o aluno seleciona um desafio a ser resolvido, a próxima página exibida é a janela responsável pela contextualização do aluno ao desafio. A Figura \ref{fig:visnodeDesafiosNarrativa} demonstra um exemplo desta contextualização, podendo conter texto e imagens, de forma que facilite o entendimento do aluno em relação ao desafio proposto.
 
 \begin{figure}[H]
 \centering
@@ -1752,7 +1752,7 @@ Quando o aluno seleciona um desafio a ser resolvido, a próxima página exibida 
 \label{fig:visnodeDesafiosNarrativa}
 \end{figure}
 
-Após a apresentação da narrativa do desafio, o usuário é redirecionado para página que contém as missões do desafio, que é representada pela Figura \ref{fig:visnodeMissoes}. O aluno deverá resolver as missões em ordem, desta forma, a segunda missão não poderá ser resolvida antes que a missão 1 seja solucionada. Na Tabela \ref{tab:listagemMissoes} é explicado cada elemento desta janela.
+Após a apresentação da narrativa do desafio, o usuário é redirecionado para a página que contém as missões do desafio, que é representada pela Figura \ref{fig:visnodeMissoes}. O aluno deverá resolver as missões em ordem, desta forma, a segunda missão não poderá ser resolvida antes que a missão 1 seja solucionada. Na Tabela \ref{tab:listagemMissoes} é explicado cada elemento desta janela.
 
 \begin{figure}[H]
 \centering
@@ -1781,7 +1781,7 @@ Após a apresentação da narrativa do desafio, o usuário é redirecionado para
 \sourceAuthor
 \end{table}
 
-Nesta mesma página, também é possível que o usuário visualize outras soluções para as missões. Este recurso possibilita que os alunos possam aprender novos forma de solucionar um mesmo desafios. Para que o aluno não copie outras soluções, este recuso somente esta disponível após a conclusão da missão. Esta página é demonstrada na Figura \ref{fig:visnodeMissaoSolucoes}. 
+Nesta mesma página, também é possível que o usuário visualize outras soluções para as missões. Este recurso possibilita que os alunos possam aprender novas forma de solucionar um mesmo desafio. Para que o aluno não copie outras soluções, este recuso somente esta disponível após a conclusão da missão. Esta página é demonstrada na Figura \ref{fig:visnodeMissaoSolucoes}. 
 
 \begin{figure}[H]
 \centering
@@ -1806,7 +1806,7 @@ Nesta mesma página, também é possível que o usuário visualize outras soluç
 \sourceAuthor
 \end{table}
 
-Para cada desafio é relacionado uma recompensa, que será adquirida pelo aluno ao final do desafio. As recompensas da ferramenta são imagens, como demonstrando na Figura \ref{fig:visnodeDesafiosRecompensa}. Com o objetivo de transmitir uma ideia de progresso, esta imagem foi dividida em várias partes e em cada conclusão de missão, uma parte da imagem é concedida ao aluno.
+Para cada desafio é relacionada uma recompensa, que será adquirida pelo aluno ao final do desafio. As recompensas da ferramenta são imagens, como demonstrando na Figura \ref{fig:visnodeDesafiosRecompensa}. Com o objetivo de transmitir uma ideia de progresso, esta imagem foi dividida em várias partes e em cada conclusão de missão, uma parte da imagem é concedida ao aluno.
 
 \begin{figure}[H]
 \centering
@@ -1826,7 +1826,7 @@ Assim que o aluno seleciona uma missão, a contextualização desta missão é a
 \label{fig:visnodeMissaoNarrativa}
 \end{figure}
 
-A Figura \ref{fig:visnodeDesktop} demonstra a resolução de uma missão utilizando a ferramenta VISNode. Na Tabela \ref{tab:visnodeDesktop} é apresentado as funcionalidade desta tarefa.
+A Figura \ref{fig:visnodeDesktop} demonstra a resolução de uma missão utilizando a ferramenta VISNode. Na Tabela \ref{tab:visnodeDesktop} são apresentadas as funcionalidades desta tarefa.
 
 \begin{figure}[H]
 \centering
@@ -1836,14 +1836,6 @@ A Figura \ref{fig:visnodeDesktop} demonstra a resolução de uma missão utiliza
 \label{fig:visnodeDesktop}
 \end{figure}
 
-
-\begin{figure}[H]
-\centering
-\caption{\textbf{Soluções de Missões}}
-\includegraphics[width=0.7\textwidth]{imagens/visnode_missoes_solucoes.png}
-\sourceAuthor
-\label{fig:visnodeMissaoSolucoes}
-\end{figure}
 
 \begin{table}[H]
 \captionof{table}{Elementos da resolução de missões} \label{tab:visnodeDesktop}
@@ -1861,7 +1853,7 @@ A Figura \ref{fig:visnodeDesktop} demonstra a resolução de uma missão utiliza
 
 \subsection{Ranking}
 
-A Figura \ref{fig:visnodeRanking} demonstra a página de visualização de \textit{ranking} de usuários. Este \textit{ranking} pode ser tando no âmbito geral, ou seja, todos os usuários da ferramenta, ou no âmbito de seu grupo, contendo somente os usuário do grupo do usuário. Caso o usuário possuam mais de um grupo, estes serão exibidos em formato de aba. Na Tabela \ref{tab:listagemMissoesConcluidas} é explicado cada elemento desta janela.
+A Figura \ref{fig:visnodeRanking} demonstra a página de visualização de \textit{ranking} de usuários. Este \textit{ranking} pode ser tando no âmbito geral, ou seja, todos os usuários da ferramenta, ou no âmbito de seu grupo, contendo somente os usuários do grupo do usuário. Caso o usuário possuam mais de um grupo, estes serão exibidos em formato de aba. Na Tabela \ref{tab:listagemMissoesConcluidas} é explicado cada elemento desta janela.
 
 \begin{figure}[H]
 \centering
@@ -1888,7 +1880,7 @@ A Figura \ref{fig:visnodeRanking} demonstra a página de visualização de \text
 
 \subsection{Conquistas}
 
-Para que o usuário visualize duas conquistas foi desenvolvido a página representada pela Figura \ref{fig:visnodeConquistas}. Nesta página, é possível visualizar todas as conquistas do usuário, mesmo que o desafio não esteja completo. Nestes casos, o usuário poderá visualizar o quanto do desafio foi concluído. Na Tabela \ref{tab:listagemMissoesConcluidas} é explicado cada elemento desta janela.
+Para que o usuário visualize duas conquistas foi desenvolvida a página representada pela Figura \ref{fig:visnodeConquistas}. Nesta página, é possível visualizar todas as conquistas do usuário, mesmo que o desafio não esteja completo. Nestes casos, o usuário poderá visualizar o quanto do desafio foi concluído. Na Tabela \ref{tab:listagemMissoesConcluidas} é explicado cada elemento desta janela.
 
 \begin{figure}[H]
 \centering
@@ -1905,7 +1897,6 @@ Para que o usuário visualize duas conquistas foi desenvolvido a página represe
 \begin{tabular}[c]{@{}c@{}}(A)\\ XP\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Barra de progresso.\end{tabular} \\ \hline
 
 \begin{tabular}[c]{@{}c@{}}(B)\\ Recompensa \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Imagem.\\ Descrição: Recompensas adquiridas.\end{tabular}\\ \hline
-
 
 \end{tabular}
 \centering
@@ -1983,7 +1974,7 @@ Com o intuito de possibilitar aos educadores um canal para a criação de novos 
 
 \subsection{Manutenção de grupos}
 
-Visando uma melhor organização dos usuários, a ferramenta VISNode possui uma funcionalidade para a criação de grupos de usuário. Este recurso possibilita que o educador possa acompanhar a evolução de uma determinada turma. A Figura \ref{fig:visnodeNovoGrupo} demonstra a janela pela qual o educador pode criar novos grupo e relacionar os respectivos usuários.
+Visando uma melhor organização dos usuários, a ferramenta VISNode possui uma funcionalidade para a criação de grupos de usuário. Este recurso possibilita que o educador possa acompanhar a evolução de uma determinada turma. A Figura \ref{fig:visnodeNovoGrupo} demonstra a janela pela qual o educador pode criar novos grupos e relacionar os respectivos usuários.
 
 \begin{figure}[H]
 \centering
@@ -1995,7 +1986,7 @@ Visando uma melhor organização dos usuários, a ferramenta VISNode possui uma 
 
 \subsection{Acompanhamento de usuários}
 
-Uma das funcionalidades da ferramenta é possibilitar ao educador um mecanismo que permita o acompanhamento do progresso dos estudantes. A Figura \ref{fig:visnodeUsuarios} demonstra uma página onde é possível visualizar a quantidade de pontos obtidos por cada usuário, além de visualizar suas conquistas e desafios concluídos. Este recurso permite que o educador abra a solução desenvolvida pelo estudante, possibilitando ao educador identificar as abordagem utilizadas pelos alunos nas resoluções dos desafios. Na Tabela \ref{tab:visnodeUsuarios} é explicado cada elemento desta janela.
+Uma das funcionalidades da ferramenta é possibilitar ao educador um mecanismo que permita o acompanhamento do progresso dos estudantes. A Figura \ref{fig:visnodeUsuarios} demonstra uma página onde é possível visualizar a quantidade de pontos obtidos por cada usuário, além de visualizar suas conquistas e desafios concluídos. Este recurso permite que o educador abra a solução desenvolvida pelo estudante, possibilitando ao educador identificar as abordagens utilizadas pelos alunos nas resoluções dos desafios. Na Tabela \ref{tab:visnodeUsuarios} é explicado cada elemento desta janela.
 
 \begin{figure}[H]
 \centering
@@ -2029,23 +2020,31 @@ Uma das funcionalidades da ferramenta é possibilitar ao educador um mecanismo q
 
 \end{tabular}
 \centering
-\label{tab:manutencaoMissoes}
+\label{tab:visnodeUsuarios}
 
 \sourceAuthor
 \end{table}
 
+\section{Considerações}
+
+%- Revisão 0 
+Neste capítulo foi apresentado o desenvolvimento do trabalho, sendo abortado o funcionamento da ferramenta e as tecnologias utilizadas na sua construção. Também foi apresentado as adaptações realizadas na ferramenta para torna-la gamificada.
+
+%- Revisão 0 
+No próximo capítulo serão apresentados o formato de validação da ferramenta. São abordados temas referente as etapas de validação e os resultados obtidos através das aplicações em sala de aula.
+
 \chapter{Validação dos resultados}
 
-Neste capítulo será abordado as etapas realizadas durante o processo de validação do trabalho, sendo descrito o formato utilizado para este etapa. Também serão apresentadas as aplicações em sala, juntamente com os resultados obtidos a partir destes eventos.
+Neste capítulo serão abordadas as etapas realizadas durante o processo de validação do trabalho, sendo descrito o formato utilizado para este etapa. Também serão apresentadas as aplicações em sala, juntamente com os resultados obtidos a partir destes eventos.
 
 \section{Piloto de validação}
 \label{validacao:piloto1}
 
-No dia 15/05/2018 foi realizada uma apresentação do VISNode para turma da disciplina de PDI da Universidade Feevale do curso de Ciência da Computação e Sistemas da Informação. O objetivo  foi apresentar o VISNode e coletar \textit{feedbacks} dos estudantes. Neste momento a ferramenta não possuía nenhuma implementação relacionada a gamificação, somente foi demonstrado o funcionamento do VISNode. A turma em questão já possuía conhecimentos em PDI, sendo que os alunos já haviam cursado mais da metada da disciplina.
+No dia 15/05/2018 foi realizada uma apresentação do VISNode para a turma da disciplina de PDI da Universidade Feevale dos cursos de Ciência da Computação e Sistemas da Informação. O objetivo  foi apresentar o VISNode e coletar \textit{feedbacks} dos estudantes. Neste momento a ferramenta não possuía nenhuma implementação relacionada a gamificação, somente foi demonstrado o funcionamento do VISNode. A turma em questão já possuía conhecimentos em PDI, sendo que os alunos já haviam cursado mais da metade da disciplina.
 
 Para dar uma maior dinâmica a apresentação, foi proposto aos estudantes a realização de um desafio utilizando a ferramenta VISNode. O desafio escolhido é o mesmo descrito na sessão \ref{desafio:moedas}. Participaram da apresentação e da resolução do desafio 5 estudantes.
 
-Ao término do desafio, foi solicitado aos estudantes que contribuíssem com um \textit{feedback} da utilização da ferramenta. Segundo os estudantes, a utilização da ferramenta permitiu a aplicação da teoria na prática, onde normalmente os estudantes tinham contado com as técnicas separadamente, foi possível aplica-las em sequência. A ferramenta contribuiu para o entendimento de como conectar as técnicas.
+Ao término do desafio, foi solicitado aos estudantes que contribuíssem com um \textit{feedback} da utilização da ferramenta. Segundo os estudantes, a utilização da ferramenta permitiu a aplicação da teoria na prática, onde normalmente os estudantes tinham contato com as técnicas separadamente, foi possível aplica-las em sequência. A ferramenta contribuiu para o entendimento de como conectar as técnicas.
 
 A aplicação do desafio também teve um \textit{feedback} positivo. Segundo os estudantes, o desafio possibilitou a resolução de um problema real. Esta abordagem tornou a dinâmica da aula mais iterativa, instigando os estudantes a resolver um problema de aplicação de técnicas de PDI e não de implementação de técnicas.
 
@@ -2055,38 +2054,37 @@ Neste mesmo cenário, outro ponto de melhoria identificado foi em relação as j
 
 \section{Piloto de validação 2}
 
-No dia 07/08/2018 foi realizada uma apresentação do VISNode para turma da disciplina de PDI da Universidade Feevale do curso de Ciência da Computação e Sistemas da Informação. Diferente do turma que foi aplicado o \ref{validacao:piloto1}, esta turma não possuía conhecimento em PDI, nesta data foi apenas a segunda aula da turma. 
+No dia 07/08/2018 foi realizada uma apresentação do VISNode para turma da disciplina de PDI da Universidade Feevale dos cursos de Ciência da Computação e Sistemas da Informação. Diferente do turma que foi aplicado o \ref{validacao:piloto1}, esta turma não possuía conhecimento em PDI, nesta data foi apenas a segunda aula da turma. 
 
-O objetivo do encontro foi apresentar o VISNode e coletar \textit{feedbacks} dos estudantes. Desta forma, a aula consistiu em demonstrar as funcionalidades da ferramenta, apresentando aos alunos o que é possível fazer utilizando o VISNode. Ao final da demonstração do software, foi solicitado aos alunos que realizassem um desafios de PDI utilizando o VISNode. O desafio aplicado é apresentado no Anexo \label{desafio:estatistica}. O modulo de gamificação não foi apresentado, somente foi utilizado os recursos existentes no VISNode.
+O objetivo do encontro foi apresentar o VISNode e coletar \textit{feedbacks} dos estudantes. Desta forma, a aula consistiu em demonstrar as funcionalidades da ferramenta, apresentando aos alunos o que é possível fazer utilizando o VISNode. Ao final da demonstração do software, foi solicitado aos alunos que realizassem um desafios de PDI utilizando o VISNode. O desafio aplicado é apresentado no Apêndice \ref{desafio:estatistica}. O módulo de gamificação não foi apresentado, somente foi utilizado os recursos existentes no VISNode.
 
-Ao término do desafio, foi solicitado aos estudantes que contribuíssem com um \textit{feedback} da utilização da ferramenta. Segundo os alunos, esta apresentação permitiu que eles pudessem vislumbrar aplicações reais da disciplina. A ferramenta permitiu que estudantes, com o mínimo de conhecimento na área, pudessem desenvolver uma solução para o desafio descrito na sessão \ref{desafio:moedas} além do desafio \label{desafio:estatistica}.
+Ao término do desafio, foi solicitado aos estudantes que contribuíssem com um \textit{feedback} da utilização da ferramenta. Segundo os alunos, esta apresentação permitiu que eles pudessem vislumbrar aplicações reais da disciplina. A ferramenta permitiu que estudantes, com o mínimo de conhecimento na área, pudessem desenvolver uma solução para problemas reais de PDI.
 
-Uma dificuldade encontrada pelos estudantes foi em relação a utilização do processo \textit{Script process} descrito na seção \ref{sec:processos}. Segundos os alunos, as funcionalidades oferecidas por este processos não estavam bem documentadas, e por este motivo, foi difícil utiliza-lo. Para a resolução deste problema, a documentação deste processo foi revista, disponibilizando todos os métodos disponível para cada parâmetro de entrada do processo e também foi adicionado exemplos de utilização deste processo.
+Uma dificuldade encontrada pelos estudantes foi em relação a utilização do processo \textit{Script process} descrito na seção \ref{sec:processos}. Segundo os alunos, as funcionalidades oferecidas por estes processos não estavam bem documentadas, e por este motivo, foi difícil utiliza-lo. Para a resolução deste problema, a documentação deste processo foi revista, disponibilizando todos os métodos disponível para cada parâmetro de entrada do processo e também foram adicionados exemplos de utilização deste processo.
 
 \section{Primeiro encontro de validação}
 
-No dia 04/09/2018 foi realizado a primeira aplicação da ferramenta gamificada na disciplina de Processamento Digital de Imagem na Universidade Feevale. A turma era composta por alunos do curso de Ciência da Computação e Sistemas da Informação.
+No dia 04/09/2018 foi realizada a primeira aplicação da ferramenta gamificada na disciplina de Processamento Digital de Imagem na Universidade Feevale. A turma era composta por alunos do curso de Ciência da Computação e Sistemas da Informação.
 
-A aplicação constituiu-se em primeiramente apresentar os módulos gamificados da ferramenta, demonstrando o funcionamento do processo de resolução de desafios, sistema de \textit{ranking} e conquistas. Após a familiarização dos alunos com a ferramenta, foi proposto que resolve-sem um desafio fazendo uso do sistema gamificado.
+A aplicação constituiu-se em primeiramente apresentar os módulos gamificados da ferramenta, demonstrando o funcionamento do processo de resolução de desafios, sistema de \textit{ranking} e conquistas. Após a familiarização dos alunos com a ferramenta, foi proposto que resolvessem um desafio fazendo uso do sistema gamificado.
 
-O desafio abordava técnicas de transformação geométrica, que foram apresentadas na sessão \ref{fig:transformacoesgeometricas} deste trabalho. Para a escolha do assunto do desafio, foi levado em consideração o conhecimento da turma, no momento da aplicação, os alunos estavam iniciando seus estudos de técnicas de transformações geométricas. O desafios é composto por seis missões, cada qual abordando um técnica de transformação. Mais informações sobre o desafio podem ser acessadas no Apêndice \ref{apen:transformacaoGeometrica}.
+O desafio abordava técnicas de transformação geométrica, que foram apresentadas na sessão \ref{fig:transformacoesgeometricas} deste trabalho. Para a escolha do assunto do desafio, foi levado em consideração o conhecimento da turma, no momento da aplicação, os alunos estavam iniciando seus estudos de técnicas de transformações geométricas. O desafio é composto por seis missões, cada qual abordando um técnica de transformação. Mais informações sobre o desafio podem ser acessadas no Apêndice \ref{apen:transformacaoGeometrica}.
 
 No total 14 alunos participaram deste experimento, destes, 13 completaram o desafio até o final e 1 completou parcialmente, concluindo 2 das 6 missões. Somente 1 aluno completou as 6 missões sem cometer erro. O experimento foi composto por 154 submissões de desafios, destas somente 74 foram assertivas. Desta forma, 48\% das submissões falharam.
 
-Aprofundando esta análise, a missão 3 foi a missão com maior número de submissões falhas, o que contabiliza 46 submissões e representa 62\% do total de falhas. Este numero excessivo de falhas da missão 3 pode ser justificado pela forma com que sua narrativa foi apresentada. A missão apresenta um objeto em uma posição x, y e pede-se para que este objeto seja movido para outra posição i, j. Na maioria da submissões, os alunos realizaram a translação para a posição i, j e não para a posição resultante da variação das duas posições. Este fato demonstra uma dificultada na interpretação da missão proposta.
+Aprofundando esta análise, a missão 3 foi a missão com maior número de submissões falhas, o que contabiliza 46 submissões e representa 62\% do total de falhas. Este número excessivo de falhas da missão 3 pode ser justificado pela forma com que sua narrativa foi apresentada. A missão apresenta um objeto em uma posição x, y e pede-se para que este objeto seja movido para outra posição i, j. Na maioria da submissões, os alunos realizaram a translação para a posição i, j e não para a posição resultante da variação das duas posições. Este fato demonstra uma dificuldade na interpretação da missão proposta.
 
-Ao final da aula foi solicita que os alunos responde-sem o questionário. Os dados coletados após a aplicação do questionário foram:
-
+Ao final da aula foi solicitado que os alunos respondessem o questionário.
 
 \section{Encontro final de validação}
 
 Aqui será narrado o funcionamento do último encontro de validação.
 
-
 \section{Análise dos resultados}
 
 Tendo em vista a coleta de informações e \textit{feedbacks} de alunos, foi desenvolvido um questionário adaptando \cite{bez2013}. O questionário é composto por 15 perguntas relacionadas a usabilidade, confiabilidade e dados referentes ao aprendizado dos alunos. 
 
+Nesta sessão será realizada a análise do resultados obtidos, realizado uma comparação dos resultados do primeiro encontro com o último.
 
 \begin{table}[H]
 \centering
@@ -2433,8 +2431,6 @@ bla                                                   \\ \hline
 \sourceAuthor
 \end{figure}
 
-
-Nesta sessão será realizado a análise do resultados obtidos, realizado uma comparação dos resultados do primeiro encontro com o último
 
 % ---
 % Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
