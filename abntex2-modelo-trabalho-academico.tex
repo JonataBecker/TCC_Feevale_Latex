@@ -1568,20 +1568,20 @@ Tendo como objetivo dar assistência ao usuário no entendimento dos algoritmos 
 
 O principal objetivo do trabalho é apresentar o desenvolvimento de uma ferramenta que motive os alunos a participarem das aulas e engaja-los na busca por conhecimentos relacionados a área de estudo. Para isso foi utilizada a gamificação. A ferramenta contará com elementos como: Desafios, Missões, Narrativas, Recompensas e Rankings.
 
-\subsubsection{Desafios}
-
-A ferramenta conta com desafios. Um desafio consiste em uma tarefa que o usuário deverá realizar. Cada desafio possui uma narrativa, na qual deve contextualizar o problema visando motivar o usuário à resolução do mesmo.
-
-A resolução do desafio deve ser realizada utilizando o VISNode, desta forma, o usuário deverá conectar as técnicas existentes para obter o resultado esperado. O próprio software realiza a conferência se a solução proposta pelo usuário condiz com o resultado esperado. Informações como número de tentativas e duração são armazenadas para análises por parte do educador.
-
 \subsubsection{Missões}
+
+A ferramenta conta com missões. Uma missão consiste em uma tarefa que o usuário deverá realizar. Cada missão possui uma narrativa, na qual deve contextualizar o problema visando motivar o usuário à resolução do mesmo.
+
+A resolução da missão deve ser realizada utilizando o VISNode, desta forma, o usuário deverá conectar as técnicas existentes para obter o resultado esperado. O próprio software realiza a conferência se a solução proposta pelo usuário condiz com o resultado esperado.
+
+\subsubsection{Desafios}
 \label{desafio:moedas}
-
-Uma missão consiste em um grande objetivo que o usuário deve alcançar. Cada missão é composta por desafios, desta forma, para um usuário concluir uma missão, este deverá concluir primeiramente uma seŕie de pequenos desafios. Estes desafios são pensados para que o aluno consiga dividir o problema em partes, desta forma, a resolução de um problema de maior complexidade é mais facilmente alcançada.
-
-Cada missão possui uma narrativa para que seja apresentado ao aluno a problemática a ser trabalhada. Esta narrativa descreve o problema como um todo e demonstra o resultado final esperado. 
-
-Uma missão pode ser exemplificada por:
+%-- revisao 0
+Um desafio consiste em um grande objetivo que o usuário deve alcançar. Cada desafio é composto por missões, desta forma, para um usuário concluir um desafio, este deverá concluir primeiramente uma séries de pequenas missões. Estes desafios são pensados para que o aluno consiga dividir o problema em partes, desta forma, a resolução de um problema de maior complexidade é mais facilmente alcançada.
+%-- revisao 0
+Cada desafio possui uma narrativa para que seja apresentado ao aluno a problemática a ser trabalhada. Esta narrativa descreve o problema como um todo e demonstra o resultado final esperado. 
+%-- revisao 0
+Um desafio pode ser exemplificada por:
 uma loja procura uma maneira mais simples de calcular o valor em moedas existes em suas caixas registradoras. A cada encerramento de caixa, fica a cargo do operador realizar a conferência de quanto em valor existe em cada caixa. Levando em consideração este cenário, foi desenvolvido um equipamento que possui um câmera fotográfica acima de um tablado. Pede-se para desenvolver um algoritmo de processamento digital de imagens que seja capaz de identificar cada moeda e calcular o valor existente no tablado. A Figura \ref{fig:exemploNarrativa} apresenta um exemplo da imagem capturada do tablado. 
 
 \begin{figure}[ht]
@@ -1592,7 +1592,8 @@ uma loja procura uma maneira mais simples de calcular o valor em moedas existes 
 \label{fig:exemploNarrativa}
 \end{figure}
 
-Os desafios desta missão podem ser:
+%-- revisao 0
+As missões deste desafio podem ser:
 
 \begin{enumerate}
 \item \textbf{Pré-processamento}: Neste desafio os usuários terão de trabalhar para melhorar a qualidade da imagem para que seja possível realizar o processo de segmentação. Como resultado espera-se que seja retornada uma imagem binária, onde os pixels com valor 0 correspondam ao fundo da imagem, e os pixels com valor 1 correspondam as moedas.
@@ -1601,13 +1602,27 @@ Os desafios desta missão podem ser:
 
 \subsubsection{Recompensas e pontos de experiência}
 
-Ao completar missões e desafios o usuário receberá pontos de experiência. Cada tarefa terá sua pontuação de acordo com o grau de dificuldade imposto ao usuário. Esta informação de experiência transmite ao usuário um \textit{feedback} de como ele está em relação ao seu progresso. Além de ser um fator de motivação extrínseca. 
+%-- revisao 0
+Um importante elemento da gamificação são as recompensas e pontos de experiência. Pois esta informação transmite ao usuário um \textit{feedback} de como ele está em relação ao seu progresso. Além de ser um fator de motivação extrínseca.
 
-Além dos pontos de experiência, o usuário poderá receber algumas recompensas. Um exemplo de recompensa seria o usuário receber uma parte de uma imagem a cada desafio completado. Após a conclusão de alguns desafios, o usuário possuirá a imagem completa.
+%-- revisao 0
+Ao utilizar o VISNode, os usuários receberão pontos de experiência ao completar missões e desafios. Cada tarefa terá sua pontuação de acordo com o grau de dificuldade imposto ao usuário, desta forma, desafios com um grau de complexidade maior resultarão em uma quantidade maior de pontos se comparados com desafios de menor complexidade.
+
+%-- revisao 0
+Cada missão possui um valor máximo de pontos que usuário pode obter. Este valor somente será concedido ao usuário caso ele acerte a missão na primeira tentativa. Caso contrário, o usuário irá receber um percentual do valor total. O valor mínimo que o usuário receberá é 70\% do da pontuação. Desta forma, o usuário é penalizado em até 30\%, variando de acordo com o número de erros. Cada tentativa falha equivale a 10\%.
+
+%-- revisao 0
+Além dos pontos de experiência, o usuário poderá receber algumas recompensas. Estas recompensas são vinculadas aos desafios, sendo assim, o usuário irá receber a recompensa ao finalizar o desafio. Para o VISNode, uma recompensa é uma imagem. Está imagem é dividade em pedaços de acordo com o número de missões do desafio. O usuário recebe um pedaço desta recompensa a cada missão concluída.
+
+%-- revisao 0
+Na ferramenta, esta recompensa é exibida em formato de quera-cabeça, onde somente são exibidas as peças que o usuário já adquiriu. Este formato de atribuição de recompensas, além de propiciar um fator motivacional, também possibilita que o usuário identifique seu processo, pois é possível que ele identifique o quanto falta para ele completar o desafio. 
 
 \subsubsection{\textit{Rankings}}
 
 Tendo em visa a possibilidade do usuário se situar em relação ao seu desempenho comparado com outros usuários, a ferramenta possui um \textit{ranking}. Este ranking leva em consideração a pontuação conquistada por cada usuário para posiciona-los em suas respectivas colocações.
+
+%-- revisao 0
+A seção de \textit{ranking} é dividida em duas partes. A primeira é referente ao \textit{ranking} do aluno em relação a sua turma, desta forma, o aluno pode identificar sua colocação em comparação com seus colegas de turma. A segunda é referente ao \textit{ranking} geral, onde este é composto por todos os alunos do sistema, podendo conter alunos de outros semestre ou instituições.
 
 \subsection{Utilização}
 
@@ -2027,15 +2042,22 @@ Uma das funcionalidades da ferramenta é possibilitar ao educador um mecanismo q
 
 \section{Considerações}
 
-%- Revisão 0 
+%-- revisao 0 
 Neste capítulo foi apresentado o desenvolvimento do trabalho, sendo abortado o funcionamento da ferramenta e as tecnologias utilizadas na sua construção. Também foi apresentado as adaptações realizadas na ferramenta para torna-la gamificada.
 
-%- Revisão 0 
+%-- revisao 0 
 No próximo capítulo serão apresentados o formato de validação da ferramenta. São abordados temas referente as etapas de validação e os resultados obtidos através das aplicações em sala de aula.
 
 \chapter{Validação dos resultados}
 
 Neste capítulo serão abordadas as etapas realizadas durante o processo de validação do trabalho, sendo descrito o formato utilizado para este etapa. Também serão apresentadas as aplicações em sala, juntamente com os resultados obtidos a partir destes eventos.
+
+\section{Cronograma}
+
+\textbf{04/09/2018}: Desafios referentes ao conteúdo de transformações geométricas.
+
+\textbf{02/10/2018}: Desafios referentes aos conteúdos brilho, contraste, transformação para tons de cinza, filtros passa-baixa e passa-alta.
+
 
 \section{Piloto de validação}
 \label{validacao:piloto1}
