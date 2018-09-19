@@ -255,19 +255,61 @@ Quanto aos procedimentos técnicos adotados, inicialmente foi realizada uma pesq
 
 Este trabalho está dividido em seis capítulos. No Capítulo 1 são expostas diferentes técnicas aplicadas no PDI, que foram estudadas na busca de embasamento técnico para o desenvolvimento da ferramenta. O Capítulo 2 trata da gamificação e seus conceitos, apresentando os principais elementos que podem ser utilizados na aplicação de gamificação. No Capítulo 3 são apresentadas algumas pesquisas que já foram feitas na área de desenvolvimento de ferramentas para o ensino e ferramentas gamificadas. No Capítulo 4 é abordada a proposta que o trabalho se prontifica a fazer. Será apresentado o principal objetivo do trabalho e o que será feito para cumpri-lo, abordando quais elementos da gamificação serão utilizados e como serão implementados na ferramenta. O Capítulo 5 aborda o desenvolvimento da ferramenta, com detalhes de seu funcionamento e das técnicas que foram utilizadas. O Capítulo 6 demonstra o processo de validação e os resultados obtidos nessa etapa, seguido das considerações finais.
 
+\chapter{Metodologia}
+
+%-- revisao
+Este trabalho será desenvolvido utilizado a técnica de pesquisa chamada \textit{Design Science Research}. Segundo \citet{dresch:2015}, a \textit{Design
+Science Research} auxilia na construção de um conhecimento científico útil e aplicável através da criação de artefatos. Estes artefatos podem ser construtos, modelos, métodos ou instanciações que permitem soluções satisfatórias a problemas práticos.
+
+%-- revisao
+O método utilizado para este trabalho será divido em quatro etapas: criação, avaliação e disseminação. Este fluxo metodológico é representado pela Figura \ref{fig:fluxoMetologico}.
+
+\begin{figure}[ht]
+\centering
+\caption{\textbf{Fluxo metodológico}}
+\includegraphics[width=1\textwidth]{imagens/dsr.jpg}
+\label{fig:fluxoMetologico}
+\sourceAuthor
+\end{figure}
+
+\section{Criação}
+
+%-- revisao
+A etapa de criação se remete aos primeiros estágios do \textit{Design Science Research}.
+Esta etapa se tem  inicio através de uma revisão na literatura, utilizando como aporte artigos, livros e outros materiais acadêmicos. Após este processo foi possível compreender melhor o problema ao qual esta se tentando resolver.
+
+%-- revisao
+A próxima etapa compreende a identificação do artefato que possa solucionar o problema de pesquisa. Foi possível identificar uma ferramenta pode auxiliar no ensino de PDI. Além disso o foi possível perceber que a utilização de elementos de gamificação despertam um maior interesse dos estudantes. Desta forma, o artefato deste trabalho compreende um software gamificado onde seja possível a resolução de desafios por estudante de PDI. Uma das premissas deste software que ele seja de fácil utilização, permitindo que estudante com pouco conhecimento possam resolver problemas reais de PDI.
+
+%-- revisao
+Com o artefato definido tem-se inicio a etapa de produção onde se é definido o plano de desenvolvimento e se tem inicio a modelagem e programação do artefato. O desenvolvimento da ferramenta se fez em cima do software VISNode. A partir dele, foi desenvolvido funcionamento de compreende elementos da gamificação além de fornecer um ambiente centralizador de conhecimento de PDI, através da explanação de técnicas de PDI pela ferramenta.
+
+\section{Avaliação}
+
+%-- revisao
+A etapa de avaliação caracteriza-se pelo ato da realização de teste de validação. Para este trabalho, esta etapa foi realizada através da aplicação do artefato desenvolvido em sala de aula. Estas aplicações ocorreram em uma turma de Processamento Digital de Imagens na Universidade Feevale.
+
+%-- revisao
+O processo de validação será composto pelo uso da ferramenta pelo alunos, e posteriormente a aplicação de um questionário. Este questionário tem como objetivo colocar dados que sejam uteis para identificar se é viável utilizar o artefato desenvolvido em sala de aula.
+
+\section{Disseminação}
+
+%-- revisao
+A etapa de disseminação compreende o procedimentos necessários para tornar o artefato desenvolvido disponível. Para a pesquisa em questão, esta etapa será composta pela construção de um material acadêmico. A monografia, caracterizada por este trabalho será o material acadêmico desenvolvido
+
 % ----------------------------------------------------------
 % Processamento digital de imagens
 % ----------------------------------------------------------
 \chapter{Processamento digital de imagens}
 \label{sec:pdi}
 
-O  processamento digital de imagens (PDI) se refere a utilização de um conjunto de técnicas para processamento de imagens digitais. Este processamento, geralmente, faz uso de técnicas matemáticas transcritas de forma algorítmica que são utilizadas para a manipulação e a geração de novas imagens \cite{gonzalesWoods:2008}. A utilização destas técnicas permite a extração e identificação de informação de imagens, possibilitando a interpretação automática por meio computacional \cite{pedriniSchwartz:2008}.
+O  processamento digital de imagens (PDI) é caracterizado pela utilização de um conjunto de técnicas para processamento de imagens digitais. Este processamento, geralmente, faz uso de técnicas matemáticas, que são transcritas de forma algorítmica, para serem utilizadas na manipulação e a geração de novas imagens \cite{gonzalesWoods:2008}. A utilização destas técnicas permite a extração e identificação de informação de imagens, possibilitando a interpretação automática por meio computacional \cite{pedriniSchwartz:2008}.
 
 Um sistema de processamento de imagens é composto por um conjunto de etapas, dentre elas estão: aquisição; pré-processamento; segmentação; representação e descrição; reconhecimento e interpretação. Estas etapas possuem a capacidade de produzir um resultado a partir de um domínio do problema. Por exemplo, determinar o número de células sanguíneas em uma amostra digital de sangue \cite{pedriniSchwartz:2008}.
 
-A etapa de aquisição tem como objetivo capturar a imagem por meio de um dispositivo e converte-la adequadamente para uma representação digital. A etapa de pré-processamento visa a melhora da qualidade da imagem, utilizando técnicas para a diminuição de ruídos, a correção de contraste e a suavização da imagem. A etapa de segmentação é responsável pela extração e identificação de áreas de interesse, geralmente utilizando técnicas de detecção de bordas ou regiões \cite{pedriniSchwartz:2008}.
+A etapa de aquisição tem como objetivo capturar a imagem por meio de um dispositivo e converte-la adequadamente para uma representação digital. A etapa de pré-processamento visa a melhora da qualidade da imagem, utilizando técnicas para a diminuição de ruídos, correção de contraste e a suavização da imagem. A etapa de segmentação é responsável pela extração e identificação de áreas de interesse, geralmente utilizando técnicas de detecção de bordas ou regiões \cite{pedriniSchwartz:2008}.
 
-A etapa de representação e descrição é responsável pelo armazenamento e manipulação dos objetos extraídos da imagem. Além disso, este processo visa a extração de características dos objetivos extraídos. A etapa de reconhecimento e interpretação é responsável por rotular os objetos da imagem, utilizando, para isso, as características extraídas na etapa anterior. Além da rotulação, é responsabilidade deste procedimento atribuir um significado ao conjunto de objetos reconhecidos \cite{pedriniSchwartz:2008}. 
+A etapa de representação e descrição é responsável pelo armazenamento e manipulação dos objetos extraídos da imagem. Além disso, este processo também visa a extração de características dos objetivos extraídos. A etapa de reconhecimento e interpretação é responsável por rotular os objetos da imagem, utilizando, para isso, as características extraídas na etapa anterior. Além da rotulação, é responsabilidade deste procedimento atribuir um significado ao conjunto de objetos reconhecidos \cite{pedriniSchwartz:2008}. 
 
 Para o processamento digital de imagens é necessário que a imagem possa ser manipulada digitalmente. Segundo \citet{pedriniSchwartz:2008}, uma imagem digital pode ser representada através de uma matriz bidimensional, onde cada elemento desta matriz corresponde a um ponto da imagem. Cada um destes pontos representa uma cor ou um tom de cinza e são denominados pixels. 
 
@@ -275,7 +317,7 @@ Imagens monocromáticas são imagens onde seus pixels possuem somente uma banda 
 
 Imagens coloridas são imagens que possuem mais de uma banda, ou seja, multibanda. Seus pixels possuem mais de um canal. Cada canal representa uma cor, desta forma, uma imagem RGB será representada por canais que identificam a cor vermelha, verde e azul, respectivamente. Digitalmente, esta imagem pode ser representada por 3 matrizes, cada uma representando um canal da imagem, a combinação das três matrizes representa uma cor \cite{conciAzevedoLeta:2008}.
 
-Uma imagem colorida pode ser transformada em uma imagem monocromática em escala de cinza ou em uma imagem binária. A transformação em escala de cinza realiza uma combinação dos valores RGB de cada pixel, definido um valor para cada pixel que representa a média dos valores RGB. A conversão para uma imagem binária pode ser realizada através do processo de Limiarização (explicado na seção \ref{sec:limiarizacao}), onde cada pixel da imagem será testado e verificado se seu valor será preto ou branco \cite{mossmann2010extraccao}.
+Uma imagem colorida pode ser transformada em uma imagem monocromática em escala de cinza ou em uma imagem binária. A transformação em escala de cinza realiza uma combinação dos valores RGB de cada pixel, definindo um valor para cada pixel através da média dos valores RGB. A conversão para uma imagem binária pode ser realizada através do processo de Limiarização (explicado na seção \ref{sec:limiarizacao}), onde cada pixel da imagem será testado e verificado se seu valor será preto ou branco \cite{mossmann2010extraccao}.
 
 O cálculo da distribuição de níveis cor de uma imagem é denominado histograma (Figura \ref{fig:histograma}). O histograma de uma imagem, normalmente é representado de maneira gráfica, onde é indicada a quantidade de pixels para cada nível de cor. Através do histograma de uma imagem é possível obter medidas estatísticas como os valores mínimo e máximo, valor médio, variância e o desvio padrão \cite{gonzalesWoods:2008}. Na Figura \ref{fig:histograma} é demonstrado o histograma de um segmento de uma imagem. 
 
@@ -289,7 +331,7 @@ O cálculo da distribuição de níveis cor de uma imagem é denominado histogra
 
 Segundo \citet{conciAzevedoLeta:2008}, o histograma pode ser obtido da seguinte forma: analisa-se o tom de cada pixel; realiza-se a contagem do número de pixeis de cada intensidade de cor; representa-se esses valores na forma gráfica, correspondendo a frequência de cada tom.
 
-Um processo comumente aplicado em técnicas de PDI é a convolução. Segundo \citet{pedriniSchwartz:2008}, o processo de convolução faz uso de matrizes, que são denominadas máscaras, para aplicar modificações na imagem pixel a pixel. A máscara, também conhecida como \textit{kernel}, é uma matriz bidimensional quadrada. Usualmente, esta matriz possui um tamanho ímpar e dimensões quadradas, estas características são importantes para que a máscara possua um pixel central.
+Um processo comumente aplicado em técnicas de PDI é a convolução. Segundo \citet{pedriniSchwartz:2008}, o processo de convolução faz uso de matrizes, também chamadas de máscaras, para aplicar modificações na imagem pixel a pixel. A máscara, também conhecida como \textit{kernel}, é uma matriz bidimensional. Usualmente, esta matriz possui um tamanho ímpar e dimensões quadradas, estas características são importantes para que a máscara possua um pixel central.
 
 O processo de convolução utiliza os coeficientes desta máscaras para realizar uma multiplicação pelos níveis de cor dos pixeis. O pixel central é modificado pela média de todas as multiplicações. Este processo percorre a imagem aplicando a máscara em todos os pixel da imagem. Outro processo semelhante é o processo de correlação, onde este possui o mesmo princípio da convolução, mas com a diferença da máscara ser rotacionada em 180º \cite{gonzalesWoods:2008}. A implementação em java para o algoritmo de convolução pode ser acessado através do link: \url{https://bit.ly/2KJBGzc}.
 
@@ -298,7 +340,7 @@ Neste capítulo serão apresentadas algumas das principais técnicas de PDI. Den
 \section{Limiarização}
 \label{sec:limiarizacao}
 
-Limiarização ou \textit{Threshold} é uma técnica que consiste em comparar cada pixel da imagem com um \textit{Threshold} e a partir deste, gerar um novo valor para o pixel em processamento. Esta técnica tem como objetivo separar objetos da imagem que correspondem a um determinado nível de intensidade. Desta forma, esta técnica permite que, em uma imagem composta por objetos claros e com fundo escuro, os objetos desta imagem possam ser facilmente extraídos aplicando um \textit{threshold} com intensidade entre a cor de fundo e a cor dos objetos \cite{gonzalesWoods:2008}. A Figura \ref{fig:limiarizacaofig} exemplifica este procedimento.
+Limiarização ou \textit{Threshold} é uma técnica que consiste em comparar cada pixel da imagem com um valor de limiar (também conhecido como \textit{threshold}) e a partir deste, gerar um novo valor para o pixel em processamento. Esta técnica tem como objetivo separar objetos da imagem que correspondem a um determinado nível de intensidade. Desta forma, esta técnica permite que, em uma imagem composta por objetos claros e com fundo escuro, os objetos desta imagem possam ser facilmente extraídos aplicando um \textit{threshold} com intensidade entre a cor de fundo e a cor dos objetos \cite{gonzalesWoods:2008}. A Figura \ref{fig:limiarizacaofig} exemplifica este procedimento.
 
 \begin{figure}[ht]
 \centering
@@ -315,7 +357,7 @@ Uma maneira comum para a identificação do \textit{Threshold} a ser utilizado �
 
 % ---
 \section{Brilho e Contraste}
-O conceito de brilho está relacionado com a intensidade luminosa de uma fonte, quando é trabalhado com imagens digitais. Esta intensidade está relacionada com os pixels da imagem. O contraste está relacionado com a medida de variação da intensidade luminosa por unidade de área \cite{gonzalesWoods:2008}.
+O conceito de brilho, quando é trabalhado com imagens digitais, está relacionado com a intensidade luminosa de uma fonte. Esta intensidade está relacionada com os pixels da imagem. O contraste está relacionado com a medida de variação da intensidade luminosa por unidade de área \cite{gonzalesWoods:2008}.
 
 O brilho e contraste podem ser definidos através de uma função matemática. Esta função é definida por \(g = \alpha.f + \beta\), onde o \(g\) é o pixel resultante, \(\alpha\) é o coeficiente de contraste e \(\beta\) é o coeficiente de brilho e \(f\) é o pixel analisado \cite{pedriniSchwartz:2008}.
 
