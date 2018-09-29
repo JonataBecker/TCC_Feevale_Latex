@@ -132,7 +132,8 @@
   \renewcommand{\bibname}{Refer\^encias}
   \renewcommand{\indexname}{\'Indice}
   \renewcommand{\listfigurename}{Lista de ilustra\c{c}\~{o}es}
-  \renewcommand{\listtablename}{Lista de tabelas}
+  \renewcommand{\tablename}{Quadro}
+  \renewcommand{\listtablename}{Lista de Quadros}  
   %% ajusta nomes usados com a macro \autoref
   \renewcommand{\pageautorefname}{p\'agina}
   \renewcommand{\sectionautorefname}{se{\c c}\~ao}

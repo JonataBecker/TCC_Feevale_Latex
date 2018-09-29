@@ -31,11 +31,14 @@
 \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
 \usepackage{color}				% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{makecell}
+\usepackage{longtable}
 \usepackage[font=footnotesize,labelfont=bf,textfont=bf]{caption}
 \usepackage{amsmath}
-
 \usepackage{float}
+\floatstyle{plaintop}
 \restylefloat{table}
+\usepackage[referable]{threeparttablex}
 % ---
 		
 % ---
@@ -113,9 +116,12 @@
 \makeindex
 % ---
 
+\renewcommand\cellgape{\Gape[4pt]}
+
 % ----
 % Início do documento
 % ----
+
 \begin{document}
 
 % Retira espaço extra obsoleto entre as frases.
@@ -1768,7 +1774,7 @@ A Figura \ref{fig:visnodeArquitetura} demonstra a arquitetura do projeto. É pos
 \begin{figure}[ht]
 \centering
 \caption{Arquitetura VISNode}
-\includegraphics[width=0.7\textwidth]{imagens/visnode_arquitetura.png}
+\includegraphics[width=0.5\textwidth]{imagens/visnode_arquitetura.png}
 \sourceAuthor
 \label{fig:visnodeArquitetura}
 \end{figure}
@@ -1782,6 +1788,26 @@ Nos próximos tópicos são apresentadas as interfaces que o aluno possui acesso
 
 O sistema gamificado é baseado em desafios e missões, onde o usuário recebe recompensas e pontuações a partir da conclusão deste elementos. A Figura \ref{fig:visnodeDesafios} demonstra a paǵina onde os alunos podem acessar os desafios disponíveis na ferramenta. Na Tabela \ref{tab:listagemDesafios} é explicado cada elemento desta janela.
 
+\begin{table}[H]
+\centering
+\caption{Elementos da listagem de desafios} \label{tab:listagemDesafios}
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{|c|l|}
+  \hline
+  \makecell{(A) \\ \textit{Max Score}} 
+  &
+  \makecell[l]{Tipo: Numérico.\\ Descrição: Pontuação máxima para o desafio.} \\
+  \hline
+  \makecell{(B) \\ Missões} 
+  &
+  \makecell[l]{Tipo: Texto.\\ Descrição: Demonstra a quantidade de missões do desafio.} \\
+  \hline
+\end{tabular}
+\centering
+\sourceAuthor
+\end{table}
+
 \begin{figure}[H]
 \centering
 \caption{Listagem de desafios}
@@ -1790,18 +1816,7 @@ O sistema gamificado é baseado em desafios e missões, onde o usuário recebe r
 \label{fig:visnodeDesafios}
 \end{figure}
 
-\begin{table}[H]
-\captionof{table}{Elementos da listagem de desafios} \label{tab:listagemDesafios}
-\begin{tabular}{c|l}
-\hline
-\begin{tabular}[c]{@{}c@{}}(A)\\ Max Score\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Numérico.\\ Descrição: Pontuação máxima para o desafio.\end{tabular} \\ \hline
 
-\begin{tabular}[c]{@{}c@{}}(B)\\ Missões \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Demonstra a quantidade de missões do desafio.\end{tabular}\\ \hline
-
-\end{tabular}
-\centering
-\sourceAuthor
-\end{table}
 
 Quando o aluno seleciona um desafio a ser resolvido, a próxima página exibida é a janela responsável pela contextualização do desafio ao aluno. A Figura \ref{fig:visnodeDesafiosNarrativa} demonstra um exemplo desta contextualização, podendo conter texto e imagens, de forma que facilite o entendimento do aluno em relação ao desafio proposto.
 
@@ -1824,48 +1839,37 @@ Após a apresentação da narrativa do desafio, o usuário é redirecionado para
 \end{figure}
 
 \begin{table}[H]
+\centering
 \captionof{table}{Elementos da listagem de missões} \label{tab:listagemMissoes}
-\begin{tabular}{c|l}
-\hline
-\begin{tabular}[c]{@{}c@{}}(A)\\ Desafios\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Exibe a narrativa do desafio.\end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(B)\\ Recompensas \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Exibe as recompensas já adquiridas.\end{tabular}\\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(C)\\ Problema \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Exibe a narrativa da missão.\end{tabular}\\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(D)\\ Resolver \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Exibe soluções de outros usuários.\end{tabular}\\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(E)\\ Resolver \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Inicia a resolução de desafios.\end{tabular}\\ \hline
-
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{|c|l|}
+  \hline
+  \makecell{(A) \\ Desafios} 
+  &
+  \makecell[l]{Tipo: Botão.\\ Descrição: Exibe a narrativa do desafio.} \\
+  \hline
+  \makecell{(B) \\ Recompensas} 
+  &
+  \makecell[l]{Tipo: Botão.\\ Descrição: Exibe as recompensas já adquiridas.} \\
+  \hline
+  \makecell{(C) \\ Problema} 
+  &
+  \makecell[l]{Tipo: Botão.\\ Descrição: Exibe a narrativa da missão.} \\
+  \hline  
+  \makecell{(D) \\ Resolver} 
+  &
+  \makecell[l]{Tipo: Botão.\\ Descrição: Exibe soluções de outros usuários.} \\
+  \hline  
+  \makecell{(E) \\ Resolver} 
+  &
+  \makecell[l]{Tipo: Botão.\\ Descrição: Inicia a resolução de desafios.} \\
+  \hline  
 \end{tabular}
 \centering
 \sourceAuthor
 \end{table}
 
-Nesta mesma página, também é possível que o usuário visualize outras soluções para as missões. Este recurso possibilita que os alunos possam aprender novas formas de solucionar um mesmo desafio. Para que o aluno não copie outras soluções, este recuso somente esta disponível após a conclusão da missão. Esta página é demonstrada na Figura \ref{fig:visnodeMissaoSolucoes}. 
-
-\begin{figure}[H]
-\centering
-\caption{Soluções de Missões}
-\includegraphics[width=0.7\textwidth]{imagens/visnode_missoes_solucoes.png}
-\sourceAuthor
-\label{fig:visnodeMissaoSolucoes}
-\end{figure}
-
-\begin{table}[H]
-\captionof{table}{Elementos da listagem de missões concluídas} \label{tab:listagemMissoesSolucoes}
-\begin{tabular}{c|l}
-\hline
-\begin{tabular}[c]{@{}c@{}}(A)\\ XP\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Pontuação ganha com a resolução da missão. \end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(B)\\ Data da resolução \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Data em que a missão foi submetida.\end{tabular}\\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(C)\\ Abrir \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Abre a solução submetida no VISNode.\end{tabular}\\ \hline
-
-\end{tabular}
-\centering
-\sourceAuthor
-\end{table}
 
 Para cada desafio é relacionada uma recompensa, que será adquirida pelo aluno ao final do desafio. As recompensas da ferramenta são imagens, como demonstrado na Figura \ref{fig:visnodeDesafiosRecompensa}. Com o objetivo de transmitir uma ideia de progresso, esta imagem foi dividida em várias partes e em cada conclusão de missão, uma parte da imagem é concedida ao aluno.
 
@@ -1876,6 +1880,43 @@ Para cada desafio é relacionada uma recompensa, que será adquirida pelo aluno 
 \sourceAuthor
 \label{fig:visnodeDesafiosRecompensa}
 \end{figure}
+
+
+Nesta mesma página, também é possível que o usuário visualize outras soluções para as missões. Este recurso possibilita que os alunos possam aprender novas formas de solucionar um mesmo desafio. Para que o aluno não copie outras soluções, este recuso somente esta disponível após a conclusão da missão. Esta página é demonstrada na Figura \ref{fig:visnodeMissaoSolucoes}. 
+
+\begin{table}[H]
+\centering
+\captionof{table}{Elementos da listagem de missões concluídas} \label{tab:listagemMissoesSolucoes}
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{|c|l|}
+  \hline
+  \makecell{(A) \\ XP} 
+  &
+  \makecell[l]{Tipo: Texto.\\ Descrição: Pontuação ganha com a resolução da missão.} \\
+  \hline
+  \makecell{(B) \\ Data da resolução} 
+  &
+  \makecell[l]{Texto.\\ Descrição: Data em que a missão foi submetida.} \\
+  \hline
+  \makecell{(C) \\ Abrir} 
+  &
+  \makecell[l]{Tipo: Botão.\\ Descrição: Abre a solução submetida no VISNode.} \\
+  \hline  
+\end{tabular}
+\centering
+\sourceAuthor
+\end{table}
+
+\begin{figure}[H]
+\centering
+\caption{Soluções de Missões}
+\includegraphics[width=0.7\textwidth]{imagens/visnode_missoes_solucoes.png}
+\sourceAuthor
+\label{fig:visnodeMissaoSolucoes}
+\end{figure}
+
+
 
 Assim que o aluno seleciona uma missão, a contextualização desta missão é apresentada. Este recurso é demonstrado na Figura \ref{fig:visnodeMissaoNarrativa}.
 
@@ -1897,16 +1938,21 @@ A Figura \ref{fig:visnodeDesktop} demonstra a resolução de uma missão utiliza
 \label{fig:visnodeDesktop}
 \end{figure}
 
-
 \begin{table}[H]
-\captionof{table}{Elementos da resolução de missões} \label{tab:visnodeDesktop}
-\begin{tabular}{c|l}
-\hline
-\begin{tabular}[c]{@{}c@{}}(A)\\ Resolver\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Submete missão para validação. \end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(B)\\ Narrativa \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Exibe a narrativa da missão.\end{tabular}\\ \hline
-
-
+\centering
+\captionof{table}{Elementos da listagem de missões concluídas} \label{tab:visnodeDesktop}
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{|c|l|}
+  \hline
+  \makecell{(A) \\ Resolver} 
+  &
+  \makecell[l]{Tipo: Botão.\\ Descrição: Submete missão para validação.} \\
+  \hline
+  \makecell{(B) \\ Narrativa} 
+  &
+  \makecell[l]{Tipo: Botão.\\ Descrição: Exibe a narrativa da missão.} \\
+  \hline
 \end{tabular}
 \centering
 \sourceAuthor
@@ -1916,6 +1962,30 @@ A Figura \ref{fig:visnodeDesktop} demonstra a resolução de uma missão utiliza
 
 A Figura \ref{fig:visnodeRanking} demonstra a página de visualização de \textit{ranking} de usuários. Este \textit{ranking} pode ser tanto no âmbito geral, ou seja, todos os usuários da ferramenta, ou no âmbito de seu grupo, contendo somente os usuários do grupo do usuário. Caso o usuário possua mais de um grupo, estes serão exibidos em formato de aba. Na Tabela \ref{tab:ranking} é explicado cada elemento desta janela.
 
+\begin{table}[H]
+\centering
+\captionof{table}{Elementos da listagem de \textit{Rankings}} \label{tab:ranking}
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{|c|l|}
+  \hline
+  \makecell{(A) \\ Grupo} 
+  &
+  \makecell[l]{Tipo: Texto.\\ Descrição: Grupo do usuário. Cada grupo será uma aba.} \\
+  \hline
+  \makecell{(B) \\ Usuário} 
+  &
+  \makecell[l]{Tipo: Texto.\\ Descrição: Nome do usuário com sua respectiva colocação.} \\
+  \hline
+  \makecell{(C) \\ XP} 
+  &
+  \makecell[l]{Tipo: Texto.\\ Descrição: Quantidade de pontos do usuário.} \\
+  \hline 
+\end{tabular}
+\centering
+\sourceAuthor
+\end{table}
+
 \begin{figure}[H]
 \centering
 \caption{Ranking}
@@ -1923,21 +1993,6 @@ A Figura \ref{fig:visnodeRanking} demonstra a página de visualização de \text
 \sourceAuthor
 \label{fig:visnodeRanking}
 \end{figure}
-
-\begin{table}[H]
-\captionof{table}{Elementos da listagem de \textit{Rankings}} \label{tab:ranking}
-\begin{tabular}{c|l}
-\hline
-\begin{tabular}[c]{@{}c@{}}(A)\\ Grupo \end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Grupo do usuário. Cada grupo será uma aba. \end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(B)\\ Usuário \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Nome do usuário com sua respectiva colocação.\end{tabular}\\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(C)\\ XP \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Quantidade de pontos do usuário.\end{tabular}\\ \hline
-
-\end{tabular}
-\centering
-\sourceAuthor
-\end{table}
 
 \subsection{Conquistas}
 
@@ -1952,13 +2007,21 @@ Para que o usuário visualize suas conquistas foi desenvolvida a página represe
 \end{figure}
 
 \begin{table}[H]
+\centering
 \captionof{table}{Elementos da listagem de missões concluídas} \label{tab:listagemMissoesConcluidas}
-\begin{tabular}{c|l}
-\hline
-\begin{tabular}[c]{@{}c@{}}(A)\\ XP\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Barra de progresso.\end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(B)\\ Recompensa \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Imagem.\\ Descrição: Recompensas adquiridas.\end{tabular}\\ \hline
-
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{|c|l|}
+  \hline
+  \makecell{(A) \\ XP} 
+  &
+  \makecell[l]{Tipo: Texto.\\ Descrição: Barra de progresso.} \\
+  \hline
+  \makecell{(B) \\ Recompensa} 
+  &
+  \makecell[l]{Tipo: Imagem.\\ Descrição: Recompensas adquiridas.} \\
+  \hline
+ 
 \end{tabular}
 \centering
 \sourceAuthor
@@ -1975,26 +2038,39 @@ Com o intuito de possibilitar aos educadores um canal para a criação de novos 
 \begin{figure}[H]
 \centering
 \caption{Cadastro de desafios}
-\includegraphics[width=0.7\textwidth]{imagens/visnode_cadastro_desafio.png}
+\includegraphics[width=0.8\textwidth]{imagens/visnode_cadastro_desafio.png}
 \sourceAuthor
 \label{fig:visnodeCadastroDesafio}
 \end{figure}
 
 \begin{table}[H]
+\centering
 \captionof{table}{Elementos da manutenção de desafios} \label{tab:manutencaoDesafios}
-\begin{tabular}{c|l}
-\hline
-\begin{tabular}[c]{@{}c@{}}(A)\\ Nome\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Nome de identificação do desafio.\end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(B)\\ Descrição\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto.\\ Descrição: Descrição resumida do desafio.\end{tabular}\\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(C)\\ Narrativa\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto no formato \textit{Markdown}.\\ Descrição: Narrativa do desafio. 
-\\ É nesta sessão que é descrito o cenário do desafio.\end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(D)\\ Recompensa\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Image\\ Descrição: Recompensa que o aluno irá receber ao completar o desafio.\end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(E)\\ Missões\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Botão\\ Descrição: Adiciona nova missão ao desafio.\end{tabular} \\ \hline
-
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{|c|l|}
+  \hline
+  \makecell{(A) \\ Nome} 
+  &
+  \makecell[l]{Tipo: Texto. \\  Descrição: Nome de identificação do desafio.} \\
+  \hline
+  \makecell{(B) \\ Descrição} 
+  &
+  \makecell[l]{Tipo: Texto.\\ Descrição: Descrição resumida do desafio.} \\
+  \hline
+  \makecell{(C) \\ Narrativa} 
+  &
+  \makecell[l]{Tipo: Texto no formato \textit{Markdown}.\\ Descrição: Narrativa do desafio. 
+  \\ É nesta sessão que é descrito o cenário do desafio.} \\
+  \hline
+  \makecell{(D) \\ Recompensa} 
+  &
+  \makecell[l]{Tipo: Image \\ Descrição: Recompensa que o aluno irá receber ao \\ completar o desafio.} \\
+  \hline
+  \makecell{(E) \\ Missões} 
+  &
+  \makecell[l]{Tipo: Botão \\ Descrição: Adiciona nova missão ao desafio.} \\
+  \hline  
 \end{tabular}
 \centering
 \sourceAuthor
@@ -2008,30 +2084,44 @@ Com o intuito de possibilitar aos educadores um canal para a criação de novos 
 \label{fig:visnodeCadastroMissoes}
 \end{figure}
 
+
 \begin{table}[H]
 \centering
-\caption{Elementos da manutenção de missões} 
-
-\begin{tabular}{c|l}
-\hline
-\begin{tabular}[c]{@{}c@{}}(A)\\ XP\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Numérico.\\ Descrição: Pontuação máxima da missão.\end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(B)\\ Narrativa\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Texto no formato \textit{Markdown}.\\ Descrição: Narrativa da missão. \end{tabular}\\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(C)\\ Parâmetros\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão. \\ Descrição: Adiciona os parâmetros da missão.\end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(D)\\ Input\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Imagem\\ Descrição: Parâmetro de entrada.\end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(E)\\ Output\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Imagem\\ Descrição: Parâmetro de saída.\end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(F)\\ \textit{Output Text}\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Texto\\ Descrição: Parâmetro de saída em formato texto.\end{tabular} \\ \hline
-
+\captionof{table}{Elementos da manutenção de missões} \label{tab:manutencaoMissoes}
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{|c|l|}
+  \hline
+  \makecell{(A) \\ XP} 
+  &
+  \makecell[l]{Tipo: Numérico.\\ Descrição: Pontuação máxima da missão.} \\
+  \hline
+  \makecell{(B) \\ Narrativa} 
+  &
+  \makecell[l]{Tipo: Texto no formato \textit{Markdown}.\\ Descrição: Narrativa da missão.} \\
+  \hline
+  \makecell{(C) \\ Parâmetros} 
+  &
+  \makecell[l]{Tipo: Botão. \\ Descrição: Adiciona os parâmetros da missão.} \\
+  \hline
+  \makecell{(D) \\ \textit{Input}} 
+  &
+  \makecell[l]{Tipo: Imagem\\ Descrição: Parâmetro de entrada.} \\
+  \hline
+  \makecell{(E) \\ \textit{Output}} 
+  &
+  \makecell[l]{Tipo: Imagem\\ Descrição: Parâmetro de saída.} \\
+  \hline  
+  \makecell{(F) \\ \textit{Output text}} 
+  &
+  \makecell[l]{Tipo: Texto \\ Descrição: Parâmetro de saída em formato texto} \\
+  \hline    
 \end{tabular}
 \centering
-\label{tab:manutencaoMissoes}
-
 \sourceAuthor
 \end{table}
+
+
 
 \subsection{Manutenção de grupos}
 
@@ -2059,30 +2149,45 @@ Uma das funcionalidades da ferramenta é possibilitar ao educador um mecanismo q
 
 \begin{table}[H]
 \centering
-\caption{Elementos do acompanhamento de usuários} 
-
-\begin{tabular}{c|l}
-\hline
-\begin{tabular}[c]{@{}c@{}}(A)\\ Grupo\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Tipo: Combo-Box.\\ Descrição: Seleção de grupo a ser filtrado.\end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(B)\\ Pesquisar\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão.\\ Descrição: Pesquisa de usuários pelo grupo. \end{tabular}\\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(C)\\ Alterar\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Tipo: Botão. \\ Descrição: Alteração do grupo selecionado.\end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(D)\\ Incluir\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Botão\\ Descrição: Inclusão de novos grupos.\end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(E)\\ Desafio\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Botão\\ Descrição: Consulta de desafios concluídos pelo usuário.\end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(F)\\ Conquistas \end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Botão\\ Descrição: Consulta de conquistas obtidas pelo usuário.\end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(G)\\ Usuário \end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Texto\\ Descrição: Nome do usuário.\end{tabular} \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}(H)\\ XP \end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Tipo: Texto\\ Descrição: Pontuação obtida pelo usuário.\end{tabular} \\ \hline
-
+\captionof{table}{Elementos do acompanhamento de usuários} \label{tab:visnodeUsuarios}
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{|c|l|}
+  \hline
+  \makecell{(A) \\ Grupo} 
+  &
+  \makecell[l]{Tipo: Combo-Box.\\ Descrição: Seleção de grupo a ser filtrado.} \\
+  \hline
+  \makecell{(B) \\ Pesquisar} 
+  &
+  \makecell[l]{Tipo: Botão.\\ Descrição: Pesquisa de usuários pelo grupo.} \\
+  \hline
+  \makecell{(C) \\ Alterar} 
+  &
+  \makecell[l]{Tipo: Botão. \\ Descrição: Alteração do grupo selecionado.} \\
+  \hline
+  \makecell{(D) \\ Incluir} 
+  &
+  \makecell[l]{Tipo: Botão\\ Descrição: Inclusão de novos grupos.} \\
+  \hline
+  \makecell{(E) \\ Desafio} 
+  &
+  \makecell[l]{Tipo: Botão\\ Descrição: Consulta de desafios concluídos pelo usuário.} \\
+  \hline  
+  \makecell{(F) \\ Conquistas} 
+  &
+  \makecell[l]{Tipo: Botão\\ Descrição: Consulta de conquistas obtidas pelo usuário.} \\
+  \hline    
+  \makecell{(G) \\ Usuário} 
+  &
+  \makecell[l]{Tipo: Texto\\ Descrição: Nome do usuário.} \\
+  \hline    
+  \makecell{(H) \\ XP} 
+  &
+  \makecell[l]{Tipo: Texto\\ Descrição: Pontuação obtida pelo usuário.} \\
+  \hline      
 \end{tabular}
 \centering
-\label{tab:visnodeUsuarios}
-
 \sourceAuthor
 \end{table}
 
@@ -2102,16 +2207,19 @@ A validação busca identificar se a utilização da ferramenta pode auxiliar os
 
 Após a utilização da ferramenta, foi aplicado aos estudantes um questionário sobre a utilização da ferramenta. Este questionário avaliou se, na percepção dos estudantes, a ferramenta auxiliou na motivação e engajamento.
 
-Neste capítulo serão abordadas as etapas realizadas durante o processo de validação do trabalho, sendo descrito o formato utilizado para este etapa. Também serão apresentadas as aplicações em sala, juntamente com os resultados obtidos a partir destes eventos.
+Neste capítulo serão abordadas as etapas realizadas durante o processo de avaliação do trabalho, sendo descrito os processos aplicados para este etapa. Serão apresentadas as aplicações em sala, juntamente com os resultados obtidos a partir destes eventos.
 
 \section{Cronograma}
+
+\textbf{15/05/2018}: Apresentação da ferramenta em sala de aula.
+
+\textbf{07/08/2018}: Apresentação em sala de aula para a turma avaliadora da ferramenta.
 
 \textbf{04/09/2018}: Desafios referentes ao conteúdo de transformações geométricas.
 
 \textbf{02/10/2018}: Desafios referentes aos conteúdos brilho, contraste, transformação para tons de cinza, filtros passa-baixa e passa-alta.
 
-
-\section{Piloto de validação}
+\section{Primeira apresentação do VISNode}
 \label{validacao:piloto1}
 
 No dia 15/05/2018 foi realizada uma apresentação do VISNode para a turma da disciplina de PDI da Universidade Feevale dos cursos de Ciência da Computação e Sistemas da Informação. O objetivo  foi apresentar o VISNode e coletar \textit{feedbacks} dos estudantes. Neste momento a ferramenta não possuía nenhuma implementação relacionada a gamificação, somente foi demonstrado o funcionamento do VISNode. A turma em questão já possuía conhecimentos em PDI, sendo que os alunos já haviam cursado mais da metade da disciplina.
@@ -2126,7 +2234,7 @@ Nesta apresentação foram identificadas algumas melhorias para a ferramenta VIS
 
 Neste mesmo cenário, outro ponto de melhoria identificado foi em relação as janelas que possuíam código fonte. Nestes casos, para facilitar a visualização de todos os estudantes, a ferramenta  passou a permitir a mudança do tamanho da fonte.
 
-\section{Piloto de validação 2}
+\section{Segunda apresentação do VISNode}
 
 No dia 07/08/2018 foi realizada uma apresentação do VISNode para a turma da disciplina de PDI da Universidade Feevale dos cursos de Ciência da Computação e Sistemas da Informação. Diferente da turma que foi aplicado o \ref{validacao:piloto1}, esta turma possuía conhecimento em PDI, nesta data foi apenas a segunda aula da turma. 
 
@@ -2154,7 +2262,7 @@ Ao final da aula foi solicitado que os alunos respondessem o questionário.
 
 Aqui será narrado o funcionamento do último encontro de validação.
 
-\section{Análise dos resultados}
+\section{Resultados obtidos}
 
 Tendo em vista a coleta de informações e \textit{feedbacks} de alunos, foi desenvolvido um questionário adaptando \cite{bez2013}. O questionário é composto por 15 perguntas relacionadas a usabilidade, confiabilidade e dados referentes ao aprendizado dos alunos. 
 
@@ -2661,6 +2769,80 @@ Para tanto, é necessário mover o caixão para cima 80 pixels na tela e para a 
 \includegraphics[width=0.3\textwidth]{imagens/desafios/coffin2d00.jpg}
 \includegraphics[width=0.3\textwidth]{imagens/desafios/mission6.png}
 \end{figure}
+
+
+% ----------------------------------------------------------
+\chapter{Desafio Estúdio Fotográfico}
+\label{apen:estudioFotografico}
+
+O estúdio “Imagem é tudo” tem um grande diferencial para os demais. Muito além de fazer fotos, eles fazem milagres com fotos problemáticas que recebem dos seus clientes. 
+
+Trabalhavam com o Corel Draw, porém, pirata. Como bateu uma fiscalização, tiveram que desinstalar todas as cópias e decidiram contratar um programador que tenha feito a disciplina de PDI na Feevale para resolver seus problemas. 
+
+Marinalvo, o novo programador, recebeu uma lista de tarefas, que aqui estão definidas como missões:
+
+
+\subsection{Missão 1}
+
+Laureta, uma cliente bem exigente, levou uma foto que não esta em boa qualidade. É necessário melhorar o brilho e o contraste da Foto. Desenvolva uma rotina que aumente em 50 o brilho e 1,25 o contraste.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{imagens/desafioestudio/mission1_input.jpg}
+\includegraphics[width=0.3\textwidth]{imagens/desafioestudio/mission1_output.png}
+\end{figure}
+
+\subsection{Missão 2}
+
+Armandinho tirou uma foto de seu cachorro para fazer um Banner. Porém, a foto está cheia de ruídos. Faça uma rotina que limpe a imagem, eliminando os ruídos e deixando tão bonita que possa ser ampliada e impressa. Para isso, utilize o filtro Gaussiano.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{imagens/desafioestudio/mission2_input.jpg}
+\includegraphics[width=0.3\textwidth]{imagens/desafioestudio/mission2_output.png}
+\end{figure}
+
+\subsection{Missão 3}
+
+Juliano está arrumando o túmulo dos seus pais. Na lápide, quer colocar as fotos dos mesmos. Porém, as fotos que tem são velhas e estragadas. Para este procedimento é necessário ajustar  brilho da imagem em 40, o contraste em 1,4 e suavizar a imagem através do filtro de mediana.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{imagens/desafioestudio/mission3_input.jpg}
+\includegraphics[width=0.3\textwidth]{imagens/desafioestudio/mission3_output.png}
+\end{figure}
+
+\subsection{Missão 4}
+
+Claudiomiro quer dar a sua namorada de presente uma caricatura sua, onde apareçam só os contornos da imagem. Utilize a imagem de entrada e aplique o detector de bordas de Sobel de forma que a foto fique como a demonstrada abaixo.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{imagens/desafioestudio/mission4_input.jpg}
+\includegraphics[width=0.3\textwidth]{imagens/desafioestudio/mission4_output.png}
+\end{figure}
+
+\subsection{Missão 5}
+
+Mendes, apaixonada por flores, pegou uma imagem na internet para decorar seu álbum de imagens em preto e branco. Solicitou que fosse retirado o fundo da imagem, permanecendo somente a flor. Para isso, utiliza o algoritmo de threshold com o limiar de 150.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{imagens/desafioestudio/mission5_input.jpg}
+\includegraphics[width=0.3\textwidth]{imagens/desafioestudio/mission5_output.png}
+\end{figure}
+
+\subsection{Missão 6}
+
+Ruídos são encontrados normalmente em imagens. O programador Marinalvo recebeu uma imagem com ruído, e ele precisa remover o fundo desta imagem. Abaixo estão a imagem original e imagem de saída. Utilizar como filtro de suavização o de média e o limiar como 60.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{imagens/desafioestudio/mission6_input.jpg}
+\includegraphics[width=0.3\textwidth]{imagens/desafioestudio/mission6_output.png}
+\end{figure}
+
+
 
 \end{apendicesenv}
 % ---
