@@ -203,6 +203,7 @@ The area of digital image processing has been growing in the most diverse areas 
   \item[2D] Bidimensional
   \item[3D] Tridimensional
   \item[PDI] Processamento Digital de Imagens
+  \item[HTTP] \textit{Hypertext Transfer Protocol}
 \end{siglas}
 % ---
 
@@ -1249,7 +1250,11 @@ A implementação em java para o algoritmo pode ser acessado através do link: \
 
 \section{Considerações}
 
-Neste capítulo foi apresentado o referencial teórico referente a PDI, cumprindo, desta forma, o primeiro objetivo específico do trabalho. Foram abordadas as principais técnicas de PDI relacionadas a transformações geométricas, filtros passa-baixa, filtros passa-alta, morfologia matemática, afinamento de bordas e técnicas de segmentação. Todas as técnicas apresentadas estão implementadas na ferramenta VISNode, que será aborda na seção \ref{sec:visnode}.
+%-- revisao
+Neste capítulo foi apresentado o referencial teórico referente a PDI, cumprindo, desta forma, o primeiro objetivo específico do trabalho que é apresentar as técnicas de processamento digital de imagens. Foram abordadas as principais técnicas de PDI relacionadas a transformações geométricas, filtros passa-baixa, filtros passa-alta, morfologia matemática, afinamento de bordas e técnicas de segmentação. O capítulo compõem a etapa metodologia de criação, servindo como aborte teórico para conscientização do problema.
+
+%-- revisao
+Todas as técnicas apresentadas estão implementadas na ferramenta VISNode, que será aborda na seção \ref{sec:visnode}. Este referencial teórico foi de grande importância, pois foi utilizado para compor a seção de explicação dos técnicas existentes na ferramenta, onde é possível acessar o referencial teórico de cada técnica de PDI. Esta funcionalidade será apresenta na seção \ref{materialTeorico}.
 
 No próximo capítulo serão abordados conceitos referente a gamificação. São abordados temas referente a sua diferença em relação a simulação e jogo, sua aplicação na educação e elementos da gamificação.
 
@@ -1418,7 +1423,10 @@ As pessoas atingem um nível mais elevado de satisfação ao comparar seu desemp
 
 \section{Considerações}
 
-Neste capítulo foi apresentado o referencial teórico referente a gamificação, cumprindo, desta forma, o segundo objetivo específico do trabalho. Foi abordado o conceito de gamificação, sua aplicabilidade como ferramenta educacional e seus principais elementos.
+%-- revisao
+Neste capítulo foi apresentado o referencial teórico referente a gamificação, abordando o conceito de gamificação, sua aplicabilidade como ferramenta educacional e seus principais elementos. Desta forma, este capítulo cumpre o segundo objetivo específico do trabalho que é indicar os principais conceitos de gamificação. O capítulo compõem a etapa metodologia de criação, servindo como aborte teórico para conscientização do problema.
+
+O conteúdo abordado neste capítulo serviu como base para o planejamento do artefato proposto neste trabalho. Foram utilizados alguns dos elementos da gamificação, apresentados neste capítulo, como desafios, \textit{rankings}, conquistas e pontos. Os elementos utilizados serão descritos na seção \ref{sec:propostaGamificada}.
 
 No próximo capítulo serão apresentados trabalhos relacionados a pequisa desenvolvida. O primeiro trabalho apresentado (seção \ref{sec:javavis}) é uma ferramenta que tem o objetivo de auxiliar no ensino e aprendizagem de PDI. O segundo trabalho apresentado (seção \ref{sec:classrom}) é uma ferramenta que foi desenvolvida visando melhorar o engajamento de estudantes, para isso, ela utiliza elementos da gamificação.
 
@@ -1573,7 +1581,12 @@ Segundo os autores, aparentemente os alunos gostaram de utilizar o Classroom Liv
 Os autores não conseguiram constatar se a utilização da ferramenta aumentou a performance dos estudantes, mas eles observaram que a aplicação obteve êxito em relação a melhorar o interesse e engajamento dos estudantes nas aulas.
 
 \section{Considerações}
-Neste capítulo foram apresentadas ferramentas relacionadas ao trabalho desenvolvido, cumprindo, desta forma, o terceiro objetivo específico do trabalho. Foi abordado o funcionamento das ferramentas e como elas foram utilizadas em sala de aula.
+
+%-- revisao
+Neste capítulo foram apresentadas ferramentas relacionadas ao trabalho desenvolvido, cumprindo, desta forma, o terceiro objetivo específico do trabalho que é analisar as ferramentas de ensino existentes no mercado ou em projetos acadêmicos. Foi abordado o funcionamento das ferramentas e como elas foram utilizadas em sala de aula. O capítulo compõem a etapa metodologia de criação, servindo como aborte teórico para conscientização do problema. 
+
+%-- revisao
+A partir das informações coletas neste capítulo e nos capítulos anteriores, foi possível definir o artefato do trabalho. Este processo foi realizado através de um \textit{brainstorming} com algumas pessoas interessadas no trabalho. As experiências apresentadas neste capítulo demonstraram que uma ferramenta gamificada pode auxiliar no engajamento de estudantes em sala de aula, como apresentado na pesquisa de \citet{de2013classroom}, e que uma ferramenta para o ensino de PDI pode proporcionar um ambiente que potencialize o aprendizado, como apresentado na pesquisa de \citet{cazorla2015javavis}.
 
 No próximo capítulo será apresentada a proposta deste trabalho de conclusão. Será demonstrando o principal objetivo e o que será feito para cumpri-lo, abordando quais elementos da gamificação serão utilizados e como serão implementados na ferramenta.
 
@@ -1616,9 +1629,7 @@ O VISNode possui \vnNumeroTotalProcessos{} processos e técnicas de PDI implemen
 
 Os métodos de detecção de bordas implementados são Sobel, Roberts, Prewitt, Laplace \cite{gonzalesWoods:2008}, Robinson \cite{robinson1977edge}, Kirsch \cite{kirsch1971computer}, Frei-Chen \cite{chen1977fast}, Marr-Hildreth \cite{marr1980theory} e Canny \cite{canny:1986}. Na categoria de desfoque tem-se as operações de Gauss, média, mediana e moda \cite{gonzalesWoods:2008}. Redimensionamento, rotação, translação e espelhamento vertical e horizontal \cite{gonzalesWoods:2008} formam a categoria de processos de transformação. Os processos de ajuste de cores são brilho, contraste, tons-de-cinza (média simples e ponderada), inversão de cor e limiarização (\textit{threshold})  \cite{gonzalesWoods:2008}. 
 
-Para a manipulação de imagens binárias tem-se os algoritmos de dilatação, erosão, abertura e fechamento \cite{gonzalesWoods:2008}. Os algoritmos implementados da categoria de afinamento são Zhang-Suen \cite{zhang1984fast}, Holt \cite{holt1987improved} e Stentiford \cite{stentiford1983some}. Na categoria de operações aritméticas tem-se a obtenção da média, mediana e moda dos valores da imagem e também histograma \cite{gonzalesWoods:2008}. Para a categoria de extração de objetos tem-se o \textit{Binary Labeling} \cite{gonzalesWoods:2008} e extração de objetos, que trabalham em conjunto. Para preenchimento de regiões o algoritmo de Snakes \cite{kass:1988} foi implementado.
-
-% TODO: adicionar todos os processos implementados
+Para a manipulação de imagens binárias tem-se os algoritmos de dilatação, erosão, abertura e fechamento \cite{gonzalesWoods:2008}. Os algoritmos implementados da categoria de afinamento são Zhang-Suen \cite{zhang1984fast}, Holt \cite{holt1987improved} e Stentiford \cite{stentiford1983some}. Na categoria de operações aritméticas tem-se a obtenção da média, mediana e moda dos valores da imagem e também histograma \cite{gonzalesWoods:2008}. Para a categoria de extração de objetos tem-se o \textit{Binary Labeling} \cite{gonzalesWoods:2008} e extração de objetos, que trabalham em conjunto. Para preenchimento de regiões o algoritmo de Snakes \cite{kass:1988} e o \textit{Flood Fill} \cite{gonzalesWoods:2008} foram implementados.
 
 % ---
 \subsection{Arquitetura}
@@ -1633,6 +1644,7 @@ O software VISNode foi construído utilizando a arquitetura modular proposta por
 
 % ---
 \section{Proposta gamificada}
+\label{sec:propostaGamificada}
 
 O presente trabalho se propõe a desenvolver uma ferramenta que faça uso de conceitos de gamificação visando auxiliar o ensino e aprendizagem. Este trabalho foca no ensino de processamento digital de imagens, pretendendo servir como aporte para alunos de disciplinas que abordam esses conceitos.
 
@@ -1726,6 +1738,7 @@ A criação deste processo foi necessário pois em algumas ocasiões é importan
 A linguagem Java possui em sua arquitetura uma API para execução de \textit{scripts}, possibilitando escrever customizações para aplicações. JavaScript (JS) é uma das linguagens suportadas por esta API, permitindo o rápido desenvolvimento e extensão de partes da aplicação. A API permite a execução de código fonte, sendo possível compartilhar objetos entre Java e JS e invocar funções \cite{oracle}. Devido a esta flexibilidade, os processos dinâmicos fazem uso desta API de Script como linguagem o JS. 
 
 \section{Material teórico}
+{sec:materialTeorico}
 
 O processamento digital de imagens é um área de estudo que possui forte embasamento teórico. Em muitas situações, o material teórico é constituído basicamente de notações matemáticas, o que pode dificultar o entendimento dos estudantes. Tendo em vista este cenário, foi construída uma área na ferramenta que possibilita ao estudante o contato com o referencial teórico de técnicas de PDI através de uma apresentação didática.
 
@@ -1768,7 +1781,7 @@ Na Figura \ref{fig:visnodeScript} é apresentada a exibição do \textit{script}
 
 Para o desenvolvimento da ferramenta foi utilizada a linguagem Java, mesma linguagem utilizada para o desenvolvimento do VISNode. Devido a necessidade de armazenar informações do usuário, foi criado um \textit{WebService} para esta finalidade. Este \textit{WebService} foi construído utilizado o \textit{framework} \textit{SprintBoot} e um Banco de dados Mysql.
 
-A Figura \ref{fig:visnodeArquitetura} demonstra a arquitetura do projeto. É possível visualizar que a comunicação realizada para o acesso a base de dados é feita utilizando o protocolo HTTP. 
+A Figura \ref{fig:visnodeArquitetura} demonstra a arquitetura do projeto. É possível visualizar que a comunicação realizada para o acesso a base de dados é feita utilizando o protocolo HTTP (\textit{Hypertext Transfer Protocol}). 
 
 \begin{figure}[ht]
 \centering
@@ -2189,14 +2202,14 @@ Uma das funcionalidades da ferramenta é possibilitar ao educador um mecanismo q
 \section{Considerações}
 
 %-- revisao 0 
-Neste capítulo foi apresentado o desenvolvimento do trabalho, sendo abordado o funcionamento da ferramenta e as tecnologias utilizadas na sua construção. Também foram apresentadas as adaptações realizadas na ferramenta para torna-la gamificada.
+Neste capítulo foi apresentado o desenvolvimento do trabalho, sendo abordado o funcionamento da ferramenta e as tecnologias utilizadas na sua construção. Também foram apresentadas as adaptações realizadas na ferramenta para torna-la gamificada. Desta forma, este capítulo cumpre o quarto objetivo específico do trabalho que é propor uma ferramenta a ser desenvolvida para o auxílio ao aprendizado na área de processamento digital de imagens. O capítulo compõem a finalização da etapa metodologia de criação, onde é concluído a processo de planejamento e desenvolvimento do artefato.
 
 %-- revisao 0 
 No próximo capítulo será apresentado o formato de validação da ferramenta. São abordados temas referente as etapas de validação e os resultados obtidos através das aplicações em sala de aula.
 
 \chapter{Validação dos resultados}
 
-A validação da ferramenta doi realizada dentro de sala de aula. Para isso, foram elaboradas as aulas onde os alunos da disciplina utilizaram a ferramenta como meio de aprendizagem. Nesta aula, foram proposto, aos alunos, missão e desafios a serem realizados.
+A validação da ferramenta foi realizada dentro de sala de aula. Para isso, foram elaboradas as aulas onde os alunos da disciplina utilizaram a ferramenta como meio de aprendizagem. Nesta aula, foram proposto, aos alunos, missão e desafios a serem realizados.
 
 A validação busca identificar se a utilização da ferramenta pode auxiliar os alunos no ensino e aprendizagem de PDI. Analisando se sua utilização auxiliou na motivação dos estudantes em relação ao conteúdo da disciplina.
 
@@ -2608,6 +2621,10 @@ bla                                                   \\ \hline
 \sourceAuthor
 \end{figure}
 
+\section{Considerações}
+
+%-- revisao 0 
+Neste capítulo foram abordadas as etapas realizadas durante o processo de avaliação do trabalho, sendo descrito os processos aplicados para este etapa. Desta forma, este capítulo cumpre o quinto objetivo específico do trabalho que é validar a ferramenta desenvolvida. O capítulo compõem a etapa metodologia de avaliação, onde o uso do artefato foi monitorado e validado.
 
 % ---
 % Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
