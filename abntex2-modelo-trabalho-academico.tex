@@ -425,21 +425,18 @@ Transformações espaciais podem ser realizadas através da multiplicação de m
     X'       \\ 
 	Y'       \\ 
 	Z'       \\ 
-    1        \\ 
 \end{bmatrix}
 =
 \begin{bmatrix}
-    t_{11} & t_{12} & t_{13} & t_{14}   \\ 
-	t_{21} & t_{22} & t_{23} & t_{24}   \\ 
-	t_{31} & t_{32} & t_{33} & t_{34}   \\ 
-	t_{41} & t_{42} & t_{43} & t_{44}   \\ 
+    t_{11} & t_{12} & t_{13}  \\ 
+	t_{21} & t_{22} & t_{23}  \\ 
+	t_{31} & t_{32} & t_{33}  \\ 
 \end{bmatrix}
 .
 \begin{bmatrix}
     X       \\ 
 	Y       \\ 
 	Z       \\ 
-    1       \\ 
 \end{bmatrix}
 \]
 
@@ -453,10 +450,9 @@ O processo de transladar um objeto consiste em deslocar ou somar a cada um dos p
 \[
 T
 \begin{bmatrix}
-    1 & 0 & 0 & t_x   \\ 
-    1 & 0 & 1 & t_y   \\    
-    0 & 0 & 1 & t_z   \\    
-    0 & 0 & 0 & 1   \\  
+    1 & 0 & t_x   \\ 
+    0 & 1 & t_y   \\    
+    0 & 0 & t_z   \\    
 \end{bmatrix} 
 \]
 
@@ -470,10 +466,9 @@ O processo de mudança de escala (zoom in, zoom out) consiste na multiplicação
 \[
 T
 \begin{bmatrix}
-    1 & 0 & 0 & s_x   \\ 
-	1 & 0 & 1 & s_y   \\ 
-	0 & 0 & 1 & s_z   \\ 
-	0 & 0 & 0 & 1     \\ 
+    s_x & 0   & 0     \\ 
+	0   & s_y & 0     \\ 
+	0   & 0   & s_z     \\ 
 \end{bmatrix} 
 \]
 
@@ -487,24 +482,21 @@ A operação de reflexão ou espelhamento é uma operação que combina operaç�
 \[
 E_{yz}
 \begin{bmatrix}
-    -1 & 0 & 0 & 0   \\ 
-	 0 & 1 & 0 & 0   \\ 
-	 0 & 0 & 1 & 0   \\ 
-	 0 & 0 & 0 & 1   \\ 
+    -1 & 0 & 0  \\ 
+	 0 & 1 & 0  \\ 
+	 0 & 0 & 1  \\ 
 \end{bmatrix} 
 E_{xz}
 \begin{bmatrix}
-    0 &  0 & 0 & 0   \\ 
-	0 & -1 & 0 & 0   \\ 
-	0 &  0 & 1 & 0   \\ 
-	0 &  0 & 0 & 1   \\ 
+    0 &  0 & 0   \\ 
+	0 & -1 & 0   \\ 
+	0 &  0 & 1   \\ 
 \end{bmatrix} 
 E_{xy}
 \begin{bmatrix}
-    0 & 0 &  0 & 0   \\ 
-	0 & 1 &  0 & 0   \\ 
-	0 & 0 & -1 & 0   \\ 
-	0 & 0 &  0 & 1   \\ 
+    0 & 0 &  0  \\ 
+	0 & 1 &  0  \\ 
+	0 & 0 & -1  \\ 
 \end{bmatrix} 
 \]
 
@@ -532,10 +524,9 @@ Segundo \citet{pedriniSchwartz:2008}, a operação de rotação pode ser realiza
 \[
 R_\alpha
 \begin{bmatrix}
-    1 &         0 &          0 & 0   \\ 
-	0 & cos\alpha & -sen\alpha & 0   \\ 
-	0 & sen\alpha &  cos\alpha & 0   \\ 
-	0 &         0 &          0 & 1   \\ 
+         1 &          0 & 0   \\ 
+ cos\alpha & -sen\alpha & 0   \\ 
+ sen\alpha &  cos\alpha & 0   \\ 
 \end{bmatrix} 
 \]
 
@@ -544,10 +535,9 @@ A rotação de um ponto em torno do eixo y utilizando um ângulo \(\beta\), pode
 \[
 R_\beta
 \begin{bmatrix}
-     cos\beta & 0 & sen\beta & 0   \\ 
-	        0 & 1 & 0        & 0   \\ 
-	-sen\beta & 0 & cos\beta & 0   \\ 
-            0 & 0 &        0 & 1   \\ 
+     cos\beta & 0 & sen\beta  \\ 
+	        0 & 1 & 0         \\ 
+	-sen\beta & 0 & cos\beta  \\ 
 \end{bmatrix} 
 \]
 
@@ -556,10 +546,9 @@ A rotação de um ponto em torno do eixo z utilizando um ângulo \(\gamma\), pod
 \[
 R_\gamma
 \begin{bmatrix}
-    cos\gamma & -sen\gamma & 0 & 0   \\ 
-	sen\gamma &  cos\gamma & 0 & 0   \\ 
-	        0 &          0 & 1 & 0   \\ 
-            0 &          0 & 0 & 1   \\ 
+    cos\gamma & -sen\gamma & 0  \\ 
+	sen\gamma &  cos\gamma & 0  \\ 
+	        0 &          0 & 1  \\ 
 \end{bmatrix} 
 \]
 
@@ -1254,7 +1243,7 @@ A implementação em java para o algoritmo pode ser acessado através do link: \
 Neste capítulo foi apresentado o referencial teórico referente a PDI, cumprindo, desta forma, o primeiro objetivo específico do trabalho que é apresentar as técnicas de processamento digital de imagens. Foram abordadas as principais técnicas de PDI relacionadas a transformações geométricas, filtros passa-baixa, filtros passa-alta, morfologia matemática, afinamento de bordas e técnicas de segmentação. O capítulo compõem a etapa metodologia de criação, servindo como aborte teórico para conscientização do problema.
 
 %-- revisao
-Todas as técnicas apresentadas estão implementadas na ferramenta VISNode, que será aborda na seção \ref{sec:visnode}. Este referencial teórico foi de grande importância, pois foi utilizado para compor a seção de explicação dos técnicas existentes na ferramenta, onde é possível acessar o referencial teórico de cada técnica de PDI. Esta funcionalidade será apresenta na seção \ref{materialTeorico}.
+Todas as técnicas apresentadas estão implementadas na ferramenta VISNode, que será aborda na seção \ref{sec:visnode}. Este referencial teórico foi de grande importância, pois foi utilizado para compor a seção de explicação dos técnicas existentes na ferramenta, onde é possível acessar o referencial teórico de cada técnica de PDI. Esta funcionalidade será apresenta na seção \ref{sec:materialTeorico}.
 
 No próximo capítulo serão abordados conceitos referente a gamificação. São abordados temas referente a sua diferença em relação a simulação e jogo, sua aplicação na educação e elementos da gamificação.
 
@@ -1738,7 +1727,7 @@ A criação deste processo foi necessário pois em algumas ocasiões é importan
 A linguagem Java possui em sua arquitetura uma API para execução de \textit{scripts}, possibilitando escrever customizações para aplicações. JavaScript (JS) é uma das linguagens suportadas por esta API, permitindo o rápido desenvolvimento e extensão de partes da aplicação. A API permite a execução de código fonte, sendo possível compartilhar objetos entre Java e JS e invocar funções \cite{oracle}. Devido a esta flexibilidade, os processos dinâmicos fazem uso desta API de Script como linguagem o JS. 
 
 \section{Material teórico}
-{sec:materialTeorico}
+\label{sec:materialTeorico}
 
 O processamento digital de imagens é um área de estudo que possui forte embasamento teórico. Em muitas situações, o material teórico é constituído basicamente de notações matemáticas, o que pode dificultar o entendimento dos estudantes. Tendo em vista este cenário, foi construída uma área na ferramenta que possibilita ao estudante o contato com o referencial teórico de técnicas de PDI através de uma apresentação didática.
 
@@ -2217,15 +2206,31 @@ Após a utilização da ferramenta, foi aplicado aos estudantes um questionário
 
 Neste capítulo serão abordadas as etapas realizadas durante o processo de avaliação do trabalho, sendo descrito os processos aplicados para este etapa. Serão apresentadas as aplicações em sala, juntamente com os resultados obtidos a partir destes eventos.
 
-\section{Cronograma}
 
-\textbf{15/05/2018}: Apresentação da ferramenta em sala de aula.
-
-\textbf{07/08/2018}: Apresentação em sala de aula para a turma avaliadora da ferramenta.
-
-\textbf{04/09/2018}: Desafios referentes ao conteúdo de transformações geométricas.
-
-\textbf{02/10/2018}: Desafios referentes aos conteúdos brilho, contraste, transformação para tons de cinza, filtros passa-baixa e passa-alta.
+\begin{longtable}{|c|l|}
+ \caption{Cronograma de avaliações} \label{tab:cronogramaAvaliacoes} \\
+  \hline
+  \textbf{15/05/2018} 
+  &
+  \makecell[l]{Apresentação da ferramenta em sala de aula.} \\
+  \hline
+  \textbf{07/08/2018}
+  &
+  \makecell[l]{Apresentação em sala de aula para a turma avaliadora da \\ ferramenta.} \\
+  \hline
+  \textbf{04/09/2018}
+  &
+   \makecell[l]{Desafios referentes aos conteúdos brilho, contraste, \\transformação para tons de cinza, filtros passa-baixa e passa-alta.} \\
+  \hline
+  \textbf{02/10/2018}
+  &
+  \makecell[l]{Desafios referentes ao conteúdo de transformações geométricas.} \\
+  \hline
+  \textbf{16/10/2018}
+  &
+  \makecell[l]{Desafios referentes aos conteúdos de morfologia \\ matemática e esqueletização.} \\
+  \hline  
+\end{longtable}
 
 \section{Primeira apresentação do VISNode}
 \label{validacao:piloto1}
@@ -2260,11 +2265,35 @@ A aplicação constituiu-se em primeiramente apresentar os módulos gamificados 
 
 O desafio abordava técnicas de transformação geométrica, que foram apresentadas na sessão \ref{fig:transformacoesgeometricas} deste trabalho. Para a escolha do assunto do desafio, foi levado em consideração o conhecimento da turma, no momento da aplicação, os alunos estavam iniciando seus estudos de técnicas de transformações geométricas. O desafio é composto por seis missões, cada qual abordando um técnica de transformação. Mais informações sobre o desafio podem ser acessadas no Apêndice \ref{apen:transformacaoGeometrica}.
 
-No total 14 alunos participaram deste experimento, destes, 13 completaram o desafio até o final e 1 completou parcialmente, concluindo 2 das 6 missões. Somente 1 aluno completou as 6 missões sem cometer erro. O experimento foi composto por 154 submissões de desafios, destas, somente 74 foram assertivas. Desta forma, 48\% das submissões falharam.
+No total 14 alunos participaram deste experimento, destes, 13 completaram o desafio até o final e 1 completou parcialmente, concluindo 2 das 6 missões. Somente 1 aluno completou as 6 missões sem cometer erro. O experimento foi composto por 154 submissões de missões, destas, somente 74 foram assertivas. Desta forma, 48\% das submissões falharam.
 
 Aprofundando esta análise, a missão 3 foi a missão com maior número de submissões falhas, o que contabiliza 46 submissões e representa 62\% do total de falhas. Este número excessivo de falhas da missão 3 pode ser justificado pela forma com que sua narrativa foi apresentada. A missão apresenta um objeto em uma posição x, y e pede-se para que este objeto seja movido para outra posição i, j. Na maioria da submissões, os alunos realizaram a translação para a posição i, j e não para a posição resultante da variação das duas posições. Este fato demonstra uma dificuldade na interpretação da missão proposta.
 
-Ao final da aula foi solicitado que os alunos respondessem o questionário.
+\section{Segundo encontro de validação com a ferramenta gamificada}
+
+No dia 02/10/2018 foi realizada a segunda aplicação da ferramenta. Neste encontro foi solicitado para os alunos realizar o desafio proposto, este desafio é apresentado na sessão \ref{apen:estudioFotografico}.
+
+No total 15 alunos participaram deste experimento, destes, 11 completaram o desafio até o final, tentaram resolver a missão 6, 1 a missão 5 e 1 parrou na missão 2. 3 Alunos completaram o desafio sem cometer erros. O experimento foi composto por 141 submissões de missões, destas, somente 89 foram assertivas, contabilizando 63\% de acerto.
+
+Aprofundando esta análise, a missão 6 for a missão com maior número de submissões falhas, o que contabiliza 25 submissões e representa 48\% do total de falhas. Este número de falhas pode ser explicado devido a formatação de sua narrativa. Nesta missão, é necessário que aplicar o filtro de \textit{Threshold} e o filtro de média. Na narrativa esta sendo solicitado para utilizar o determina limiar, mas o alunos não conheciam este termo, somente tinham conhecimento do termo em inglês \textit{Threshold}. Esta alternância de de termos, que possuem o mesmo significado, causou confusão entre os estudantes. 
+
+Outra equivoco comum foi a utilização do filtro de mediana ao invés do filtro de média. Ao observar a utilização por parte dos estudantes, foi possível observar que ao realizar a procura pela técnica utilizando o termo "media", somente a técnica da mediana estava sendo retornada. Em analise a funcionalidade da ferramenta, verificado que a funcionalidade de busca de técnicas considera caracteres acentuados, desta forma, o técnica de suavização de média não estava sendo retornada pois os estudante realizam a busca sem o acento. Em função deste cenário, foi alterado a ferramenta para realizar a busca ignorando a acentuação. 
+
+total de submissões: 141
+Erros: 52
+Alunos 15
+
+Somente 11 completaram o desafio até o final
+
+Missão 6 = 25 erros
+
+3 alunos completaram sem erro
+
+2 tentaram completar a última missão
+
+1 tentou concluir a 5 missão
+
+1 tentou concluir a missão 2
 
 \section{Encontro final de validação}
 
