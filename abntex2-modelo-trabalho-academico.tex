@@ -2202,17 +2202,7 @@ No próximo capítulo será apresentado o formato de validação da ferramenta. 
 \chapter{Validação dos resultados}
 
 %-- revisao 0 
-A validação da ferramenta foi realizada dentro de sala de aula. Para isso, foram elaboradas aulas onde os alunos da disciplina utilizaram a ferramenta como meio de aprendizagem. Nestas aulas, foram propostos, aos alunos, missão e desafios a serem realizados. O Quadro \ref{tab:cronogramaAvaliacoes} apresenta o cronograma de avaliações da ferramenta.
-
-%-- revisao 0 
-A validação busca identificar se a utilização da ferramenta pode auxiliar os alunos no ensino e aprendizagem de PDI. Analisando se sua utilização auxiliou na motivação dos estudantes em relação ao conteúdo da disciplina.
-
-%-- revisao 0 
-Após a utilização da ferramenta, foi aplicado aos estudantes um questionário sobre a utilização da ferramenta. Este questionário avaliou se, na percepção dos estudantes, a ferramenta auxiliou na motivação e engajamento.
-
-%-- revisao 0 
-Neste capítulo serão abordadas as etapas realizadas durante o processo de avaliação do trabalho, sendo descrito os processos aplicados para este etapa. Serão apresentadas as aplicações em sala, juntamente com os resultados obtidos a partir destes eventos.
-
+A validação da ferramenta foi realizada dentro de sala de aula. Para isso, foram elaboradas aulas onde os alunos da disciplina utilizaram a ferramenta para a resolução de desafios relacionados ao conteúdo estudado. O Quadro \ref{tab:cronogramaAvaliacoes} apresenta o cronograma de avaliações da ferramenta.
 
 \begin{longtable}{|c|l|}
  \caption{Cronograma de avaliações} \label{tab:cronogramaAvaliacoes} \\
@@ -2238,6 +2228,13 @@ Neste capítulo serão abordadas as etapas realizadas durante o processo de aval
   \makecell[l]{Desafios referentes aos conteúdos de morfologia \\ matemática e esqueletização.} \\
   \hline  
 \end{longtable}
+
+%-- revisao 0 
+O processo de validação busca avaliar a ferramenta em quatro categorias, sendo elas funcionalidades, usabilidade, confiabilidade e aprendizagem.
+Para a avaliação foi aplicado um questionário nos estudantes da disciplina de Processamento Digital de Imagens da Universidade Feevale. Mais informações referente a esta etapa serão apresentadas na seção \ref{sec:resultadosObtidos}.
+
+%-- revisao 0 
+Neste capítulo será abordada a etapa de avaliação do trabalho. Serão descritos os encontros de avaliação realizados em sala e os resultados obtidos a partir da coleta de avaliações dos alunos através de um questionário.
 
 \section{Primeira apresentação do VISNode}
 \label{validacao:piloto1}
@@ -2265,6 +2262,7 @@ Ao término do desafio, foi solicitado aos estudantes que contribuíssem com um 
 Uma dificuldade encontrada pelos estudantes foi em relação a utilização do processo \textit{Script process} descrito na seção \ref{sec:processos}. Segundo os alunos, as funcionalidades oferecidas por estes processos não estavam bem documentadas, e por este motivo, foi difícil utilizá-lo. Para a resolução deste problema, a documentação deste processo foi revista, disponibilizando todos os métodos disponível para cada parâmetro de entrada do processo e também foram adicionados exemplos de utilização deste processo.
 
 \section{Primeiro encontro de validação com a ferramenta gamificada}
+\label{sec:validacaoPrimeiroEncontro}
 
 No dia 04/09/2018 foi realizada a primeira aplicação da ferramenta gamificada na disciplina de Processamento Digital de Imagem na Universidade Feevale. A turma era composta por alunos do curso de Ciência da Computação e Sistemas da Informação.
 
@@ -2291,359 +2289,238 @@ Aprofundando esta análise, a missão 6 for a missão com maior número de submi
 Outro equivoco comum foi a utilização do filtro de mediana ao invés do filtro de média. Ao observar a utilização por parte dos estudantes, foi possível observar que ao realizar a procura pela técnica utilizando o termo "media", somente a técnica da mediana estava sendo retornada. Em analise a funcionalidade da ferramenta, verificado que a funcionalidade de busca de técnicas considera caracteres acentuados, desta forma, a técnica de suavização de média não era filtrada, pois os estudante realizam a busca sem o acento. Em função deste cenário, foi alterado a ferramenta para realizar a busca ignorando a acentuação. 
 
 \section{Encontro final de validação}
+\label{sec:validacaoEncontroFinal}
 
 Aqui será narrado o funcionamento do último encontro de validação.
 
 \section{Resultados obtidos}
+\label{sec:resultadosObtidos}
 
-Tendo em vista a coleta de informações e \textit{feedbacks} de alunos, foi desenvolvido um questionário adaptando \cite{bez2013}. O questionário é composto por 15 perguntas relacionadas a usabilidade, confiabilidade e dados referentes ao aprendizado dos alunos. 
+Tendo em vista a coleta de informações e \textit{feedbacks} de alunos, foi desenvolvido um questionário adaptando \cite{bez2013}. O questionário é composto por 15 perguntas relacionadas a funcionalidades do sistema, usabilidade, confiabilidade e dados referentes ao aprendizado dos alunos. Quatorze questões são objetivas variando entre concordo plenamente, concordo, indiferente, discordo e discordo totalmente. Uma questão é dissertativa que possibilita aos alunos descrever uma observação sobre a ferramenta.
 
-Nesta seção será realizada a análise do resultados obtidos, realizado uma comparação dos resultados do primeiro encontro com o último.
+%-- revisao 0
+O questionário foi aplicado no primeiro encontro de avaliação, descrito na seção \ref{sec:validacaoPrimeiroEncontro}, e no último encontro, descrito na seção \ref{sec:validacaoEncontroFinal}. Neste seção serão apresentados os dados obtidos nestas avaliações.
+
+A primeira avaliação foi composta por 9 avaliações.
+
+
+\subsection{Avaliação de funcionalidades da ferramenta}
+
+Nesta seção serão apresentados os dados obtidos referentes as funcionalidades da ferramenta. O Quadro \ref{tab:avaliacaoFuncionalidadesv1} contém os dados obtidos na primeira aplicação do questionário. 
+
+A partir dos dados coletados é possível verificar 56,6\% dos estudantes concordam plenamente que o VISNode dispões de funções que permitem a adequada execução de técnicas de PDI, 33,3\% concordam e 11,1\% estão indiferentes.
+
+Referente a percepção dos alunos em relação ao VISNode apresentar informações integras e confiável, 66,7\% concordam plenamente e 33,3\% concordam. Em relação ao VISNode ser preciso nos resultados apresentados, 44,4\% concordam plenamente, 44,4\% concordam e 11,1\% discordam.
 
 \begin{table}[H]
 \centering
-\caption{Questionário - Pegunta 1} 
-\def\arraystretch{1.5}
-\begin{tabular}{l}
-\hline
-\multicolumn{1}{c}{\textbf{Pegunta 1}}              \\ \hline
-O VISNode dispõe de funções que permitem a adequada execução de técnicas de PDI \\ \hline
-\multicolumn{1}{c}{\textbf{Motivo}}                 \\ \hline
-Este questionamento                                   \\ \hline
-\multicolumn{1}{c}{\textbf{Considerações}}          \\ \hline
-bla                                                   \\ \hline
+\captionof{table}{Primeira avaliação de funcionalidades} \label{tab:avaliacaoFuncionalidadesv1}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|l|c|c|c|c|c|}
+    \hline
+    &
+    \makecell{\footnotesize Concordo \\ \footnotesize Plenamente} 
+    &
+    \makecell{\footnotesize Concordo} 
+    &
+    \makecell{\footnotesize Indiferente} 
+    &
+    \makecell{\footnotesize Discordo} 
+    &
+    \makecell{\footnotesize Discordo \\ \footnotesize Totalmente} \\
+    \hline
+    \makecell[l]{O VISNode dispõe de funções \\
+                que permitem a adequada \\
+                execução de técnicas de PDI} 
+    &
+    5 & 3 & 1 &  &  \\
+    \hline
+    \makecell[l]{Percebo no VISNode \\ 
+                informações integras e \\
+                confiáveis} 
+    &
+    6 & 3 &  &  &  \\
+    \hline
+    \makecell[l]{O VISNode é preciso nos \\
+                resultados apresentados} 
+    &
+    4 & 4 &  & 1 &  \\
+    \hline
+  
 \end{tabular}
-\sourceAuthor
+\centering
 \end{table}
+
+Na Figura \ref{fig:avaliacaoFuncionalidades} é apresentado um gráfico contendo a distribuição de avaliações. O eixo x do gráfico representa a nota atribuída, o eixo y representa as questões referente a avaliação das funcionalidades. O tamanho do circulo representa a quantidade de avaliações, desta forma, quanto maior o diâmetro maior será a quantidade de avaliações.
+
+Na Figura \ref{fig:avaliacaoFuncionalidades} é possível visualizar que a maior parte das avaliações foram Concordo e Concordo Plenamente. 
 
 \begin{figure}[H]
 \centering
-\caption{Questionário - Pegunta 1}
-\includegraphics[width=0.7\textwidth]{imagens/v1/p1.png}
+\caption{Avaliação de funcionalidades}\label{fig:avaliacaoFuncionalidades}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacao_funcionalidades.png}
+\sourceAuthor
+\end{figure}
+
+\subsection{Avaliação de confiabilidade}
+
+\begin{figure}[H]
+\centering
+\caption{Avaliação de confiabilidade}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacao_confiabilidade.png}
+\sourceAuthor
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\captionof{table}{Avaliação de confiabilidade} \label{tab:avaliacaoConfiabilidade}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|l|c|c|c|c|c|}
+    \hline
+    &
+    \makecell{\footnotesize Concordo \\ \footnotesize Plenamente} 
+    &
+    \makecell{\footnotesize Concordo} 
+    &
+    \makecell{\footnotesize Indiferente} 
+    &
+    \makecell{\footnotesize Discordo} 
+    &
+    \makecell{\footnotesize Discordo \\ \footnotesize Totalmente} \\
+    \hline
+    \makecell[l]{O VISNode apresenta erros\\
+                com frequência} 
+    &
+    1 & 4 & 2 & 2 &  \\
+    \hline
+    \makecell[l]{O VISNode informa de forma \\
+                clara quando ocorrem erros} 
+    &
+     &  & 5 & 4 &  \\
+    \hline
+\end{tabular}
+\centering
+\end{table}
+
+
+
+
+
+\subsection{Avaliação de usabilidade}
+
+\begin{figure}[H]
+\centering
+\caption{Avaliação de usabilidade}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacao_usabilidade.png}
 \sourceAuthor
 \end{figure}
 
 \begin{table}[H]
 \centering
-\caption{Questionário - Pegunta 2} 
-\def\arraystretch{1.5}
-\begin{tabular}{l}
-\hline
-\multicolumn{1}{c}{\textbf{Pegunta 2}}              \\ \hline
-Percebo no VISNode informações integras e confiáveis \\ \hline
-\multicolumn{1}{c}{\textbf{Motivo}}                 \\ \hline
-Este questionamento                                   \\ \hline
-\multicolumn{1}{c}{\textbf{Considerações}}          \\ \hline
-bla                                                   \\ \hline
+\captionof{table}{Avaliação de usabilidade} \label{tab:avaliacaoUsabilidade}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|l|c|c|c|c|c|}
+    \hline
+    &
+    \makecell{\footnotesize Concordo \\ \footnotesize Plenamente} 
+    &
+    \makecell{\footnotesize Concordo} 
+    &
+    \makecell{\footnotesize Indiferente} 
+    &
+    \makecell{\footnotesize Discordo} 
+    &
+    \makecell{\footnotesize Discordo \\ \footnotesize Totalmente} \\
+    \hline
+    \makecell[l]{A interface do VISNode é \\ 
+                de uso intuitivo} 
+    &
+    3 & 5 &  & 1 &  \\
+    \hline
+    \makecell[l]{O VISNode é fácil de \\
+                aprender a usar} 
+    &
+    3 & 4 &  & 1 & 1  \\
+    \hline
+    \makecell[l]{O tempo de resposta nas \\
+                interações com o VISNode \\ 
+                é adequado} 
+    &
+    6 & 2 & 1 &  &  \\
+    \hline    
 \end{tabular}
-\sourceAuthor
+\centering
 \end{table}
+
+
+\subsection{Avaliação de aprendizagem}
 
 \begin{figure}[H]
 \centering
-\caption{Questionário - Pegunta 2}
-\includegraphics[width=0.7\textwidth]{imagens/v1/p2.png}
+\caption{Avaliação de aprendizagem}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacao_aprendizagem.png}
 \sourceAuthor
 \end{figure}
+
 
 \begin{table}[H]
 \centering
-\caption{Questionário - Pegunta 3} 
-\def\arraystretch{1.5}
-\begin{tabular}{l}
-\hline
-\multicolumn{1}{c}{\textbf{Pegunta 3}}              \\ \hline
-O VISNode é preciso nos resultados apresentados \\ \hline
-\multicolumn{1}{c}{\textbf{Motivo}}                 \\ \hline
-Este questionamento                                   \\ \hline
-\multicolumn{1}{c}{\textbf{Considerações}}          \\ \hline
-bla                                                   \\ \hline
+\captionof{table}{Avaliação de aprendizagem} \label{tab:avaliacaoAprendizagem}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|l|c|c|c|c|c|}
+    \hline
+    &
+    \makecell{\footnotesize Concordo \\ \footnotesize Plenamente} 
+    &
+    \makecell{\footnotesize Concordo} 
+    &
+    \makecell{\footnotesize Indiferente} 
+    &
+    \makecell{\footnotesize Discordo} 
+    &
+    \makecell{\footnotesize Discordo \\ \footnotesize Totalmente} \\
+    \hline
+    \makecell[l]{O VISNode permite que o \\
+                usuário retenha \\ conhecimento} 
+    &
+    6 & 2 & 1 &  &  \\
+    \hline
+    \makecell[l]{O VISNode é uma ferramenta \\ 
+                motivacional para aprendizagem} 
+    &
+    5 & 4 &  &  &   \\
+    \hline
+    \makecell[l]{O feedback do VISNode ao \\ 
+                aluno é adequado} 
+    &
+    4 & 4 & 1 &  &  \\
+    \hline 
+       \makecell[l]{O VISNode permite maior \\
+                    participação do aluno, \\ 
+                    interferindo na relação \\
+                    pedagógica professor x aluno} 
+    &
+    2 & 4 & 3 &  &  \\
+    \hline
+    \makecell[l]{O VISNode favorece o aluno \\
+                a estudar de forma autônoma} 
+    &
+    3 & 3 & 1 & 2 &   \\
+    \hline
+    \makecell[l]{O VISNode pode ser utilizado \\
+                como um recurso efetivo na \\ 
+                educação de PDI} 
+    &
+    7 & 2 &  &  &  \\
+    \hline  
 \end{tabular}
-\sourceAuthor
+\centering
 \end{table}
 
-\begin{figure}[H]
-\centering
-\caption{Questionário - Pegunta 3}
-\includegraphics[width=0.7\textwidth]{imagens/v1/p3.png}
-\sourceAuthor
-\end{figure}
 
-\begin{table}[H]
-\centering
-\caption{Questionário - Pegunta 4} 
-\def\arraystretch{1.5}
-\begin{tabular}{l}
-\hline
-\multicolumn{1}{c}{\textbf{Pegunta 4}}              \\ \hline
-O VISNode apresenta erros com frequência \\ \hline
-\multicolumn{1}{c}{\textbf{Motivo}}                 \\ \hline
-Este questionamento                                   \\ \hline
-\multicolumn{1}{c}{\textbf{Considerações}}          \\ \hline
-bla                                                   \\ \hline
-\end{tabular}
-\sourceAuthor
-\end{table}
+\subsection{Observações}
 
-\begin{figure}[H]
-\centering
-\caption{Questionário - Pegunta 4}
-\includegraphics[width=0.7\textwidth]{imagens/v1/p4.png}
-\sourceAuthor
-\end{figure}
-
-\begin{table}[H]
-\centering
-\caption{Questionário - Pegunta 5} 
-\def\arraystretch{1.5}
-\begin{tabular}{l}
-\hline
-\multicolumn{1}{c}{\textbf{Pegunta 5}}              \\ \hline
-O VISNode informa de forma clara quando ocorrem erros \\ \hline
-\multicolumn{1}{c}{\textbf{Motivo}}                 \\ \hline
-Este questionamento                                   \\ \hline
-\multicolumn{1}{c}{\textbf{Considerações}}          \\ \hline
-bla                                                   \\ \hline
-\end{tabular}
-\sourceAuthor
-\end{table}
-
-\begin{figure}[H]
-\centering
-\caption{Questionário - Pegunta 5}
-\includegraphics[width=0.7\textwidth]{imagens/v1/p5.png}
-\sourceAuthor
-\end{figure}
-
-\begin{table}[H]
-\centering
-\caption{Questionário - Pegunta 6} 
-\def\arraystretch{1.5}
-\begin{tabular}{l}
-\hline
-\multicolumn{1}{c}{\textbf{Pegunta 6}}              \\ \hline
-A interface do VISNode é de uso intuitivo \\ \hline
-\multicolumn{1}{c}{\textbf{Motivo}}                 \\ \hline
-Este questionamento                                   \\ \hline
-\multicolumn{1}{c}{\textbf{Considerações}}          \\ \hline
-bla                                                   \\ \hline
-\end{tabular}
-\sourceAuthor
-\end{table}
-
-\begin{figure}[H]
-\centering
-\caption{Questionário - Pegunta 6}
-\includegraphics[width=0.7\textwidth]{imagens/v1/p6.png}
-\sourceAuthor
-\end{figure}
-
-\begin{table}[H]
-\centering
-\caption{Questionário - Pegunta 7} 
-\def\arraystretch{1.5}
-\begin{tabular}{l}
-\hline
-\multicolumn{1}{c}{\textbf{Pegunta 7}}              \\ \hline
-O VISNode é fácil de aprender a usar          \\ \hline
-\multicolumn{1}{c}{\textbf{Motivo}}                 \\ \hline
-Este questionamento                                   \\ \hline
-\multicolumn{1}{c}{\textbf{Considerações}}          \\ \hline
-bla                                                   \\ \hline
-\end{tabular}
-\sourceAuthor
-\end{table}
-
-\begin{figure}[H]
-\centering
-\caption{Questionário - Pegunta 7}
-\includegraphics[width=0.7\textwidth]{imagens/v1/p7.png}
-\sourceAuthor
-\end{figure}
-
-\begin{table}[H]
-\centering
-\caption{Questionário - Pegunta 8} 
-\def\arraystretch{1.5}
-\begin{tabular}{l}
-\hline
-\multicolumn{1}{c}{\textbf{Pegunta 8}}              \\ \hline
-O tempo de resposta nas interações com o VISNode é adequado \\ \hline
-\multicolumn{1}{c}{\textbf{Motivo}}                 \\ \hline
-Este questionamento                                   \\ \hline
-\multicolumn{1}{c}{\textbf{Considerações}}          \\ \hline
-bla                                                   \\ \hline
-\end{tabular}
-\sourceAuthor
-\end{table}
-
-\begin{figure}[H]
-\centering
-\caption{Questionário - Pegunta 8}
-\includegraphics[width=0.7\textwidth]{imagens/v1/p8.png}
-\sourceAuthor
-\end{figure}
-
-\begin{table}[H]
-\centering
-\caption{Questionário - Pegunta 9} 
-\def\arraystretch{1.5}
-\begin{tabular}{l}
-\hline
-\multicolumn{1}{c}{\textbf{Pegunta 9}}              \\ \hline
-O VISNode permite que o usuário retenha conhecimento \\ \hline
-\multicolumn{1}{c}{\textbf{Motivo}}                 \\ \hline
-Este questionamento                                   \\ \hline
-\multicolumn{1}{c}{\textbf{Considerações}}          \\ \hline
-bla                                                   \\ \hline
-\end{tabular}
-\sourceAuthor
-\end{table}
-
-\begin{figure}[H]
-\centering
-\caption{Questionário - Pegunta 9}
-\includegraphics[width=0.7\textwidth]{imagens/v1/p9.png}
-\sourceAuthor
-\end{figure}
-
-\begin{table}[H]
-\centering
-\caption{Questionário - Pegunta 10} 
-\def\arraystretch{1.5}
-\begin{tabular}{l}
-\hline
-\multicolumn{1}{c}{\textbf{Pegunta 10}}              \\ \hline
-O VISNode é uma ferramenta motivacional para aprendizagem \\ \hline
-\multicolumn{1}{c}{\textbf{Motivo}}                 \\ \hline
-Este questionamento                                   \\ \hline
-\multicolumn{1}{c}{\textbf{Considerações}}          \\ \hline
-bla                                                   \\ \hline
-\end{tabular}
-\sourceAuthor
-\end{table}
-
-\begin{figure}[H]
-\centering
-\caption{Questionário - Pegunta 10}
-\includegraphics[width=0.7\textwidth]{imagens/v1/p10.png}
-\sourceAuthor
-\end{figure}
-
-\begin{table}[H]
-\centering
-\caption{Questionário - Pegunta 11} 
-\def\arraystretch{1.5}
-\begin{tabular}{l}
-\hline
-\multicolumn{1}{c}{\textbf{Pegunta 11}}              \\ \hline
-O feedback do VISNode ao aluno é adequado \\ \hline
-\multicolumn{1}{c}{\textbf{Motivo}}                 \\ \hline
-Este questionamento                                   \\ \hline
-\multicolumn{1}{c}{\textbf{Considerações}}          \\ \hline
-bla                                                   \\ \hline
-\end{tabular}
-\sourceAuthor
-\end{table}
-
-\begin{figure}[H]
-\centering
-\caption{Questionário - Pegunta 11}
-\includegraphics[width=0.7\textwidth]{imagens/v1/p11.png}
-\sourceAuthor
-\end{figure}
-
-\begin{table}[H]
-\centering
-\caption{Questionário - Pegunta 12} 
-\def\arraystretch{1.5}
-\begin{tabular}{l}
-\hline
-\multicolumn{1}{c}{\textbf{Pegunta 12}}              \\ \hline
-O feedback do VISNode ao aluno é adequado \\ \hline
-\multicolumn{1}{c}{\textbf{Motivo}}                 \\ \hline
-Este questionamento                                   \\ \hline
-\multicolumn{1}{c}{\textbf{Considerações}}          \\ \hline
-bla                                                   \\ \hline
-\end{tabular}
-\sourceAuthor
-\end{table}
-
-\begin{figure}[H]
-\centering
-\caption{Questionário - Pegunta 12}
-\includegraphics[width=0.7\textwidth]{imagens/v1/p12.png}
-\sourceAuthor
-\end{figure}
-
-\begin{table}[H]
-\centering
-\caption{Questionário - Pegunta 13} 
-\def\arraystretch{1.5}
-\begin{tabular}{l}
-\hline
-\multicolumn{1}{c}{\textbf{Pegunta 13}}              \\ \hline
-O VISNode permite maior participação do aluno, \\ interferindo na relação pedagógica professor x aluno \\ \hline
-\multicolumn{1}{c}{\textbf{Motivo}}                 \\ \hline
-Este questionamento                                   \\ \hline
-\multicolumn{1}{c}{\textbf{Considerações}}          \\ \hline
-bla                                                   \\ \hline
-\end{tabular}
-\sourceAuthor
-\end{table}
-
-\begin{figure}[H]
-\centering
-\caption{Questionário - Pegunta 13}
-\includegraphics[width=0.7\textwidth]{imagens/v1/p13.png}
-\sourceAuthor
-\end{figure}
-
-\begin{table}[H]
-\centering
-\caption{Questionário - Pegunta 14} 
-\def\arraystretch{1.5}
-\begin{tabular}{l}
-\hline
-\multicolumn{1}{c}{\textbf{Pegunta 14}}              \\ \hline
-O VISNode favorece o aluno a estudar de forma autônoma \\ \hline
-\multicolumn{1}{c}{\textbf{Motivo}}                 \\ \hline
-Este questionamento                                   \\ \hline
-\multicolumn{1}{c}{\textbf{Considerações}}          \\ \hline
-bla                                                   \\ \hline
-\end{tabular}
-\sourceAuthor
-\end{table}
-
-\begin{figure}[H]
-\centering
-\caption{Questionário - Pegunta 14}
-\includegraphics[width=0.7\textwidth]{imagens/v1/p14.png}
-\sourceAuthor
-\end{figure}
-
-\begin{table}[H]
-\centering
-\caption{Questionário - Pegunta 15} 
-\def\arraystretch{1.5}
-\begin{tabular}{l}
-\hline
-\multicolumn{1}{c}{\textbf{Pegunta 15}}              \\ \hline
-O VISNode pode ser utilizado como um recurso efetivo na educação de PDI \\ \hline
-\multicolumn{1}{c}{\textbf{Motivo}}                 \\ \hline
-Este questionamento                                   \\ \hline
-\multicolumn{1}{c}{\textbf{Considerações}}          \\ \hline
-bla                                                   \\ \hline
-\end{tabular}
-\sourceAuthor
-\end{table}
-
-\begin{figure}[H]
-\centering
-\caption{Questionário - Pegunta 15}
-\includegraphics[width=0.7\textwidth]{imagens/v1/p15.png}
-\sourceAuthor
-\end{figure}
 
 \section{Considerações}
 
