@@ -39,6 +39,22 @@
 \floatstyle{plaintop}
 \restylefloat{table}
 \usepackage[referable]{threeparttablex}
+
+\usepackage{tikz}
+
+\makeatletter
+\newcommand*{\radiobutton}{%
+  \@ifstar{\@radiobutton0}{\@radiobutton1}%
+}
+\newcommand*{\@radiobutton}[1]{%
+  \begin{tikzpicture}
+    \pgfmathsetlengthmacro\radius{height("X")/2}
+    \draw[radius=\radius] circle;
+    \ifcase#1 \fill[radius=.6*\radius] circle;\fi
+  \end{tikzpicture}%
+}
+\makeatother
+
 % ---
 		
 % ---
@@ -2414,7 +2430,6 @@ Nesta seção serão apresentados os dados obtidos referentes a avaliação de u
 
 A partir dos dados coletados é possível verificar 33,3\% dos estudantes concordam plenamente que a interface do VISNode é de uso intuitivo, 55,6\% concordam e 11,1\% discordam. Referente a percepção dos alunos em relação a facilidade de aprender a usar o VISNode, 33,3\% concordam plenamente, 44,4\% concordam, 11,1\% discordam e 11,1\% discordam totalmente. Em relação ao tempo de resposta nas iterações com o VISNode, 66,7\%  concordam plenamente que é adequado, 22,2\% concordam e 11,1\% foram indiferentes.
 
-
 \begin{table}[H]
 \centering
 \captionof{table}{Avaliação de usabilidade} \label{tab:avaliacaoUsabilidadev1}
@@ -2529,8 +2544,41 @@ Em relação ao VISNode permitir maior participação do aluno, interferindo na 
 \sourceAuthor
 \end{figure}
 
+\subsection{Comentários}
 
-\subsection{Observações}
+O Quadro \ref{tab:avaliacaoComentarios} apresenta os comentários recebidos através do questionário de validação da ferramenta.
+
+\begin{table}[H]
+\centering
+\captionof{table}{Comentário recebidos no questionário sobre o VISNode} \label{tab:avaliacaoComentarios}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|c|l|}
+    \hline
+    1 &
+    \makecell[l]{
+"A ideia da ferramenta é boa e o layout é agradável, porém, falta instruções nos \\ desafios e funcionalidades da ferramenta, bugs são frequentes na ferramenta tendo\\ 
+que reiniciar para poder utilizar de forma coesa, o redimensionamento das \\
+funcionalidade como entrada, redimensionamento e saída entre outros devem \\
+permitir redimensionamento da imagem, não há descrição das funcionalidades \\
+ou manual da ferramenta tornando que o usuários descubra como funciona, o que \\
+torna uma experiência ruim, documentação da ferramenta inexistente."} \\   
+    \hline  
+    2 &
+    \makecell[l]{
+"Necessário documentação para parte de criação dos scripts em Javascript dentro \\
+da plataforma. Também um pouco confusa a parte do código fonte das funções \\
+executadas, por utilizarem bibliotecas e frameworks desconhecidos, se fosse \\
+de uma maneira mais genérica seria interessante. Um pequeno tutorial na própria\\ ferramenta também seria algo bem interessante para maior utilização do software.\\ 
+Versão totalmente em português acredito ser algo necessário também. No mais o \\
+software está muito bom, surpreendeu positivamente!"} \\   
+    \hline      
+\end{tabular}
+\centering
+\end{table}
+
+
+
+
 
 
 \section{Considerações}
@@ -2584,10 +2632,176 @@ No capítulo \ref{sec:trabalhosCorrelatos} foram apresentados dois trabalhos rel
 \partapendices
 
 % ---
-\chapter{Questionário}
+\chapter{Questionário aplicado nas avaliações em sala de aula}
 \label{apen:questionario}
 
-\lipsum[55-57]
+\noindent Nome\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\vspace{3mm}
+
+\noindent\textbf{Perguntas referentes as Funcionalidades presentes no VISNode}
+
+\vspace{3mm}
+
+\noindent O VISNode dispõe de funções que permitem a adequada execução de técnicas de PDI
+
+\begin{itemize}
+\item[\radiobutton] Concordo plenamente
+\item[\radiobutton] Concordo
+\item[\radiobutton] Indiferente
+\item[\radiobutton] Discordo
+\item[\radiobutton] Discordo totalmente
+\end{itemize}
+
+\noindent Percebo no VISNode informações integras e confiáveis
+
+\begin{itemize}
+\item[\radiobutton] Concordo plenamente
+\item[\radiobutton] Concordo
+\item[\radiobutton] Indiferente
+\item[\radiobutton] Discordo
+\item[\radiobutton] Discordo totalmente
+\end{itemize}
+
+\noindent O VISNode é preciso nos resultados apresentados
+
+\begin{itemize}
+\item[\radiobutton] Concordo plenamente
+\item[\radiobutton] Concordo
+\item[\radiobutton] Indiferente
+\item[\radiobutton] Discordo
+\item[\radiobutton] Discordo totalmente
+\end{itemize}
+
+\vspace{3mm}
+
+\noindent\textbf{Perguntas referentes a confiabilidade quanto ao uso do VISNode}
+
+\vspace{3mm}
+
+\noindent O VISNode apresenta erros com frequência
+
+\begin{itemize}
+\item[\radiobutton] Concordo plenamente
+\item[\radiobutton] Concordo
+\item[\radiobutton] Indiferente
+\item[\radiobutton] Discordo
+\item[\radiobutton] Discordo totalmente
+\end{itemize}
+
+\noindent O VISNode informa de forma clara quando ocorrem erros
+
+\begin{itemize}
+\item[\radiobutton] Concordo plenamente
+\item[\radiobutton] Concordo
+\item[\radiobutton] Indiferente
+\item[\radiobutton] Discordo
+\item[\radiobutton] Discordo totalmente
+\end{itemize}
+
+\vspace{3mm}
+
+\noindent\textbf{Perguntas referentes a usabilidade do VISNode}
+
+\vspace{3mm}
+
+\noindent A interface do VISNode é de uso intuitivo
+
+\begin{itemize}
+\item[\radiobutton] Concordo plenamente
+\item[\radiobutton] Concordo
+\item[\radiobutton] Indiferente
+\item[\radiobutton] Discordo
+\item[\radiobutton] Discordo totalmente
+\end{itemize}
+
+\noindent O VISNode é fácil de aprender a usar
+
+\begin{itemize}
+\item[\radiobutton] Concordo plenamente
+\item[\radiobutton] Concordo
+\item[\radiobutton] Indiferente
+\item[\radiobutton] Discordo
+\item[\radiobutton] Discordo totalmente
+\end{itemize}
+
+\noindent O tempo de resposta nas interações com o VISNode é adequado
+
+\begin{itemize}
+\item[\radiobutton] Concordo plenamente
+\item[\radiobutton] Concordo
+\item[\radiobutton] Indiferente
+\item[\radiobutton] Discordo
+\item[\radiobutton] Discordo totalmente
+\end{itemize}
+
+\vspace{3mm}
+
+\noindent\textbf{Perguntas referentes a usabilidade do VISNode}
+
+\vspace{3mm}
+
+\noindent O VISNode permite que o usuário retenha conhecimento
+
+\begin{itemize}
+\item[\radiobutton] Concordo plenamente
+\item[\radiobutton] Concordo
+\item[\radiobutton] Indiferente
+\item[\radiobutton] Discordo
+\item[\radiobutton] Discordo totalmente
+\end{itemize}
+
+\noindent O VISNode é uma ferramenta motivacional para aprendizagem
+
+\begin{itemize}
+\item[\radiobutton] Concordo plenamente
+\item[\radiobutton] Concordo
+\item[\radiobutton] Indiferente
+\item[\radiobutton] Discordo
+\item[\radiobutton] Discordo totalmente
+\end{itemize}
+
+\noindent O feedback do VISNode ao aluno é adequado
+
+\begin{itemize}
+\item[\radiobutton] Concordo plenamente
+\item[\radiobutton] Concordo
+\item[\radiobutton] Indiferente
+\item[\radiobutton] Discordo
+\item[\radiobutton] Discordo totalmente
+\end{itemize}
+
+\noindent O VISNode permite maior participação do aluno, interferindo na relação pedagógica professor x aluno
+
+\begin{itemize}
+\item[\radiobutton] Concordo plenamente
+\item[\radiobutton] Concordo
+\item[\radiobutton] Indiferente
+\item[\radiobutton] Discordo
+\item[\radiobutton] Discordo totalmente
+\end{itemize}
+
+\noindent O VISNode favorece o aluno a estudar de forma autônoma
+
+\begin{itemize}
+\item[\radiobutton] Concordo plenamente
+\item[\radiobutton] Concordo
+\item[\radiobutton] Indiferente
+\item[\radiobutton] Discordo
+\item[\radiobutton] Discordo totalmente
+\end{itemize}
+
+\noindent O VISNode pode ser utilizado como um recurso efetivo na educação de PDI
+
+\begin{itemize}
+\item[\radiobutton] Concordo plenamente
+\item[\radiobutton] Concordo
+\item[\radiobutton] Indiferente
+\item[\radiobutton] Discordo
+\item[\radiobutton] Discordo totalmente
+\end{itemize}
+
+\noindent Sugestões para ferramenta \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 % ---
 \chapter{Desafios de extração de estatísticas da imagem}
