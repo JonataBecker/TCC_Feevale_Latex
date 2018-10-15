@@ -2998,6 +2998,52 @@ Ruídos são encontrados normalmente em imagens. O programador Marinalvo recebeu
 \end{figure}
 
 
+% ----------------------------------------------------------
+\chapter{Desafio de trânsito}
+\label{apen:trasito}
+
+Alunos da escola Técnica de Design fazem um trabalho voluntário para auxiliar a comunidade no que se refere a imagens. Para tanto recebe as mais diversos demandas, e aqui, cada demanda gera uma missão... algumas são missões quase impossíveis!
+
+\subsection{Missão 1}
+
+É solicitado que esta placa fique da largura de um pixel, sendo afinada ao máximo possível para ser usada em um sistema de que identifica e descreve a placa para cegos. Para tanto, a rotina deve constar de uma transformação em tonalidades de cinza, uma inversão de cores, um \textit{threshold} de 150 e na sequência utilizar o afinamento de Holt. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{imagens/transito/mission1_input.jpg}
+\includegraphics[width=0.3\textwidth]{imagens/transito/mission1_output.png}
+\end{figure}
+
+\subsection{Missão 2}
+
+Na placa apresentada abaixo, por um problema de impressão, o pneu dianteiro está muito longe da cabine do caminhão. Da mesma forma, a carroceria está separada. Use o processo de dilatação para aproximar o pneu e unir a carroceria com a cabine do caminhão. Utilize 150 como \textit{threshold}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{imagens/transito/mission2_input.jpg}
+\includegraphics[width=0.3\textwidth]{imagens/transito/mission2_output.png}
+\end{figure}
+
+\subsection{Missão 3}
+
+Observe que nesta placa existe uma falha no pneu de trás da bicicleta. Use o fechamento para corrigir a falha, deixando a placa perfeita. Utilize 150 como \textit{threshold}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{imagens/transito/mission3_input.jpg}
+\includegraphics[width=0.3\textwidth]{imagens/transito/mission3_output.png}
+\end{figure}
+
+\subsection{Missão 4}
+
+Utilizando a placa de PARE mostrada abaixo, faça com que a mesma fique somente com o texto PARE escrito em branco. Para isso utilize \textit{threshold} 230 e 3 processos de erosão.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{imagens/transito/mission4_input.jpg}
+\includegraphics[width=0.3\textwidth]{imagens/transito/mission4_output.png}
+\end{figure}
+
 
 \end{apendicesenv}
 % ---
