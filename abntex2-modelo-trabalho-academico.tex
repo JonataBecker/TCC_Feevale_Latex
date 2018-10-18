@@ -2304,7 +2304,11 @@ Outro equivoco comum foi a utilização do filtro de mediana ao invés do filtro
 \section{Encontro final de validação}
 \label{sec:validacaoEncontroFinal}
 
-Aqui será narrado o funcionamento do último encontro de validação.
+No dia 02/10/2018 foi realizada a terceira aplicação da ferramenta. Neste encontro foi solicitado para os alunos realizar um desafio referente ao conteúdo que estava sendo estudado, este desafio é apresentado na seção \ref{apen:trasito}. 
+
+Neste dia poucos alunos estavam presentes, no total 4 alunos participaram deste experimento, destes, os 4 completaram o desafio até o final. Somente 1 aluno completou o desafio sem cometer erros. O experimento foi composto por 28 submissões de missões, destas, somente 14 foram assertivas, contabilizando 50\% de acerto.
+
+As missões 3 e 4 foram as que tiveram o maio número de falhas, contabilizando 5 e 6 respectivamente. Este desafio foi baseado em missão que necessitavam a aplicação de algoritmos de esqueletização e algoritmos de dilatação e erosão. Estes algoritmos, normalmente são executados em imagens binarias, somente com duas cores. As submissões falhas foram em função da não correta binarização da imagem.
 
 \section{Resultados obtidos}
 \label{sec:resultadosObtidos}
@@ -2312,24 +2316,14 @@ Aqui será narrado o funcionamento do último encontro de validação.
 Tendo em vista a coleta de informações e \textit{feedbacks} de alunos, foi desenvolvido um questionário adaptando \cite{bez2013}. O questionário é composto por 15 perguntas relacionadas a funcionalidades do sistema, usabilidade, confiabilidade e dados referentes ao aprendizado dos alunos. Quatorze questões são objetivas variando entre concordo plenamente, concordo, indiferente, discordo e discordo totalmente. Uma questão é dissertativa que possibilita aos alunos descrever uma observação sobre a ferramenta.
 
 %-- revisao 0
-O questionário foi aplicado no primeiro encontro de avaliação, descrito na seção \ref{sec:validacaoPrimeiroEncontro}, e no último encontro, descrito na seção \ref{sec:validacaoEncontroFinal}. Nesta seção serão apresentados os dados obtidos nestas avaliações.
-
-A primeira avaliação foi composta por 9 avaliações.
-
+O questionário foi aplicado no primeiro encontro de avaliação, descrito na seção \ref{sec:validacaoPrimeiroEncontro}, e no último encontro, descrito na seção \ref{sec:validacaoEncontroFinal}. Na primeira avaliação foi composta por 9 avaliações, já a segunda, foi composta por 7 avaliações. Nesta seção serão apresentados os dados obtidos nestas avaliações.
 
 \subsection{Avaliação de funcionalidades da ferramenta}
 
-Nesta seção serão apresentados os dados obtidos referentes as funcionalidades da ferramenta. O Quadro \ref{tab:avaliacaoFuncionalidadesv1} contém os dados obtidos na primeira aplicação do questionário. 
-
-A partir dos dados coletados é possível verificar 56,6\% dos estudantes concordam plenamente que o VISNode dispões de funções que permitem a adequada execução de técnicas de PDI, 33,3\% concordam e 11,1\% estão indiferentes.
-
-Referente a percepção dos alunos em relação ao VISNode apresentar informações integras e confiável, 66,7\% concordam plenamente e 33,3\% concordam. Em relação ao VISNode ser preciso nos resultados apresentados, 44,4\% concordam plenamente, 44,4\% concordam e 11,1\% discordam.
-
-\begin{table}[H]
-\centering
-\captionof{table}{Primeira avaliação de funcionalidades} \label{tab:avaliacaoFuncionalidadesv1}
-\renewcommand{\arraystretch}{1.8}
-\begin{tabular}{|l|c|c|c|c|c|}
+Nesta seção serão apresentados os dados obtidos referentes a avaliação das funcionalidades da ferramenta. Esta avaliação tem como objetivo identificar, segundo a percepção dos alunos, se as funcionalidades existentes na ferramenta são precisas, possuem informações confiáveis e se ela permite a adequada execução de técnicas de PDI. O Quadro \ref{tab:avaliacaoFuncionalidades} contém os dados obtidos na primeira e na segunda aplicação do questionário. 
+\begin{longtable}{|l|c|c|c|c|c|}
+\caption{Primeira avaliação de funcionalidades} \label{tab:avaliacaoFuncionalidades}
+\renewcommand{\arraystretch}{1.8} \\
     \hline
     &
     \makecell{\footnotesize Concordo \\ \footnotesize Plenamente} 
@@ -2342,9 +2336,12 @@ Referente a percepção dos alunos em relação ao VISNode apresentar informaç�
     &
     \makecell{\footnotesize Discordo \\ \footnotesize Totalmente} \\
     \hline
-    \makecell[l]{O VISNode dispõe de funções \\
-                que permitem a adequada \\
-                execução de técnicas de PDI} 
+    \multicolumn{6}{|c|}{Primeira avaliação} \\
+    \hline
+    \makecell[l]{O VISNode dispõe de \\ 
+                funções que permitem a \\
+                adequada  execução de \\
+                técnicas de PDI} 
     &
     5 & 3 & 1 &  &  \\
     \hline
@@ -2359,35 +2356,66 @@ Referente a percepção dos alunos em relação ao VISNode apresentar informaç�
     &
     4 & 4 &  & 1 &  \\
     \hline
-  
-\end{tabular}
-\centering
-\end{table}
-
-Na Figura \ref{fig:avaliacaoFuncionalidades} é apresentado um gráfico contendo a distribuição de avaliações. O eixo x do gráfico representa a nota atribuída, o eixo y representa as questões referente a avaliação das funcionalidades. O tamanho do circulo representa a quantidade de avaliações, desta forma, quanto maior o diâmetro maior será a quantidade de avaliações.
-
-Na Figura \ref{fig:avaliacaoFuncionalidades} é possível visualizar que a maior parte das avaliações foram Concordo e Concordo Plenamente.
-
-Referente a primeira avaliação em relação as funcionalidades do aplicativos, é possível identificar que a maioria das avaliações ficaram entre Concordo e Concordo plenamente. Houve somente uma avaliação Discordo em relação a precisão dos resultados apresentados, e uma avaliação indiferente em relação a correta execução de técnicas de PDI.
+    \multicolumn{6}{|c|}{Segunda avaliação} \\
+    \hline
+      \makecell[l]{O VISNode dispõe de \\ 
+                funções que permitem a \\
+                adequada  execução de \\
+                técnicas de PDI} 
+    &
+    3 & 4 &  &  &  \\
+    \hline
+    \makecell[l]{Percebo no VISNode \\ 
+                informações integras e \\
+                confiáveis} 
+    &
+    3 & 4 &  &  &  \\
+    \hline
+    \makecell[l]{O VISNode é preciso nos \\
+                resultados apresentados} 
+    &
+    3 & 4 &  &  &  \\
+    \hline
+\end{longtable}
 
 \begin{figure}[H]
 \centering
-\caption{Avaliação de funcionalidades}\label{fig:avaliacaoFuncionalidades}
-\includegraphics[width=0.9\textwidth]{imagens/avaliacao_funcionalidades.png}
+\caption{Avaliação de funcionalidades - Pergunta 1}\label{fig:avaliacaoFuncionalidades1}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacoes/avaliacao_funcionalidade_1.jpg}
 \sourceAuthor
 \end{figure}
 
+A Figura \ref{fig:avaliacaoFuncionalidades1} apresenta os dados coletados nas duas avaliações referentes ao questionamento se o VISNode dispõem de funções que permitem a adequada execução de técnicas de PDI. É possível identificar que na primeira avaliação, 56,6\% dos estudantes concordam plenamente, 33,3\% concordam e 11,1\% estão indiferentes. Já na segunda avaliação o percentual de alunos que concordam aumentou para 57,1\% e os que concordam plenamente diminuíram para 42,9\%. Para este questionamento não houve grandes alterações em relação a primeira e a segunda avaliação, o que vale ressaltar é que na segunda avaliação não houve nenhuma avaliação indiferente ao discordando, demonstrando uma pequena melhora neste questionamento.
+
+\begin{figure}[H]
+\centering
+\caption{Avaliação de funcionalidades - Pergunta 2}\label{fig:avaliacaoFuncionalidades2}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacoes/avaliacao_funcionalidade_2.jpg}
+\sourceAuthor
+\end{figure}
+
+A Figura \ref{fig:avaliacaoFuncionalidades2} apresenta os dados coletados nas duas avaliações referentes ao questionamento se aluno percebe no VISNode informações integras e confiáveis. É possível identificar que na primeira avaliação, 66,7\% concordam plenamente e 33,3\% concorda. Já na segunda avaliação o percentual de alunos que concordam aumentou para 57,1\% e os que concordam plenamente diminuíram para 42,9\%. Para este questionamento não houve grandes alterações em relação a primeira e a segunda avaliação, sendo que as duas avaliações foram positivas.
+
+\begin{figure}[H]
+\centering
+\caption{Avaliação de funcionalidades - Pergunta 3}\label{fig:avaliacaoFuncionalidades3}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacoes/avaliacao_funcionalidade_3.jpg}
+\sourceAuthor
+\end{figure}
+
+A Figura \ref{fig:avaliacaoFuncionalidades3} apresenta os dados coletados nas duas avaliações referentes ao questionamento se o VISNode é preciso nos resultados apresentados. É possível identificar que na primeira avaliação, 44,4\% concordam plenamente, 44,4\% concordam e 11,1\% discordam. Já na segunda avaliação o percentual de alunos que concordam aumentou para 57,1\% e os que concordam plenamente diminuíram para 42,9\%. Para este questionamento não houve grandes alterações em relação a primeira e a segunda avaliação, o que vale ressaltar é que na segunda avaliação, não houve nenhuma avaliação negativa.
+
+Referente a avaliação das funcionalidades da ferramenta, é possível identificar que a maioria das avaliações foram positivas, valiando entre Concordo e Concordo plenamente. Houve somente uma avaliação Discordo em relação a precisão dos resultados apresentados, e uma avaliação indiferente em relação a correta execução de técnicas de PDI na primeira avaliação. Na segunda avaliação todas as avaliação foram positivas.
+
 \subsection{Avaliação de confiabilidade}
 
-Nesta seção serão apresentados os dados obtidos referentes a avaliação de confiabilidade da ferramenta. O Quadro \ref{tab:avaliacaoConfiabilidadev1} contém os dados obtidos na primeira aplicação do questionário. 
+Nesta seção serão apresentados os dados obtidos referentes a avaliação de confiabilidade da ferramenta. O Quadro \ref{tab:avaliacaoConfiabilidade} contém os dados obtidos na primeira aplicação do questionário. 
 
 A partir dos dados coletados é possível verificar 11,1\% dos estudantes concordam plenamente que o VISNode apresenta erros com frequência, 44,4\% concordam, 22,2\% estão indiferentes e 22,2\% discordam. Referente a percepção dos alunos em relação ao VISNode informar de forma clara quando ocorrem erros, 44,4\% discordem e 55,6\% estão indiferentes. 
 
-\begin{table}[H]
-\centering
-\captionof{table}{Avaliação de confiabilidade} \label{tab:avaliacaoConfiabilidadev1}
-\renewcommand{\arraystretch}{1.8}
-\begin{tabular}{|l|c|c|c|c|c|}
+\begin{longtable}{|l|c|c|c|c|c|}
+\caption{Avaliação de confiabilidade} \label{tab:avaliacaoConfiabilidade}
+\renewcommand{\arraystretch}{1.8} \\
     \hline
     &
     \makecell{\footnotesize Concordo \\ \footnotesize Plenamente} 
@@ -2399,6 +2427,8 @@ A partir dos dados coletados é possível verificar 11,1\% dos estudantes concor
     \makecell{\footnotesize Discordo} 
     &
     \makecell{\footnotesize Discordo \\ \footnotesize Totalmente} \\
+    \hline
+    \multicolumn{6}{|c|}{Primeira avaliação} \\
     \hline
     \makecell[l]{O VISNode apresenta erros\\
                 com frequência} 
@@ -2410,31 +2440,46 @@ A partir dos dados coletados é possível verificar 11,1\% dos estudantes concor
     &
      &  & 5 & 4 &  \\
     \hline
-\end{tabular}
-\centering
-\end{table}
+    \multicolumn{6}{|c|}{Segunda avaliação} \\
+    \hline
+    \makecell[l]{O VISNode apresenta erros\\
+                com frequência} 
+    &
+     & 2 & 2 & 3 &  \\
+    \hline
+    \makecell[l]{O VISNode informa de forma \\
+                clara quando ocorrem erros} 
+    &
+     & 2 & 2 & 3 &  \\
+    \hline
+\end{longtable}
 
 Referente a primeira avaliação em relação a confiabilidade do VISNode, é possível identificar a maioria dos avaliações indicam que a ferramenta apresenta erros com frequência e quando estes erros ocorrem não são informados de maneira clara. Estes dados demonstram uma deficiência da ferramenta em relação ocorrência de erros.
 
 \begin{figure}[H]
 \centering
-\caption{Avaliação de confiabilidade} \label{fig:avaliacaoConfiabilidade}
-\includegraphics[width=0.9\textwidth]{imagens/avaliacao_confiabilidade.png}
+\caption{Avaliação de confiabilidade - Pergunta 1}\label{fig:avaliacaoConfiabilidade1}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacoes/avaliacao_confiabilidade_1.jpg}
 \sourceAuthor
 \end{figure}
 
 
+\begin{figure}[H]
+\centering
+\caption{Avaliação de confiabilidade - Pergunta 2}\label{fig:avaliacaoConfiabilidade2}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacoes/avaliacao_confiabilidade_2.jpg}
+\sourceAuthor
+\end{figure}
+
 \subsection{Avaliação de usabilidade}
 
-Nesta seção serão apresentados os dados obtidos referentes a avaliação de usabilidade da ferramenta. O Quadro \ref{tab:avaliacaoUsabilidadev1} contém os dados obtidos na primeira aplicação do questionário. 
+Nesta seção serão apresentados os dados obtidos referentes a avaliação de usabilidade da ferramenta. O Quadro \ref{tab:avaliacaoUsabilidade} contém os dados obtidos na primeira aplicação do questionário. 
 
 A partir dos dados coletados é possível verificar 33,3\% dos estudantes concordam plenamente que a interface do VISNode é de uso intuitivo, 55,6\% concordam e 11,1\% discordam. Referente a percepção dos alunos em relação a facilidade de aprender a usar o VISNode, 33,3\% concordam plenamente, 44,4\% concordam, 11,1\% discordam e 11,1\% discordam totalmente. Em relação ao tempo de resposta nas iterações com o VISNode, 66,7\%  concordam plenamente que é adequado, 22,2\% concordam e 11,1\% foram indiferentes.
 
-\begin{table}[H]
-\centering
-\captionof{table}{Avaliação de usabilidade} \label{tab:avaliacaoUsabilidadev1}
-\renewcommand{\arraystretch}{1.8}
-\begin{tabular}{|l|c|c|c|c|c|}
+\begin{longtable}{|l|c|c|c|c|c|}
+\caption{Avaliação de usabilidade} \label{tab:avaliacaoUsabilidade}
+\renewcommand{\arraystretch}{1.8} \\
     \hline
     &
     \makecell{\footnotesize Concordo \\ \footnotesize Plenamente} 
@@ -2446,6 +2491,8 @@ A partir dos dados coletados é possível verificar 33,3\% dos estudantes concor
     \makecell{\footnotesize Discordo} 
     &
     \makecell{\footnotesize Discordo \\ \footnotesize Totalmente} \\
+    \hline
+    \multicolumn{6}{|c|}{Primeira avaliação} \\
     \hline
     \makecell[l]{A interface do VISNode é \\ 
                 de uso intuitivo} 
@@ -2462,33 +2509,63 @@ A partir dos dados coletados é possível verificar 33,3\% dos estudantes concor
                 é adequado} 
     &
     6 & 2 & 1 &  &  \\
-    \hline    
-\end{tabular}
-\centering
-\end{table}
+    \hline
+    \multicolumn{6}{|c|}{Segunda avaliação} \\
+    \hline
+    \makecell[l]{A interface do VISNode é \\ 
+                de uso intuitivo} 
+    &
+    3 & 2 & 2 &  &  \\
+    \hline
+    \makecell[l]{O VISNode é fácil de \\
+                aprender a usar} 
+    &
+    3 & 2 & 2 &  &   \\
+    \hline
+    \makecell[l]{O tempo de resposta nas \\
+                interações com o VISNode \\ 
+                é adequado} 
+    &
+    6 & 1 &  &  &  \\
+    \hline
+\end{longtable}
 
 \begin{figure}[H]
 \centering
-\caption{Avaliação de usabilidade}\label{fig:avaliacaoUsabilidade}
-\includegraphics[width=0.9\textwidth]{imagens/avaliacao_usabilidade.png}
+\caption{Avaliação de usabilidade - Pergunta 1}\label{fig:avaliacaoUsabilidade1}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacoes/avaliacao_usabilidade_1.jpg}
 \sourceAuthor
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\caption{Avaliação de usabilidade - Pergunta 2}\label{fig:avaliacaoUsabilidade2}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacoes/avaliacao_usabilidade_2.jpg}
+\sourceAuthor
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\caption{Avaliação de usabilidade - Pergunta 3}\label{fig:avaliacaoUsabilidade3}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacoes/avaliacao_usabilidade_3.jpg}
+\sourceAuthor
+\end{figure}
+
 
 Referente a primeira avaliação em relação a avaliação de usabilidade é possível identificar que a maioria da avaliação concordam que o VISNode é de uso intuitivo e fácil de aprender. Um avaliação discordou que o uso da ferramenta é intuitivo e duas avaliações discordaram que o VISNode é fácil de aprender a utilizar. Estas avaliações negativas demonstram um ponto de melhoria no sistema.
 
 \subsection{Avaliação de aprendizagem}
 
-Nesta seção serão apresentados os dados obtidos referentes a avaliação de aprendizagem da ferramenta. O Quadro \ref{tab:avaliacaoAprendizagemv1} contém os dados obtidos na primeira aplicação do questionário. 
+Nesta seção serão apresentados os dados obtidos referentes a avaliação de aprendizagem da ferramenta. O Quadro \ref{tab:avaliacaoAprendizagem} contém os dados obtidos na primeira aplicação do questionário. 
 
 A partir dos dados coletados é possível verificar 66,7\% dos estudantes concordam plenamente que o VISNode permite que o usuário retenha conhecimento, 22,2\% concordam e 11,1\% foram indiferentes. Referente a percepção dos alunos em relação ao VISNode ser um ferramenta motivacional para aprendizagem, 55,6\% concordam plenamente, 44,4\% concordam. Em relação ao VISNode apresentar um feedback adequado ao aluno, 44,4\%  concordam plenamente, 44,4\% concordam e 11,1\% foram indiferentes.
 
 Em relação ao VISNode permitir maior participação do aluno, interferindo na relação pedagógica professor x aluno, 22,2\% concordam plenamente, 44,4 \% concordam e 33,3\% foram indiferentes. Referente ao VISNode fornecer ao aluno uma forma de estudar autônoma, 33,3\% concordam plenamente, 33,3\% concordam, 22,2\% discordam e 11,1\% foram indiferentes. Em relação ao VISNode poder ser utilizado como recurso efetivo na educação de PDI, 77,8\% concordam plenamente e 22,2\% concordam.
 
-\begin{table}[H]
-\centering
-\captionof{table}{Avaliação de aprendizagem} \label{tab:avaliacaoAprendizagemv1}
-\renewcommand{\arraystretch}{1.8}
-\begin{tabular}{|l|c|c|c|c|c|}
+\begin{longtable}{|l|c|c|c|c|c|}
+\caption{Avaliação de aprendizagem} \label{tab:avaliacaoAprendizagem}
+\renewcommand{\arraystretch}{1.8} \\
     \hline
     &
     \makecell{\footnotesize Concordo \\ \footnotesize Plenamente} 
@@ -2501,13 +2578,16 @@ Em relação ao VISNode permitir maior participação do aluno, interferindo na 
     &
     \makecell{\footnotesize Discordo \\ \footnotesize Totalmente} \\
     \hline
+    \multicolumn{6}{|c|}{Primeira avaliação} \\
+    \hline
     \makecell[l]{O VISNode permite que o \\
                 usuário retenha \\ conhecimento} 
     &
     6 & 2 & 1 &  &  \\
     \hline
-    \makecell[l]{O VISNode é uma ferramenta \\ 
-                motivacional para aprendizagem} 
+    \makecell[l]{O VISNode é uma \\
+                ferramenta motivacional \\
+                para aprendizagem} 
     &
     5 & 4 &  &  &   \\
     \hline
@@ -2524,28 +2604,107 @@ Em relação ao VISNode permitir maior participação do aluno, interferindo na 
     2 & 4 & 3 &  &  \\
     \hline
     \makecell[l]{O VISNode favorece o aluno \\
-                a estudar de forma autônoma} 
+                a estudar de forma \\ autônoma} 
     &
     3 & 3 & 1 & 2 &   \\
     \hline
-    \makecell[l]{O VISNode pode ser utilizado \\
-                como um recurso efetivo na \\ 
-                educação de PDI} 
+    \makecell[l]{O VISNode pode ser \\ 
+                utilizado como um recurso \\
+                efetivo na educação de PDI} 
     &
     7 & 2 &  &  &  \\
-    \hline  
-\end{tabular}
-\centering
-\end{table}
+    \hline    
+    \multicolumn{6}{|c|}{Segunda avaliação} \\
+    \hline
+    \makecell[l]{O VISNode permite que o \\
+                usuário retenha \\ conhecimento} 
+    &
+    4 & 3 &  &  &  \\
+    \hline
+    \makecell[l]{O VISNode é uma \\
+                ferramenta motivacional \\
+                para aprendizagem} 
+    &
+    3 & 3 & 1 &  &   \\
+    \hline
+    \makecell[l]{O feedback do VISNode ao \\ 
+                aluno é adequado} 
+    &
+    2 & 2 & 2 & 1 &  \\
+    \hline 
+       \makecell[l]{O VISNode permite maior \\
+                    participação do aluno, \\ 
+                    interferindo na relação \\
+                    pedagógica professor x aluno} 
+    &
+    3 & 1 & 2 & 1 &  \\
+    \hline
+    \makecell[l]{O VISNode favorece o aluno \\
+                a estudar de forma \\ autônoma} 
+    &
+    2 & 4 & 1 &  &   \\
+    \hline
+    \makecell[l]{O VISNode pode ser \\
+                utilizado como um recurso \\
+                efetivo na educação de PDI} 
+    &
+    4 & 2 & 1  &  &  \\
+    \hline
+\end{longtable}
+
+
+
 
 Referente a primeira avaliação de aprendizagem da ferramenta, foi obtido resultados positivos. A maior parte das avaliações foram concordando que o VISNode auxilia neste quesito. Foi obtido duas avaliações discordando que o VISNode favorece que o aluno a estudar de forma autônoma. Mas 100\% dos alunos concordaram que o VISNode pode ser utilizado como recurso para edução de PDI.
 
+
 \begin{figure}[H]
 \centering
-\caption{Avaliação de aprendizagem} \label{fig:avaliacaoAprendizagem}
-\includegraphics[width=0.9\textwidth]{imagens/avaliacao_aprendizagem.png}
+\caption{Avaliação de aprendizagem - Pergunta 1}\label{fig:avaliacaoAprendizagem1}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacoes/aprendizagem_1.jpg}
 \sourceAuthor
 \end{figure}
+
+
+\begin{figure}[H]
+\centering
+\caption{Avaliação de aprendizagem - Pergunta 2}\label{fig:avaliacaoAprendizagem2}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacoes/aprendizagem_2.jpg}
+\sourceAuthor
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\caption{Avaliação de aprendizagem - Pergunta 3}\label{fig:avaliacaoAprendizagem3}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacoes/aprendizagem_3.jpg}
+\sourceAuthor
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\caption{Avaliação de aprendizagem - Pergunta 4}\label{fig:avaliacaoAprendizagem4}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacoes/aprendizagem_4.jpg}
+\sourceAuthor
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\caption{Avaliação de aprendizagem - Pergunta 5}\label{fig:avaliacaoAprendizagem5}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacoes/aprendizagem_5.jpg}
+\sourceAuthor
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\caption{Avaliação de aprendizagem - Pergunta 6}\label{fig:avaliacaoAprendizagem6}
+\includegraphics[width=0.9\textwidth]{imagens/avaliacoes/aprendizagem_6.jpg}
+\sourceAuthor
+\end{figure}
+
+
 
 \subsection{Comentários}
 
@@ -2592,9 +2751,9 @@ Neste capítulo foram abordadas as etapas realizadas durante o processo de avali
 A partir dos dados coletados, é possível identificar, segundo os alunos, que o VISNode dispõe de funções que permitem a adequada execução de técnicas de PDI,
 que apresenta informações integras e confiáveis e é preciso nos resultados apresentados.
 
-Em relação a confiabilidade da ferramenta, é possível identificar que neste quesito o \textit{software} precisa ser melhorado. As avaliações indicaram que a ferramenta apresenta erros com frequência e quando estes erros ocorrem não são informados de maneira clara.
+Em relação a confiabilidade da ferramenta, é possível identificar que neste quesito o \textit{software} precisa ser melhorado. As avaliações indicaram que a ferramenta, em alguns casos, apresenta erros com frequência e quando estes erros ocorrem, normalmente, não são informados de maneira clara.
 
-Analisando a avaliação de usabilidade, é possível identificar pontos de melhoria neste quesito. Houve um pequeno percentual de avaliações discordando que o uso da ferramenta era intuitivo e fácil de aprender a utilizar. Este quesito também foi abordado de forma negativa nos comentários da ferramenta, sendo a documentação um ponto de melhoria.
+Analisando a avaliação de usabilidade, é possível identificar pontos de melhoria neste quesito. Houve um pequeno percentual de avaliações discordando que o uso da ferramenta era intuitivo e fácil de aprender a utilizar. Este quesito também foi abordado de forma negativa nos comentários da ferramenta, sendo a documentação da ferramenta um ponto de melhoria.
 
 A avaliação de aprendizagem foi positiva, a maioria as avaliações concordam que o VISNode pode ser utilizado como ferramenta de aprendizagem, sendo uma ferramenta motivacional.
 
