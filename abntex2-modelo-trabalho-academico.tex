@@ -991,7 +991,7 @@ De acordo com \citet{pedriniSchwartz:2008}, a fórmula que representa a operaç�
 \includegraphics[width=0.6\textwidth]{imagens/erosao_formula.png}
 \end{figure}
 
-Onde f representa a imagem de origem e (s, t) pertencem ao elemento estruturante b. Este elemento estruturante é aplicado na imagem e a cada ciclo, o pixel analisado é substituído pelo pixel resultante de menor valor.
+Onde \(f\) representa a imagem de origem e (\(s\), \(t\)) pertencem ao elemento estruturante b. Este elemento estruturante é aplicado na imagem e a cada ciclo, o pixel analisado é substituído pelo pixel resultante de menor valor.
 
 A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2rrIuIO}.
 
@@ -1097,7 +1097,7 @@ Segundo \citet{guilherme:2007}, para que um pixel seja marcado para exclusão el
 
 \begin{itemize}
 \item Possuir sua conectividade maior que 1;
-\item O objeto deve ser composto de pelo menos dois e no máximo seis pixels pretos;
+\item O objeto deve ser composto de no mínimo dois e no máximo seis pixels pretos;
 \item Ao menos um dos pixels da primeira máscara deve ser branco;
 \item Ao menos um dos pixels da segunda máscara deve ser branco;
 \end{itemize}
@@ -1189,7 +1189,7 @@ Na Figura \ref{fig:esqueletizacao} são apresentadas as aplicações de algoritm
 
 Segmentação é um processo que consiste em dividir a imagem em regiões. O objetivo deste processo é fazer com que os objetos e áreas de interesse de uma imagem tenham seus pixels agrupados e destacados do restante da imagem. A segmentação é um tema de extrema importância na área de análise de imagens, pois a identificação de partes de imagens que representam elementos de interesse é fundamental \cite{conciAzevedoLeta:2008}.  
 
-A segmentação de imagens é convencionalmente baseada em propriedades dos níveis de cinza de imagens, a descontinuidade e a similaridade. Os métodos da descontinuidade visam a identificação de objetos a partir de mudanças abruptas dos níveis de cinza da imagem, que caracterizam a borda de um objeto. Estes métodos foram tratados do seção \ref{sec:passaAlta}. Os métodos de similaridade tem como objetivo agrupar pontos semelhantes da imagem para um determinado conjunto de características \cite{pedriniSchwartz:2008}. Este métodos serão tratados nesta seção.
+A segmentação de imagens é convencionalmente baseada em propriedades dos níveis de cinza de imagens, a descontinuidade e a similaridade. Os métodos da descontinuidade visam a identificação de objetos a partir de mudanças abruptas dos níveis de cinza da imagem, que caracterizam a borda de um objeto. Estes métodos foram tratados na seção \ref{sec:passaAlta}. Os métodos de similaridade tem como objetivo agrupar pontos semelhantes da imagem para um determinado conjunto de características \cite{pedriniSchwartz:2008}. Estes métodos serão tratados nesta seção.
     
 % ---
 \subsection{Segmentação baseada em regiões}     
@@ -1210,7 +1210,7 @@ Após a detecção da regiões, comumente é realizada a identificação destas 
 \label{fig:crescimento_regiao}
 \end{figure}
 
-Na Figura \ref{fig:crescimento_regiao} é apresentado um exemplo de uma aplicação de crescimento de regiões. (a) representa a imagem origem, (b) representa uma segmentação utilizando como limiar (T) 4, desta forma, a diferença absoluta entre a semente e o valor do pixel analisado deve ser menor do que 4 para que o pixel seja considerado pertencente a região da semente. Os pontos (1, 1) e (1,5) representam as sementes utilizadas para o método. O predicado P, utilizado para adicionar um pixel em uma região, pode ser observado na fórmula:
+Na Figura \ref{fig:crescimento_regiao} é apresentado um exemplo de uma aplicação de crescimento de regiões. (a) Representa a imagem origem, (b) representa uma segmentação utilizando como limiar (T) 4, desta forma, a diferença absoluta entre a semente e o valor do pixel analisado deve ser menor do que 4 para que o pixel seja considerado pertencente a região da semente. Os pontos (1, 1) e (1,5) representam as sementes utilizadas para o método. O predicado P, utilizado para adicionar um pixel em uma região, pode ser observado na fórmula:
 
 \begin{figure}[ht]
 \centering
@@ -1234,7 +1234,7 @@ O ajuste da curva é realizado levando em consideração forças internas e exte
 \label{fig:snake}
 \end{figure}
 
-Na Figura \ref{fig:snake} é demonstrada uma execução do método de Snakes. (a) é o contorno inicial, (b) é o contorno resultante após aplicação de algumas etapas e (c) contorno final.
+Na Figura \ref{fig:snake} é demonstrada uma execução do método de Snakes. (a) É o contorno inicial, (b) é o contorno resultante após aplicação de algumas etapas e (c) contorno final.
 
 A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2LsmV43}.
 
@@ -1244,9 +1244,9 @@ A implementação em java para o algoritmo pode ser acessado através do link: \
 Neste capítulo foi apresentado o referencial teórico referente a PDI, cumprindo, desta forma, o primeiro objetivo específico do trabalho que é apresentar as técnicas de processamento digital de imagens. Foram abordadas as principais técnicas de PDI relacionadas a transformações geométricas, filtros passa-baixa, filtros passa-alta, morfologia matemática, afinamento de bordas e técnicas de segmentação. O capítulo compõem a etapa metodológica de criação, servindo como aporte teórico para conscientização do problema.
 
 %-- revisao 1
-Todas as técnicas apresentadas estão implementadas na ferramenta VISNode, que serão abordadas na seção \ref{sec:visnode}. Este referencial teórico foi de grande importância, pois foi utilizado para compor a seção de explicação das técnicas existentes na ferramenta, onde é possível acessar o referencial teórico de cada técnica de PDI. Esta funcionalidade será apresenta na seção \ref{sec:materialTeorico}.
+Todas as técnicas apresentadas estão implementadas na ferramenta VISNode, que serão abordadas na seção \ref{sec:visnode}. Este referencial teórico teve grande importância, pois foi utilizado para compor a seção de explicação das técnicas existentes na ferramenta, onde é possível acessar o referencial teórico de cada técnica de PDI. Esta funcionalidade será apresenta na seção \ref{sec:materialTeorico}.
 
-No próximo capítulo serão abordados conceitos referente a gamificação. São abordados temas referente a sua diferença em relação a simulação e jogo, sua aplicação na educação e elementos da gamificação.
+No próximo capítulo serão abordados conceitos referente a gamificação. Serão abordados temas referente a sua diferença em relação a simulação e jogo, sua aplicação na educação e elementos da gamificação.
 
 % ----------------------------------------------------------
 % Gamificação
@@ -1258,7 +1258,7 @@ A gamificação é um tópico bastante discutido nos últimos anos, estando pres
 
 A gamificação tem sido aplicada com o objetivo de melhorar a experiência e engajamento de usuários \cite{quadros2016gamificaccao}. Segundo \citet{deterding2011game}, a gamificação é um conceito que pode ser aplicado nos mais diversos campos de pesquisa, estando presente em áreas de ciências humanas, computação, finanças, saúde e educação. É um termo que deve ser utilizado para sistemas que utilizam elementos de jogos, e não para cenários que utilizam games. 
 
-Levando em consideração este cenário propício, a gamificação se apresenta como uma ferramenta com grande potencialidade de aplicação. Isso se faz possível devido a linguagem e metodologia dos games serem bastante populares, sendo aceitos naturalmente pelas gerações que cresceram interagindo com esse tipo de entretenimento \cite{fardo2013gamificaccao}. Segundo \citet{deterding2011game}, a gamificação é um fenômeno emergente, que se aproveita da popularidade dos jogos digitais e de suas capacidades de motivar ações, resolver problemas e potencializar aprendizagens em diversas áreas do conhecimento
+Levando em consideração este cenário propício, a gamificação se apresenta como uma ferramenta com grande potencialidade de aplicação. Isso se faz possível devido a linguagem e metodologia dos games serem bastante populares, sendo aceitos naturalmente pelas gerações que cresceram interagindo com esse tipo de entretenimento \cite{fardo2013gamificaccao}. Segundo \citet{deterding2011game}, a gamificação é um fenômeno emergente, que se aproveita da popularidade dos jogos digitais e de suas capacidades de motivar ações, resolver problemas e potencializar aprendizagens em diversas áreas do conhecimento.
 
 Um dos autores precursores na teorização da gamificação foi \citet{mcgonigal2011reality}, afirmando que promover o engajamentos das pessoas em atividades do cotidiano, fazendo uso da lógica de jogos na vida real, pode auxiliar no desenvolvimento de um mundo melhor.
 
@@ -1273,7 +1273,7 @@ Jogo, simulação e gamificação são conceitos que muitas vezes são confundid
 
 Definir o que é um jogo não é uma tarefa fácil devido a grande quantidade e diversidade de jogos existentes. Há, por exemplo, jogos de tabuleiro, como xadrez e damas, também há jogos digitais, como jogos de console e computador e também há jogos esportivos como Futebol, Rugby, entre outros. Desta forma, o fato de um produto ser eletrônico não o define como sendo um jogo. Um jogo normalmente é caracterizado pela existência de um objetivo, além de regras específicas. Sendo assim, um jogo pode ser definido como sendo um sistema onde jogadores estão engajados em um desafio que é definido por regras, interatividade e \textit{feedback} \cite{kaap:2014}. 
 
-Dentro da área de jogos existe uma categoria denominada \textit{Serious Game}, que são jogos desenvolvidos com o objetivo de resolver problemas reais. A gamificação e os \textit{serious game} estão relacionadas, pois ambos fazem uso de conceitos de jogos para conquistar algo a mais. Um \textit{Serious Game} é um jogo real, enquanto a gamificação faz uso de uma série de ferramentas relacionadas a jogos, como, por exemplo a mecânica ou dinâmica de jogo, design do jogo, psicologia dos jogos, entre outros \cite{dorling2012software}
+Dentro da área de jogos existe uma categoria denominada \textit{Serious Game}, que são jogos desenvolvidos com o objetivo de resolver problemas reais. A gamificação e os \textit{serious game} estão relacionadas, pois ambos fazem uso de conceitos de jogos para conquistar algo a mais. Um \textit{Serious Game} é um jogo real, enquanto a gamificação faz uso de uma série de ferramentas relacionadas a jogos, como, por exemplo a mecânica ou dinâmica de jogo, design do jogo, psicologia dos jogos, entre outros \cite{dorling2012software}.
 
 A simulação também está relacionada com a ideia de jogo. Mas diferente de um jogo, a simulação é um ambiente onde usuários podem praticar ações e comportamentos do mundo real em um mundo virtual. Um simulador de voo é um exemplo, a partir dele é possível que um piloto simule diversas manobras como a decolagem e a aterrissagem de uma aeronave.
 
@@ -1311,7 +1311,7 @@ A motivação intrínseca é aquela originada pelo próprio indivíduo. O envolv
 
 De maneira contrária, a motivação extrínseca é baseada no mundo que envolve o indivíduo de forma externa. Tem como origem o desejo em obter alguma recompensa externa, como, por exemplo, pontos, prêmios e classificações ou evitar uma punição. Desta forma, através da motivação extrínseca, um indivíduo não é motivado por fatores internos, em vez disso, é motivado pela recompensa que será obtida por realizar uma determinada tarefa \cite{busarello2016gamificaccao}.
 
-Segundo \citet{andre2018}, alguns críticos da gamificação argumentam que esta gamificação é baseada em motivações extrínsecas. E, por este motivo, o aluno perderá o interesse a partir do momento que a motivação externa for interrompida. Portanto, é importante equilibrar elementos motivacionais intrínsecos e extrínsecos na implementação da gamificação. O autor apresenta algumas recomendações:
+Segundo \citet{andre2018}, ao utilizar elementos da gamificação baseados em motivações extrínsecas, o aluno perderá o interesse a partir do momento que a motivação externa for interrompida. Portanto, é importante equilibrar elementos motivacionais intrínsecos e extrínsecos na implementação da gamificação. O autor apresenta algumas recomendações:
 
 \begin{enumerate}
 \item Utilizar um sistema de pontos e recompensas (extrínseca) para motivar o aluno e demonstrar \textit{feedback} (intrínseca) sobre a execução das tarefas;
@@ -1325,7 +1325,7 @@ Segundo \citet{andre2018}, alguns críticos da gamificação argumentam que esta
 
 Elementos de jogos aplicados a gamificação como narrativas, metas, regras, \textit{feedbacks} e desafios podem contribuir para uma experiência agradável em um ambiente gamificado, pois favorecem a participação de maneira voluntária por parte do indivíduo \cite{busarello2016gamificaccao}.
 
-Nesta seção serão apresentados os principais elementos utilizados em soluções gamificadas. Como já foi descrito anteriormente, a gamificação faz uso de elementos de jogos, desta forma, os elementos descritos nesta seção são originários destes.
+Nesta seção serão apresentados os principais elementos utilizados em soluções gamificadas. Como já foi descrito anteriormente, a gamificação faz uso de elementos de jogos, desta forma, os elementos descritos nesta seção são originários destes mecanismos.
 
 % ---
 \subsection{Narrativas}
@@ -1344,7 +1344,7 @@ Segundo \citet{andre2018}, ao construir uma história para o aprendizado gamific
 % ---
 \subsection{Metas, Regras e Objetivos}
 
-A meta consiste no propósito pelo qual um indivíduo realiza uma determinada tarefa, é aquilo que o indivíduo persegue constantemente. Desta forma, a atividade se apresenta como sendo o desejo pelo qual um indivíduo possui em atuar em uma determinada atividade \cite{bunchball2016gamification}. Segundo \citet{kaap:2014}, metas contribuem para a visualização de propósitos, foco e resultados.
+A meta consiste no propósito pelo qual um indivíduo realiza uma determinada tarefa, é aquilo que o indivíduo persegue constantemente. Desta forma, a meta se caracteriza-se como o desejo que um indivíduo possui em realizar uma determinada atividade \cite{bunchball2016gamification}. Segundo \citet{kaap:2014}, metas contribuem para a visualização de propósitos, foco e resultados.
 
 As regras têm como objetivo restringir ações por parte do indivíduo, desta forma, determinando a maneira de como o indivíduo agirá para completar os desafios do ambiente. As regras buscam equilibrar o nível de complexidade com o nível de conhecimento do sujeito, favorecendo, desta forma, a criatividade e o pensamento estratégico \cite{bunchball2016gamification}.
 
@@ -1397,10 +1397,10 @@ A utilização de \textit{rankings} permite aos jogadores uma forma de interagir
 % ---
 \subsection{\textit{Feedback}}            
 
-O \textit{feedback} é um recurso pelo qual jogadores podem visualizar o resultado de suas ações, tornando-se um poderoso elemento para tornar o usuário mais focado e permitir modificar suas estratégias para melhorar seu desempenho. Este elemento, auxilia na construção do conhecimento através da integração entre o indivíduo e o sistema, onde o retorno do sistema pode ao aumentar a experiência do aprendizado \cite{fardo2013gamificaccao}.
+O \textit{feedback} é um recurso pelo qual jogadores podem visualizar o resultado de suas ações. É um poderoso elemento para tornar o usuário mais focado e permitir modificar suas estratégias para melhorar seu desempenho. Este elemento, auxilia na construção do conhecimento através da integração entre o indivíduo e o sistema, onde as informações transmitidas pelo sistema podem aumentar a experiência do aprendizado \cite{fardo2013gamificaccao}.
 
 %-- revisao 0
-Segundo \citet{andre2018} o \textit{feedback} pode ser aplicado de diversas formas. Ele pode ser aplicado informando imediatamente se o jogador executou uma ação corretamente ou não, mas não informando a ação que deve ser corrigida ou pode ser aplicado para corrigir algum comportamento errado do jogador, indicando qual ação foi executada errada e qual é a maneira correta de executar a tarefa.
+Segundo \citet{andre2018} o \textit{feedback} pode ser utilizado de diversas formas. Ele pode ser aplicado informando imediatamente se o jogador executou uma ação corretamente ou não, mas não informando a ação que deve ser corrigida ou pode ser aplicado para corrigir algum comportamento errado do jogador, indicando qual ação foi executada errada e qual é a maneira correta de executar a tarefa.
 
 % ---
 \subsection{Desafios}                
@@ -1412,7 +1412,7 @@ Segundo \citet{busarello2016gamificaccao}, os indivíduos têm interesse em reso
 % ---
 \subsection{Competição}                    
 
-As pessoas atingem um nível mais elevado de satisfação ao comparar seu desempenho com o de outras pessoas. Este ambiente competitivo pode aumentar o desempenho. Elementos de jogos instigam esse tipo de desejo, fazendo uso de \textit{rankings} para exibir os resultados e celebrando os vencedores  \cite{bunchball2016gamification}. Alguns jogos fazem uso de uma lista contendo os 10 mais bem classificados, expondo novos níveis e recompensas alcançadas.
+As pessoas atingem um nível mais elevado de satisfação ao comparar seu desempenho com o de outras pessoas. Um ambiente competitivo pode aumentar o desempenho de seus usuários. Elementos de jogos instigam esse tipo de desejo, fazendo uso de \textit{rankings}, para exibir os resultados, e celebrando os vencedores \cite{bunchball2016gamification}. Alguns jogos fazem uso de uma lista contendo os 10 mais bem classificados, expondo novos níveis e recompensas alcançadas.
 
 %-- revisao 0
 Segundo \citet{andre2018}, para a utilização da competição na educação, na maioria dos casos, é melhor manter um grupo pequeno para prover a concorrência. A utilização de um grupo grande, como a escola inteira, pode contribuir para a desmotivação dos alunos.
@@ -1422,7 +1422,7 @@ Segundo \citet{andre2018}, para a utilização da competição na educação, na
 %-- revisao 1
 Neste capítulo foi apresentado o referencial teórico referente a gamificação, abordando o conceito de gamificação, sua aplicabilidade como ferramenta educacional e seus principais elementos. Desta forma, este capítulo cumpre o segundo objetivo específico do trabalho que é indicar os principais conceitos de gamificação. O capítulo compõem a etapa metodológica de criação, servindo como aborte teórico para conscientização do problema.
 
-O conteúdo abordado neste capítulo serviu como base para o planejamento do artefato proposto neste trabalho. Foram utilizados alguns dos elementos da gamificação, apresentados neste capítulo, como desafios, \textit{rankings}, conquistas e pontos. Os elementos utilizados serão descritos na seção \ref{sec:propostaGamificada}.
+O conteúdo abordado neste capítulo serviu como base para o planejamento do artefato proposto neste trabalho. Foram utilizados alguns dos elementos da gamificação apresentados neste capítulo, como: desafios, \textit{rankings}, conquistas e pontos. Os elementos utilizados serão descritos na seção \ref{sec:propostaGamificada}.
 
 No próximo capítulo serão apresentados trabalhos relacionados a pequisa desenvolvida. O primeiro trabalho apresentado (seção \ref{sec:javavis}) é uma ferramenta que tem o objetivo de auxiliar no ensino e aprendizagem de PDI. O segundo trabalho apresentado (seção \ref{sec:classrom}) é uma ferramenta que foi desenvolvida visando melhorar o engajamento de estudantes, para isso, ela utiliza elementos da gamificação.
 
@@ -1440,7 +1440,7 @@ Neste capítulo são apresentados trabalhos relacionados à área de pesquisa de
 
 A pesquisa de \citet{cazorla2015javavis} propõe o desenvolvimento de um \textit{framework} para estudar visão computacional e tópicos semelhantes. Esta ferramenta foi chamada de JavaVis, sendo  dividida em 3 áreas. A primeira é denominada JavaVis2D, por onde o sistema é iniciado. Esta área está relacionada com a visão computacional tradicional, onde é possível utilizar diversos algoritmos já implementados, e também que os próprios alunos criem novos algoritmos. 
 
-JavaVisDesktop é outra área do software, que permite a conexão de uma sequência de algoritmos e a manipulação de seus parâmetros. Esta foi construída para facilitar a manipulação dos algoritmos por parte do aluno, tendo em vista que a manipulação individual de algoritmos através de 2D pode ser difícil, devido a grande quantidade de tentativas para ajustar corretamente os parâmetros. Por final, existe a área 3D, que tem como objetivo permitir a manipulação de imagens 3D.
+JavaVisDesktop é outra área do software, que permite a conexão de uma sequência de algoritmos e a manipulação de seus parâmetros. Esta foi construída para facilitar a manipulação dos algoritmos por parte do aluno, tendo em vista que a manipulação individual de algoritmos através de um ambiente 2D pode ser difícil, devido a grande quantidade de tentativas para ajustar corretamente os parâmetros. Por final, existe a área 3D, que tem como objetivo permitir a manipulação de imagens 3D.
 
 O objetivo do JavaVis é prover uma ferramenta que seja fácil de utilizar e aprender conceitos relacionados à visão computacional, sempre tendo em vista que o desenvolvimento de novos algoritmos deve ser uma tarefa fácil. O JavaVis permite a manipulação de algoritmos através de uma interface gráfica, possibilitando alteração de parâmetros de algoritmos visualmente. É uma ferramenta que foi construída objetivando facilitar a aprendizagem de estudantes.
 
@@ -1485,7 +1485,7 @@ Esta área da ferramenta tem como objetivo permitir a manipulação de imagens 3
 
 A Figura \ref{fig:javavis_3d} demonstra o JavaVis3D \textit{framework}. A janela a direita controla a posição da cena. O usuário pode navegar pela cena utilizando esta janela.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \caption{Ambiente JavaVis3D}
 \includegraphics[width=0.8\textwidth]{imagens/javavis_3d.png}
@@ -1579,7 +1579,7 @@ Os autores não conseguiram constatar se a utilização da ferramenta aumentou a
 \section{Considerações}
 
 %-- revisao 1
-Neste capítulo foram apresentadas ferramentas relacionadas ao trabalho desenvolvido, cumprindo, desta forma, o terceiro objetivo específico do trabalho que é analisar as ferramentas de ensino existentes no mercado ou em projetos acadêmicos. Foi abordado o funcionamento das ferramentas e como elas foram utilizadas em sala de aula. O capítulo compõem a etapa metodológica de criação, servindo como aborte teórico para conscientização do problema. 
+Neste capítulo foram apresentadas soluções relacionadas ao trabalho desenvolvido, cumprindo, desta forma, o terceiro objetivo específico da pesquisa que é analisar as ferramentas de ensino existentes no mercado ou em projetos acadêmicos. Foi abordado o funcionamento das ferramentas e como elas foram utilizadas em sala de aula. O capítulo compõem a etapa metodológica de criação, servindo como aborte teórico para conscientização do problema. 
 
 %-- revisao 1
 A partir das informações coletas neste capítulo e nos capítulos anteriores, foi possível definir o artefato do trabalho. Este processo foi realizado através de um \textit{brainstorming} com algumas pessoas interessadas no trabalho. As experiências apresentadas neste capítulo demonstraram que uma ferramenta gamificada pode auxiliar no engajamento de estudantes em sala de aula, como apresentado na pesquisa de \citet{de2013classroom}, e que uma ferramenta para o ensino de PDI pode proporcionar um ambiente que potencialize o aprendizado, como apresentado na pesquisa de \citet{cazorla2015javavis}.
@@ -1655,7 +1655,7 @@ O principal objetivo do trabalho é apresentar o desenvolvimento de uma ferramen
 
 Uma missão consiste em uma tarefa que o usuário deverá realizar. Cada missão possui uma narrativa, na qual deve contextualizar o problema visando motivar o usuário à resolução do mesmo.
 
-A resolução da missão deve ser realizada utilizando o VISNode, desta forma, o usuário deverá conectar as técnicas existentes para obter o resultado esperado. O próprio software realiza a conferência se a solução proposta pelo usuário condiz com o resultado esperado.
+A resolução da missão deve ser efetuada utilizando o VISNode, desta forma, o usuário deverá conectar as técnicas existentes para obter o resultado esperado. O próprio software realiza a conferência se a solução proposta pelo usuário condiz com o resultado esperado.
 
 \subsubsection{Desafios}
 \label{desafio:moedas}
@@ -1714,8 +1714,6 @@ A seção de \textit{ranking} é dividida em duas partes. A primeira é referent
 A parte gamificada da ferramenta é acessada através de um cadastro e \textit{login} no sistema. Isso se torna necessário para identificar o usuário que esta acessando o sistema, e também para controlar o progresso de cada usuário. Após o usuário logado, ele terá acesso a todas as funcionalidades referentes a parte gamificada da ferramenta.
 
 Logado no sistema, o usuário possui acesso ao menu de desafios. Neste local o usuário encontrará diversas missões com diferentes objetivos e graus de dificuldades. O usuário poderá selecionar uma missão para ser realizada e a cada missão cumprida receberá suas respectivas recompensas.
-
-A ferramenta exibirá os pontos do usuário na página principal do sistema. Isso ocorrerá para que os usuários recebem um \textit{feedback} o mais rápido possível.
 
 O usuário terá acesso a mais dois menus responsáveis pelo \textit{ranking} e uma lista das recompensas conquistadas pelo usuário. Também haverá uma página onde o usuário poderá visualizar seu progresso em cada missão, sendo possível visualizar o quanto ele já cumpriu de cada missão.
 
@@ -1778,7 +1776,7 @@ Na Figura \ref{fig:visnodeScript} é apresentada a exibição do \textit{script}
 
 Para o desenvolvimento da ferramenta foi utilizada a linguagem Java, mesma linguagem utilizada para o desenvolvimento do VISNode. Devido a necessidade de armazenar informações do usuário, foi criado um \textit{WebService} para esta finalidade. Este \textit{WebService} foi construído utilizado o \textit{framework} \textit{SprintBoot} e um Banco de dados Mysql.
 
-A Figura \ref{fig:visnodeArquitetura} demonstra a arquitetura do projeto. É possível visualizar que a comunicação realizada para o acesso a base de dados é feita utilizando o protocolo HTTP (\textit{Hypertext Transfer Protocol}). 
+A Figura \ref{fig:visnodeArquitetura} demonstra a arquitetura do projeto. É possível visualizar que a comunicação realizada para o acesso a dados é feita utilizando o protocolo HTTP (\textit{Hypertext Transfer Protocol}). 
 
 \begin{figure}[ht]
 \centering
@@ -1795,7 +1793,7 @@ Nos próximos tópicos são apresentadas as interfaces que o aluno possui acesso
 
 \subsection{Desafios e missões}
 
-O sistema gamificado é baseado em desafios e missões, onde o usuário recebe recompensas e pontuações a partir da conclusão deste elementos. A Figura \ref{fig:visnodeDesafios} demonstra a paǵina onde os alunos podem acessar os desafios disponíveis na ferramenta. Na Tabela \ref{tab:listagemDesafios} é explicado cada elemento desta janela.
+O sistema gamificado é baseado em desafios e missões, onde o usuário recebe recompensas e pontuações a partir da conclusão deste elementos. A Figura \ref{fig:visnodeDesafios} demonstra a paǵina onde os alunos podem acessar os desafios disponíveis na ferramenta. No Quadro \ref{tab:listagemDesafios} é explicado cada elemento desta janela.
 
 \begin{table}[H]
 \centering
@@ -1825,8 +1823,6 @@ O sistema gamificado é baseado em desafios e missões, onde o usuário recebe r
 \label{fig:visnodeDesafios}
 \end{figure}
 
-
-
 Quando o aluno seleciona um desafio a ser resolvido, a próxima página exibida é a janela responsável pela contextualização do desafio ao aluno. A Figura \ref{fig:visnodeDesafiosNarrativa} demonstra um exemplo desta contextualização, podendo conter texto e imagens, de forma que facilite o entendimento do aluno em relação ao desafio proposto.
 
 \begin{figure}[H]
@@ -1837,7 +1833,7 @@ Quando o aluno seleciona um desafio a ser resolvido, a próxima página exibida 
 \label{fig:visnodeDesafiosNarrativa}
 \end{figure}
 
-Após a apresentação da narrativa do desafio, o usuário é redirecionado para a página que contém as missões do desafio, que é representada pela Figura \ref{fig:visnodeMissoes}. O aluno deverá resolver as missões em ordem, desta forma, a segunda missão não poderá ser resolvida antes que a missão 1 seja solucionada. Na Tabela \ref{tab:listagemMissoes} é explicado cada elemento desta janela.
+Após a apresentação da narrativa do desafio, o usuário é redirecionado para a página que contém as missões do desafio, que é representada pela Figura \ref{fig:visnodeMissoes}. O aluno deverá resolver as missões em ordem, desta forma, a segunda missão não poderá ser resolvida antes que a missão 1 seja solucionada. No Quadro \ref{tab:listagemMissoes} é explicado cada elemento desta janela.
 
 \begin{figure}[H]
 \centering
@@ -1937,7 +1933,7 @@ Assim que o aluno seleciona uma missão, a contextualização desta missão é a
 \label{fig:visnodeMissaoNarrativa}
 \end{figure}
 
-A Figura \ref{fig:visnodeDesktop} demonstra a resolução de uma missão utilizando a ferramenta VISNode. Na Tabela \ref{tab:visnodeDesktop} são apresentadas as funcionalidades desta tarefa.
+A Figura \ref{fig:visnodeDesktop} demonstra a resolução de uma missão utilizando a ferramenta VISNode. No Quadro \ref{tab:visnodeDesktop} são apresentadas as funcionalidades desta tarefa.
 
 \begin{figure}[H]
 \centering
@@ -1969,7 +1965,7 @@ A Figura \ref{fig:visnodeDesktop} demonstra a resolução de uma missão utiliza
 
 \subsection{Ranking}
 
-A Figura \ref{fig:visnodeRanking} demonstra a página de visualização de \textit{ranking} de usuários. Este \textit{ranking} pode ser tanto no âmbito geral, ou seja, todos os usuários da ferramenta, ou no âmbito de seu grupo, contendo somente os usuários do grupo do usuário. Caso o usuário possua mais de um grupo, estes serão exibidos em formato de aba. Na Tabela \ref{tab:ranking} é explicado cada elemento desta janela.
+A Figura \ref{fig:visnodeRanking} demonstra a página de visualização de \textit{ranking} de usuários. Este \textit{ranking} pode ser tanto no âmbito geral, ou seja, todos os usuários da ferramenta, ou no âmbito de seu grupo, contendo somente os usuários do grupo do usuário. Caso o usuário possua mais de um grupo, estes serão exibidos em formato de aba. No Quadro \ref{tab:ranking} é explicado cada elemento desta janela.
 
 \begin{table}[H]
 \centering
@@ -2005,7 +2001,7 @@ A Figura \ref{fig:visnodeRanking} demonstra a página de visualização de \text
 
 \subsection{Conquistas}
 
-Para que o usuário visualize suas conquistas foi desenvolvida a página representada pela Figura \ref{fig:visnodeConquistas}. Nesta página, é possível visualizar todas as conquistas do usuário, mesmo que o desafio não esteja completo. Nestes casos, o usuário poderá visualizar o quanto do desafio foi concluído. Na Tabela \ref{tab:listagemMissoesConcluidas} é explicado cada elemento desta janela.
+Para que o usuário visualize suas conquistas foi desenvolvida a página representada pela Figura \ref{fig:visnodeConquistas}. Nesta página, é possível visualizar todas as conquistas do usuário, mesmo que o desafio não esteja completo. Nestes casos, o usuário poderá visualizar o quanto do desafio foi concluído. No Quadro \ref{tab:listagemMissoesConcluidas} é explicado cada elemento desta janela.
 
 \begin{figure}[H]
 \centering
@@ -2042,7 +2038,7 @@ Nós próximos tópicos são apresentadas as interfaces que o professor possui a
 
 \subsection{Manutenção de Desafios}
 
-Com o intuito de possibilitar aos educadores um canal para a criação de novos desafios, foi desenvolvido na ferramenta o cadastro de desafios e missões. As Figuras \ref{fig:visnodeCadastroDesafio} e \ref{fig:visnodeCadastroMissoes} demonstram tais funcionalidades. As Tabelas \ref{tab:manutencaoDesafios} e \ref{tab:manutencaoMissoes} demonstram os elementos destas janelas.
+Com o intuito de possibilitar aos educadores um canal para a criação de novos desafios, foi desenvolvido na ferramenta o cadastro de desafios e missões. As Figuras \ref{fig:visnodeCadastroDesafio} e \ref{fig:visnodeCadastroMissoes} demonstram tais funcionalidades. Os Quadros \ref{tab:manutencaoDesafios} e \ref{tab:manutencaoMissoes} demonstram os elementos destas janelas.
 
 \begin{figure}[H]
 \centering
@@ -2144,7 +2140,7 @@ Visando uma melhor organização dos usuários, a ferramenta VISNode possui uma 
 
 \subsection{Acompanhamento de usuários}
 
-Uma das funcionalidades da ferramenta é possibilitar ao educador um mecanismo que permita o acompanhamento do progresso dos estudantes. A Figura \ref{fig:visnodeUsuarios} demonstra uma página onde é possível visualizar a quantidade de pontos obtidos por cada usuário, além de visualizar suas conquistas e desafios concluídos. Este recurso permite que o educador abra a solução desenvolvida pelo estudante, e identifique as abordagens utilizadas pelos alunos nas resoluções dos desafios. Na Tabela \ref{tab:visnodeUsuarios} é explicado cada elemento desta janela.
+Um dos objetivos da ferramenta é possibilitar ao educador um mecanismo que permita o acompanhamento do progresso dos estudantes. A Figura \ref{fig:visnodeUsuarios} demonstra uma página onde é possível visualizar a quantidade de pontos obtidos por cada usuário, além de visualizar suas conquistas e desafios concluídos. Este recurso permite que o educador abra a solução desenvolvida pelo estudante, e identifique as abordagens utilizadas pelos alunos nas resoluções dos desafios. No Quadro \ref{tab:visnodeUsuarios} é explicado cada elemento desta janela.
 
 \begin{figure}[H]
 \centering
