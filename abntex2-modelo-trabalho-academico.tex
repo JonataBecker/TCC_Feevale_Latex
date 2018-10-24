@@ -212,6 +212,7 @@ This research aims to present the development of modules for the VISNode, the ob
   \item[2D] Bidimensional
   \item[3D] Tridimensional
   \item[PDI] Processamento Digital de Imagens
+  \item[API] \textit{Application Program Interface}
   \item[HTTP] \textit{Hypertext Transfer Protocol}
   \item[DICOM] \textit{Digital Imaging and Communications in Medicine}
 \end{siglas}
@@ -1622,16 +1623,16 @@ A Figura \ref{fig:visnode} demonstra a utilização do software VISNode. Nesta f
 \label{fig:visnode}
 \end{figure}
 
-O VISNode possui \vnNumeroTotalProcessos{} processos e técnicas de PDI implementadas, entre eles algoritmos de detecção de borda, desfoque, transformação, ajustes de cores, manipulação de imagens binárias, afinamento, operações aritméticas, extração de objetos e preenchimento. Todos os processos atualmente presentes na ferramenta foram desenvolvidas pelo time responsável pelo VISNode, e novos processos são constantemente adicionados a ferramenta.
+O VISNode diversos processos e técnicas de PDI implementadas, entre eles, algoritmos de detecção de borda, desfoque, transformação, ajustes de cores, manipulação de imagens binárias, afinamento, operações aritméticas, extração de objetos e preenchimento. Todos os processos atualmente presentes na ferramenta foram desenvolvidas pelo time responsável pelo VISNode, e novos processos são constantemente adicionados a ferramenta.
 
-Os métodos de detecção de bordas implementados são Sobel, Roberts, Prewitt, Laplace \cite{gonzalesWoods:2008}, Robinson \cite{robinson1977edge}, Kirsch \cite{kirsch1971computer}, Frei-Chen \cite{chen1977fast}, Marr-Hildreth \cite{marr1980theory} e Canny \cite{canny:1986}. Na categoria de desfoque tem-se as operações de Gauss, média, mediana e moda \cite{gonzalesWoods:2008}. Redimensionamento, rotação, translação e espelhamento vertical e horizontal \cite{gonzalesWoods:2008} formam a categoria de processos de transformação. Os processos de ajuste de cores são brilho, contraste, tons-de-cinza (média simples e ponderada), inversão de cor e limiarização (\textit{threshold})  \cite{gonzalesWoods:2008}. 
+Os métodos de detecção de bordas implementados são Sobel, Roberts, Prewitt, Laplace \cite{gonzalesWoods:2008}, Robinson \cite{robinson1977edge}, Kirsch \cite{kirsch1971computer}, Frei-Chen \cite{chen1977fast}, Marr-Hildreth \cite{marr1980theory} e Canny \cite{canny:1986}. Na categoria de desfoque tem-se as operações de Gauss, média, mediana e moda \cite{gonzalesWoods:2008}. Redimensionamento, rotação, translação e espelhamento vertical e horizontal \cite{gonzalesWoods:2008} formam a categoria de processos de transformação. Os processos de ajuste de cores são: brilho, contraste, tons-de-cinza (média simples e ponderada), inversão de cor e limiarização (\textit{threshold})  \cite{gonzalesWoods:2008}. 
 
 Para a manipulação de imagens binárias tem-se os algoritmos de dilatação, erosão, abertura e fechamento \cite{gonzalesWoods:2008}. Os algoritmos implementados da categoria de afinamento são Zhang-Suen \cite{zhang1984fast}, Holt \cite{holt1987improved} e Stentiford \cite{stentiford1983some}. Na categoria de operações aritméticas tem-se a obtenção da média, mediana e moda dos valores da imagem e também histograma \cite{gonzalesWoods:2008}. Para a categoria de extração de objetos tem-se o \textit{Binary Labeling} \cite{gonzalesWoods:2008} e extração de objetos, que trabalham em conjunto. Para preenchimento de regiões o algoritmo de Snakes \cite{kass:1988} e o \textit{Flood Fill} \cite{gonzalesWoods:2008} foram implementados.
 
 % ---
 \subsection{Arquitetura}
 
-O software VISNode foi construído utilizando a arquitetura modular proposta por \citet{reisferramenta}, onde é construída uma linha de produtos de software (\textit{Software Product Line} ou SPL) (SEI, 2018)  para a extração e apresentação de características em exames médicos por imagem. Na arquitetura existem cinco módulos, cada um com um objetivo específico, que podem ser usados de forma independente para diversos tipos de aplicações que trabalham com imagens. Dos módulos construídos, três foram utilizados no desenvolvimento do VISNode, descritos a seguir:
+O software VISNode foi construído utilizando a arquitetura modular proposta por \citet{reisferramenta}, onde é construída uma linha de produtos de software (\textit{Software Product Line} ou SPL) \citet{spl} para a extração e apresentação de características em exames médicos por imagem. Na arquitetura existem cinco módulos, cada um com um objetivo específico, que podem ser usados de forma independente para diversos tipos de aplicações que trabalham com imagens. Dos módulos construídos, três foram utilizados no desenvolvimento do VISNode, descritos a seguir:
 
 \begin{enumerate}
 \item PDI: implementações de algoritmos de processamento de imagens, que são aplicados aos exames médicos no processo de extração de características, como, por exemplo: histograma, limiarização, remoção e redução de ruídos, operações de convolução, métodos de classificação, entre outros \cite{reisferramenta}; 
@@ -1645,7 +1646,7 @@ O software VISNode foi construído utilizando a arquitetura modular proposta por
 
 O presente trabalho se propõe a desenvolver uma ferramenta que faça uso de conceitos de gamificação visando auxiliar o ensino e aprendizagem. Este trabalho foca no ensino de processamento digital de imagens, pretendendo servir como aporte para alunos de disciplinas que abordam esses conceitos.
 
-Tendo como objetivo dar assistência ao usuário no entendimento dos algoritmos utilizados, a ferramenta provê informações detalhadas dos algoritmos implementados, sendo possível visualizar uma explicação textual de seu funcionamento, além do código de sua implementação. Esta funcionalidade também pode servir como material didático, auxiliando na etapa de aprendizado de usuários como pouca conhecimento na área.
+Tendo como objetivo dar assistência ao usuário no entendimento dos algoritmos utilizados, a ferramenta provê informações detalhadas dos algoritmos implementados, sendo possível visualizar uma explicação textual de seu funcionamento, além do código de sua implementação. Esta funcionalidade também pode servir como material didático, auxiliando na etapa de aprendizado de usuários como pouco conhecimento na área.
 
 \subsection{Elementos}
 
@@ -1681,8 +1682,8 @@ uma loja procura uma maneira mais simples de calcular o valor em moedas existes 
 As missões deste desafio podem ser:
 
 \begin{enumerate}
-\item \textbf{Pré-processamento}: Nesta missão os usuários terão de trabalhar para melhorar a qualidade da imagem para que seja possível realizar o processo de segmentação. Como resultado espera-se que seja retornada uma imagem binária, onde os pixels com valor 0 correspondam ao fundo da imagem, e os pixels com valor 1 correspondam as moedas.
-\item \textbf{Cálculo do valor}: Nesta missão os usuários tem que executar algum procedimento que realize a segmentação das imagens. Após este procedimento, devem extrair características de cada objeto para que seja possível identificar qual é o valor monetário de cada imagem.
+\item \textbf{Pré-processamento}: Nesta missão os usuários devem trabalhar para melhorar a qualidade da imagem para que seja possível realizar o processo de segmentação. Como resultado espera-se que seja retornada uma imagem binária, onde os pixels com valor 0 correspondam ao fundo da imagem, e os pixels com valor 1 correspondam as moedas.
+\item \textbf{Cálculo do valor}: Nesta missão os usuários precisam executar algum procedimento que realize a segmentação das imagens. Após este procedimento, devem extrair características de cada objeto para que seja possível identificar qual é o valor monetário de cada imagem.
 \end{enumerate}
 
 \subsubsection{Recompensas e pontos de experiência}
@@ -1694,13 +1695,13 @@ Recompensas e pontos de experiência são importantes elementos da gamificação
 Ao utilizar o VISNode, os usuários receberão pontos de experiência ao completar missões e desafios. Cada tarefa terá sua pontuação de acordo com o grau de dificuldade imposto ao usuário, desta forma, desafios com um grau de complexidade maior resultarão em uma quantidade maior de pontos se comparados com desafios de menor complexidade.
 
 %-- revisao 1
-Cada missão possui um valor máximo de pontos que o usuário pode obter. Este valor somente será concedido ao usuário caso ele acerte a missão na primeira tentativa. Caso contrário, o usuário receberá um percentual do valor total. O valor mínimo que o usuário receberá é 70\% do da pontuação. Desta forma, o usuário é penalizado em até 30\%, variando de acordo com o número de erros. Cada tentativa falha equivale a 10\%.
+Cada missão possui um valor máximo de pontos que o usuário pode obter. Este valor somente será concedido ao usuário caso ele acerte a missão na primeira tentativa. Caso contrário, o usuário receberá um percentual do valor total. O valor mínimo que o usuário receberá é 70\% da pontuação. Desta forma, o usuário é penalizado em até 30\%, variando de acordo com o número de erros. Cada tentativa falha equivale a 10\%.
 
 %-- revisao 1
 Além dos pontos de experiência, o usuário poderá receber algumas recompensas. Estas recompensas são vinculadas aos desafios, sendo assim, o usuário receberá a recompensa ao finalizar o desafio. Para o VISNode, uma recompensa é uma imagem. Esta imagem é dividade em pedaços de acordo com o número de missões do desafio. O usuário recebe um pedaço desta recompensa a cada missão concluída.
 
 %-- revisao 1
-Na ferramenta, esta recompensa é exibida em formato de quera-cabeça, onde somente são exibidas as peças que o usuário já adquiriu. Este formato de atribuição de recompensas, além de proporcionar um fator motivacional, também possibilita que o usuário identifique seu processo, pois é possível que ele identifique o quanto falta para ele completar o desafio, e, por consequência, o quebra-cabeças. 
+Na ferramenta, esta recompensa é exibida em formato de quera-cabeça, onde somente são exibidas as peças que o usuário já adquiriu. Este formato de atribuição de recompensas, além de proporcionar um fator motivacional, também possibilita que o usuário identifique seu progresso, pois é possível que ele identifique o quanto falta para ele completar o desafio, e, por consequência, o quebra-cabeças. 
 
 \subsubsection{\textit{Rankings}}
 
@@ -1719,18 +1720,14 @@ O usuário terá acesso a mais dois menus responsáveis pelo \textit{ranking} e 
 
 Quando a ferramenta for utilizada dentro da sala de aula, o educador poderá criar um grupo de trabalho e definir quais usuários e quais desafios este grupo irá compor. Desta forma, o educador poderá controlar o progresso de cada participante do grupo, podendo visualizar quantas tarefas o usuário já realizou, como ele solucionou os desafios e quais recompensas ele já ganhou.
 
-Visando ser utilizada em outras instituições, a ferramenta permite a criação de novas missões e desafios. Ampliando, desta forma, o uso da ferramenta para mais usuários.
-
-A ideia da ferramenta é que possa ser utilizada dentro da sala de aula, como já descrito, mas também fora. Para isso, a ferramenta contará com áreas que podem ser acessíveis por pessoas fora da disciplina. Desta forma, qualquer indivíduo que tenha interesse em usufruir da ferramenta poderá utiliza-la.
+Visando ser utilizada em outras instituições, a ferramenta permite a criação de novas missões e desafios. Ampliando, desta forma, o uso da ferramenta para mais usuários. A ideia da ferramenta é que possa ser utilizada dentro da sala de aula, como já descrito, mas também fora. Para isso, a ferramenta contará com áreas que podem ser acessíveis por pessoas fora da disciplina. Desta forma, qualquer indivíduo que tenha interesse em usufruir da ferramenta poderá utiliza-la.
 
 \section{Processos}
 \label{sec:processos}
 
-Para auxiliar o aluno na utilização da ferramenta, foi necessária a implementação de um novo processo. Este processo foi chamado de \textit{Script Process}.
+Para auxiliar o aluno na utilização da ferramenta, foi necessária a implementação de um novo processo. Este processo foi chamado de \textit{Script Process}. A criação deste processo foi necessário pois em algumas ocasiões é importante realizar operações que não são técnicas de PDI clássicas. Este processo não está vinculado a nenhuma técnica de processamento digital de imagens, é um processo que tem por objetivo disponibilizar uma interface para a implementação de algoritmos pela própria ferramenta. Como exemplo, pode ser levado em consideração um cenário apresentado em \ref{desafio:moedas}, onde é necessário calcular o valor total das moedas.
 
-A criação deste processo foi necessário pois em algumas ocasiões é importante realizar operações que não são técnicas de PDI clássicas. Este processo não está vinculado a nenhuma técnica de processamento digital de imagens, é um processo que tem por objetivo disponibilizar uma interface para a implementação de algoritmos pela própria ferramenta. Como exemplo, pode ser levado em consideração um cenário apresentado em \ref{desafio:moedas}, onde é necessário calcular o valor total das moedas.
-
-A linguagem Java possui em sua arquitetura uma API para execução de \textit{scripts}, possibilitando escrever customizações para aplicações. JavaScript (JS) é uma das linguagens suportadas por esta API, permitindo o rápido desenvolvimento e extensão de partes da aplicação. A API permite a execução de código fonte, sendo possível compartilhar objetos entre Java e JS e invocar funções \cite{oracle}. Devido a esta flexibilidade, os processos dinâmicos fazem uso desta API de Script como linguagem o JS. 
+A linguagem Java possui em sua arquitetura uma API (\textit{Application Program Interface}) para execução de \textit{scripts}, possibilitando escrever customizações para aplicações. JavaScript (JS) é uma das linguagens suportadas por esta API, permitindo o rápido desenvolvimento e extensão de partes da aplicação. A API permite a execução de código fonte, sendo possível compartilhar objetos entre Java e JS e invocar funções \cite{oracle}. Devido a esta flexibilidade, os processos dinâmicos fazem uso desta API de Script como linguagem o JS. 
 
 \section{Material teórico}
 \label{sec:materialTeorico}
@@ -1751,7 +1748,7 @@ O acesso a este conteúdo é realizado por processo, desta forma, o usuário sel
 \label{fig:visnodeCode}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \caption{Exibição da explicação do algoritmo de Holt}
 \includegraphics[width=0.7\textwidth]{imagens/visnode_information.png}
@@ -1793,7 +1790,7 @@ Nos próximos tópicos são apresentadas as interfaces que o aluno possui acesso
 
 \subsection{Desafios e missões}
 
-O sistema gamificado é baseado em desafios e missões, onde o usuário recebe recompensas e pontuações a partir da conclusão deste elementos. A Figura \ref{fig:visnodeDesafios} demonstra a paǵina onde os alunos podem acessar os desafios disponíveis na ferramenta. No Quadro \ref{tab:listagemDesafios} é explicado cada elemento desta janela.
+O sistema gamificado é baseado em desafios e missões, onde o usuário recebe recompensas e pontuações a partir da conclusão destes elementos. A Figura \ref{fig:visnodeDesafios} demonstra a paǵina onde os alunos podem acessar os desafios disponíveis na ferramenta. No Quadro \ref{tab:listagemDesafios} é explicado cada elemento desta janela.
 
 \begin{table}[H]
 \centering
@@ -1876,7 +1873,7 @@ Após a apresentação da narrativa do desafio, o usuário é redirecionado para
 \end{table}
 
 
-Para cada desafio é relacionada uma recompensa, que será adquirida pelo aluno ao final do desafio. As recompensas da ferramenta são imagens, como demonstrado na Figura \ref{fig:visnodeDesafiosRecompensa}. Com o objetivo de transmitir uma ideia de progresso, esta imagem foi dividida em várias partes e em cada conclusão de missão, uma parte da imagem é concedida ao aluno.
+Para cada desafio é relacionada uma recompensa, que será adquirida pelo aluno ao cumprir o desafio com exito. As recompensas da ferramenta são imagens, como demonstrado na Figura \ref{fig:visnodeDesafiosRecompensa}. Com o objetivo de transmitir uma ideia de progresso, esta imagem foi dividida em várias partes e em cada conclusão de missão, uma parte da imagem é concedida ao aluno.
 
 \begin{figure}[H]
 \centering
@@ -1902,7 +1899,7 @@ Nesta mesma página, também é possível que o usuário visualize outras soluç
   \hline
   \makecell{(B) \\ Data da resolução} 
   &
-  \makecell[l]{Texto.\\ Descrição: Data em que a missão foi submetida.} \\
+  \makecell[l]{Tipo: Texto.\\ Descrição: Data em que a missão foi submetida.} \\
   \hline
   \makecell{(C) \\ Abrir} 
   &
@@ -1965,7 +1962,7 @@ A Figura \ref{fig:visnodeDesktop} demonstra a resolução de uma missão utiliza
 
 \subsection{Ranking}
 
-A Figura \ref{fig:visnodeRanking} demonstra a página de visualização de \textit{ranking} de usuários. Este \textit{ranking} pode ser tanto no âmbito geral, ou seja, todos os usuários da ferramenta, ou no âmbito de seu grupo, contendo somente os usuários do grupo do usuário. Caso o usuário possua mais de um grupo, estes serão exibidos em formato de aba. No Quadro \ref{tab:ranking} é explicado cada elemento desta janela.
+A Figura \ref{fig:visnodeRanking} demonstra a página de visualização de \textit{ranking} de usuários. Este \textit{ranking} pode ser tanto no âmbito geral, ou seja, todos os usuários da ferramenta, ou no âmbito de seu grupo, contendo somente os integrantes do grupo do usuário. Caso o usuário possua mais de um grupo, estes serão exibidos em formato de aba. No Quadro \ref{tab:ranking} é explicado cada elemento desta janela.
 
 \begin{table}[H]
 \centering
@@ -2191,7 +2188,7 @@ Um dos objetivos da ferramenta é possibilitar ao educador um mecanismo que perm
 \section{Considerações}
 
 %-- revisao 1 
-Neste capítulo foi apresentado o desenvolvimento do trabalho, sendo abordado o funcionamento da ferramenta e as tecnologias utilizadas na sua construção. Também foram apresentadas as adaptações realizadas na ferramenta para torna-la gamificada. Desta forma, este capítulo cumpre o quarto objetivo específico do trabalho que é propor uma ferramenta para o auxílio ao aprendizado na área de processamento digital de imagens. O capítulo compõem a finalização da etapa metodológica de criação, onde é concluído a processo de planejamento e desenvolvimento do artefato.
+Neste capítulo foi apresentado o desenvolvimento do trabalho, sendo abordado o funcionamento da ferramenta e as tecnologias utilizadas na sua construção. Também foram apresentadas as adaptações realizadas na ferramenta para torna-la gamificada. Desta forma, este capítulo cumpre o quarto objetivo específico do trabalho que é propor uma ferramenta para o auxílio ao aprendizado na área de processamento digital de imagens. O capítulo compõem a finalização da etapa metodológica de criação, onde é concluído o processo de planejamento e desenvolvimento do artefato.
 
 %-- revisao 1
 No próximo capítulo será apresentado o formato de validação da ferramenta. São abordados temas referentes as etapas de validação e os resultados obtidos através das aplicações em sala de aula.
