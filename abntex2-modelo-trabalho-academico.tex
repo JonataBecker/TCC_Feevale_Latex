@@ -1103,8 +1103,7 @@ Segundo \citet{guilherme:2007}, para que um pixel seja marcado para exclusão el
 \item Ao menos um dos pixels da segunda máscara deve ser branco;
 \end{itemize}
 
-
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \caption{pixels P2 ou P8 ou P4 devem ser um pixel branco}
 \includegraphics[width=0.3\textwidth]{imagens/zhangsuen1.png}
@@ -1114,7 +1113,7 @@ Fonte: Guilherme (2007, p. 16)
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \caption{pixels P2 ou P8 ou P4 devem ser um pixel branco}
 \includegraphics[width=0.3\textwidth]{imagens/zhangsuen2.png}
@@ -1123,7 +1122,7 @@ Fonte: Guilherme (2007, p. 16)
 \label{fig:zhangsuen2}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \caption{pixels P2 ou P4 ou P6 devem ser um pixel branco}
 \includegraphics[width=0.3\textwidth]{imagens/zhangsuen3.png}
@@ -1132,7 +1131,7 @@ Fonte: Guilherme (2007, p. 16)
 \label{fig:zhangsuen3}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \caption{pixels P8 ou P6 ou P4 devem ser um pixel branco}
 \includegraphics[width=0.3\textwidth]{imagens/zhangsuen4.png}
@@ -1238,6 +1237,22 @@ O ajuste da curva é realizado levando em consideração forças internas e exte
 Na Figura \ref{fig:snake} é demonstrada uma execução do método de Snakes. (a) É o contorno inicial, (b) é o contorno resultante após aplicação de algumas etapas e (c) contorno final.
 
 A implementação em java para o algoritmo pode ser acessado através do link: \url{https://bit.ly/2LsmV43}.
+
+\subsection{\textit{Flood-fill}}
+
+%-- ultima_revisao
+\textit{Flood-fill} é um algoritmo que tem por objetivo alterar as cores de pixels de um região. Esta técnica possui três parâmetros: um ponto inicial, uma cor alvo e uma cor de destino. O algoritmo irá percorrer todos os pixels conectados pela cor alvo, a partir do ponto inicial, e irá altera-los para a cor de destino \cite{Treuenfels:1994}.
+
+\begin{figure}[ht]
+\centering
+\caption{Exemplo na execução do método \textit{Flood-fill}}
+\includegraphics[width=1\textwidth]{imagens/floodfill.png}
+\sourceAuthor
+\label{fig:flood}
+\end{figure}
+
+A Figura \ref{fig:flood} apresenta um exemplo da execução do \textit{flood-fill}. Partindo de um ponto inicial (a), a vizinhança é
+preenchida (b). O processo é repetido (c) até que a toda a região seja alterada (d).
 
 \section{Considerações}
 
@@ -2301,7 +2316,7 @@ As missões 3 e 4 foram as que tiveram o maior número de falhas, contabilizando
 Tendo em vista a coleta de informações e \textit{feedbacks} de alunos, foi desenvolvido um questionário adaptando de \citet{bez2013}. O questionário é composto por 15 perguntas relacionadas a funcionalidades do sistema, usabilidade, confiabilidade e questões referentes ao aprendizado dos alunos. Quatorze questões são objetivas, variando entre concordo plenamente, concordo, indiferente, discordo e discordo totalmente. Uma questão é dissertativa, que possibilita aos alunos descrever um comentário sobre a ferramenta.
 
 %-- revisao 0
-O questionário foi aplicado no primeiro encontro de avaliação, descrito na seção \ref{sec:validacaoPrimeiroEncontro}, e no último encontro, descrito na seção \ref{sec:validacaoEncontroFinal}. A primeira avaliação foi composta por 9 avaliações, já a segunda, foi composta por 7 avaliações.
+O questionário foi aplicado no primeiro encontro de avaliação, descrito na seção \ref{sec:validacaoPrimeiroEncontro}, e no último encontro, descrito na seção \ref{sec:validacaoEncontroFinal}. A primeira e a segunda avaliação foram compostas por 9 avaliações.
 
 Para a avaliação da ferramenta optou-se por realizar a aplicação do questionário em dois momentos. Esta abordagem visa identificar se houve mudanças em relação a percepção dos estudantes após   adquirirem maiores experiências na utilização do VISNode e no conteúdo da disciplina. Nesta seção serão apresentados os dados obtidos nestas avaliações.
 
@@ -2351,18 +2366,18 @@ Nesta seção serão apresentados os dados obtidos referentes a avaliação das 
                 adequada  execução de \\
                 técnicas de PDI} 
     &
-    3 & 4 &  &  &  \\
+    5 & 4 &  &  &  \\
     \hline
     \makecell[l]{Percebo no VISNode \\ 
                 informações integras e \\
                 confiáveis} 
     &
-    3 & 4 &  &  &  \\
+    5 & 4 &  &  &  \\
     \hline
     \makecell[l]{O VISNode é preciso nos \\
                 resultados apresentados} 
     &
-    3 & 4 &  &  &  \\
+    5 & 4 &  &  &  \\
     \hline
 \end{longtable}
 
@@ -2373,7 +2388,7 @@ Nesta seção serão apresentados os dados obtidos referentes a avaliação das 
 \sourceAuthor
 \end{figure}
 
-A Figura \ref{fig:avaliacaoFuncionalidades1} apresenta os dados coletados nas duas avaliações referentes ao questionamento se o VISNode dispõem de funções que permitem a adequada execução de técnicas de PDI. É possível observar que na primeira avaliação, 55,6\% dos estudantes concordam plenamente, 33,3\% concordam e 11,1\% estão indiferentes. Já na segunda avaliação, o percentual de alunos que concordam aumentou para 57,1\% e os que concordam plenamente diminuíram para 42,9\%. Para este questionamento não houve grandes alterações em relação a primeira e a segunda avaliação, o que vale ressaltar é que na segunda avaliação não houve nenhuma avaliação indiferente ou discordando, demonstrando uma pequena melhora neste questionamento.
+A Figura \ref{fig:avaliacaoFuncionalidades1} apresenta os dados coletados nas duas avaliações referentes ao questionamento se o VISNode dispõem de funções que permitem a adequada execução de técnicas de PDI. É possível observar que na primeira avaliação, 55,6\% dos estudantes concordam plenamente, 33,3\% concordam e 11,1\% estão indiferentes. Já na segunda avaliação, o percentual de alunos que concordam aumentou para 44,4\%. Para este questionamento não houve grandes alterações em relação a primeira e a segunda avaliação, o que vale ressaltar é que na segunda avaliação não houve nenhuma avaliação indiferente ou discordando, demonstrando uma pequena melhora neste questionamento.
 
 \begin{figure}[H]
 \centering
@@ -2382,7 +2397,7 @@ A Figura \ref{fig:avaliacaoFuncionalidades1} apresenta os dados coletados nas du
 \sourceAuthor
 \end{figure}
 
-A Figura \ref{fig:avaliacaoFuncionalidades2} demonstra as respostas referentes ao questionamento se aluno percebe no VISNode informações integras e confiáveis. Na primeira avaliação, 66,7\% concordam plenamente e 33,3\% concorda. Já na segunda avaliação, o percentual de alunos que concordam aumentou para 57,1\% e os que concordam plenamente diminuíram para 42,9\%. A primeira e a segunda avaliação foram positivas, pois a maioria de suas avaliações foram concordo ou concordo plenamente.
+A Figura \ref{fig:avaliacaoFuncionalidades2} demonstra as respostas referentes ao questionamento se aluno percebe no VISNode informações integras e confiáveis. Na primeira avaliação, 66,7\% concordam plenamente e 33,3\% concorda. Já na segunda avaliação, o percentual de alunos que concordam aumentou para 44,4\% e os que concordam plenamente diminuíram para 55,6\%. A primeira e a segunda avaliação foram positivas, pois a maioria de suas avaliações foram concordo ou concordo plenamente.
 
 \begin{figure}[H]
 \centering
@@ -2391,7 +2406,7 @@ A Figura \ref{fig:avaliacaoFuncionalidades2} demonstra as respostas referentes a
 \sourceAuthor
 \end{figure}
 
-Resultados sobre o questionamento se o VISNode é preciso nos resultados são apresentados na Figura \ref{fig:avaliacaoFuncionalidades3}. Os dados indicam que na primeira avaliação, 44,4\% concordam plenamente, 44,4\% concordam e 11,1\% discordam. Na segunda avaliação, o percentual de alunos que concordam aumentou para 57,1\% e os que concordam plenamente diminuíram para 42,9\%. Comparando a primeira e a segunda avaliação, o possível identificar que na segunda avaliação não houve nenhuma avaliação negativa.
+Resultados sobre o questionamento se o VISNode é preciso nos resultados são apresentados na Figura \ref{fig:avaliacaoFuncionalidades3}. Os dados indicam que na primeira avaliação, 44,4\% concordam plenamente, 44,4\% concordam e 11,1\% discordam. Na segunda avaliação, o percentual de alunos que concordam aumentou para 44,4\% e os que concordam plenamente aumentou para 55,6\%. Comparando a primeira e a segunda avaliação, o possível identificar que na segunda avaliação não houve nenhuma avaliação negativa.
 
 Analisando os resultados da avaliação das funcionalidades da ferramenta, é possível constatar que a maioria das avaliações foram positivas, variando entre Concordo e Concordo plenamente. Houve somente uma avaliação Discordo em relação a precisão dos resultados apresentados, e uma avaliação indiferente em relação a correta execução de técnicas de PDI na primeira avaliação. Na segunda avaliação, todas as respostas foram positivas.
 
@@ -2431,12 +2446,12 @@ Os resultados obtidos referentes a avaliação de confiabilidade da ferramenta s
     \makecell[l]{O VISNode apresenta erros\\
                 com frequência} 
     &
-     & 2 & 2 & 3 &  \\
+     & 3 & 2 & 4 &  \\
     \hline
     \makecell[l]{O VISNode informa de forma \\
                 clara quando ocorrem erros} 
     &
-     & 2 & 2 & 3 &  \\
+     & 2 & 2 & 5 &  \\
     \hline
 \end{longtable}
 
@@ -2447,7 +2462,7 @@ Os resultados obtidos referentes a avaliação de confiabilidade da ferramenta s
 \sourceAuthor
 \end{figure}
 
-Conforme a avaliação, 11,1\% dos estudantes concordam plenamente que o VISNode apresenta erros com frequência, 44,4\% concordam, 22,2\% estão indiferentes e 22,2\% discordam. Já na segunda avaliação o percentual de alunos que concordam diminuiu para 28,6,1\%, os que discordam aumentou para 42,9\% e os indiferentes aumentou para 28,6\%. Este dados são apresentados na Figura  \ref{fig:avaliacaoConfiabilidade1}. Comparando as duas avaliações, o que vale ressaltar é que na segunda avaliação não houve nenhuma avaliação concordando plenamente e o número dos que discordam aumentou, demonstrando uma pequena melhora neste questionamento.
+Conforme a avaliação, 11,1\% dos estudantes concordam plenamente que o VISNode apresenta erros com frequência, 44,4\% concordam, 22,2\% estão indiferentes e 22,2\% discordam. Já na segunda avaliação, o percentual de alunos que concordam diminuiu para 33,3\%, os que discordam aumentou para 44,4\%. Este dados são apresentados na Figura \ref{fig:avaliacaoConfiabilidade1}. Comparando as duas avaliações, o que vale ressaltar é que na segunda avaliação não houve nenhuma avaliação concordando plenamente e o número dos que discordam aumentou, demonstrando uma pequena melhora neste questionamento.
 
 \begin{figure}[H]
 \centering
@@ -2456,7 +2471,7 @@ Conforme a avaliação, 11,1\% dos estudantes concordam plenamente que o VISNode
 \sourceAuthor
 \end{figure}
 
-A Figura \ref{fig:avaliacaoConfiabilidade2} apresenta os dados referentes ao questionamento se o VISNode informa de forma clara quando ocorrem erros. Na primeira avaliação, 44,4\% dos estudantes concordaram e 55,6\% estão indiferentes. Já na segunda avaliação, 28,6\% dos alunos concordam, o percentual de indiferentes diminuiu para 28,6\% e os que discordam diminuíram para 42,9\%. Para este questionamento houve algumas alterações em relação a primeira e a segunda avaliação, o que vale ressaltar é que na segunda avaliação alunos concordaram que o VISNode informa de forma clara quando ocorrem erros, demonstrando uma mudança de percepção.
+A Figura \ref{fig:avaliacaoConfiabilidade2} apresenta os dados referentes ao questionamento se o VISNode informa de forma clara quando ocorrem erros. Na primeira avaliação, 44,4\% dos estudantes discordam e 55,6\% estão indiferentes. Já na segunda avaliação, 22,2\% dos alunos concordam, o percentual de indiferentes diminuiu para 22,2\% e os que discordam aumentou para 55,6\%. Para este questionamento houve algumas alterações em relação a primeira e a segunda avaliação, o que vale ressaltar é que na segunda avaliação alunos concordaram que o VISNode informa de forma clara quando ocorrem erros, demonstrando uma mudança de percepção.
 
 Os dados coletados indicam que, em alguns casos, a ferramenta apresenta erros e quando estes erros ocorrem, não são informados de maneira clara. Estas avaliações demonstram uma deficiência da ferramenta, que deve ser aprimorada.
 
@@ -2502,18 +2517,18 @@ Nesta seção serão apresentados os dados coletados referentes a avaliação da
     \makecell[l]{A interface do VISNode é \\ 
                 de uso intuitivo} 
     &
-    3 & 2 & 2 &  &  \\
+    3 & 4 & 2 &  &  \\
     \hline
     \makecell[l]{O VISNode é fácil de \\
                 aprender a usar} 
     &
-    3 & 2 & 2 &  &   \\
+    4 & 3 & 2 &  &   \\
     \hline
     \makecell[l]{O tempo de resposta nas \\
                 interações com o VISNode \\ 
                 é adequado} 
     &
-    6 & 1 &  &  &  \\
+    7 & 2 &  &  &  \\
     \hline
 \end{longtable}
 
@@ -2524,7 +2539,7 @@ Nesta seção serão apresentados os dados coletados referentes a avaliação da
 \sourceAuthor
 \end{figure}
 
-Respostas referentes ao questionamento  se a interface do VISNode é de uso intuitivo são apresentados na Figura \ref{fig:avaliacaoUsabilidade1}. Analisando esta Figura, é possível identificar que na primeira avaliação, 33,3\% dos estudantes concordam plenamente, 55,6\% concordam e 11,1\% discordam. Na segunda avaliação, o percentual de alunos que concordam plenamente aumentou para 42,9\%, os que discordam diminuíram para 28,6\% e apresentou um percentual de 28,6\% de alunos indiferentes. Comparando as duas avaliações, é possível observar que na segunda avaliação não houve nenhuma avaliação discordando, diferente do que ocorreu na primeira.
+Respostas referentes ao questionamento  se a interface do VISNode é de uso intuitivo são apresentados na Figura \ref{fig:avaliacaoUsabilidade1}. Analisando esta Figura, é possível identificar que na primeira avaliação, 33,3\% dos estudantes concordam plenamente, 55,6\% concordam e 11,1\% discordam. Na segunda avaliação, o percentual de alunos que concordam diminuiu para 44,4\% e apresentou um percentual de 22,2\% de alunos indiferentes. Comparando as duas avaliações, é possível observar que na segunda avaliação não houve nenhuma avaliação discordando, diferente do que ocorreu na primeira.
 
 \begin{figure}[H]
 \centering
@@ -2533,7 +2548,7 @@ Respostas referentes ao questionamento  se a interface do VISNode é de uso intu
 \sourceAuthor
 \end{figure}
 
-De acordo com os dados coletados, é possível observar que na primeira avaliação 33,3\% dos estudantes concordam plenamente que o VISNode é fácil de aprender a usar, 44,4\% concordam, 11,1\% discordam e 11,1\% discordam totalmente. Já na segunda avaliação, o percentual de alunos que concordam plenamente aumentou para 42,9\%, os que discordam diminuiu para 28,6\% e apresentou um percentual de 28,6\% de alunos indiferentes. Para este questionamento, o que vale ressaltar é que na segunda avaliação não houve nenhum resultado discordando. Este dados são apresentados na Figura \ref{fig:avaliacaoUsabilidade2}.
+De acordo com os dados coletados, é possível observar que na primeira avaliação 33,3\% dos estudantes concordam plenamente que o VISNode é fácil de aprender a usar, 44,4\% concordam, 11,1\% discordam e 11,1\% discordam totalmente. Já na segunda avaliação, o percentual de alunos que concordam plenamente aumentou para 44,4\%, os que concordam diminuiu para 33,3\% e apresentou um percentual de 22,2\% de alunos indiferentes. Para este questionamento, o que vale ressaltar é que na segunda avaliação não houve nenhum resultado discordando. Este dados são apresentados na Figura \ref{fig:avaliacaoUsabilidade2}.
 
 \begin{figure}[H]
 \centering
@@ -2542,9 +2557,9 @@ De acordo com os dados coletados, é possível observar que na primeira avaliaç
 \sourceAuthor
 \end{figure}
 
-A Figura \ref{fig:avaliacaoUsabilidade3} apresenta os dados referentes ao questionamento se o tempo de resposta nas interações com o VISNode é adequado. É possível observar que na primeira avaliação, 66,7\%  concordam plenamente que é adequado, 22,2\% concordam e 11,1\% foram indiferentes. Na segunda avaliação, o percentual de alunos que concordam plenamente aumentou para 85,7\% e o percentual de concordo diminui para 14,3\%. Comparando as duas avaliações, é possível perceber que na segunda avaliação não houve nenhum resultado indiferente.
+A Figura \ref{fig:avaliacaoUsabilidade3} apresenta os dados referentes ao questionamento se o tempo de resposta nas interações com o VISNode é adequado. É possível observar que na primeira avaliação, 66,7\%  concordam plenamente que é adequado, 22,2\% concordam e 11,1\% foram indiferentes. Na segunda avaliação, o percentual de alunos que concordam plenamente aumentou para 77,8\%. Comparando as duas avaliações, é possível perceber que na segunda avaliação não houve nenhum resultado indiferente.
 
-Analisando os resultados da avaliação de usabilidade é possível verificar que a maior parte dos resultados concordam que o VISNode é de uso intuitivo e fácil de aprender. Houve um percentual baixo de avaliações discordando que o uso da ferramenta é intuitivo e que o VISNode é fácil de aprender a utilizar. Estas avaliações negativas demonstram um ponto de melhoria no sistema que pode ser explorado.
+Analisando os resultados da avaliação de usabilidade é possível verificar que a maior parte dos resultados concordam que o VISNode é de uso intuitivo e fácil de aprender. Houve um percentual baixo de avaliações discordando que o uso da ferramenta é intuitivo e que o VISNode é fácil de aprender a utilizar, na primeira avaliação. Estas avaliações negativas demonstram um ponto de melhoria no sistema que pode ser explorado.
 
 \subsection{Avaliação de aprendizagem}
 
@@ -2606,36 +2621,36 @@ Os dados obtidos referentes a avaliação da aprendizagem da ferramenta serão a
     \makecell[l]{O VISNode permite que o \\
                 usuário retenha \\ conhecimento} 
     &
-    4 & 3 &  &  &  \\
+    5 & 4 &  &  &  \\
     \hline
     \makecell[l]{O VISNode é uma \\
                 ferramenta motivacional \\
                 para aprendizagem} 
     &
-    3 & 3 & 1 &  &   \\
+    4 & 4 & 1 &  &   \\
     \hline
     \makecell[l]{O feedback do VISNode ao \\ 
                 aluno é adequado} 
     &
-    2 & 2 & 2 & 1 &  \\
+    4 & 2 & 2 & 1 &  \\
     \hline 
        \makecell[l]{O VISNode permite maior \\
                     participação do aluno, \\ 
                     interferindo na relação \\
                     pedagógica professor x aluno} 
     &
-    3 & 1 & 2 & 1 &  \\
+    5 & 1 & 2 & 1 &  \\
     \hline
     \makecell[l]{O VISNode favorece o aluno \\
                 a estudar de forma \\ autônoma} 
     &
-    2 & 4 & 1 &  &   \\
+    3 & 4 & 1 & 1 &   \\
     \hline
     \makecell[l]{O VISNode pode ser \\
                 utilizado como um recurso \\
                 efetivo na educação de PDI} 
     &
-    4 & 2 & 1  &  &  \\
+    6 & 2 & 1  &  &  \\
     \hline
 \end{longtable}
 
@@ -2646,7 +2661,7 @@ Os dados obtidos referentes a avaliação da aprendizagem da ferramenta serão a
 \sourceAuthor
 \end{figure}
 
-Em relação ao questionamento se VISNode permite que o usuário retenha conhecimento, é possível identificar que na primeira avaliação, 66,7\% dos estudantes concordam plenamente, 22,2\% concordam e 11,1\% foram indiferentes. Já na segunda avaliação, o percentual de alunos que concordam plenamente diminuiu para 57,1\% e o percentual de concordo aumentou para 42,9\%. Para este questionamento, o que vale ressaltar é que na segunda avaliação não houve nenhuma avaliação indiferente. Este dados são apresentados na Figura \ref{fig:avaliacaoAprendizagem1}.
+Em relação ao questionamento se VISNode permite que o usuário retenha conhecimento, é possível identificar que na primeira avaliação, 66,7\% dos estudantes concordam plenamente, 22,2\% concordam e 11,1\% foram indiferentes. Já na segunda avaliação, o percentual de alunos que concordam plenamente diminuiu para 55,6\% e o percentual de concordo aumentou para 44,4\%. Para este questionamento, o que vale ressaltar é que na segunda avaliação não houve nenhuma avaliação indiferente. Este dados são apresentados na Figura \ref{fig:avaliacaoAprendizagem1}.
 
 \begin{figure}[H]
 \centering
@@ -2655,7 +2670,7 @@ Em relação ao questionamento se VISNode permite que o usuário retenha conheci
 \sourceAuthor
 \end{figure}
 
-Os resultados coletados demonstram que na primeira avaliação 55,6\% concordam plenamente que o VISNode é uma ferramenta motivacional para aprendizagem e 44,4\% concordam. Na segunda avaliação, o percentual de alunos que concordam plenamente diminuiu para 42,9\% o percentual de concordo diminuiu para 42,9\% e 14,3\% foram indiferentes. Comparando a primeira e a segunda avaliação, é possível constatar que na segunda avaliação houve avaliações indiferentes. Este dados são apresentados na Figura \ref{fig:avaliacaoAprendizagem2}.
+Os resultados coletados demonstram que na primeira avaliação 55,6\% concordam plenamente que o VISNode é uma ferramenta motivacional para aprendizagem e 44,4\% concordam. Na segunda avaliação, o percentual de alunos que concordam plenamente diminuiu para 44,4\% e 11,1\% foram indiferentes. Comparando a primeira e a segunda avaliação, é possível constatar que na segunda avaliação houve avaliações indiferentes. Este dados são apresentados na Figura \ref{fig:avaliacaoAprendizagem2}.
 
 \begin{figure}[H]
 \centering
@@ -2664,7 +2679,7 @@ Os resultados coletados demonstram que na primeira avaliação 55,6\% concordam 
 \sourceAuthor
 \end{figure}
 
-A Figura \ref{fig:avaliacaoAprendizagem3} apresenta os dados coletados nas duas avaliações referentes ao questionamento se o \textit{feedback} do VISNode ao aluno é adequado. É possível observar que na primeira avaliação, 44,4\% concordam plenamente, 44,4\% concordam e 11,1\% foram indiferentes. Já na segunda avaliação, o percentual de alunos que concordam plenamente diminuiu para 28,6\%, o de concordo diminuiu para 28,6\%, o percentual de indiferentes aumentou para 28,6\% e houve 14,3\% que discordaram. Para este questionamento, o que vale ressaltar é que na segunda avaliação alguns alunos discordaram.
+A Figura \ref{fig:avaliacaoAprendizagem3} apresenta os dados coletados nas duas avaliações referentes ao questionamento se o \textit{feedback} do VISNode ao aluno é adequado. É possível observar que na primeira avaliação, 44,4\% concordam plenamente, 44,4\% concordam e 11,1\% foram indiferentes. Já na segunda avaliação, o percentual de alunos que concordam diminuiu para 22,2\%, o percentual de indiferentes aumentou para 22,2\% e houve 11,1\% que discordaram. Para este questionamento, o que vale ressaltar é que na segunda avaliação alguns alunos discordaram.
 
 \begin{figure}[H]
 \centering
@@ -2673,7 +2688,7 @@ A Figura \ref{fig:avaliacaoAprendizagem3} apresenta os dados coletados nas duas 
 \sourceAuthor
 \end{figure}
 
-De acordo com os dados coletados, é possível identificar que na primeira avaliação, 22,2\% concordam plenamente que o VISNode permite maior participação do aluno, 44,4 \% concordam e 33,3\% foram indiferentes. Na segunda avaliação, o percentual e alunos que concordam plenamente aumentou para 42,9\%, o percentual de concordo diminuiu para 14,3\%, o percentual de indiferentes diminuiu para 28,6\% e 14,3\% discordam. Analisando as duas avaliações, é possível observar que na segunda avaliação houve avaliações que discordaram. Este dados são demonstrados na Figura \ref{fig:avaliacaoAprendizagem4}.
+De acordo com os dados coletados, é possível identificar que na primeira avaliação, 22,2\% concordam plenamente que o VISNode permite maior participação do aluno, 44,4 \% concordam e 33,3\% foram indiferentes. Na segunda avaliação, o percentual e alunos que concordam plenamente aumentou para 55,6\%, o percentual de concordo diminuiu para 11,1\%, o percentual de indiferentes diminuiu para 22,2\% e 11,1\% discordaram. Analisando as duas avaliações, é possível observar que na segunda avaliação houve avaliações que discordaram. Este dados são demonstrados na Figura \ref{fig:avaliacaoAprendizagem4}.
 
 \begin{figure}[H]
 \centering
@@ -2682,7 +2697,7 @@ De acordo com os dados coletados, é possível identificar que na primeira avali
 \sourceAuthor
 \end{figure}
 
-Para o questionamento se o VISNode favorece o aluno a estudar de forma autônoma, é possível identificar que na primeira avaliação, 33,3\% concordam plenamente, 33,3\% concordam, 22,2\% discordam e 11,1\% foram indiferentes. Já na segunda avaliação, o percentual de alunos que concordam plenamente diminuiu para 28,6\%, o percentual de concordo aumentou para 57,1\% e os que foram indiferentes aumentou para 14,3\%. Para este questionamento, o que vale ressaltar é que na segunda avaliação não houve avaliações que discordaram.
+Para o questionamento se o VISNode favorece o aluno a estudar de forma autônoma, é possível identificar que na primeira avaliação, 33,3\% concordam plenamente, 33,3\% concordam, 22,2\% discordam e 11,1\% foram indiferentes. Já na segunda avaliação, o percentual de alunos que concordam aumentou para 44,4\% e o percentual de discordância diminuiu para 11,1\%. Para este questionamento, o que vale ressaltar é que na segunda avaliação houve redução no percentual de avaliações que discordaram.
 
 \begin{figure}[H]
 \centering
@@ -2691,7 +2706,7 @@ Para o questionamento se o VISNode favorece o aluno a estudar de forma autônoma
 \sourceAuthor
 \end{figure}
 
-Informações referentes ao questionamento se o VISNode pode ser utilizado como recurso efetivo na educação de PDI, são apresentados na Figura \ref{fig:avaliacaoAprendizagem6}. É demonstrado que na primeira avaliação, 77,8\% concordam plenamente e 22,2\% concordam. Na segunda avaliação, o percentual de alunos que concordam plenamente diminuiu para 57,1\% o percentual de concordo aumentou para 28,6\%, e houve 14,3 \% de avaliações indiferentes. Comparando a primeira e a segunda avaliação, é constatado que na segunda avaliação houve avaliações indiferentes.
+Informações referentes ao questionamento se o VISNode pode ser utilizado como recurso efetivo na educação de PDI, são apresentados na Figura \ref{fig:avaliacaoAprendizagem6}. É demonstrado que na primeira avaliação, 77,8\% concordam plenamente e 22,2\% concordam. Na segunda avaliação, o percentual de alunos que concordam plenamente diminuiu para 66,7\% e houve 11,1 \% de avaliações indiferentes. Comparando a primeira e a segunda avaliação, é constatado que na segunda avaliação houve avaliações indiferentes.
 
 Na avaliação de aprendizagem da ferramenta, foram obtidos resultados positivos. A maior parte das avaliações foram concordando que o VISNode pode auxiliar neste quesito. Houve poucas avaliações discordando e nenhuma discordando totalmente.
 
@@ -2699,11 +2714,9 @@ Na avaliação de aprendizagem da ferramenta, foram obtidos resultados positivos
 
 O Quadro \ref{tab:avaliacaoComentarios} apresenta os comentários recebidos através do questionário de validação da ferramenta.
 
-\begin{table}[H]
-\centering
-\captionof{table}{Comentário recebidos no questionário sobre o VISNode} \label{tab:avaliacaoComentarios}
-\renewcommand{\arraystretch}{1.8}
-\begin{tabular}{|c|l|}
+\begin{longtable}{|c|l|}
+\caption{Comentário recebidos no questionário sobre o VISNode} \label{tab:avaliacaoComentarios}
+\renewcommand{\arraystretch}{1.8} \\
     \hline
     1 &
     \makecell[l]{
@@ -2738,9 +2751,7 @@ meu notebook. Ao instalar o Java 8 x32 solucionou o problema.
     \makecell[l]{
 "Ajustar o desfazer ligações"} \\   
     \hline
-\end{tabular}
-\centering
-\end{table}
+\end{longtable}
 
 O comentário 3 é referente a uma incompatibilidade do VISNode com a versão 10 do Java. Uma das dependências do projeto não é compatível com esta versão. Este cometário já propõem uma solução para este problema, que é distribuir uma versão do Java junto com o software. O comentário 5 descreve uma deficiência existente da ferramenta VISNode. Para o usuário desfazer uma conexão entre dois nodos é necessário conecta-los novamente. Este comportamento não é intuitivo, uma possível solução para este problema é a criação de uma ação que permita selecionar conexões e deleta-las com a função \textit{delete} do teclado.
 
