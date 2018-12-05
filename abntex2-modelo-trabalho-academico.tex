@@ -214,6 +214,7 @@ This research aims to present the development of modules for the VISNode, the ob
   \item[PDI] Processamento Digital de Imagens
   \item[API] \textit{Application Program Interface}
   \item[HTTP] \textit{Hypertext Transfer Protocol}
+  \item[REST] \textit{Representational State Transfer}
   \item[DICOM] \textit{Digital Imaging and Communications in Medicine}
 \end{siglas}
 % ---
@@ -1772,7 +1773,7 @@ O acesso a este conteúdo é realizado por processo, desta forma, o usuário sel
 
 Além dos dois recursos apresentados acima, também foi criada uma seção chamada \textit{script}. Esta seção faz uso do processo apresentado na seção \ref{sec:processos}. Através deste recurso, foi possível disponibilizar para o aluno um \textit{script} que represente a técnica de PDI consultada. Desta forma, o aluno pode modificar a implementação do algoritmo para complementar seu aprendizado da técnica estudada.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \caption{Exibição do \textit{script} do algoritmo de Brilho}
 \includegraphics[width=0.7\textwidth]{imagens/visnode_script.png}
@@ -1785,17 +1786,34 @@ Na Figura \ref{fig:visnodeScript} é apresentada a exibição do \textit{script}
 % ---
 \section{Arquitetura}
 
-Para o desenvolvimento da ferramenta foi utilizada a linguagem Java, mesma linguagem utilizada para o desenvolvimento do VISNode. Devido a necessidade de armazenar informações do usuário, foi criado um \textit{WebService} para esta finalidade. Este \textit{WebService} foi construído utilizado o \textit{framework} \textit{SprintBoot} e um Banco de dados Mysql.
+Para o desenvolvimento da ferramenta foi utilizada a linguagem Java, mesma linguagem utilizada para o desenvolvimento do VISNode, utilizando o paradigma de orientação à objetos. Devido a necessidade de armazenar informações do usuário, foi criado um \textit{WebService} para esta finalidade. Este \textit{WebService} foi construído utilizado o \textit{framework} \textit{SprintBoot} e um Banco de dados Mysql.
+
+
+\begin{figure}[H]
+\centering
+\caption{Modelo entidade relacionamento do banco de dados}
+\includegraphics[width=0.9\textwidth]{imagens/visnode_modeloer.png}
+\sourceAuthor
+\label{fig:visnodeModeloER}
+\end{figure}
+
+A Figura \ref{fig:visnodeModeloER} apresenta o modelo entidade relacionamento da base de dados da aplicação desenvolvida. Neste diagrama é possível observar a entidade \textit{challenge} responsável por armazenar informações sobre os desafios, a entidade \textit{challenge\_user} que tem como objetivo armazenar as submissões de desafios, a entidade \textit{mission} e \textit{mission\_value\_input} que armazenam informações de missões e as entidade \textit{user} e \textit{user\_session} responsáveis pelo controle de usuários.
 
 A Figura \ref{fig:visnodeArquitetura} demonstra a arquitetura do projeto. É possível visualizar que a comunicação realizada para o acesso a dados é feita utilizando o protocolo HTTP (\textit{Hypertext Transfer Protocol}). 
 
 \begin{figure}[ht]
 \centering
 \caption{Arquitetura VISNode}
-\includegraphics[width=0.5\textwidth]{imagens/visnode_arquitetura.png}
+\includegraphics[width=0.5\textwidth]{imagens/visnode_arquitetura.jpg}
 \sourceAuthor
 \label{fig:visnodeArquitetura}
 \end{figure}
+
+
+
+
+
+
 
 % ---
 \section{Interface do Aluno}
@@ -2226,11 +2244,11 @@ A etapa de validação da ferramenta foi realizada através do monitoramento do 
   \hline
   \textbf{04/09/2018}
   &
-   \makecell[l]{Aplicação de desafio referente aos conteúdos de aplicação de brilho \\ e contraste, transformação para tons de cinza, filtros passa-baixa\\  e passa-alta.} \\
+   \makecell[l]{Aplicação de desafio referente ao conteúdo de transformações \\ geométricas.} \\
   \hline
   \textbf{02/10/2018}
   &
-  \makecell[l]{Aplicação de desafio referente ao conteúdo de transformações \\ geométricas.} \\
+  \makecell[l]{Aplicação de desafio referente aos conteúdos de aplicação de brilho \\ e contraste, transformação para tons de cinza, filtros passa-baixa\\  e passa-alta.} \\
   \hline
   \textbf{16/10/2018}
   &
@@ -2260,7 +2278,20 @@ A aplicação do desafio teve um \textit{feedback} positivo. De acordo com os es
 
 Nesta apresentação foram identificadas algumas melhorias para a ferramenta VISNode. A ferramenta utiliza tonalidades escuras na construção de suas janelas. Estas tonalidades dificultaram a visualização da ferramenta na projetação da tela, utilizando um projetor. Para a resolução deste problema, foi disponibilizado, na ferramenta, uma opção para a mudanças do \textit{Skin}, sendo possível alternar entre tonalidades escuras e claras.
 
-Neste mesmo cenário, outro ponto de melhoria identificado foi em relação as janelas que possuíam código fonte. Nestes casos, para facilitar a visualização de todos os estudantes, a ferramenta  passou a permitir a mudança do tamanho da fonte. 
+Neste mesmo cenário, outro ponto de melhoria identificado foi em relação as janelas que possuíam código fonte. Nestes casos, para facilitar a visualização de todos os estudantes, a ferramenta  passou a permitir a mudança do tamanho da fonte. O Quadro \ref{tab:primeiraApresentacaoVisnode} apresenta as informações deste encontro.
+
+\begin{longtable}{|r|c|}
+ \caption{Primeira apresentação do VISNode} \label{tab:primeiraApresentacaoVisnode} \\
+  \hline
+  Semestre
+  &
+  \textbf{2018/01} \\
+  \hline
+  Número de participantes
+  &
+  \textbf{5} \\
+  \hline  
+\end{longtable}
 
 \section{Segunda apresentação do VISNode}
 
@@ -2270,7 +2301,20 @@ O objetivo do encontro foi apresentar o VISNode e coletar \textit{feedbacks} dos
 
 Ao término do desafio, foi solicitado aos estudantes que contribuíssem com um \textit{feedback} da utilização da ferramenta. De acordo com alunos, esta apresentação permitiu que eles vislumbrassem aplicações reais da disciplina. A ferramenta permitiu que estudantes, com o mínimo de conhecimento na área, pudessem desenvolver uma solução para problemas reais de PDI.
 
-Uma dificuldade encontrada pelos estudantes foi em relação a utilização do processo \textit{Script process} descrito na seção \ref{sec:processos}. Segundo os alunos, as funcionalidades oferecidas por estes processos não estavam bem documentadas, e por este motivo, foi difícil utilizá-lo. Para a resolução deste problema, a documentação deste processo foi revista, disponibilizando todos os métodos disponíveis para cada parâmetro de entrada do processo, e da mesma forma, foram adicionados exemplos de utilização deste processo.
+Uma dificuldade encontrada pelos estudantes foi em relação a utilização do processo \textit{Script process} descrito na seção \ref{sec:processos}. Segundo os alunos, as funcionalidades oferecidas por estes processos não estavam bem documentadas, e por este motivo, foi difícil utilizá-lo. Para a resolução deste problema, a documentação deste processo foi revista, disponibilizando todos os métodos disponíveis para cada parâmetro de entrada do processo, e da mesma forma, foram adicionados exemplos de utilização deste processo. O Quadro \ref{tab:segundaApresentacaoVisnode} apresenta as informações deste encontro.
+
+\begin{longtable}{|r|c|}
+ \caption{Segunda apresentação do VISNode} \label{tab:segundaApresentacaoVisnode} \\
+  \hline
+  Semestre
+  &
+  \textbf{2018/02} \\
+  \hline
+  Número de participantes
+  &
+  \textbf{17} \\
+  \hline  
+\end{longtable}
 
 \section{Primeiro encontro de validação com a ferramenta gamificada}
 \label{sec:validacaoPrimeiroEncontro}
@@ -2279,9 +2323,38 @@ Este encontro teve como objetivo apresentar os módulos gamificados do VISNode, 
 
 O desafio abordava técnicas de transformação geométrica, que foram apresentadas na seção \ref{sec:transformacoesGeometricas} deste trabalho. Para a escolha do assunto do desafio, foi levado em consideração o conhecimento da turma no momento da aplicação. Os alunos estavam iniciando seus estudos de técnicas de transformações geométricas. O desafio é composto por seis missões, cada qual abordando um técnica de transformação. Mais informações sobre o desafio podem ser acessadas no Apêndice \ref{apen:transformacaoGeometrica}.
 
-No total 14 alunos participaram deste experimento, destes, 13 completaram o desafio até o final e 1 completou parcialmente, concluindo 2 das 6 missões. Somente 1 aluno completou as 6 missões sem cometer erro. O experimento foi composto por 154 submissões de missões, destas, somente 74 foram assertivas. Desta forma, 48\% das submissões falharam.
+No total 14 alunos participaram deste experimento, destes, 13 completaram o desafio até o final e 1 completou parcialmente, concluindo 2 das 6 missões. Somente 1 aluno completou as 6 missões sem cometer erro. O experimento foi composto por 154 submissões de missões, destas, somente 74 foram assertivas. Desta forma, 52\% das submissões falharam.
 
-Aprofundando esta análise, a missão 3 foi a missão com maior número de submissões falhas, o que contabiliza 46 submissões e representa 62\% do total de falhas. Este número excessivo de falhas da missão 3 pode ser justificado pela forma com que sua narrativa foi apresentada. A missão apresenta um objeto em uma posição x, y e pede-se para que este objeto seja movido para a posição i, j. Na maioria da submissões, os alunos realizaram a translação utilizando como parâmetro as coordenadas i, j e não para a posição resultante da variação das duas posições. Este fato demonstra uma dificuldade na interpretação da missão proposta.
+Aprofundando esta análise, a missão 3 foi a missão com maior número de submissões falhas, o que contabiliza 46 submissões e representa 62\% do total de falhas. Este número excessivo de falhas da missão 3 pode ser justificado pela forma com que sua narrativa foi apresentada. A missão apresenta um objeto em uma posição x, y e pede-se para que este objeto seja movido para a posição i, j. Na maioria da submissões, os alunos realizaram a translação utilizando como parâmetro as coordenadas i, j e não para a posição resultante da variação das duas posições. Este fato demonstra uma dificuldade na interpretação da missão proposta. O Quadro \ref{tab:primeiroEncontroFerramentaGamificada} apresenta as informações deste encontro.
+
+\begin{longtable}{|r|c|}
+ \caption{Primeiro encontro de validação com a ferramenta gamificada} \label{tab:primeiroEncontroFerramentaGamificada} \\
+  \hline
+  Semestre
+  &
+  \textbf{2018/02} \\
+  \hline
+  Número de participantes
+  &
+  \textbf{14} \\
+  \hline  
+  Quantidade de missões
+  &
+  \textbf{6} \\
+  \hline   
+  Quantidade de submissões
+  &
+  \textbf{74} acertos / \textbf{80} falhas (154) \\
+  \hline     
+  Percentual de submissões
+  &
+  \textbf{48\%} acerto / \textbf{52\%} falha  \\
+  \hline
+  Missão com mais falhas
+  &
+  \textbf{Missão 3} (62\% to total de falhas)  \\
+  \hline  
+\end{longtable}
 
 \section{Segundo encontro de validação com a ferramenta gamificada}
 
@@ -2295,16 +2368,74 @@ No total 15 alunos participaram deste experimento, destes, 11 completaram o desa
 Aprofundando esta análise, a missão 6 foi a missão com maior número de submissões falhas, o que contabiliza 25 submissões e representa 48\% do total de falhas. Este número de falhas pode ser explicado devido a formatação de sua narrativa. Nesta missão, é necessário aplicar o filtro de \textit{Threshold} e o filtro de média. A narrativa solicitava a utilização de um determinado limiar para o filtro, mas os alunos não conheciam este termo, somente tinham conhecimento do termo em inglês \textit{Threshold}. Esta alternância de de termos, que possuem o mesmo significado, causou confusão entre os estudantes. 
 
 %-- revisao
-Outro equivoco comum foi a utilização do filtro de mediana ao invés do filtro de média. Ao observar a utilização por parte dos estudantes, foi possível observar que ao realizar a procura pela técnica utilizando o termo "media", somente a técnica da mediana estava sendo retornada. Após verificar o funcionamento da ferramenta, foi percebido que a funcionalidade de busca de técnicas considera caracteres acentuados, desta forma, a técnica de suavização de média não era filtrada, pois os estudante realizam a busca sem o acento. Em função deste cenário, foi alterada a ferramenta para realizar a busca ignorando a acentuação. 
+Outro equivoco comum foi a utilização do filtro de mediana ao invés do filtro de média. Ao observar a utilização por parte dos estudantes, foi possível observar que ao realizar a procura pela técnica utilizando o termo "media", somente a técnica da mediana estava sendo retornada. Após verificar o funcionamento da ferramenta, foi percebido que a funcionalidade de busca de técnicas considera caracteres acentuados, desta forma, a técnica de suavização de média não era filtrada, pois os estudante realizam a busca sem o acento. Em função deste cenário, foi alterada a ferramenta para realizar a busca ignorando a acentuação. O Quadro \ref{tab:segundoEncontroFerramentaGamificada} apresenta as informações deste encontro.
+
+\begin{longtable}{|r|c|}
+ \caption{Segundo encontro de validação com a ferramenta gamificada} \label{tab:segundoEncontroFerramentaGamificada} \\
+  \hline
+  Semestre
+  &
+  \textbf{2018/02} \\
+  \hline
+  Número de participantes
+  &
+  \textbf{15} \\
+  \hline  
+  Quantidade de missões
+  &
+  \textbf{6} \\
+  \hline   
+  Quantidade de submissões
+  &
+  \textbf{89} acertos / \textbf{52} falhas (141) \\
+  \hline     
+  Percentual de submissões
+  &
+  \textbf{63\%} acerto / \textbf{37\%} falha  \\
+  \hline
+  Missão com mais falhas
+  &
+  \textbf{Missão 6} (48\% to total de falhas)  \\
+  \hline  
+\end{longtable}
 
 \section{Encontro final de validação com a ferramenta gamificada}
 \label{sec:validacaoEncontroFinal}
 
-A terceira aplicação da ferramenta gamificada foi realizada no dia 02/10/2018. Neste encontro foi solicitado para os alunos realizarem um desafio referente aos conteúdos de erosão, dilatação e esqueletização. Este desafio é apresentado na Apêndice \ref{apen:trasito}. 
+A terceira aplicação da ferramenta gamificada foi realizada no dia 16/10/2018. Neste encontro foi solicitado para os alunos realizarem um desafio referente aos conteúdos de erosão, dilatação e esqueletização. Este desafio é apresentado na Apêndice \ref{apen:trasito}. 
 
 Neste dia poucos alunos estavam presentes, no total 4 alunos participaram deste experimento. Todos os estudantes completaram o desafio até o final. Somente 1 aluno completou o desafio sem cometer erros. O experimento foi composto por 28 submissões de missões, destas, somente 14 foram assertivas, contabilizando 50\% de acerto.
 
-As missões 3 e 4 foram as que tiveram o maior número de falhas, contabilizando 5 e 6 respectivamente. Este desafio foi baseado em missões que necessitavam a aplicação de algoritmos de esqueletização e algoritmos de dilatação e erosão. Estes algoritmos, normalmente são executados em imagens binarias, que são imagens com duas cores. As submissões falhas foram em função da não correta binarização da imagem.
+As missões 3 e 4 foram as que tiveram o maior número de falhas, contabilizando 5 e 6 respectivamente. Este desafio foi baseado em missões que necessitavam a aplicação de algoritmos de esqueletização e algoritmos de dilatação e erosão. Estes algoritmos, normalmente são executados em imagens binarias, que são imagens com duas cores. As submissões falhas foram em função da não correta binarização da imagem. O Quadro \ref{tab:encontroFinalFerramentaGamificada} apresenta as informações deste encontro.
+
+\begin{longtable}{|r|c|}
+ \caption{Encontro final de validação com a ferramenta gamificada} \label{tab:encontroFinalFerramentaGamificada} \\
+  \hline
+  Semestre
+  &
+  \textbf{2018/02} \\
+  \hline
+  Número de participantes
+  &
+  \textbf{4} \\
+  \hline  
+  Quantidade de missões
+  &
+  \textbf{4} \\
+  \hline   
+  Quantidade de submissões
+  &
+  \textbf{14} acertos / \textbf{14} falhas (28) \\
+  \hline     
+  Percentual de submissões
+  &
+  \textbf{50\%} acerto / \textbf{50\%} falha  \\
+  \hline
+  Missões com mais falhas
+  &
+  \textbf{Missão 3 e Missão 2}  \\
+  \hline  
+\end{longtable}
 
 \section{Resultados obtidos}
 \label{sec:resultadosObtidos}
